@@ -1,0 +1,4005 @@
+{
+  "round": 0,
+  "items": [
+    {
+      "image_id": "10_1436",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1443",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1448",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1453",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1457",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1464",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1490",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1494",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1504",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1505",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1517",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1521",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1528",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1531",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1535",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1548",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1563",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1565",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1590",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1591",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1595",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1597",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1604",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1606",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1616",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1620",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1626",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1629",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1649",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1650",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1657",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1662",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1674",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1675",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1677",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1687",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1690",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1693",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1704",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1707",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1718",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1732",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1744",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1753",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1754",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1759",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1796",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1807",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1815",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1827",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1836",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1839",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1843",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1845",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1851",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1857",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1861",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1872",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1875",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1878",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1894",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1931",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1938",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1944",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1954",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_1973",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2017",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2040",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2044",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2052",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2089",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2095",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2098",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2101",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2143",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2145",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2153",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2191",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2193",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2198",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2208",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2209",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2221",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2248",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2268",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2271",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2289",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2320",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2329",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2335",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2343",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2351",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2376",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2381",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2384",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2396",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2416",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2419",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2420",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2423",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2432",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2449",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2451",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2455",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2467",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2479",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2519",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2522",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2527",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2533",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2535",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2548",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2552",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2567",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2568",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2581",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2598",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2603",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2604",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2618",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2619",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2623",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2632",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2634",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "10_2639",
+      "label": "empty kitchen",
+      "score": 1.0,
+      "cluster": -1,
+      "runner_up": null,
+      "margin": 1.0
+    },
+    {
+      "image_id": "20_439",
+      "label": "opening the refrigerator",
+      "score": 0.9458,
+      "cluster": 2,
+      "runner_up": "eating",
+      "margin": 0.7323
+    },
+    {
+      "image_id": "11_2421",
+      "label": "preparing food",
+      "score": 0.9454,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0182
+    },
+    {
+      "image_id": "11_3032",
+      "label": "preparing food",
+      "score": 0.938,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0117
+    },
+    {
+      "image_id": "11_2397",
+      "label": "preparing food",
+      "score": 0.9337,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0149
+    },
+    {
+      "image_id": "11_2869",
+      "label": "preparing food",
+      "score": 0.9295,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0305
+    },
+    {
+      "image_id": "11_2372",
+      "label": "preparing food",
+      "score": 0.9207,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0289
+    },
+    {
+      "image_id": "16_1104",
+      "label": "cooking at the stove",
+      "score": 0.9119,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0622
+    },
+    {
+      "image_id": "11_2425",
+      "label": "preparing food",
+      "score": 0.9087,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0335
+    },
+    {
+      "image_id": "16_1121",
+      "label": "cooking at the stove",
+      "score": 0.9032,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0314
+    },
+    {
+      "image_id": "11_2353",
+      "label": "cooking at the stove",
+      "score": 0.903,
+      "cluster": 0,
+      "runner_up": "preparing food",
+      "margin": 0.0065
+    },
+    {
+      "image_id": "16_1127",
+      "label": "cooking at the stove",
+      "score": 0.8984,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0411
+    },
+    {
+      "image_id": "13_1041",
+      "label": "eating",
+      "score": 0.8975,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.3943
+    },
+    {
+      "image_id": "11_2783",
+      "label": "cooking at the stove",
+      "score": 0.8963,
+      "cluster": 0,
+      "runner_up": "preparing food",
+      "margin": 0.0319
+    },
+    {
+      "image_id": "13_1033",
+      "label": "eating",
+      "score": 0.8953,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.431
+    },
+    {
+      "image_id": "13_1027",
+      "label": "eating",
+      "score": 0.8948,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.4181
+    },
+    {
+      "image_id": "17_625",
+      "label": "having a conversation",
+      "score": 0.8879,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0455
+    },
+    {
+      "image_id": "17_381",
+      "label": "having a conversation",
+      "score": 0.8857,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0944
+    },
+    {
+      "image_id": "11_1832",
+      "label": "washing dishes",
+      "score": 0.881,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.2211
+    },
+    {
+      "image_id": "11_1880",
+      "label": "washing dishes",
+      "score": 0.8764,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.2043
+    },
+    {
+      "image_id": "17_464",
+      "label": "having a conversation",
+      "score": 0.8763,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0873
+    },
+    {
+      "image_id": "13_1031",
+      "label": "eating",
+      "score": 0.871,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.4574
+    },
+    {
+      "image_id": "20_488",
+      "label": "opening the refrigerator",
+      "score": 0.871,
+      "cluster": 2,
+      "runner_up": "carrying items",
+      "margin": 0.6153
+    },
+    {
+      "image_id": "11_1878",
+      "label": "washing dishes",
+      "score": 0.8675,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.2139
+    },
+    {
+      "image_id": "17_851",
+      "label": "having a conversation",
+      "score": 0.8581,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0569
+    },
+    {
+      "image_id": "09_605",
+      "label": "cooking at the stove",
+      "score": 0.8563,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.3325
+    },
+    {
+      "image_id": "20_1766",
+      "label": "having a conversation",
+      "score": 0.8547,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1167
+    },
+    {
+      "image_id": "16_3222",
+      "label": "having a conversation",
+      "score": 0.8347,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0969
+    },
+    {
+      "image_id": "17_487",
+      "label": "having a conversation",
+      "score": 0.8325,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0482
+    },
+    {
+      "image_id": "11_2102",
+      "label": "getting items from a cabinet",
+      "score": 0.8298,
+      "cluster": 0,
+      "runner_up": "preparing food",
+      "margin": 0.3398
+    },
+    {
+      "image_id": "20_1900",
+      "label": "having a conversation",
+      "score": 0.8282,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1001
+    },
+    {
+      "image_id": "19_268",
+      "label": "having a conversation",
+      "score": 0.8281,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0555
+    },
+    {
+      "image_id": "20_1656",
+      "label": "having a conversation",
+      "score": 0.8279,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1449
+    },
+    {
+      "image_id": "17_75",
+      "label": "having a conversation",
+      "score": 0.8265,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0932
+    },
+    {
+      "image_id": "17_695",
+      "label": "having a conversation",
+      "score": 0.8263,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0691
+    },
+    {
+      "image_id": "17_527",
+      "label": "having a conversation",
+      "score": 0.8227,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0593
+    },
+    {
+      "image_id": "20_1770",
+      "label": "having a conversation",
+      "score": 0.822,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1192
+    },
+    {
+      "image_id": "17_66",
+      "label": "eating",
+      "score": 0.8212,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0558
+    },
+    {
+      "image_id": "17_665",
+      "label": "sitting at the table",
+      "score": 0.8177,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0476
+    },
+    {
+      "image_id": "09_238",
+      "label": "cooking at the stove",
+      "score": 0.8175,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.3129
+    },
+    {
+      "image_id": "13_1299",
+      "label": "eating",
+      "score": 0.8171,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2566
+    },
+    {
+      "image_id": "17_504",
+      "label": "having a conversation",
+      "score": 0.8168,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0367
+    },
+    {
+      "image_id": "09_621",
+      "label": "cooking at the stove",
+      "score": 0.815,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2944
+    },
+    {
+      "image_id": "13_1071",
+      "label": "eating",
+      "score": 0.8128,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.3066
+    },
+    {
+      "image_id": "14_2849",
+      "label": "having a conversation",
+      "score": 0.8121,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0488
+    },
+    {
+      "image_id": "16_3265",
+      "label": "having a conversation",
+      "score": 0.8121,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0546
+    },
+    {
+      "image_id": "17_519",
+      "label": "having a conversation",
+      "score": 0.8119,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0359
+    },
+    {
+      "image_id": "11_2114",
+      "label": "preparing food",
+      "score": 0.8112,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0025
+    },
+    {
+      "image_id": "17_634",
+      "label": "having a conversation",
+      "score": 0.8111,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0042
+    },
+    {
+      "image_id": "17_728",
+      "label": "sitting at the table",
+      "score": 0.8109,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.035
+    },
+    {
+      "image_id": "09_616",
+      "label": "cooking at the stove",
+      "score": 0.8094,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.3068
+    },
+    {
+      "image_id": "17_563",
+      "label": "having a conversation",
+      "score": 0.8091,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0339
+    },
+    {
+      "image_id": "20_1829",
+      "label": "having a conversation",
+      "score": 0.8083,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0618
+    },
+    {
+      "image_id": "19_3055",
+      "label": "having a conversation",
+      "score": 0.8081,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0979
+    },
+    {
+      "image_id": "19_3310",
+      "label": "having a conversation",
+      "score": 0.8081,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0927
+    },
+    {
+      "image_id": "20_366",
+      "label": "opening the refrigerator",
+      "score": 0.8071,
+      "cluster": 2,
+      "runner_up": "getting items from a cabinet",
+      "margin": 0.5188
+    },
+    {
+      "image_id": "11_2083",
+      "label": "getting items from a cabinet",
+      "score": 0.8068,
+      "cluster": 0,
+      "runner_up": "preparing food",
+      "margin": 0.2812
+    },
+    {
+      "image_id": "17_539",
+      "label": "having a conversation",
+      "score": 0.8055,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0224
+    },
+    {
+      "image_id": "09_671",
+      "label": "cooking at the stove",
+      "score": 0.8043,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2893
+    },
+    {
+      "image_id": "16_3591",
+      "label": "eating",
+      "score": 0.8043,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0029
+    },
+    {
+      "image_id": "19_3289",
+      "label": "eating",
+      "score": 0.8038,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.025
+    },
+    {
+      "image_id": "09_638",
+      "label": "cooking at the stove",
+      "score": 0.8035,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2775
+    },
+    {
+      "image_id": "16_3307",
+      "label": "eating",
+      "score": 0.8031,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0823
+    },
+    {
+      "image_id": "20_1817",
+      "label": "having a conversation",
+      "score": 0.803,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0264
+    },
+    {
+      "image_id": "17_545",
+      "label": "having a conversation",
+      "score": 0.8017,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0322
+    },
+    {
+      "image_id": "09_644",
+      "label": "cooking at the stove",
+      "score": 0.8013,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2737
+    },
+    {
+      "image_id": "19_3285",
+      "label": "having a conversation",
+      "score": 0.8008,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0643
+    },
+    {
+      "image_id": "17_428",
+      "label": "having a conversation",
+      "score": 0.7996,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0498
+    },
+    {
+      "image_id": "14_605",
+      "label": "washing dishes",
+      "score": 0.7991,
+      "cluster": 1,
+      "runner_up": "setting or clearing the table",
+      "margin": 0.2199
+    },
+    {
+      "image_id": "17_2374",
+      "label": "having a conversation",
+      "score": 0.7985,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0617
+    },
+    {
+      "image_id": "17_222",
+      "label": "eating",
+      "score": 0.7981,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0588
+    },
+    {
+      "image_id": "09_639",
+      "label": "cooking at the stove",
+      "score": 0.7976,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2772
+    },
+    {
+      "image_id": "19_2671",
+      "label": "having a conversation",
+      "score": 0.7975,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0753
+    },
+    {
+      "image_id": "17_411",
+      "label": "having a conversation",
+      "score": 0.7972,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0141
+    },
+    {
+      "image_id": "17_650",
+      "label": "sitting at the table",
+      "score": 0.7955,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0284
+    },
+    {
+      "image_id": "17_777",
+      "label": "eating",
+      "score": 0.7942,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0087
+    },
+    {
+      "image_id": "14_2664",
+      "label": "having a conversation",
+      "score": 0.7939,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0806
+    },
+    {
+      "image_id": "19_3300",
+      "label": "having a conversation",
+      "score": 0.7938,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.126
+    },
+    {
+      "image_id": "09_612",
+      "label": "cooking at the stove",
+      "score": 0.7932,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2888
+    },
+    {
+      "image_id": "16_3595",
+      "label": "having a conversation",
+      "score": 0.7928,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0174
+    },
+    {
+      "image_id": "20_2562",
+      "label": "cleaning",
+      "score": 0.7917,
+      "cluster": 0,
+      "runner_up": "washing dishes",
+      "margin": 0.1934
+    },
+    {
+      "image_id": "09_670",
+      "label": "cooking at the stove",
+      "score": 0.7912,
+      "cluster": 1,
+      "runner_up": "getting items from a cabinet",
+      "margin": 0.2274
+    },
+    {
+      "image_id": "17_831",
+      "label": "having a conversation",
+      "score": 0.7909,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0427
+    },
+    {
+      "image_id": "20_1926",
+      "label": "having a conversation",
+      "score": 0.7907,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0692
+    },
+    {
+      "image_id": "16_1070",
+      "label": "cooking at the stove",
+      "score": 0.7894,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0522
+    },
+    {
+      "image_id": "17_16",
+      "label": "having a conversation",
+      "score": 0.7879,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0807
+    },
+    {
+      "image_id": "16_3277",
+      "label": "eating",
+      "score": 0.7878,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0482
+    },
+    {
+      "image_id": "11_2086",
+      "label": "getting items from a cabinet",
+      "score": 0.7874,
+      "cluster": 0,
+      "runner_up": "preparing food",
+      "margin": 0.2342
+    },
+    {
+      "image_id": "16_3296",
+      "label": "eating",
+      "score": 0.7871,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0633
+    },
+    {
+      "image_id": "20_479",
+      "label": "opening the refrigerator",
+      "score": 0.787,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.5456
+    },
+    {
+      "image_id": "16_923",
+      "label": "cooking at the stove",
+      "score": 0.7865,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0422
+    },
+    {
+      "image_id": "20_1671",
+      "label": "having a conversation",
+      "score": 0.7859,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1085
+    },
+    {
+      "image_id": "14_3140",
+      "label": "having a conversation",
+      "score": 0.7855,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1094
+    },
+    {
+      "image_id": "14_2905",
+      "label": "having a conversation",
+      "score": 0.7853,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0731
+    },
+    {
+      "image_id": "20_1790",
+      "label": "having a conversation",
+      "score": 0.7847,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0905
+    },
+    {
+      "image_id": "16_3287",
+      "label": "eating",
+      "score": 0.7833,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0173
+    },
+    {
+      "image_id": "19_432",
+      "label": "having a conversation",
+      "score": 0.7825,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0722
+    },
+    {
+      "image_id": "15_800",
+      "label": "preparing food",
+      "score": 0.7817,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.1896
+    },
+    {
+      "image_id": "08_1016",
+      "label": "having a conversation",
+      "score": 0.7804,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.049
+    },
+    {
+      "image_id": "19_2839",
+      "label": "having a conversation",
+      "score": 0.7804,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0616
+    },
+    {
+      "image_id": "17_1388",
+      "label": "having a conversation",
+      "score": 0.7803,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0362
+    },
+    {
+      "image_id": "17_1397",
+      "label": "eating",
+      "score": 0.78,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1169
+    },
+    {
+      "image_id": "19_3078",
+      "label": "having a conversation",
+      "score": 0.78,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0576
+    },
+    {
+      "image_id": "19_2907",
+      "label": "having a conversation",
+      "score": 0.7792,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0239
+    },
+    {
+      "image_id": "09_255",
+      "label": "cooking at the stove",
+      "score": 0.779,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.2348
+    },
+    {
+      "image_id": "13_1115",
+      "label": "eating",
+      "score": 0.7783,
+      "cluster": 2,
+      "runner_up": "sitting at the table",
+      "margin": 0.2495
+    },
+    {
+      "image_id": "20_2672",
+      "label": "cleaning",
+      "score": 0.7783,
+      "cluster": 0,
+      "runner_up": "washing dishes",
+      "margin": 0.1333
+    },
+    {
+      "image_id": "14_2908",
+      "label": "having a conversation",
+      "score": 0.778,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0237
+    },
+    {
+      "image_id": "17_60",
+      "label": "eating",
+      "score": 0.7778,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0026
+    },
+    {
+      "image_id": "19_3065",
+      "label": "having a conversation",
+      "score": 0.7773,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1223
+    },
+    {
+      "image_id": "12_1327",
+      "label": "cleaning",
+      "score": 0.7772,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0362
+    },
+    {
+      "image_id": "17_11",
+      "label": "having a conversation",
+      "score": 0.777,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0895
+    },
+    {
+      "image_id": "17_168",
+      "label": "eating",
+      "score": 0.777,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.072
+    },
+    {
+      "image_id": "09_662",
+      "label": "cooking at the stove",
+      "score": 0.7768,
+      "cluster": 1,
+      "runner_up": "getting items from a cabinet",
+      "margin": 0.2573
+    },
+    {
+      "image_id": "09_303",
+      "label": "cooking at the stove",
+      "score": 0.7766,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.2546
+    },
+    {
+      "image_id": "17_2364",
+      "label": "having a conversation",
+      "score": 0.7757,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.116
+    },
+    {
+      "image_id": "13_63",
+      "label": "eating",
+      "score": 0.7754,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.3217
+    },
+    {
+      "image_id": "16_3249",
+      "label": "eating",
+      "score": 0.7752,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1314
+    },
+    {
+      "image_id": "20_1843",
+      "label": "having a conversation",
+      "score": 0.7752,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.033
+    },
+    {
+      "image_id": "19_3293",
+      "label": "eating",
+      "score": 0.7751,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0358
+    },
+    {
+      "image_id": "16_3050",
+      "label": "sitting at the table",
+      "score": 0.7745,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0031
+    },
+    {
+      "image_id": "09_690",
+      "label": "cooking at the stove",
+      "score": 0.7729,
+      "cluster": 1,
+      "runner_up": "getting items from a cabinet",
+      "margin": 0.2424
+    },
+    {
+      "image_id": "13_1119",
+      "label": "eating",
+      "score": 0.7729,
+      "cluster": 2,
+      "runner_up": "sitting at the table",
+      "margin": 0.1856
+    },
+    {
+      "image_id": "13_2953",
+      "label": "having a conversation",
+      "score": 0.7729,
+      "cluster": 1,
+      "runner_up": "eating",
+      "margin": 0.3006
+    },
+    {
+      "image_id": "09_696",
+      "label": "cooking at the stove",
+      "score": 0.7725,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2491
+    },
+    {
+      "image_id": "17_217",
+      "label": "eating",
+      "score": 0.7723,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.075
+    },
+    {
+      "image_id": "17_170",
+      "label": "eating",
+      "score": 0.7721,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0433
+    },
+    {
+      "image_id": "13_1182",
+      "label": "eating",
+      "score": 0.7718,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2673
+    },
+    {
+      "image_id": "08_2627",
+      "label": "eating",
+      "score": 0.7717,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0774
+    },
+    {
+      "image_id": "13_2901",
+      "label": "having a conversation",
+      "score": 0.77,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.2206
+    },
+    {
+      "image_id": "14_2780",
+      "label": "having a conversation",
+      "score": 0.77,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0998
+    },
+    {
+      "image_id": "13_3188",
+      "label": "cooking at the stove",
+      "score": 0.7698,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0047
+    },
+    {
+      "image_id": "16_3257",
+      "label": "having a conversation",
+      "score": 0.7696,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0245
+    },
+    {
+      "image_id": "08_2200",
+      "label": "having a conversation",
+      "score": 0.7691,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0674
+    },
+    {
+      "image_id": "09_1624",
+      "label": "eating",
+      "score": 0.7677,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0338
+    },
+    {
+      "image_id": "19_2733",
+      "label": "sitting at the table",
+      "score": 0.7676,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0978
+    },
+    {
+      "image_id": "08_1437",
+      "label": "eating",
+      "score": 0.7673,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.1052
+    },
+    {
+      "image_id": "08_2944",
+      "label": "eating",
+      "score": 0.7672,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0648
+    },
+    {
+      "image_id": "08_1530",
+      "label": "eating",
+      "score": 0.7671,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0783
+    },
+    {
+      "image_id": "08_2641",
+      "label": "eating",
+      "score": 0.7671,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0435
+    },
+    {
+      "image_id": "14_2852",
+      "label": "having a conversation",
+      "score": 0.7666,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0028
+    },
+    {
+      "image_id": "09_284",
+      "label": "cooking at the stove",
+      "score": 0.7662,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.2368
+    },
+    {
+      "image_id": "17_820",
+      "label": "having a conversation",
+      "score": 0.7656,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0079
+    },
+    {
+      "image_id": "13_1353",
+      "label": "eating",
+      "score": 0.7654,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.3146
+    },
+    {
+      "image_id": "14_2897",
+      "label": "having a conversation",
+      "score": 0.7648,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.007
+    },
+    {
+      "image_id": "14_2991",
+      "label": "having a conversation",
+      "score": 0.7645,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.066
+    },
+    {
+      "image_id": "17_54",
+      "label": "eating",
+      "score": 0.7645,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0763
+    },
+    {
+      "image_id": "08_2247",
+      "label": "eating",
+      "score": 0.764,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1281
+    },
+    {
+      "image_id": "09_669",
+      "label": "cooking at the stove",
+      "score": 0.7636,
+      "cluster": 1,
+      "runner_up": "getting items from a cabinet",
+      "margin": 0.2284
+    },
+    {
+      "image_id": "19_392",
+      "label": "having a conversation",
+      "score": 0.7636,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0613
+    },
+    {
+      "image_id": "13_1152",
+      "label": "eating",
+      "score": 0.7623,
+      "cluster": 2,
+      "runner_up": "opening the refrigerator",
+      "margin": 0.3266
+    },
+    {
+      "image_id": "17_1380",
+      "label": "eating",
+      "score": 0.7622,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0564
+    },
+    {
+      "image_id": "09_345",
+      "label": "cooking at the stove",
+      "score": 0.762,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2561
+    },
+    {
+      "image_id": "08_3068",
+      "label": "sitting at the table",
+      "score": 0.7609,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0757
+    },
+    {
+      "image_id": "18_1257",
+      "label": "sitting at the table",
+      "score": 0.7605,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.0774
+    },
+    {
+      "image_id": "09_706",
+      "label": "cooking at the stove",
+      "score": 0.7604,
+      "cluster": 1,
+      "runner_up": "setting or clearing the table",
+      "margin": 0.268
+    },
+    {
+      "image_id": "20_1684",
+      "label": "having a conversation",
+      "score": 0.7603,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.1031
+    },
+    {
+      "image_id": "08_1368",
+      "label": "eating",
+      "score": 0.7599,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0556
+    },
+    {
+      "image_id": "20_1848",
+      "label": "having a conversation",
+      "score": 0.7594,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0682
+    },
+    {
+      "image_id": "08_1012",
+      "label": "having a conversation",
+      "score": 0.7592,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1011
+    },
+    {
+      "image_id": "16_2019",
+      "label": "opening the refrigerator",
+      "score": 0.7584,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.3944
+    },
+    {
+      "image_id": "19_2976",
+      "label": "having a conversation",
+      "score": 0.7582,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0131
+    },
+    {
+      "image_id": "20_2718",
+      "label": "eating",
+      "score": 0.7572,
+      "cluster": 0,
+      "runner_up": "using a phone",
+      "margin": 0.1345
+    },
+    {
+      "image_id": "08_3023",
+      "label": "having a conversation",
+      "score": 0.7571,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0137
+    },
+    {
+      "image_id": "19_2806",
+      "label": "having a conversation",
+      "score": 0.7571,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.029
+    },
+    {
+      "image_id": "13_1665",
+      "label": "opening the refrigerator",
+      "score": 0.7567,
+      "cluster": 1,
+      "runner_up": "eating",
+      "margin": 0.2597
+    },
+    {
+      "image_id": "13_1210",
+      "label": "eating",
+      "score": 0.7566,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2351
+    },
+    {
+      "image_id": "09_1554",
+      "label": "eating",
+      "score": 0.7557,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0806
+    },
+    {
+      "image_id": "13_1573",
+      "label": "eating",
+      "score": 0.7551,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.334
+    },
+    {
+      "image_id": "09_2018",
+      "label": "setting or clearing the table",
+      "score": 0.7548,
+      "cluster": 0,
+      "runner_up": "washing dishes",
+      "margin": 0.3437
+    },
+    {
+      "image_id": "17_1131",
+      "label": "eating",
+      "score": 0.7548,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.086
+    },
+    {
+      "image_id": "20_1745",
+      "label": "having a conversation",
+      "score": 0.7548,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0823
+    },
+    {
+      "image_id": "13_1314",
+      "label": "eating",
+      "score": 0.7547,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2576
+    },
+    {
+      "image_id": "16_3083",
+      "label": "eating",
+      "score": 0.7539,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0211
+    },
+    {
+      "image_id": "20_1734",
+      "label": "having a conversation",
+      "score": 0.7539,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.093
+    },
+    {
+      "image_id": "13_1167",
+      "label": "eating",
+      "score": 0.7535,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2986
+    },
+    {
+      "image_id": "17_1246",
+      "label": "eating",
+      "score": 0.7531,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1306
+    },
+    {
+      "image_id": "16_2333",
+      "label": "eating",
+      "score": 0.7528,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0403
+    },
+    {
+      "image_id": "13_79",
+      "label": "eating",
+      "score": 0.7519,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2343
+    },
+    {
+      "image_id": "16_3112",
+      "label": "sitting at the table",
+      "score": 0.7517,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0012
+    },
+    {
+      "image_id": "08_1445",
+      "label": "having a conversation",
+      "score": 0.7509,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0917
+    },
+    {
+      "image_id": "16_2348",
+      "label": "eating",
+      "score": 0.7509,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0396
+    },
+    {
+      "image_id": "17_1414",
+      "label": "sitting at the table",
+      "score": 0.7506,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0115
+    },
+    {
+      "image_id": "13_1305",
+      "label": "eating",
+      "score": 0.7504,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2792
+    },
+    {
+      "image_id": "19_2972",
+      "label": "eating",
+      "score": 0.75,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0315
+    },
+    {
+      "image_id": "19_442",
+      "label": "having a conversation",
+      "score": 0.7495,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1368
+    },
+    {
+      "image_id": "14_2579",
+      "label": "eating",
+      "score": 0.7492,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0323
+    },
+    {
+      "image_id": "08_2954",
+      "label": "eating",
+      "score": 0.7488,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1352
+    },
+    {
+      "image_id": "16_3137",
+      "label": "eating",
+      "score": 0.7485,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0962
+    },
+    {
+      "image_id": "18_558",
+      "label": "sitting at the table",
+      "score": 0.7485,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.0683
+    },
+    {
+      "image_id": "17_1061",
+      "label": "having a conversation",
+      "score": 0.7483,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0153
+    },
+    {
+      "image_id": "16_2569",
+      "label": "having a conversation",
+      "score": 0.748,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0961
+    },
+    {
+      "image_id": "19_388",
+      "label": "having a conversation",
+      "score": 0.748,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0756
+    },
+    {
+      "image_id": "15_1012",
+      "label": "preparing food",
+      "score": 0.7476,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.2394
+    },
+    {
+      "image_id": "17_114",
+      "label": "eating",
+      "score": 0.7475,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0694
+    },
+    {
+      "image_id": "17_371",
+      "label": "eating",
+      "score": 0.7465,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0061
+    },
+    {
+      "image_id": "19_2731",
+      "label": "sitting at the table",
+      "score": 0.7465,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.054
+    },
+    {
+      "image_id": "20_1743",
+      "label": "having a conversation",
+      "score": 0.7465,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0712
+    },
+    {
+      "image_id": "19_2746",
+      "label": "having a conversation",
+      "score": 0.7462,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0117
+    },
+    {
+      "image_id": "14_2909",
+      "label": "having a conversation",
+      "score": 0.7457,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0344
+    },
+    {
+      "image_id": "20_1765",
+      "label": "having a conversation",
+      "score": 0.7454,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0725
+    },
+    {
+      "image_id": "13_54",
+      "label": "eating",
+      "score": 0.7447,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2663
+    },
+    {
+      "image_id": "13_1208",
+      "label": "eating",
+      "score": 0.7446,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2152
+    },
+    {
+      "image_id": "17_783",
+      "label": "having a conversation",
+      "score": 0.7444,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0071
+    },
+    {
+      "image_id": "17_867",
+      "label": "eating",
+      "score": 0.7444,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0456
+    },
+    {
+      "image_id": "14_2626",
+      "label": "having a conversation",
+      "score": 0.7439,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1016
+    },
+    {
+      "image_id": "17_945",
+      "label": "having a conversation",
+      "score": 0.743,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.018
+    },
+    {
+      "image_id": "13_1419",
+      "label": "eating",
+      "score": 0.7426,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.321
+    },
+    {
+      "image_id": "19_2966",
+      "label": "having a conversation",
+      "score": 0.7424,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0325
+    },
+    {
+      "image_id": "19_464",
+      "label": "having a conversation",
+      "score": 0.7424,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1177
+    },
+    {
+      "image_id": "15_859",
+      "label": "preparing food",
+      "score": 0.7423,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.3275
+    },
+    {
+      "image_id": "17_111",
+      "label": "eating",
+      "score": 0.7423,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.057
+    },
+    {
+      "image_id": "08_954",
+      "label": "having a conversation",
+      "score": 0.742,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0975
+    },
+    {
+      "image_id": "17_938",
+      "label": "sitting at the table",
+      "score": 0.7419,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0088
+    },
+    {
+      "image_id": "16_2522",
+      "label": "having a conversation",
+      "score": 0.7418,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0475
+    },
+    {
+      "image_id": "18_1317",
+      "label": "sitting at the table",
+      "score": 0.7418,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.0628
+    },
+    {
+      "image_id": "14_2798",
+      "label": "having a conversation",
+      "score": 0.7416,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0426
+    },
+    {
+      "image_id": "16_3014",
+      "label": "eating",
+      "score": 0.7416,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.014
+    },
+    {
+      "image_id": "20_1853",
+      "label": "having a conversation",
+      "score": 0.7414,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.039
+    },
+    {
+      "image_id": "17_455",
+      "label": "having a conversation",
+      "score": 0.7412,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0253
+    },
+    {
+      "image_id": "13_1105",
+      "label": "eating",
+      "score": 0.7408,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2617
+    },
+    {
+      "image_id": "14_2777",
+      "label": "having a conversation",
+      "score": 0.7407,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0219
+    },
+    {
+      "image_id": "17_59",
+      "label": "eating",
+      "score": 0.7407,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0545
+    },
+    {
+      "image_id": "18_1005",
+      "label": "washing dishes",
+      "score": 0.7406,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0129
+    },
+    {
+      "image_id": "13_1215",
+      "label": "eating",
+      "score": 0.7405,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2355
+    },
+    {
+      "image_id": "17_241",
+      "label": "having a conversation",
+      "score": 0.7391,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0253
+    },
+    {
+      "image_id": "19_2683",
+      "label": "having a conversation",
+      "score": 0.739,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0656
+    },
+    {
+      "image_id": "08_2426",
+      "label": "eating",
+      "score": 0.7385,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1053
+    },
+    {
+      "image_id": "20_337",
+      "label": "opening the refrigerator",
+      "score": 0.7384,
+      "cluster": 2,
+      "runner_up": "carrying items",
+      "margin": 0.4956
+    },
+    {
+      "image_id": "19_258",
+      "label": "eating",
+      "score": 0.7381,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0182
+    },
+    {
+      "image_id": "15_997",
+      "label": "cooking at the stove",
+      "score": 0.738,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0051
+    },
+    {
+      "image_id": "20_1850",
+      "label": "having a conversation",
+      "score": 0.7373,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0696
+    },
+    {
+      "image_id": "11_2263",
+      "label": "preparing food",
+      "score": 0.737,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0095
+    },
+    {
+      "image_id": "19_2947",
+      "label": "sitting at the table",
+      "score": 0.7366,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0142
+    },
+    {
+      "image_id": "11_3202",
+      "label": "preparing food",
+      "score": 0.7359,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0618
+    },
+    {
+      "image_id": "17_2502",
+      "label": "having a conversation",
+      "score": 0.7357,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0454
+    },
+    {
+      "image_id": "19_2997",
+      "label": "having a conversation",
+      "score": 0.7357,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0392
+    },
+    {
+      "image_id": "17_500",
+      "label": "having a conversation",
+      "score": 0.7355,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0119
+    },
+    {
+      "image_id": "08_2423",
+      "label": "eating",
+      "score": 0.7354,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0992
+    },
+    {
+      "image_id": "17_1048",
+      "label": "having a conversation",
+      "score": 0.7353,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0048
+    },
+    {
+      "image_id": "13_1376",
+      "label": "eating",
+      "score": 0.7352,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2658
+    },
+    {
+      "image_id": "19_3013",
+      "label": "having a conversation",
+      "score": 0.7352,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0152
+    },
+    {
+      "image_id": "11_2732",
+      "label": "preparing food",
+      "score": 0.7351,
+      "cluster": 0,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0263
+    },
+    {
+      "image_id": "17_350",
+      "label": "having a conversation",
+      "score": 0.7351,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0316
+    },
+    {
+      "image_id": "08_1257",
+      "label": "eating",
+      "score": 0.7349,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0912
+    },
+    {
+      "image_id": "19_400",
+      "label": "having a conversation",
+      "score": 0.7347,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0848
+    },
+    {
+      "image_id": "16_3015",
+      "label": "eating",
+      "score": 0.7346,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0777
+    },
+    {
+      "image_id": "16_3100",
+      "label": "eating",
+      "score": 0.7335,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0903
+    },
+    {
+      "image_id": "13_231",
+      "label": "eating",
+      "score": 0.7334,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2016
+    },
+    {
+      "image_id": "17_497",
+      "label": "sitting at the table",
+      "score": 0.7334,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0119
+    },
+    {
+      "image_id": "13_924",
+      "label": "eating",
+      "score": 0.7331,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2305
+    },
+    {
+      "image_id": "14_2981",
+      "label": "having a conversation",
+      "score": 0.7331,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.073
+    },
+    {
+      "image_id": "08_3315",
+      "label": "eating",
+      "score": 0.733,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0098
+    },
+    {
+      "image_id": "08_815",
+      "label": "having a conversation",
+      "score": 0.733,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0036
+    },
+    {
+      "image_id": "09_1901",
+      "label": "setting or clearing the table",
+      "score": 0.733,
+      "cluster": 0,
+      "runner_up": "carrying items",
+      "margin": 0.381
+    },
+    {
+      "image_id": "09_293",
+      "label": "cooking at the stove",
+      "score": 0.7328,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.2366
+    },
+    {
+      "image_id": "19_3008",
+      "label": "having a conversation",
+      "score": 0.7326,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0011
+    },
+    {
+      "image_id": "18_867",
+      "label": "washing dishes",
+      "score": 0.7325,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0409
+    },
+    {
+      "image_id": "15_878",
+      "label": "preparing food",
+      "score": 0.7322,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.3162
+    },
+    {
+      "image_id": "13_2912",
+      "label": "having a conversation",
+      "score": 0.7315,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.144
+    },
+    {
+      "image_id": "17_47",
+      "label": "eating",
+      "score": 0.7314,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0313
+    },
+    {
+      "image_id": "08_2276",
+      "label": "eating",
+      "score": 0.7309,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0712
+    },
+    {
+      "image_id": "14_513",
+      "label": "carrying items",
+      "score": 0.7305,
+      "cluster": 1,
+      "runner_up": "cleaning",
+      "margin": 0.1457
+    },
+    {
+      "image_id": "17_1782",
+      "label": "having a conversation",
+      "score": 0.7297,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0972
+    },
+    {
+      "image_id": "13_1589",
+      "label": "eating",
+      "score": 0.7296,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2307
+    },
+    {
+      "image_id": "20_2836",
+      "label": "eating",
+      "score": 0.7296,
+      "cluster": 0,
+      "runner_up": "using a phone",
+      "margin": 0.1531
+    },
+    {
+      "image_id": "19_396",
+      "label": "having a conversation",
+      "score": 0.7295,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0738
+    },
+    {
+      "image_id": "13_1576",
+      "label": "eating",
+      "score": 0.7294,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.3305
+    },
+    {
+      "image_id": "09_333",
+      "label": "cooking at the stove",
+      "score": 0.7293,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.1863
+    },
+    {
+      "image_id": "14_402",
+      "label": "cleaning",
+      "score": 0.7286,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0775
+    },
+    {
+      "image_id": "14_565",
+      "label": "cleaning",
+      "score": 0.7286,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0719
+    },
+    {
+      "image_id": "15_1184",
+      "label": "preparing food",
+      "score": 0.7285,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.2163
+    },
+    {
+      "image_id": "20_2839",
+      "label": "eating",
+      "score": 0.7285,
+      "cluster": 0,
+      "runner_up": "using a phone",
+      "margin": 0.1647
+    },
+    {
+      "image_id": "09_1874",
+      "label": "setting or clearing the table",
+      "score": 0.7279,
+      "cluster": 0,
+      "runner_up": "carrying items",
+      "margin": 0.392
+    },
+    {
+      "image_id": "13_3109",
+      "label": "cleaning",
+      "score": 0.7279,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.1193
+    },
+    {
+      "image_id": "16_1064",
+      "label": "cooking at the stove",
+      "score": 0.7276,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0412
+    },
+    {
+      "image_id": "16_3041",
+      "label": "eating",
+      "score": 0.7275,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0582
+    },
+    {
+      "image_id": "11_2058",
+      "label": "cooking at the stove",
+      "score": 0.7272,
+      "cluster": 0,
+      "runner_up": "washing dishes",
+      "margin": 0.007
+    },
+    {
+      "image_id": "19_2816",
+      "label": "sitting at the table",
+      "score": 0.727,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0158
+    },
+    {
+      "image_id": "08_1348",
+      "label": "eating",
+      "score": 0.7269,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0908
+    },
+    {
+      "image_id": "17_2382",
+      "label": "having a conversation",
+      "score": 0.7266,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.119
+    },
+    {
+      "image_id": "18_470",
+      "label": "washing dishes",
+      "score": 0.7264,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0424
+    },
+    {
+      "image_id": "17_868",
+      "label": "eating",
+      "score": 0.7262,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0144
+    },
+    {
+      "image_id": "14_2701",
+      "label": "having a conversation",
+      "score": 0.7261,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0017
+    },
+    {
+      "image_id": "14_2804",
+      "label": "having a conversation",
+      "score": 0.726,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0342
+    },
+    {
+      "image_id": "08_2930",
+      "label": "eating",
+      "score": 0.7255,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0644
+    },
+    {
+      "image_id": "09_2172",
+      "label": "setting or clearing the table",
+      "score": 0.7248,
+      "cluster": 0,
+      "runner_up": "washing dishes",
+      "margin": 0.1969
+    },
+    {
+      "image_id": "14_2580",
+      "label": "having a conversation",
+      "score": 0.7248,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.057
+    },
+    {
+      "image_id": "18_216",
+      "label": "washing dishes",
+      "score": 0.7248,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0272
+    },
+    {
+      "image_id": "19_379",
+      "label": "having a conversation",
+      "score": 0.7247,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.084
+    },
+    {
+      "image_id": "16_3548",
+      "label": "eating",
+      "score": 0.7243,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0745
+    },
+    {
+      "image_id": "19_2957",
+      "label": "having a conversation",
+      "score": 0.7243,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0594
+    },
+    {
+      "image_id": "17_818",
+      "label": "eating",
+      "score": 0.7236,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0139
+    },
+    {
+      "image_id": "08_3275",
+      "label": "eating",
+      "score": 0.7235,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1088
+    },
+    {
+      "image_id": "17_1100",
+      "label": "sitting at the table",
+      "score": 0.7234,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0173
+    },
+    {
+      "image_id": "08_3060",
+      "label": "sitting at the table",
+      "score": 0.7231,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0848
+    },
+    {
+      "image_id": "09_647",
+      "label": "cooking at the stove",
+      "score": 0.7223,
+      "cluster": 1,
+      "runner_up": "setting or clearing the table",
+      "margin": 0.1457
+    },
+    {
+      "image_id": "13_3201",
+      "label": "cooking at the stove",
+      "score": 0.7222,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0022
+    },
+    {
+      "image_id": "08_2057",
+      "label": "eating",
+      "score": 0.7221,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1725
+    },
+    {
+      "image_id": "16_2494",
+      "label": "having a conversation",
+      "score": 0.7218,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0283
+    },
+    {
+      "image_id": "11_3458",
+      "label": "using a laptop",
+      "score": 0.7216,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.2602
+    },
+    {
+      "image_id": "15_860",
+      "label": "preparing food",
+      "score": 0.7213,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.3175
+    },
+    {
+      "image_id": "16_3045",
+      "label": "eating",
+      "score": 0.7211,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0569
+    },
+    {
+      "image_id": "15_256",
+      "label": "having a conversation",
+      "score": 0.721,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0879
+    },
+    {
+      "image_id": "20_493",
+      "label": "opening the refrigerator",
+      "score": 0.721,
+      "cluster": 2,
+      "runner_up": "carrying items",
+      "margin": 0.4561
+    },
+    {
+      "image_id": "18_1135",
+      "label": "washing dishes",
+      "score": 0.7206,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0247
+    },
+    {
+      "image_id": "14_2388",
+      "label": "sitting at the table",
+      "score": 0.7204,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.0425
+    },
+    {
+      "image_id": "17_401",
+      "label": "eating",
+      "score": 0.7203,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0189
+    },
+    {
+      "image_id": "13_14",
+      "label": "eating",
+      "score": 0.7199,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2495
+    },
+    {
+      "image_id": "09_344",
+      "label": "cooking at the stove",
+      "score": 0.7195,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.1342
+    },
+    {
+      "image_id": "13_227",
+      "label": "eating",
+      "score": 0.7193,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2764
+    },
+    {
+      "image_id": "18_281",
+      "label": "washing dishes",
+      "score": 0.7191,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0383
+    },
+    {
+      "image_id": "15_2640",
+      "label": "carrying items",
+      "score": 0.719,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.03
+    },
+    {
+      "image_id": "08_1275",
+      "label": "eating",
+      "score": 0.7188,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.107
+    },
+    {
+      "image_id": "18_1174",
+      "label": "washing dishes",
+      "score": 0.7188,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0435
+    },
+    {
+      "image_id": "08_2972",
+      "label": "eating",
+      "score": 0.7185,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0569
+    },
+    {
+      "image_id": "08_1792",
+      "label": "eating",
+      "score": 0.7181,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1238
+    },
+    {
+      "image_id": "18_12",
+      "label": "washing dishes",
+      "score": 0.7178,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0387
+    },
+    {
+      "image_id": "08_1965",
+      "label": "eating",
+      "score": 0.7172,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.0387
+    },
+    {
+      "image_id": "17_120",
+      "label": "eating",
+      "score": 0.7172,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1107
+    },
+    {
+      "image_id": "18_845",
+      "label": "washing dishes",
+      "score": 0.7172,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0422
+    },
+    {
+      "image_id": "15_1997",
+      "label": "cleaning",
+      "score": 0.7171,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0995
+    },
+    {
+      "image_id": "18_1405",
+      "label": "washing dishes",
+      "score": 0.7168,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0394
+    },
+    {
+      "image_id": "19_2996",
+      "label": "having a conversation",
+      "score": 0.7163,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0316
+    },
+    {
+      "image_id": "18_963",
+      "label": "washing dishes",
+      "score": 0.7162,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0365
+    },
+    {
+      "image_id": "16_3542",
+      "label": "eating",
+      "score": 0.7159,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0844
+    },
+    {
+      "image_id": "13_3316",
+      "label": "cleaning",
+      "score": 0.7158,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0696
+    },
+    {
+      "image_id": "19_443",
+      "label": "having a conversation",
+      "score": 0.7158,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1232
+    },
+    {
+      "image_id": "09_2030",
+      "label": "setting or clearing the table",
+      "score": 0.7153,
+      "cluster": 0,
+      "runner_up": "throwing away trash",
+      "margin": 0.3483
+    },
+    {
+      "image_id": "15_823",
+      "label": "preparing food",
+      "score": 0.7152,
+      "cluster": 1,
+      "runner_up": "using a phone",
+      "margin": 0.2678
+    },
+    {
+      "image_id": "19_3248",
+      "label": "having a conversation",
+      "score": 0.7152,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0613
+    },
+    {
+      "image_id": "08_2433",
+      "label": "eating",
+      "score": 0.715,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0782
+    },
+    {
+      "image_id": "17_1778",
+      "label": "having a conversation",
+      "score": 0.7149,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0516
+    },
+    {
+      "image_id": "13_1544",
+      "label": "eating",
+      "score": 0.7147,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.2522
+    },
+    {
+      "image_id": "19_257",
+      "label": "eating",
+      "score": 0.7146,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0307
+    },
+    {
+      "image_id": "17_169",
+      "label": "eating",
+      "score": 0.7143,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0908
+    },
+    {
+      "image_id": "18_201",
+      "label": "washing dishes",
+      "score": 0.7139,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0441
+    },
+    {
+      "image_id": "08_1114",
+      "label": "having a conversation",
+      "score": 0.7136,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0301
+    },
+    {
+      "image_id": "08_2217",
+      "label": "eating",
+      "score": 0.7134,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.1741
+    },
+    {
+      "image_id": "18_336",
+      "label": "washing dishes",
+      "score": 0.7129,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0257
+    },
+    {
+      "image_id": "17_807",
+      "label": "eating",
+      "score": 0.7121,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0378
+    },
+    {
+      "image_id": "15_572",
+      "label": "cooking at the stove",
+      "score": 0.712,
+      "cluster": 2,
+      "runner_up": "cleaning",
+      "margin": 0.0167
+    },
+    {
+      "image_id": "18_182",
+      "label": "washing dishes",
+      "score": 0.712,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0402
+    },
+    {
+      "image_id": "18_1316",
+      "label": "sitting at the table",
+      "score": 0.7119,
+      "cluster": 1,
+      "runner_up": "washing dishes",
+      "margin": 0.0957
+    },
+    {
+      "image_id": "18_984",
+      "label": "washing dishes",
+      "score": 0.7119,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.038
+    },
+    {
+      "image_id": "09_708",
+      "label": "cooking at the stove",
+      "score": 0.7118,
+      "cluster": 1,
+      "runner_up": "throwing away trash",
+      "margin": 0.1916
+    },
+    {
+      "image_id": "08_3008",
+      "label": "eating",
+      "score": 0.7116,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0009
+    },
+    {
+      "image_id": "16_1935",
+      "label": "opening the refrigerator",
+      "score": 0.7115,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.3344
+    },
+    {
+      "image_id": "17_2471",
+      "label": "eating",
+      "score": 0.7111,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0119
+    },
+    {
+      "image_id": "18_108",
+      "label": "washing dishes",
+      "score": 0.7111,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0285
+    },
+    {
+      "image_id": "08_961",
+      "label": "having a conversation",
+      "score": 0.711,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0193
+    },
+    {
+      "image_id": "16_2899",
+      "label": "sitting at the table",
+      "score": 0.711,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0045
+    },
+    {
+      "image_id": "08_2945",
+      "label": "eating",
+      "score": 0.7108,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.1104
+    },
+    {
+      "image_id": "13_133",
+      "label": "eating",
+      "score": 0.7107,
+      "cluster": 2,
+      "runner_up": "having a conversation",
+      "margin": 0.1694
+    },
+    {
+      "image_id": "17_677",
+      "label": "sitting at the table",
+      "score": 0.7107,
+      "cluster": 0,
+      "runner_up": "having a conversation",
+      "margin": 0.0267
+    },
+    {
+      "image_id": "17_25",
+      "label": "eating",
+      "score": 0.7105,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0161
+    },
+    {
+      "image_id": "18_693",
+      "label": "washing dishes",
+      "score": 0.7105,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0234
+    },
+    {
+      "image_id": "18_93",
+      "label": "washing dishes",
+      "score": 0.7105,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0265
+    },
+    {
+      "image_id": "16_2520",
+      "label": "having a conversation",
+      "score": 0.7102,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0206
+    },
+    {
+      "image_id": "18_279",
+      "label": "washing dishes",
+      "score": 0.7102,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0381
+    },
+    {
+      "image_id": "19_3095",
+      "label": "having a conversation",
+      "score": 0.7102,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.0473
+    },
+    {
+      "image_id": "13_3635",
+      "label": "having a conversation",
+      "score": 0.7101,
+      "cluster": 1,
+      "runner_up": "having a drink",
+      "margin": 0.305
+    },
+    {
+      "image_id": "12_981",
+      "label": "opening the refrigerator",
+      "score": 0.71,
+      "cluster": 1,
+      "runner_up": "eating",
+      "margin": 0.3793
+    },
+    {
+      "image_id": "16_2011",
+      "label": "opening the refrigerator",
+      "score": 0.7099,
+      "cluster": 1,
+      "runner_up": "having a conversation",
+      "margin": 0.2141
+    },
+    {
+      "image_id": "08_2299",
+      "label": "eating",
+      "score": 0.7097,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0733
+    },
+    {
+      "image_id": "17_1042",
+      "label": "eating",
+      "score": 0.7097,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.052
+    },
+    {
+      "image_id": "13_1372",
+      "label": "eating",
+      "score": 0.7095,
+      "cluster": 2,
+      "runner_up": "preparing food",
+      "margin": 0.2141
+    },
+    {
+      "image_id": "18_38",
+      "label": "washing dishes",
+      "score": 0.7095,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0477
+    },
+    {
+      "image_id": "13_3339",
+      "label": "cleaning",
+      "score": 0.7093,
+      "cluster": 1,
+      "runner_up": "cooking at the stove",
+      "margin": 0.0633
+    },
+    {
+      "image_id": "18_830",
+      "label": "washing dishes",
+      "score": 0.7089,
+      "cluster": 0,
+      "runner_up": "having a drink",
+      "margin": 0.0362
+    },
+    {
+      "image_id": "08_1435",
+      "label": "eating",
+      "score": 0.7087,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0976
+    },
+    {
+      "image_id": "13_1497",
+      "label": "eating",
+      "score": 0.7087,
+      "cluster": 2,
+      "runner_up": "opening the refrigerator",
+      "margin": 0.3121
+    },
+    {
+      "image_id": "16_2857",
+      "label": "eating",
+      "score": 0.7086,
+      "cluster": 1,
+      "runner_up": "sitting at the table",
+      "margin": 0.0533
+    },
+    {
+      "image_id": "19_265",
+      "label": "having a conversation",
+      "score": 0.7086,
+      "cluster": 0,
+      "runner_up": "eating",
+      "margin": 0.0175
+    },
+    {
+      "image_id": "11_3470",
+      "label": "using a laptop",
+      "score": 0.7082,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.3237
+    },
+    {
+      "image_id": "18_3180",
+      "label": "having a conversation",
+      "score": 0.708,
+      "cluster": 0,
+      "runner_up": "sitting at the table",
+      "margin": 0.1401
+    }
+  ]
+}

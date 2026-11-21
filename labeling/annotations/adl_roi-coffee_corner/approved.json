@@ -1,0 +1,5727 @@
+{
+  "08_1002": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1010": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1012": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1013": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1016": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1020": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1026": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1062": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1068": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1078": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1100": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1112": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1114": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1115": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1116": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1118": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1130": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1136": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1161": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1162": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1169": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1992,
+    "vlm": "agree"
+  },
+  "08_1178": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1182": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1183": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1201": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1214": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1223": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1237": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1239": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1257": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1259": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1267": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1285": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1979,
+    "vlm": "agree"
+  },
+  "08_1294": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1330": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1347": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1348": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1352": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1368": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1387": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1403": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1433": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1435": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1437": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1445": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1462": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1468": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1500": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1510": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1512": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1519": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1530": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1535": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1552": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1582": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1584": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1961,
+    "vlm": "agree"
+  },
+  "08_1609": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1619": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1633": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1649": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1650": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1708": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1735": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1841": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1843": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1847": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1866": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1876": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1936": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1952": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1960": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1965": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1977": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_1989": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2021": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2031": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2035": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2044": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2045": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2080": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2146": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2190": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2200": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2222": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2233": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2237": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2247": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2262": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2263": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2265": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2276": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2281": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2287": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2295": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2297": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2299": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2306": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2373": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2385": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1944,
+    "vlm": "agree"
+  },
+  "08_2386": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2389": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2413": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2423": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2426": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2461": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2472": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2495": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2541": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2553": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2606": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2607": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2610": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_262": {
+    "label": "person at the coffee corner",
+    "source": "human",
+    "round": 3,
+    "score": null
+  },
+  "08_2641": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_266": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2662": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2668": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2674": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2679": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_269": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_272": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2725": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2734": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_275": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_276": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2765": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_280": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2810": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2817": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_286": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2944": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2945": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_2976": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3029": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3068": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3081": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3130": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1928,
+    "vlm": "agree"
+  },
+  "08_314": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3195": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_333": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3387": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_339": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3428": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_3445": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_353": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_358": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_382": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_398": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_405": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_419": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_425": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_428": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_438": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_449": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_459": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_470": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_472": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_483": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_486": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_489": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_499": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_505": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_509": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_527": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_533": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_534": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_541": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_547": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_581": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_601": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_606": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_607": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_620": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_651": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_670": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_677": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_683": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_696": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_723": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_726": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_736": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_765": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_766": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_802": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_806": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_808": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_815": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_830": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_837": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_841": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_843": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_845": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_848": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_861": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_862": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_875": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_890": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_904": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_907": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_915": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_941": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_943": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_954": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_961": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_965": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "08_994": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_1525": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_1531": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_1573": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_1665": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_1668": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_198": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2104": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2105": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2187": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2209": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2333": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2499": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2830": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2834": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2836": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2937": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2983": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_2987": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3201": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3206": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3216": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3234": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.6238,
+    "vlm": "agree"
+  },
+  "09_3238": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1437,
+    "vlm": "agree"
+  },
+  "09_3252": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3260": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3261": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3265": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3275": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3292": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3317": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3319": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3325": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_3416": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_476": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "09_568": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "10_142": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "10_159": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "10_57": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1023": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1033": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1037": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1052": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1055": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1058": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1089": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1120": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1124": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1135": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1157": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1177": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1184": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1188": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1201": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1222": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1228": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1230": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1239": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1262": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1265": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1310": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1413,
+    "vlm": "agree"
+  },
+  "11_1313": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1398,
+    "vlm": "agree"
+  },
+  "11_1319": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1326": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1430": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1439": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1460": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1498": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1524": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1987,
+    "vlm": "agree"
+  },
+  "11_1627": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6012,
+    "vlm": "agree"
+  },
+  "11_1687": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1709": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_1813": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1344,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "11_2162": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_596": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_605": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_610": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_619": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_622": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_623": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_630": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_646": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5529,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "11_652": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_660": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_687": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_688": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_711": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_730": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_767": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_770": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_771": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_774": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_785": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_791": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_800": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_873": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_875": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_893": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_898": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_901": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_914": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_920": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_925": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_933": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_944": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_952": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_971": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "11_996": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1009": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6152,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "12_1010": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1013": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1025": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1047": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5587,
+    "vlm": "agree"
+  },
+  "12_1096": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5574,
+    "vlm": "agree"
+  },
+  "12_1098": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1100": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1101": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5599,
+    "vlm": "agree"
+  },
+  "12_1191": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5782,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_1198": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6457,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_1199": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6393,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_1207": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.5774,
+    "vlm": "agree"
+  },
+  "12_1208": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1403,
+    "vlm": "agree"
+  },
+  "12_1221": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6387,
+    "vlm": "agree"
+  },
+  "12_1222": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5656,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_1249": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5643,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_1307": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5871,
+    "vlm": "agree"
+  },
+  "12_1312": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_1327": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6203,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "12_1328": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5801,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "12_1333": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2016": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1433,
+    "vlm": "agree"
+  },
+  "12_2037": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2039": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2043": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2044": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2046": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2053": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2056": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2062": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2063": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2157": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2158": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2179": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2211": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2221": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2232": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2233": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2240": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2270": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2277": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2400": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2421": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2507": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2508": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2519": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2527": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2545": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2546": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2550": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2554": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2557": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2558": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2578": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2584": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2594": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2600": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2619": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5694,
+    "vlm": "agree"
+  },
+  "12_2636": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2639": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.5765,
+    "vlm": "agree"
+  },
+  "12_2648": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1475,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "12_2669": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2670": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2683": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6339,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "12_2706": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2755": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2764": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_2809": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_309": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_3177": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_3179": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_3591": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_456": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_469": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_491": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_560": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.5507,
+    "vlm": "agree"
+  },
+  "12_635": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.7307,
+    "vlm": "agree"
+  },
+  "12_740": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_751": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "12_947": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5706,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "12_983": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2110": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.2129,
+    "vlm": "agree"
+  },
+  "13_2114": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1909,
+    "vlm": "agree"
+  },
+  "13_2163": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2199": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.2052,
+    "vlm": "agree"
+  },
+  "13_2201": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1908,
+    "vlm": "agree"
+  },
+  "13_2206": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1443,
+    "vlm": "agree"
+  },
+  "13_2538": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2577": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2672": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2734": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2876": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2896": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2901": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2902": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2908": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2912": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2913": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2923": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2948": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2953": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2961": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2992": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_2999": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5758,
+    "vlm": "agree"
+  },
+  "13_3008": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6421,
+    "vlm": "agree"
+  },
+  "13_3105": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_3276": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1535,
+    "vlm": "agree"
+  },
+  "13_3497": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6029,
+    "vlm": "agree"
+  },
+  "13_3503": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6488,
+    "vlm": "agree"
+  },
+  "13_3507": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_3511": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_3512": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5726,
+    "vlm": "agree"
+  },
+  "13_3540": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_3541": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_514": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_516": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.149,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "13_520": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_521": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_795": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_812": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_815": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5843,
+    "vlm": "agree"
+  },
+  "13_897": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "13_898": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1566,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "13_899": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_1158": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_207": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2574": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2579": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2620": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2626": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.627,
+    "vlm": "agree"
+  },
+  "14_2630": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1567,
+    "vlm": "agree"
+  },
+  "14_2640": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1944,
+    "vlm": "agree"
+  },
+  "14_2675": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.6894,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "14_2683": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2699": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2701": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2719": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2780": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2809": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2832": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.5538,
+    "vlm": "agree"
+  },
+  "14_2836": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1491,
+    "vlm": "agree"
+  },
+  "14_2839": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1563,
+    "vlm": "agree"
+  },
+  "14_2849": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2852": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2881": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2886": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2897": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2903": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2905": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2908": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2909": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2913": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2916": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2917": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_2997": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_3007": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_3028": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_3111": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_3113": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "14_3140": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.5608,
+    "vlm": "agree"
+  },
+  "14_557": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1052": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1058": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1229": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1244": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1246": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1248": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1257": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_1261": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_209": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2116": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2145": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.565,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "15_2146": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5736,
+    "vlm": "agree"
+  },
+  "15_2154": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2155": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_218": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2186": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_219": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2197": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2219": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.589,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "15_2299": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6536,
+    "vlm": "agree"
+  },
+  "15_2388": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5957,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "15_2675": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5678,
+    "vlm": "agree"
+  },
+  "15_2676": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5731,
+    "vlm": "agree"
+  },
+  "15_2682": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.587,
+    "vlm": "agree"
+  },
+  "15_2699": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2722": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2725": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.577,
+    "vlm": "agree"
+  },
+  "15_2746": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_281": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2827": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2841": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2844": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2848": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2875": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6087,
+    "vlm": "agree"
+  },
+  "15_2877": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2882": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6412,
+    "vlm": "agree"
+  },
+  "15_2892": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2910": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_2911": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_3262": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_339": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1411,
+    "vlm": "agree"
+  },
+  "15_426": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "15_911": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_1249": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.554,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "16_1363": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6369,
+    "vlm": "agree"
+  },
+  "16_1364": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7002,
+    "vlm": "agree"
+  },
+  "16_1387": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.558,
+    "vlm": "agree"
+  },
+  "16_1399": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7145,
+    "vlm": "agree"
+  },
+  "16_1504": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_1509": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_155": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_1864": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6336,
+    "vlm": "agree"
+  },
+  "16_1995": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6551,
+    "vlm": "agree"
+  },
+  "16_2014": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.581,
+    "vlm": "agree"
+  },
+  "16_2073": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5939,
+    "vlm": "agree"
+  },
+  "16_2117": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2128": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5936,
+    "vlm": "agree"
+  },
+  "16_2132": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7293,
+    "vlm": "agree"
+  },
+  "16_2208": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2209": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2221": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2228": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2242": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7718,
+    "vlm": "agree"
+  },
+  "16_226": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.759,
+    "vlm": "agree"
+  },
+  "16_2312": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_233": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1471,
+    "vlm": "agree"
+  },
+  "16_234": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.8306,
+    "vlm": "agree"
+  },
+  "16_241": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2550": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_2553": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5897,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "16_2715": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6129,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "16_291": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_294": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_296": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.6029,
+    "vlm": "agree"
+  },
+  "16_2986": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6751,
+    "vlm": "agree"
+  },
+  "16_3165": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6255,
+    "vlm": "agree"
+  },
+  "16_3307": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7003,
+    "vlm": "agree"
+  },
+  "16_3320": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_3482": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_350": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.6149,
+    "vlm": "agree"
+  },
+  "16_3580": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5676,
+    "vlm": "agree"
+  },
+  "16_3585": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_3591": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "16_97": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1037": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1042": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5897,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_1044": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1048": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1054": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6697,
+    "vlm": "agree"
+  },
+  "17_1061": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6542,
+    "vlm": "agree"
+  },
+  "17_1100": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.682,
+    "vlm": "agree"
+  },
+  "17_1268": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1276": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6466,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "17_1280": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6388,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "17_1304": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1312": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1317": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1320": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1325": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1338": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5903,
+    "vlm": "agree"
+  },
+  "17_1347": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6376,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_1365": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6796,
+    "vlm": "agree"
+  },
+  "17_1372": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1380": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5924,
+    "vlm": "agree"
+  },
+  "17_1388": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5823,
+    "vlm": "agree"
+  },
+  "17_1397": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1414": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5978,
+    "vlm": "agree"
+  },
+  "17_1423": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1428": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5886,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_1463": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1464": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1480": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1499": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1504": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1511": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1513": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1518": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6651,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_1527": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5956,
+    "vlm": "agree"
+  },
+  "17_1530": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5699,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_1574": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1575": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1776": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6785,
+    "vlm": "agree"
+  },
+  "17_1778": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1857": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_1989": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2036": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2129": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6735,
+    "vlm": "agree"
+  },
+  "17_2236": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5588,
+    "vlm": "agree"
+  },
+  "17_2238": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2344": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5569,
+    "vlm": "agree"
+  },
+  "17_2347": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5961,
+    "vlm": "agree"
+  },
+  "17_2374": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6415,
+    "vlm": "agree"
+  },
+  "17_2382": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2389": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2514": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2522": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6089,
+    "vlm": "agree"
+  },
+  "17_2523": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5663,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "17_2555": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2620": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2651": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_2652": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5659,
+    "vlm": "agree"
+  },
+  "17_455": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6343,
+    "vlm": "agree"
+  },
+  "17_464": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_487": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6522,
+    "vlm": "agree"
+  },
+  "17_497": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5589,
+    "vlm": "agree"
+  },
+  "17_500": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5759,
+    "vlm": "agree"
+  },
+  "17_504": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_519": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5509,
+    "vlm": "agree"
+  },
+  "17_525": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5778,
+    "vlm": "agree"
+  },
+  "17_527": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_539": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_545": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_563": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5778,
+    "vlm": "agree"
+  },
+  "17_586": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_625": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_634": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5719,
+    "vlm": "agree"
+  },
+  "17_650": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_665": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5678,
+    "vlm": "agree"
+  },
+  "17_667": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.655,
+    "vlm": "agree"
+  },
+  "17_671": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5801,
+    "vlm": "agree"
+  },
+  "17_677": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6111,
+    "vlm": "agree"
+  },
+  "17_689": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7405,
+    "vlm": "agree"
+  },
+  "17_691": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7179,
+    "vlm": "agree"
+  },
+  "17_695": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_703": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5942,
+    "vlm": "agree"
+  },
+  "17_728": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7756,
+    "vlm": "agree"
+  },
+  "17_741": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7063,
+    "vlm": "agree"
+  },
+  "17_772": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6506,
+    "vlm": "agree"
+  },
+  "17_777": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_783": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7115,
+    "vlm": "agree"
+  },
+  "17_818": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.565,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_820": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.5835,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "17_822": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_831": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_838": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_851": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_867": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_868": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_879": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "17_887": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5682,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "17_888": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1345,
+    "vlm": "changed",
+    "suggested": "coffee corner idle"
+  },
+  "17_902": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6984,
+    "vlm": "agree"
+  },
+  "17_912": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7289,
+    "vlm": "agree"
+  },
+  "17_937": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7338,
+    "vlm": "agree"
+  },
+  "17_938": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6318,
+    "vlm": "agree"
+  },
+  "17_941": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7459,
+    "vlm": "agree"
+  },
+  "18_2075": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.6014,
+    "vlm": "agree"
+  },
+  "18_3106": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1935,
+    "vlm": "agree"
+  },
+  "18_3165": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "18_3300": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "18_3425": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "18_3514": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "18_3599": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_100": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_101": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_104": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_1126": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_1171": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_130": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_1509": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_1528": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_1567": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_197": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2473": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2488": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_257": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_258": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2606": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7108,
+    "vlm": "agree"
+  },
+  "19_265": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2650": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1526,
+    "vlm": "agree"
+  },
+  "19_268": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2698": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2718": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2746": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2806": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2816": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2965": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2966": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2968": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2972": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2974": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_2976": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1911,
+    "vlm": "agree"
+  },
+  "19_3051": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3065": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3078": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3094": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3095": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3293": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3295": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3300": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_3393": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_379": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_388": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_392": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_396": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_400": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_406": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_407": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.5864,
+    "vlm": "agree"
+  },
+  "19_432": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_449": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_456": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5516,
+    "vlm": "agree"
+  },
+  "19_517": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_519": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_53": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.6072,
+    "vlm": "agree"
+  },
+  "19_552": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_554": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1937,
+    "vlm": "agree"
+  },
+  "19_61": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_662": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_721": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": 0.573,
+    "vlm": "changed",
+    "suggested": "person at the coffee corner"
+  },
+  "19_760": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6303,
+    "vlm": "agree"
+  },
+  "19_806": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_83": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "19_85": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1000": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1587": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1589": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_16": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1631": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1655": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1656": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1765": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1766": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1770": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1780": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1790": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1804": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_184": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1900": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1907": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1914": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_1922": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.6207,
+    "vlm": "agree"
+  },
+  "20_1958": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2015": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2290": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2300": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2527": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2538": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2582": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_2972": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7252,
+    "vlm": "agree"
+  },
+  "20_2979": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7521,
+    "vlm": "agree"
+  },
+  "20_2998": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6387,
+    "vlm": "agree"
+  },
+  "20_3002": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7065,
+    "vlm": "agree"
+  },
+  "20_3006": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5814,
+    "vlm": "agree"
+  },
+  "20_3008": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.614,
+    "vlm": "agree"
+  },
+  "20_3019": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7183,
+    "vlm": "agree"
+  },
+  "20_3026": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6216,
+    "vlm": "agree"
+  },
+  "20_3036": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6894,
+    "vlm": "agree"
+  },
+  "20_3048": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6508,
+    "vlm": "agree"
+  },
+  "20_3066": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7096,
+    "vlm": "agree"
+  },
+  "20_3084": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.645,
+    "vlm": "agree"
+  },
+  "20_3092": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.726,
+    "vlm": "agree"
+  },
+  "20_3095": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7353,
+    "vlm": "agree"
+  },
+  "20_3104": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.728,
+    "vlm": "agree"
+  },
+  "20_3109": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6881,
+    "vlm": "agree"
+  },
+  "20_3119": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.7523,
+    "vlm": "agree"
+  },
+  "20_3152": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7158,
+    "vlm": "agree"
+  },
+  "20_3189": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7321,
+    "vlm": "agree"
+  },
+  "20_3191": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6551,
+    "vlm": "agree"
+  },
+  "20_3204": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7073,
+    "vlm": "agree"
+  },
+  "20_3206": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6237,
+    "vlm": "agree"
+  },
+  "20_3208": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7159,
+    "vlm": "agree"
+  },
+  "20_3219": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.63,
+    "vlm": "agree"
+  },
+  "20_3235": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7329,
+    "vlm": "agree"
+  },
+  "20_3244": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.688,
+    "vlm": "agree"
+  },
+  "20_3273": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6015,
+    "vlm": "agree"
+  },
+  "20_3280": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6827,
+    "vlm": "agree"
+  },
+  "20_3292": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7373,
+    "vlm": "agree"
+  },
+  "20_3315": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.678,
+    "vlm": "agree"
+  },
+  "20_3327": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6892,
+    "vlm": "agree"
+  },
+  "20_3335": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7329,
+    "vlm": "agree"
+  },
+  "20_3364": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7078,
+    "vlm": "agree"
+  },
+  "20_337": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_3425": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7041,
+    "vlm": "agree"
+  },
+  "20_3428": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7173,
+    "vlm": "agree"
+  },
+  "20_3431": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6893,
+    "vlm": "agree"
+  },
+  "20_3436": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7372,
+    "vlm": "agree"
+  },
+  "20_3438": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7161,
+    "vlm": "agree"
+  },
+  "20_3440": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_3443": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.713,
+    "vlm": "agree"
+  },
+  "20_3449": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_487": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_799": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_898": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_967": {
+    "label": "person at the coffee corner",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "20_984": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 3,
+    "score": null,
+    "vlm": "direct"
+  },
+  "bg-08": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1467,
+    "vlm": "agree"
+  },
+  "bg-09": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.6418,
+    "vlm": "agree"
+  },
+  "bg-10": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 2,
+    "score": 0.573,
+    "vlm": "agree"
+  },
+  "bg-11": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5938,
+    "vlm": "agree"
+  },
+  "bg-12": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5751,
+    "vlm": "agree"
+  },
+  "bg-13": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5515,
+    "vlm": "agree"
+  },
+  "bg-14": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 0,
+    "score": 0.1501,
+    "vlm": "agree"
+  },
+  "bg-16": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.5792,
+    "vlm": "agree"
+  },
+  "bg-17": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7817,
+    "vlm": "agree"
+  },
+  "bg-18": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7233,
+    "vlm": "agree"
+  },
+  "bg-19": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.8012,
+    "vlm": "agree"
+  },
+  "bg-20": {
+    "label": "coffee corner idle",
+    "source": "vlm",
+    "round": 1,
+    "score": 0.7783,
+    "vlm": "agree"
+  }
+}

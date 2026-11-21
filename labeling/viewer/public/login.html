@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập · Castle Labeler</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { display: grid; place-items: center; }
+    .login { width: 340px; max-width: 92vw; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+    .login h1 { margin: 0 0 16px; font: 400 26px/1.1 "Newsreader", Georgia, serif; color: var(--strong); }
+    .login label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px; }
+    .login input { width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--canvas); }
+    .login button { width: 100%; margin-top: 18px; }
+    .login .err { color: var(--red); font-size: 13px; min-height: 18px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <form class="login" id="f">
+    <h1>Castle Labeler</h1>
+    <label for="u">Tên tài khoản</label>
+    <input id="u" name="user" autocomplete="username" required autofocus>
+    <label for="p">Mật khẩu</label>
+    <input id="p" name="password" type="password" autocomplete="current-password" required>
+    <button class="btn primary" type="submit">Đăng nhập</button>
+    <div class="err" id="err" role="alert"></div>
+  </form>
+  <script src="login.js"></script>
+</body>
+</html>

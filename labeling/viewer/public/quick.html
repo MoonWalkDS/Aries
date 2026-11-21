@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gán nhanh</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .q-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; padding: 12px 16px; height: calc(100vh - 56px); }
+    @media (max-width: 860px) { .q-wrap { grid-template-columns: 1fr; height: auto; } }
+    .q-stage { display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+    .q-stage canvas { width: 100%; height: 100%; min-height: 320px; object-fit: contain; background: #111; border-radius: 8px; }
+    .q-info { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+    .q-guess { font-weight: 600; }
+    .q-keys { overflow-y: auto; display: flex; flex-direction: column; gap: 4px; }
+    .q-key { display: flex; gap: 10px; align-items: center; padding: 6px 10px; border: 1px solid var(--line, #d9d9d4); border-radius: 6px; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+    .q-key kbd { min-width: 22px; text-align: center; font-weight: 700; border: 1px solid currentColor; border-radius: 4px; padding: 0 4px; }
+    .q-key.guess { outline: 2px solid #e0a800; }
+    .q-key.flash { background: #1a7f4b; color: #fff; }
+    .q-key.danger kbd { color: #c0392b; }
+    .q-key.ok kbd { color: #1a7f4b; }
+    .q-guess { font-size: 1.15em; }
+    .q-key.chosen { outline: 3px solid var(--strong, #111); outline-offset: -1px; font-weight: 700; }
+    .q-result { padding: 8px 14px; border-radius: 8px; font-size: 18px; font-weight: 700; }
+    .q-result.ok { background: var(--green-bg); color: var(--green); }
+    .q-result.bad { background: var(--red-bg); color: var(--red); }
+    .q-result.set { background: var(--blue-bg); color: var(--blue); }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="ghost" href="/board.html" title="Về bảng định danh">← Bảng định danh</a>
+    <a class="ghost" href="/action.html" title="Gán nhanh hành động">Gán nhanh hành động</a>
+    <h1 class="b-title">Gán nhanh</h1>
+    <label class="small">Hàng đợi <select id="mode"><option value="hard">Khó trước (chưa gán)</option><option value="recheck">Cần gán lại (đã bấm X)</option><option value="extra">Có thể box thừa</option></select></label>
+    <span class="grow"></span>
+    <label class="small"><input type="checkbox" id="byPlace" checked> Xếp theo vị trí</label>
+    <label class="small"><input type="checkbox" id="bigOnly"> Chỉ crop lớn (≥160 px)</label>
+  </header>
+  <main class="q-wrap">
+    <section class="q-stage">
+      <div class="q-info"><strong id="pid">…</strong><span class="muted" id="count"></span><span class="q-guess" id="ask"></span><span class="muted" id="msg" role="status"></span></div>
+      <div class="q-result" id="result" role="status" hidden></div>
+      <canvas id="view" width="960" height="720" aria-label="Ảnh người cần gán, cắt rộng quanh box"></canvas>
+    </section>
+    <aside class="q-keys" id="keys" aria-label="Phím gán tên"></aside>
+  </main>
+  <script src="quickcore.js"></script>
+  <script src="quick.js"></script>
+</body>
+</html>

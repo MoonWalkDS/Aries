@@ -1,0 +1,42 @@
+# Nhãn hoạt động thô, đầu vào của `python main.py adl propose-labels`.
+#
+# Bài báo LSC-ADL (mục 3.2) gom nhãn thô từ bốn bộ dữ liệu ADL trước đó. Ở đây dùng 35 lớp cuối
+# cùng của chính LSC-ADL (Phụ lục A) làm bể nhãn thô. Thêm nhãn từ nguồn khác vào danh sách này nếu
+# muốn; model sẽ chỉ giữ những nhãn thật sự xuất hiện trong ảnh và đề xuất thêm nhãn mới.
+
+labels:
+  - attending a meeting
+  - attending a presentation
+  - cleaning kitchenware
+  - decorating
+  - doing office work
+  - doing the cleaning
+  - doing the laundry
+  - eating
+  - fixing something
+  - grooming
+  - having a casual conversation
+  - having a drink
+  - lying
+  - making financial transactions
+  - no activity
+  - organizing clothes
+  - personal hygiene
+  - playing musical instruments
+  - preparing some food
+  - reading documents
+  - riding a bike or motorbike
+  - shopping
+  - taking a bus
+  - taking a car
+  - taking a photo
+  - taking a plane
+  - taking a train
+  - taking out the trash
+  - using a computer
+  - using a mobile device
+  - walking indoor
+  - walking outdoor
+  - watching a live performance
+  - watching TV or digital display devices
+  - writing

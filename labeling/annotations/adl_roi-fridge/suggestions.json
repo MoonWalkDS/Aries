@@ -1,0 +1,533 @@
+{
+  "round": 3,
+  "items": [
+    {
+      "image_id": "13_738",
+      "label": "fridge closed",
+      "score": 0.8892,
+      "cluster": 1,
+      "runner_up": "person passing",
+      "margin": 0.4385
+    },
+    {
+      "image_id": "12_1991",
+      "label": "fridge closed",
+      "score": 0.7623,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0915
+    },
+    {
+      "image_id": "11_1157",
+      "label": "person passing",
+      "score": 0.7494,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.0369
+    },
+    {
+      "image_id": "14_3512",
+      "label": "fridge closed",
+      "score": 0.7112,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.1457
+    },
+    {
+      "image_id": "14_3228",
+      "label": "fridge closed",
+      "score": 0.6804,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.1118
+    },
+    {
+      "image_id": "16_3491",
+      "label": "fridge closed",
+      "score": 0.6774,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0243
+    },
+    {
+      "image_id": "11_646",
+      "label": "person passing",
+      "score": 0.6705,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.0117
+    },
+    {
+      "image_id": "14_3234",
+      "label": "fridge closed",
+      "score": 0.6628,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.1565
+    },
+    {
+      "image_id": "15_272",
+      "label": "fridge closed",
+      "score": 0.6574,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0506
+    },
+    {
+      "image_id": "10_81",
+      "label": "person passing",
+      "score": 0.6559,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.0333
+    },
+    {
+      "image_id": "20_2802",
+      "label": "fridge closed",
+      "score": 0.6469,
+      "cluster": 9,
+      "runner_up": "person passing",
+      "margin": 0.1719
+    },
+    {
+      "image_id": "11_660",
+      "label": "fridge closed",
+      "score": 0.6444,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0531
+    },
+    {
+      "image_id": "14_3459",
+      "label": "fridge closed",
+      "score": 0.6402,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0919
+    },
+    {
+      "image_id": "11_1003",
+      "label": "fridge closed",
+      "score": 0.6394,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0191
+    },
+    {
+      "image_id": "15_800",
+      "label": "fridge closed",
+      "score": 0.6301,
+      "cluster": 8,
+      "runner_up": "person passing",
+      "margin": 0.0852
+    },
+    {
+      "image_id": "08_2810",
+      "label": "person passing",
+      "score": 0.6251,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.6553
+    },
+    {
+      "image_id": "17_269",
+      "label": "fridge closed",
+      "score": 0.6238,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0653
+    },
+    {
+      "image_id": "08_3315",
+      "label": "person passing",
+      "score": 0.614,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.5813
+    },
+    {
+      "image_id": "20_1682",
+      "label": "person passing",
+      "score": 0.6121,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.7153
+    },
+    {
+      "image_id": "15_1248",
+      "label": "fridge closed",
+      "score": 0.6089,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0653
+    },
+    {
+      "image_id": "15_312",
+      "label": "fridge closed",
+      "score": 0.608,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0512
+    },
+    {
+      "image_id": "08_1178",
+      "label": "fridge closed",
+      "score": 0.6068,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0268
+    },
+    {
+      "image_id": "08_3092",
+      "label": "fridge closed",
+      "score": 0.6067,
+      "cluster": 12,
+      "runner_up": "person passing",
+      "margin": 0.1942
+    },
+    {
+      "image_id": "12_2424",
+      "label": "fridge closed",
+      "score": 0.6019,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0203
+    },
+    {
+      "image_id": "11_652",
+      "label": "fridge closed",
+      "score": 0.6013,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0472
+    },
+    {
+      "image_id": "09_3319",
+      "label": "person passing",
+      "score": 0.598,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.05
+    },
+    {
+      "image_id": "08_3008",
+      "label": "person passing",
+      "score": 0.5938,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.6762
+    },
+    {
+      "image_id": "14_3447",
+      "label": "fridge closed",
+      "score": 0.5936,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.1051
+    },
+    {
+      "image_id": "14_727",
+      "label": "fridge closed",
+      "score": 0.5913,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0797
+    },
+    {
+      "image_id": "17_1190",
+      "label": "person passing",
+      "score": 0.5903,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.5431
+    },
+    {
+      "image_id": "16_3482",
+      "label": "fridge closed",
+      "score": 0.5875,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0801
+    },
+    {
+      "image_id": "15_134",
+      "label": "fridge closed",
+      "score": 0.5872,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0579
+    },
+    {
+      "image_id": "14_303",
+      "label": "person passing",
+      "score": 0.5862,
+      "cluster": 1,
+      "runner_up": "fridge closed",
+      "margin": 0.1356
+    },
+    {
+      "image_id": "08_3093",
+      "label": "fridge closed",
+      "score": 0.5858,
+      "cluster": 12,
+      "runner_up": "person passing",
+      "margin": 0.1985
+    },
+    {
+      "image_id": "17_396",
+      "label": "person passing",
+      "score": 0.5853,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.7045
+    },
+    {
+      "image_id": "19_3300",
+      "label": "person passing",
+      "score": 0.5817,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.6383
+    },
+    {
+      "image_id": "19_3309",
+      "label": "person passing",
+      "score": 0.5802,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.6221
+    },
+    {
+      "image_id": "15_799",
+      "label": "fridge closed",
+      "score": 0.58,
+      "cluster": 8,
+      "runner_up": "person passing",
+      "margin": 0.1188
+    },
+    {
+      "image_id": "15_327",
+      "label": "fridge closed",
+      "score": 0.5794,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0433
+    },
+    {
+      "image_id": "08_1162",
+      "label": "person passing",
+      "score": 0.5774,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.5181
+    },
+    {
+      "image_id": "08_470",
+      "label": "person passing",
+      "score": 0.5762,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.038
+    },
+    {
+      "image_id": "14_3139",
+      "label": "person passing",
+      "score": 0.5751,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.5404
+    },
+    {
+      "image_id": "15_572",
+      "label": "fridge closed",
+      "score": 0.5739,
+      "cluster": 8,
+      "runner_up": "person passing",
+      "margin": 0.1682
+    },
+    {
+      "image_id": "09_2358",
+      "label": "person passing",
+      "score": 0.5737,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.5881
+    },
+    {
+      "image_id": "08_1552",
+      "label": "person passing",
+      "score": 0.5719,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.5753
+    },
+    {
+      "image_id": "08_1116",
+      "label": "person passing",
+      "score": 0.5717,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.6312
+    },
+    {
+      "image_id": "15_281",
+      "label": "person passing",
+      "score": 0.5713,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.2567
+    },
+    {
+      "image_id": "12_417",
+      "label": "person passing",
+      "score": 0.568,
+      "cluster": 1,
+      "runner_up": "fridge closed",
+      "margin": 0.0556
+    },
+    {
+      "image_id": "15_1548",
+      "label": "fridge closed",
+      "score": 0.5675,
+      "cluster": 6,
+      "runner_up": "person passing",
+      "margin": 0.1995
+    },
+    {
+      "image_id": "08_845",
+      "label": "person passing",
+      "score": 0.5664,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.6196
+    },
+    {
+      "image_id": "08_2869",
+      "label": "person passing",
+      "score": 0.566,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.5438
+    },
+    {
+      "image_id": "08_1530",
+      "label": "person passing",
+      "score": 0.5659,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.5843
+    },
+    {
+      "image_id": "08_1161",
+      "label": "person passing",
+      "score": 0.5645,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.5274
+    },
+    {
+      "image_id": "16_3176",
+      "label": "person passing",
+      "score": 0.5635,
+      "cluster": 0,
+      "runner_up": "fridge closed",
+      "margin": 0.5699
+    },
+    {
+      "image_id": "15_2309",
+      "label": "person passing",
+      "score": 0.5629,
+      "cluster": 2,
+      "runner_up": "fridge closed",
+      "margin": 0.0876
+    },
+    {
+      "image_id": "20_2561",
+      "label": "fridge closed",
+      "score": 0.5602,
+      "cluster": 9,
+      "runner_up": "person passing",
+      "margin": 0.1155
+    },
+    {
+      "image_id": "15_357",
+      "label": "person passing",
+      "score": 0.5588,
+      "cluster": 1,
+      "runner_up": "fridge closed",
+      "margin": 0.0125
+    },
+    {
+      "image_id": "15_150",
+      "label": "fridge closed",
+      "score": 0.5576,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0719
+    },
+    {
+      "image_id": "13_576",
+      "label": "fridge closed",
+      "score": 0.556,
+      "cluster": 14,
+      "runner_up": "person passing",
+      "margin": 0.0832
+    },
+    {
+      "image_id": "08_509",
+      "label": "fridge closed",
+      "score": 0.5531,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0524
+    },
+    {
+      "image_id": "08_2276",
+      "label": "person passing",
+      "score": 0.5519,
+      "cluster": 0,
+      "runner_up": "fridge open",
+      "margin": 0.6532
+    },
+    {
+      "image_id": "12_2182",
+      "label": "person passing",
+      "score": 0.5519,
+      "cluster": 1,
+      "runner_up": "fridge closed",
+      "margin": 0.0681
+    },
+    {
+      "image_id": "09_1791",
+      "label": "person passing",
+      "score": 0.5517,
+      "cluster": 1,
+      "runner_up": "fridge closed",
+      "margin": 0.0189
+    },
+    {
+      "image_id": "13_556",
+      "label": "fridge closed",
+      "score": 0.5511,
+      "cluster": 14,
+      "runner_up": "person passing",
+      "margin": 0.0865
+    },
+    {
+      "image_id": "17_276",
+      "label": "fridge closed",
+      "score": 0.5509,
+      "cluster": 0,
+      "runner_up": "person passing",
+      "margin": 0.0131
+    },
+    {
+      "image_id": "14_3343",
+      "label": "fridge closed",
+      "score": 0.5502,
+      "cluster": 10,
+      "runner_up": "person passing",
+      "margin": 0.0553
+    }
+  ]
+}

@@ -1,0 +1,3205 @@
+{
+  "round": 3,
+  "items": [
+    {
+      "image_id": "13_1747",
+      "label": "island with fruit only",
+      "score": 0.9544,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.2194
+    },
+    {
+      "image_id": "18_2597",
+      "label": "food being prepared",
+      "score": 0.9433,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.007
+    },
+    {
+      "image_id": "18_2858",
+      "label": "food being prepared",
+      "score": 0.943,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.009
+    },
+    {
+      "image_id": "18_2596",
+      "label": "food being prepared",
+      "score": 0.9416,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0119
+    },
+    {
+      "image_id": "18_2729",
+      "label": "island with fruit only",
+      "score": 0.9403,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0033
+    },
+    {
+      "image_id": "18_2859",
+      "label": "food being prepared",
+      "score": 0.9398,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0055
+    },
+    {
+      "image_id": "13_2867",
+      "label": "island with fruit only",
+      "score": 0.9302,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0836
+    },
+    {
+      "image_id": "18_2889",
+      "label": "island with fruit only",
+      "score": 0.9286,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0016
+    },
+    {
+      "image_id": "18_2682",
+      "label": "island with fruit only",
+      "score": 0.9283,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0008
+    },
+    {
+      "image_id": "18_2936",
+      "label": "food being prepared",
+      "score": 0.9282,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0039
+    },
+    {
+      "image_id": "18_2759",
+      "label": "food being prepared",
+      "score": 0.9248,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0182
+    },
+    {
+      "image_id": "18_2964",
+      "label": "island with fruit only",
+      "score": 0.9239,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0063
+    },
+    {
+      "image_id": "18_2999",
+      "label": "island with fruit only",
+      "score": 0.9224,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0025
+    },
+    {
+      "image_id": "18_2860",
+      "label": "food being prepared",
+      "score": 0.9215,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0234
+    },
+    {
+      "image_id": "18_2595",
+      "label": "food being prepared",
+      "score": 0.9191,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0192
+    },
+    {
+      "image_id": "13_3107",
+      "label": "island with fruit only",
+      "score": 0.9185,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1129
+    },
+    {
+      "image_id": "18_3247",
+      "label": "island with fruit only",
+      "score": 0.9165,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0166
+    },
+    {
+      "image_id": "18_2561",
+      "label": "food being prepared",
+      "score": 0.9145,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0201
+    },
+    {
+      "image_id": "13_1566",
+      "label": "food being prepared",
+      "score": 0.9126,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.5276
+    },
+    {
+      "image_id": "13_3282",
+      "label": "island with fruit only",
+      "score": 0.9126,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1326
+    },
+    {
+      "image_id": "18_2892",
+      "label": "food being prepared",
+      "score": 0.91,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.021
+    },
+    {
+      "image_id": "18_2448",
+      "label": "food being prepared",
+      "score": 0.9081,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0219
+    },
+    {
+      "image_id": "18_3282",
+      "label": "island with fruit only",
+      "score": 0.9075,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0167
+    },
+    {
+      "image_id": "18_2768",
+      "label": "food being prepared",
+      "score": 0.9064,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0128
+    },
+    {
+      "image_id": "18_2687",
+      "label": "food being prepared",
+      "score": 0.8969,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0174
+    },
+    {
+      "image_id": "13_1963",
+      "label": "island with fruit only",
+      "score": 0.893,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1325
+    },
+    {
+      "image_id": "18_2824",
+      "label": "food being prepared",
+      "score": 0.8914,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0032
+    },
+    {
+      "image_id": "18_2513",
+      "label": "food being prepared",
+      "score": 0.8907,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0089
+    },
+    {
+      "image_id": "13_3079",
+      "label": "island with fruit only",
+      "score": 0.8853,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0817
+    },
+    {
+      "image_id": "18_3267",
+      "label": "island with fruit only",
+      "score": 0.8853,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0137
+    },
+    {
+      "image_id": "13_3316",
+      "label": "island with fruit only",
+      "score": 0.8841,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1458
+    },
+    {
+      "image_id": "18_3212",
+      "label": "island with fruit only",
+      "score": 0.8837,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0243
+    },
+    {
+      "image_id": "18_2167",
+      "label": "island with fruit only",
+      "score": 0.8794,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.01
+    },
+    {
+      "image_id": "18_2636",
+      "label": "food being prepared",
+      "score": 0.8778,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0139
+    },
+    {
+      "image_id": "18_2342",
+      "label": "food being prepared",
+      "score": 0.8755,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0128
+    },
+    {
+      "image_id": "15_339",
+      "label": "island with fruit only",
+      "score": 0.8739,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.2725
+    },
+    {
+      "image_id": "18_3073",
+      "label": "island with fruit only",
+      "score": 0.873,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0248
+    },
+    {
+      "image_id": "18_2215",
+      "label": "island with fruit only",
+      "score": 0.8698,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0013
+    },
+    {
+      "image_id": "13_1972",
+      "label": "island with fruit only",
+      "score": 0.8696,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.2033
+    },
+    {
+      "image_id": "13_1900",
+      "label": "island with fruit only",
+      "score": 0.8694,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1469
+    },
+    {
+      "image_id": "18_2307",
+      "label": "food being prepared",
+      "score": 0.8693,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0025
+    },
+    {
+      "image_id": "18_3344",
+      "label": "island with fruit only",
+      "score": 0.8693,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0129
+    },
+    {
+      "image_id": "13_2019",
+      "label": "island with fruit only",
+      "score": 0.866,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0527
+    },
+    {
+      "image_id": "18_3274",
+      "label": "island with fruit only",
+      "score": 0.8649,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0005
+    },
+    {
+      "image_id": "18_3258",
+      "label": "island with fruit only",
+      "score": 0.862,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0349
+    },
+    {
+      "image_id": "18_2117",
+      "label": "food being prepared",
+      "score": 0.8617,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0089
+    },
+    {
+      "image_id": "18_3338",
+      "label": "island with fruit only",
+      "score": 0.8615,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0237
+    },
+    {
+      "image_id": "18_2688",
+      "label": "food being prepared",
+      "score": 0.8614,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0204
+    },
+    {
+      "image_id": "13_1928",
+      "label": "island with fruit only",
+      "score": 0.8594,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1771
+    },
+    {
+      "image_id": "13_1544",
+      "label": "food being prepared",
+      "score": 0.8588,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.4608
+    },
+    {
+      "image_id": "15_327",
+      "label": "island with fruit only",
+      "score": 0.8587,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.3184
+    },
+    {
+      "image_id": "13_1989",
+      "label": "island with fruit only",
+      "score": 0.8583,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0593
+    },
+    {
+      "image_id": "18_1964",
+      "label": "food being prepared",
+      "score": 0.8574,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0196
+    },
+    {
+      "image_id": "13_3291",
+      "label": "island with fruit only",
+      "score": 0.8546,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1028
+    },
+    {
+      "image_id": "13_2030",
+      "label": "island with fruit only",
+      "score": 0.8543,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0852
+    },
+    {
+      "image_id": "13_1576",
+      "label": "food being prepared",
+      "score": 0.8537,
+      "cluster": 14,
+      "runner_up": "meal served",
+      "margin": 0.5195
+    },
+    {
+      "image_id": "18_2213",
+      "label": "island with fruit only",
+      "score": 0.8532,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0006
+    },
+    {
+      "image_id": "13_1891",
+      "label": "island with fruit only",
+      "score": 0.8522,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1418
+    },
+    {
+      "image_id": "18_1932",
+      "label": "food being prepared",
+      "score": 0.8517,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0186
+    },
+    {
+      "image_id": "13_2781",
+      "label": "island with fruit only",
+      "score": 0.8488,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0896
+    },
+    {
+      "image_id": "18_1820",
+      "label": "food being prepared",
+      "score": 0.8487,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0408
+    },
+    {
+      "image_id": "13_1936",
+      "label": "island with fruit only",
+      "score": 0.8477,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0886
+    },
+    {
+      "image_id": "18_2322",
+      "label": "food being prepared",
+      "score": 0.8474,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0114
+    },
+    {
+      "image_id": "18_1885",
+      "label": "food being prepared",
+      "score": 0.8473,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0369
+    },
+    {
+      "image_id": "13_3665",
+      "label": "island with fruit only",
+      "score": 0.8443,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1477
+    },
+    {
+      "image_id": "13_1511",
+      "label": "food being prepared",
+      "score": 0.8434,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.5142
+    },
+    {
+      "image_id": "13_2173",
+      "label": "food being prepared",
+      "score": 0.8405,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0624
+    },
+    {
+      "image_id": "13_2686",
+      "label": "food being prepared",
+      "score": 0.8405,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1003
+    },
+    {
+      "image_id": "14_82",
+      "label": "island with fruit only",
+      "score": 0.8399,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0674
+    },
+    {
+      "image_id": "18_1934",
+      "label": "island with fruit only",
+      "score": 0.8398,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0045
+    },
+    {
+      "image_id": "18_2160",
+      "label": "island with fruit only",
+      "score": 0.8382,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0045
+    },
+    {
+      "image_id": "15_350",
+      "label": "island with fruit only",
+      "score": 0.8379,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.4727
+    },
+    {
+      "image_id": "13_2139",
+      "label": "food being prepared",
+      "score": 0.8371,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1038
+    },
+    {
+      "image_id": "13_1883",
+      "label": "island with fruit only",
+      "score": 0.8351,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.079
+    },
+    {
+      "image_id": "18_2640",
+      "label": "food being prepared",
+      "score": 0.8349,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0048
+    },
+    {
+      "image_id": "13_1912",
+      "label": "island with fruit only",
+      "score": 0.8336,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1747
+    },
+    {
+      "image_id": "13_1976",
+      "label": "island with fruit only",
+      "score": 0.831,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0727
+    },
+    {
+      "image_id": "13_1981",
+      "label": "island with fruit only",
+      "score": 0.8305,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.111
+    },
+    {
+      "image_id": "13_3237",
+      "label": "island with fruit only",
+      "score": 0.8293,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0804
+    },
+    {
+      "image_id": "18_1837",
+      "label": "food being prepared",
+      "score": 0.8255,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0313
+    },
+    {
+      "image_id": "18_3221",
+      "label": "island with fruit only",
+      "score": 0.8224,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0168
+    },
+    {
+      "image_id": "18_1910",
+      "label": "food being prepared",
+      "score": 0.8214,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0476
+    },
+    {
+      "image_id": "18_1833",
+      "label": "food being prepared",
+      "score": 0.8193,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0133
+    },
+    {
+      "image_id": "18_2919",
+      "label": "food being prepared",
+      "score": 0.8179,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0146
+    },
+    {
+      "image_id": "13_2027",
+      "label": "island with fruit only",
+      "score": 0.8166,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.03
+    },
+    {
+      "image_id": "13_1608",
+      "label": "food being prepared",
+      "score": 0.8145,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.3944
+    },
+    {
+      "image_id": "13_2608",
+      "label": "food being prepared",
+      "score": 0.8143,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0829
+    },
+    {
+      "image_id": "13_2058",
+      "label": "food being prepared",
+      "score": 0.8131,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0282
+    },
+    {
+      "image_id": "18_3293",
+      "label": "island with fruit only",
+      "score": 0.8123,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0217
+    },
+    {
+      "image_id": "13_3416",
+      "label": "island with fruit only",
+      "score": 0.8114,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1213
+    },
+    {
+      "image_id": "18_2045",
+      "label": "food being prepared",
+      "score": 0.8114,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0103
+    },
+    {
+      "image_id": "13_3209",
+      "label": "island with fruit only",
+      "score": 0.8075,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0904
+    },
+    {
+      "image_id": "13_2226",
+      "label": "food being prepared",
+      "score": 0.802,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0664
+    },
+    {
+      "image_id": "11_1058",
+      "label": "island with fruit only",
+      "score": 0.7992,
+      "cluster": 5,
+      "runner_up": "meal served",
+      "margin": 0.4533
+    },
+    {
+      "image_id": "18_3075",
+      "label": "food being prepared",
+      "score": 0.7977,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0044
+    },
+    {
+      "image_id": "13_2049",
+      "label": "food being prepared",
+      "score": 0.7966,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.044
+    },
+    {
+      "image_id": "13_2157",
+      "label": "food being prepared",
+      "score": 0.7944,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0527
+    },
+    {
+      "image_id": "18_1858",
+      "label": "food being prepared",
+      "score": 0.7943,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0382
+    },
+    {
+      "image_id": "13_2132",
+      "label": "food being prepared",
+      "score": 0.7938,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0357
+    },
+    {
+      "image_id": "16_1493",
+      "label": "island with fruit only",
+      "score": 0.7935,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.4551
+    },
+    {
+      "image_id": "18_1939",
+      "label": "food being prepared",
+      "score": 0.7932,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0015
+    },
+    {
+      "image_id": "18_2220",
+      "label": "food being prepared",
+      "score": 0.7928,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0112
+    },
+    {
+      "image_id": "13_1604",
+      "label": "food being prepared",
+      "score": 0.7927,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.3637
+    },
+    {
+      "image_id": "14_577",
+      "label": "island with fruit only",
+      "score": 0.7895,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.117
+    },
+    {
+      "image_id": "13_1893",
+      "label": "island with fruit only",
+      "score": 0.7885,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1037
+    },
+    {
+      "image_id": "13_3483",
+      "label": "island with fruit only",
+      "score": 0.7879,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1291
+    },
+    {
+      "image_id": "13_2021",
+      "label": "island with fruit only",
+      "score": 0.7878,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0115
+    },
+    {
+      "image_id": "13_1679",
+      "label": "island with fruit only",
+      "score": 0.7877,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1388
+    },
+    {
+      "image_id": "18_2129",
+      "label": "island with fruit only",
+      "score": 0.7874,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0254
+    },
+    {
+      "image_id": "13_2123",
+      "label": "food being prepared",
+      "score": 0.7869,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1385
+    },
+    {
+      "image_id": "13_2081",
+      "label": "food being prepared",
+      "score": 0.7865,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0893
+    },
+    {
+      "image_id": "18_3154",
+      "label": "island with fruit only",
+      "score": 0.7843,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0152
+    },
+    {
+      "image_id": "18_3134",
+      "label": "food being prepared",
+      "score": 0.7841,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0046
+    },
+    {
+      "image_id": "14_3407",
+      "label": "island with fruit only",
+      "score": 0.7828,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0552
+    },
+    {
+      "image_id": "18_2353",
+      "label": "food being prepared",
+      "score": 0.7807,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0148
+    },
+    {
+      "image_id": "13_3076",
+      "label": "island with fruit only",
+      "score": 0.7803,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0868
+    },
+    {
+      "image_id": "15_344",
+      "label": "food being prepared",
+      "score": 0.7788,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0985
+    },
+    {
+      "image_id": "18_3234",
+      "label": "food being prepared",
+      "score": 0.7786,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0006
+    },
+    {
+      "image_id": "18_3185",
+      "label": "island with fruit only",
+      "score": 0.7771,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0234
+    },
+    {
+      "image_id": "13_1573",
+      "label": "food being prepared",
+      "score": 0.7766,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.4387
+    },
+    {
+      "image_id": "18_2297",
+      "label": "island with fruit only",
+      "score": 0.7752,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0158
+    },
+    {
+      "image_id": "18_2044",
+      "label": "food being prepared",
+      "score": 0.7751,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0173
+    },
+    {
+      "image_id": "18_1888",
+      "label": "food being prepared",
+      "score": 0.7747,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0393
+    },
+    {
+      "image_id": "16_1553",
+      "label": "island with fruit only",
+      "score": 0.7745,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.5329
+    },
+    {
+      "image_id": "18_3051",
+      "label": "island with fruit only",
+      "score": 0.7736,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0226
+    },
+    {
+      "image_id": "13_3555",
+      "label": "island with fruit only",
+      "score": 0.7721,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1654
+    },
+    {
+      "image_id": "18_2274",
+      "label": "island with fruit only",
+      "score": 0.7719,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0087
+    },
+    {
+      "image_id": "18_1890",
+      "label": "food being prepared",
+      "score": 0.7706,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0369
+    },
+    {
+      "image_id": "18_2064",
+      "label": "island with fruit only",
+      "score": 0.7697,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0179
+    },
+    {
+      "image_id": "18_2308",
+      "label": "island with fruit only",
+      "score": 0.7688,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0074
+    },
+    {
+      "image_id": "14_3447",
+      "label": "island with fruit only",
+      "score": 0.7686,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0568
+    },
+    {
+      "image_id": "14_3260",
+      "label": "island with fruit only",
+      "score": 0.7677,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0177
+    },
+    {
+      "image_id": "18_1968",
+      "label": "food being prepared",
+      "score": 0.7629,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0333
+    },
+    {
+      "image_id": "14_3500",
+      "label": "island with fruit only",
+      "score": 0.7624,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0376
+    },
+    {
+      "image_id": "18_3401",
+      "label": "island with fruit only",
+      "score": 0.7608,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0145
+    },
+    {
+      "image_id": "18_2416",
+      "label": "food being prepared",
+      "score": 0.7598,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0225
+    },
+    {
+      "image_id": "13_1476",
+      "label": "food being prepared",
+      "score": 0.7571,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.3459
+    },
+    {
+      "image_id": "18_3174",
+      "label": "island with fruit only",
+      "score": 0.7515,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0192
+    },
+    {
+      "image_id": "14_3440",
+      "label": "island with fruit only",
+      "score": 0.7514,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0105
+    },
+    {
+      "image_id": "15_2309",
+      "label": "island with fruit only",
+      "score": 0.7502,
+      "cluster": 18,
+      "runner_up": "food being prepared",
+      "margin": 0.3164
+    },
+    {
+      "image_id": "13_3608",
+      "label": "island with fruit only",
+      "score": 0.7486,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1408
+    },
+    {
+      "image_id": "18_2229",
+      "label": "island with fruit only",
+      "score": 0.748,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0089
+    },
+    {
+      "image_id": "13_3362",
+      "label": "island with fruit only",
+      "score": 0.7459,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1302
+    },
+    {
+      "image_id": "16_234",
+      "label": "food being prepared",
+      "score": 0.7438,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.1275
+    },
+    {
+      "image_id": "13_1836",
+      "label": "island with fruit only",
+      "score": 0.7419,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1799
+    },
+    {
+      "image_id": "18_2642",
+      "label": "island with fruit only",
+      "score": 0.7413,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0272
+    },
+    {
+      "image_id": "14_3250",
+      "label": "island with fruit only",
+      "score": 0.7399,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0138
+    },
+    {
+      "image_id": "18_2602",
+      "label": "island with fruit only",
+      "score": 0.7391,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.03
+    },
+    {
+      "image_id": "13_1518",
+      "label": "food being prepared",
+      "score": 0.7371,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.3698
+    },
+    {
+      "image_id": "18_1878",
+      "label": "food being prepared",
+      "score": 0.7364,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0338
+    },
+    {
+      "image_id": "13_2977",
+      "label": "island with fruit only",
+      "score": 0.7356,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0205
+    },
+    {
+      "image_id": "13_3078",
+      "label": "island with fruit only",
+      "score": 0.735,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0816
+    },
+    {
+      "image_id": "18_1849",
+      "label": "food being prepared",
+      "score": 0.7346,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0397
+    },
+    {
+      "image_id": "18_2147",
+      "label": "island with fruit only",
+      "score": 0.7343,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0187
+    },
+    {
+      "image_id": "13_1870",
+      "label": "island with fruit only",
+      "score": 0.7336,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1808
+    },
+    {
+      "image_id": "13_2148",
+      "label": "food being prepared",
+      "score": 0.7321,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1123
+    },
+    {
+      "image_id": "13_3256",
+      "label": "island with fruit only",
+      "score": 0.7317,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.076
+    },
+    {
+      "image_id": "18_3243",
+      "label": "island with fruit only",
+      "score": 0.7308,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0291
+    },
+    {
+      "image_id": "14_3349",
+      "label": "island with fruit only",
+      "score": 0.7303,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0139
+    },
+    {
+      "image_id": "13_3645",
+      "label": "island with fruit only",
+      "score": 0.7276,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1516
+    },
+    {
+      "image_id": "09_1873",
+      "label": "meal served",
+      "score": 0.7274,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1592
+    },
+    {
+      "image_id": "18_1851",
+      "label": "food being prepared",
+      "score": 0.7273,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0426
+    },
+    {
+      "image_id": "19_2982",
+      "label": "food being prepared",
+      "score": 0.7267,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0764
+    },
+    {
+      "image_id": "11_1085",
+      "label": "island with fruit only",
+      "score": 0.7251,
+      "cluster": 5,
+      "runner_up": "people around the island",
+      "margin": 0.5245
+    },
+    {
+      "image_id": "13_2610",
+      "label": "food being prepared",
+      "score": 0.7242,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1481
+    },
+    {
+      "image_id": "18_2207",
+      "label": "island with fruit only",
+      "score": 0.7235,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0141
+    },
+    {
+      "image_id": "13_3056",
+      "label": "island with fruit only",
+      "score": 0.7226,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0976
+    },
+    {
+      "image_id": "18_3336",
+      "label": "island with fruit only",
+      "score": 0.7225,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0077
+    },
+    {
+      "image_id": "11_1290",
+      "label": "island with fruit only",
+      "score": 0.7218,
+      "cluster": 5,
+      "runner_up": "meal served",
+      "margin": 0.3729
+    },
+    {
+      "image_id": "12_3577",
+      "label": "food being prepared",
+      "score": 0.7205,
+      "cluster": 17,
+      "runner_up": "island with fruit only",
+      "margin": 0.1963
+    },
+    {
+      "image_id": "14_3334",
+      "label": "island with fruit only",
+      "score": 0.7198,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.1008
+    },
+    {
+      "image_id": "18_3322",
+      "label": "island with fruit only",
+      "score": 0.7185,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0319
+    },
+    {
+      "image_id": "13_1286",
+      "label": "food being prepared",
+      "score": 0.7174,
+      "cluster": 13,
+      "runner_up": "people around the island",
+      "margin": 0.2627
+    },
+    {
+      "image_id": "18_2368",
+      "label": "island with fruit only",
+      "score": 0.7168,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0004
+    },
+    {
+      "image_id": "13_3258",
+      "label": "island with fruit only",
+      "score": 0.7165,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.129
+    },
+    {
+      "image_id": "14_3299",
+      "label": "island with fruit only",
+      "score": 0.7165,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0171
+    },
+    {
+      "image_id": "15_0",
+      "label": "island with fruit only",
+      "score": 0.7158,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0116
+    },
+    {
+      "image_id": "13_1605",
+      "label": "food being prepared",
+      "score": 0.7129,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.3732
+    },
+    {
+      "image_id": "13_1482",
+      "label": "food being prepared",
+      "score": 0.7122,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.3978
+    },
+    {
+      "image_id": "13_3364",
+      "label": "island with fruit only",
+      "score": 0.7114,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1147
+    },
+    {
+      "image_id": "09_1860",
+      "label": "meal served",
+      "score": 0.7112,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1189
+    },
+    {
+      "image_id": "13_2232",
+      "label": "food being prepared",
+      "score": 0.7096,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0231
+    },
+    {
+      "image_id": "09_1878",
+      "label": "meal served",
+      "score": 0.709,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.12
+    },
+    {
+      "image_id": "14_3343",
+      "label": "island with fruit only",
+      "score": 0.709,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.0335
+    },
+    {
+      "image_id": "11_1120",
+      "label": "island with fruit only",
+      "score": 0.7065,
+      "cluster": 5,
+      "runner_up": "food being prepared",
+      "margin": 0.4932
+    },
+    {
+      "image_id": "11_1096",
+      "label": "island with fruit only",
+      "score": 0.704,
+      "cluster": 5,
+      "runner_up": "people around the island",
+      "margin": 0.514
+    },
+    {
+      "image_id": "09_1859",
+      "label": "meal served",
+      "score": 0.7037,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1523
+    },
+    {
+      "image_id": "18_2149",
+      "label": "island with fruit only",
+      "score": 0.7018,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0106
+    },
+    {
+      "image_id": "14_3341",
+      "label": "island with fruit only",
+      "score": 0.7005,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.2139
+    },
+    {
+      "image_id": "18_3300",
+      "label": "island with fruit only",
+      "score": 0.7002,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0207
+    },
+    {
+      "image_id": "14_3281",
+      "label": "island with fruit only",
+      "score": 0.699,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.0149
+    },
+    {
+      "image_id": "11_1071",
+      "label": "island with fruit only",
+      "score": 0.6975,
+      "cluster": 5,
+      "runner_up": "people around the island",
+      "margin": 0.5266
+    },
+    {
+      "image_id": "19_1322",
+      "label": "food being prepared",
+      "score": 0.6939,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.1163
+    },
+    {
+      "image_id": "13_2221",
+      "label": "island with fruit only",
+      "score": 0.6929,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0155
+    },
+    {
+      "image_id": "18_3374",
+      "label": "food being prepared",
+      "score": 0.6926,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0726
+    },
+    {
+      "image_id": "15_450",
+      "label": "food being prepared",
+      "score": 0.6924,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0267
+    },
+    {
+      "image_id": "11_1109",
+      "label": "island with fruit only",
+      "score": 0.6919,
+      "cluster": 5,
+      "runner_up": "meal served",
+      "margin": 0.5329
+    },
+    {
+      "image_id": "14_3333",
+      "label": "island with fruit only",
+      "score": 0.6916,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.1101
+    },
+    {
+      "image_id": "15_87",
+      "label": "island with fruit only",
+      "score": 0.691,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0037
+    },
+    {
+      "image_id": "13_1632",
+      "label": "food being prepared",
+      "score": 0.6896,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.4073
+    },
+    {
+      "image_id": "13_707",
+      "label": "meal served",
+      "score": 0.6884,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0728
+    },
+    {
+      "image_id": "18_2410",
+      "label": "food being prepared",
+      "score": 0.6877,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.026
+    },
+    {
+      "image_id": "13_3023",
+      "label": "island with fruit only",
+      "score": 0.6875,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0298
+    },
+    {
+      "image_id": "15_2742",
+      "label": "island with fruit only",
+      "score": 0.6861,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.5575
+    },
+    {
+      "image_id": "14_3317",
+      "label": "island with fruit only",
+      "score": 0.6858,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.2443
+    },
+    {
+      "image_id": "18_1982",
+      "label": "island with fruit only",
+      "score": 0.6845,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0284
+    },
+    {
+      "image_id": "16_773",
+      "label": "island with fruit only",
+      "score": 0.6844,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.5538
+    },
+    {
+      "image_id": "09_1831",
+      "label": "meal served",
+      "score": 0.6837,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1195
+    },
+    {
+      "image_id": "11_569",
+      "label": "island with fruit only",
+      "score": 0.6826,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0861
+    },
+    {
+      "image_id": "09_2293",
+      "label": "meal served",
+      "score": 0.6824,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0636
+    },
+    {
+      "image_id": "09_1933",
+      "label": "meal served",
+      "score": 0.6799,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0699
+    },
+    {
+      "image_id": "15_74",
+      "label": "food being prepared",
+      "score": 0.679,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0447
+    },
+    {
+      "image_id": "18_2132",
+      "label": "food being prepared",
+      "score": 0.6779,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0021
+    },
+    {
+      "image_id": "14_3195",
+      "label": "food being prepared",
+      "score": 0.6773,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0317
+    },
+    {
+      "image_id": "11_1089",
+      "label": "island with fruit only",
+      "score": 0.6767,
+      "cluster": 5,
+      "runner_up": "food being prepared",
+      "margin": 0.564
+    },
+    {
+      "image_id": "19_3289",
+      "label": "food being prepared",
+      "score": 0.675,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0666
+    },
+    {
+      "image_id": "14_3504",
+      "label": "island with fruit only",
+      "score": 0.6714,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.0035
+    },
+    {
+      "image_id": "09_1971",
+      "label": "meal served",
+      "score": 0.6709,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1319
+    },
+    {
+      "image_id": "13_1775",
+      "label": "island with fruit only",
+      "score": 0.6709,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.2027
+    },
+    {
+      "image_id": "18_2158",
+      "label": "island with fruit only",
+      "score": 0.6707,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0204
+    },
+    {
+      "image_id": "13_133",
+      "label": "meal served",
+      "score": 0.6685,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.1014
+    },
+    {
+      "image_id": "14_3125",
+      "label": "island with fruit only",
+      "score": 0.6666,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.0246
+    },
+    {
+      "image_id": "09_2987",
+      "label": "island with fruit only",
+      "score": 0.6661,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0449
+    },
+    {
+      "image_id": "11_1001",
+      "label": "island with fruit only",
+      "score": 0.665,
+      "cluster": 5,
+      "runner_up": "people around the island",
+      "margin": 0.4822
+    },
+    {
+      "image_id": "14_227",
+      "label": "island with fruit only",
+      "score": 0.6641,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.1311
+    },
+    {
+      "image_id": "14_3339",
+      "label": "island with fruit only",
+      "score": 0.664,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.1807
+    },
+    {
+      "image_id": "15_843",
+      "label": "island with fruit only",
+      "score": 0.6628,
+      "cluster": 20,
+      "runner_up": "food being prepared",
+      "margin": 0.5899
+    },
+    {
+      "image_id": "09_1759",
+      "label": "meal served",
+      "score": 0.6616,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0967
+    },
+    {
+      "image_id": "13_2229",
+      "label": "island with fruit only",
+      "score": 0.6606,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.0091
+    },
+    {
+      "image_id": "20_2554",
+      "label": "food being prepared",
+      "score": 0.6603,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.1083
+    },
+    {
+      "image_id": "14_3121",
+      "label": "food being prepared",
+      "score": 0.6595,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0154
+    },
+    {
+      "image_id": "09_1762",
+      "label": "meal served",
+      "score": 0.6594,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.13
+    },
+    {
+      "image_id": "15_219",
+      "label": "island with fruit only",
+      "score": 0.6594,
+      "cluster": 16,
+      "runner_up": "meal served",
+      "margin": 0.284
+    },
+    {
+      "image_id": "09_1952",
+      "label": "meal served",
+      "score": 0.6593,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1089
+    },
+    {
+      "image_id": "14_3452",
+      "label": "island with fruit only",
+      "score": 0.6586,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0132
+    },
+    {
+      "image_id": "18_3139",
+      "label": "island with fruit only",
+      "score": 0.6575,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0213
+    },
+    {
+      "image_id": "09_2273",
+      "label": "meal served",
+      "score": 0.6567,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0931
+    },
+    {
+      "image_id": "12_595",
+      "label": "island with fruit only",
+      "score": 0.6567,
+      "cluster": 29,
+      "runner_up": "meal served",
+      "margin": 0.1466
+    },
+    {
+      "image_id": "12_1450",
+      "label": "people around the island",
+      "score": 0.6559,
+      "cluster": 1,
+      "runner_up": "food being prepared",
+      "margin": 0.0574
+    },
+    {
+      "image_id": "13_1808",
+      "label": "island with fruit only",
+      "score": 0.6554,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1954
+    },
+    {
+      "image_id": "09_2358",
+      "label": "meal served",
+      "score": 0.655,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0336
+    },
+    {
+      "image_id": "14_218",
+      "label": "island with fruit only",
+      "score": 0.6543,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.1035
+    },
+    {
+      "image_id": "14_248",
+      "label": "island with fruit only",
+      "score": 0.6538,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1614
+    },
+    {
+      "image_id": "12_1442",
+      "label": "people around the island",
+      "score": 0.6536,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0262
+    },
+    {
+      "image_id": "09_1791",
+      "label": "meal served",
+      "score": 0.6524,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1614
+    },
+    {
+      "image_id": "15_71",
+      "label": "island with fruit only",
+      "score": 0.6516,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.1794
+    },
+    {
+      "image_id": "15_913",
+      "label": "island with fruit only",
+      "score": 0.6512,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0574
+    },
+    {
+      "image_id": "19_2840",
+      "label": "food being prepared",
+      "score": 0.6505,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0548
+    },
+    {
+      "image_id": "13_1630",
+      "label": "food being prepared",
+      "score": 0.6504,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.4271
+    },
+    {
+      "image_id": "12_3024",
+      "label": "food being prepared",
+      "score": 0.65,
+      "cluster": 3,
+      "runner_up": "island with fruit only",
+      "margin": 0.1019
+    },
+    {
+      "image_id": "13_1797",
+      "label": "island with fruit only",
+      "score": 0.6492,
+      "cluster": 8,
+      "runner_up": "food being prepared",
+      "margin": 0.1101
+    },
+    {
+      "image_id": "14_337",
+      "label": "island with fruit only",
+      "score": 0.6487,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0329
+    },
+    {
+      "image_id": "12_3591",
+      "label": "food being prepared",
+      "score": 0.6481,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.1105
+    },
+    {
+      "image_id": "18_2438",
+      "label": "food being prepared",
+      "score": 0.6472,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0199
+    },
+    {
+      "image_id": "12_2995",
+      "label": "food being prepared",
+      "score": 0.6469,
+      "cluster": 3,
+      "runner_up": "island with fruit only",
+      "margin": 0.1358
+    },
+    {
+      "image_id": "12_2910",
+      "label": "island with fruit only",
+      "score": 0.6465,
+      "cluster": 1,
+      "runner_up": "people around the island",
+      "margin": 0.0342
+    },
+    {
+      "image_id": "09_2014",
+      "label": "meal served",
+      "score": 0.6457,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1391
+    },
+    {
+      "image_id": "15_2722",
+      "label": "food being prepared",
+      "score": 0.6449,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0228
+    },
+    {
+      "image_id": "09_2276",
+      "label": "meal served",
+      "score": 0.6447,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0622
+    },
+    {
+      "image_id": "19_737",
+      "label": "food being prepared",
+      "score": 0.6445,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.1042
+    },
+    {
+      "image_id": "20_1926",
+      "label": "island with fruit only",
+      "score": 0.6433,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0123
+    },
+    {
+      "image_id": "08_314",
+      "label": "island with fruit only",
+      "score": 0.6427,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0522
+    },
+    {
+      "image_id": "14_3120",
+      "label": "island with fruit only",
+      "score": 0.6424,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0095
+    },
+    {
+      "image_id": "13_3503",
+      "label": "island with fruit only",
+      "score": 0.6422,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.1179
+    },
+    {
+      "image_id": "14_3459",
+      "label": "island with fruit only",
+      "score": 0.6419,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0364
+    },
+    {
+      "image_id": "18_2483",
+      "label": "island with fruit only",
+      "score": 0.6409,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0112
+    },
+    {
+      "image_id": "18_3192",
+      "label": "island with fruit only",
+      "score": 0.6403,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0213
+    },
+    {
+      "image_id": "13_290",
+      "label": "food being prepared",
+      "score": 0.6399,
+      "cluster": 13,
+      "runner_up": "meal served",
+      "margin": 0.2224
+    },
+    {
+      "image_id": "bg-19",
+      "label": "island with fruit only",
+      "score": 0.6388,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0011
+    },
+    {
+      "image_id": "14_3053",
+      "label": "island with fruit only",
+      "score": 0.6379,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0513
+    },
+    {
+      "image_id": "15_823",
+      "label": "island with fruit only",
+      "score": 0.6373,
+      "cluster": 21,
+      "runner_up": "meal served",
+      "margin": 0.4586
+    },
+    {
+      "image_id": "19_3248",
+      "label": "food being prepared",
+      "score": 0.6373,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0862
+    },
+    {
+      "image_id": "09_1774",
+      "label": "meal served",
+      "score": 0.6371,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1213
+    },
+    {
+      "image_id": "19_1455",
+      "label": "island with fruit only",
+      "score": 0.6371,
+      "cluster": 18,
+      "runner_up": "food being prepared",
+      "margin": 0.0201
+    },
+    {
+      "image_id": "08_651",
+      "label": "island with fruit only",
+      "score": 0.6358,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0668
+    },
+    {
+      "image_id": "12_1560",
+      "label": "food being prepared",
+      "score": 0.6358,
+      "cluster": 7,
+      "runner_up": "people around the island",
+      "margin": 0.0922
+    },
+    {
+      "image_id": "13_1611",
+      "label": "food being prepared",
+      "score": 0.6357,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.3276
+    },
+    {
+      "image_id": "08_419",
+      "label": "island with fruit only",
+      "score": 0.6355,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0773
+    },
+    {
+      "image_id": "09_1880",
+      "label": "meal served",
+      "score": 0.6347,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0953
+    },
+    {
+      "image_id": "18_2201",
+      "label": "food being prepared",
+      "score": 0.6345,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0138
+    },
+    {
+      "image_id": "15_691",
+      "label": "island with fruit only",
+      "score": 0.6341,
+      "cluster": 20,
+      "runner_up": "food being prepared",
+      "margin": 0.5149
+    },
+    {
+      "image_id": "19_2821",
+      "label": "island with fruit only",
+      "score": 0.6323,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0129
+    },
+    {
+      "image_id": "09_2085",
+      "label": "meal served",
+      "score": 0.6322,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0974
+    },
+    {
+      "image_id": "19_3300",
+      "label": "food being prepared",
+      "score": 0.632,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.043
+    },
+    {
+      "image_id": "14_3515",
+      "label": "food being prepared",
+      "score": 0.6317,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0302
+    },
+    {
+      "image_id": "13_3497",
+      "label": "island with fruit only",
+      "score": 0.6316,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.1251
+    },
+    {
+      "image_id": "09_2277",
+      "label": "meal served",
+      "score": 0.6312,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0496
+    },
+    {
+      "image_id": "19_100",
+      "label": "food being prepared",
+      "score": 0.6308,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.1858
+    },
+    {
+      "image_id": "12_3036",
+      "label": "food being prepared",
+      "score": 0.6306,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.2422
+    },
+    {
+      "image_id": "12_1013",
+      "label": "island with fruit only",
+      "score": 0.63,
+      "cluster": 15,
+      "runner_up": "food being prepared",
+      "margin": 0.1313
+    },
+    {
+      "image_id": "12_2702",
+      "label": "island with fruit only",
+      "score": 0.6298,
+      "cluster": 1,
+      "runner_up": "people around the island",
+      "margin": 0.0808
+    },
+    {
+      "image_id": "08_2237",
+      "label": "island with fruit only",
+      "score": 0.6291,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0318
+    },
+    {
+      "image_id": "12_1047",
+      "label": "meal served",
+      "score": 0.6291,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0206
+    },
+    {
+      "image_id": "14_2616",
+      "label": "island with fruit only",
+      "score": 0.6287,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1438
+    },
+    {
+      "image_id": "13_556",
+      "label": "meal served",
+      "score": 0.6284,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.2069
+    },
+    {
+      "image_id": "13_46",
+      "label": "food being prepared",
+      "score": 0.6283,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.21
+    },
+    {
+      "image_id": "13_1426",
+      "label": "food being prepared",
+      "score": 0.6281,
+      "cluster": 14,
+      "runner_up": "people around the island",
+      "margin": 0.1159
+    },
+    {
+      "image_id": "18_3291",
+      "label": "food being prepared",
+      "score": 0.6264,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.055
+    },
+    {
+      "image_id": "18_1769",
+      "label": "food being prepared",
+      "score": 0.6258,
+      "cluster": 4,
+      "runner_up": "island with fruit only",
+      "margin": 0.0349
+    },
+    {
+      "image_id": "17_1054",
+      "label": "food being prepared",
+      "score": 0.6255,
+      "cluster": 8,
+      "runner_up": "island with fruit only",
+      "margin": 0.342
+    },
+    {
+      "image_id": "12_2727",
+      "label": "island with fruit only",
+      "score": 0.6243,
+      "cluster": 1,
+      "runner_up": "people around the island",
+      "margin": 0.0229
+    },
+    {
+      "image_id": "09_854",
+      "label": "meal served",
+      "score": 0.6242,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0419
+    },
+    {
+      "image_id": "13_184",
+      "label": "food being prepared",
+      "score": 0.6239,
+      "cluster": 9,
+      "runner_up": "meal served",
+      "margin": 0.0521
+    },
+    {
+      "image_id": "13_3104",
+      "label": "island with fruit only",
+      "score": 0.6239,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1815
+    },
+    {
+      "image_id": "09_3106",
+      "label": "island with fruit only",
+      "score": 0.6237,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0282
+    },
+    {
+      "image_id": "19_3281",
+      "label": "food being prepared",
+      "score": 0.6228,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0477
+    },
+    {
+      "image_id": "09_1972",
+      "label": "meal served",
+      "score": 0.6227,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1393
+    },
+    {
+      "image_id": "13_2332",
+      "label": "food being prepared",
+      "score": 0.6226,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0531
+    },
+    {
+      "image_id": "09_1881",
+      "label": "meal served",
+      "score": 0.6223,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0796
+    },
+    {
+      "image_id": "08_3493",
+      "label": "meal served",
+      "score": 0.621,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.076
+    },
+    {
+      "image_id": "20_1922",
+      "label": "people around the island",
+      "score": 0.6206,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0975
+    },
+    {
+      "image_id": "13_749",
+      "label": "meal served",
+      "score": 0.6201,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.1608
+    },
+    {
+      "image_id": "18_1781",
+      "label": "food being prepared",
+      "score": 0.6197,
+      "cluster": 8,
+      "runner_up": "island with fruit only",
+      "margin": 0.1792
+    },
+    {
+      "image_id": "14_3370",
+      "label": "island with fruit only",
+      "score": 0.6195,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.1548
+    },
+    {
+      "image_id": "20_1817",
+      "label": "food being prepared",
+      "score": 0.6192,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0398
+    },
+    {
+      "image_id": "16_1509",
+      "label": "island with fruit only",
+      "score": 0.6185,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.4088
+    },
+    {
+      "image_id": "19_144",
+      "label": "food being prepared",
+      "score": 0.6171,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.1895
+    },
+    {
+      "image_id": "13_748",
+      "label": "meal served",
+      "score": 0.6169,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0822
+    },
+    {
+      "image_id": "19_2794",
+      "label": "food being prepared",
+      "score": 0.6169,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.1716
+    },
+    {
+      "image_id": "19_268",
+      "label": "food being prepared",
+      "score": 0.6166,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.1236
+    },
+    {
+      "image_id": "08_3523",
+      "label": "meal served",
+      "score": 0.6164,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0819
+    },
+    {
+      "image_id": "19_258",
+      "label": "food being prepared",
+      "score": 0.6163,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.4233
+    },
+    {
+      "image_id": "12_1208",
+      "label": "meal served",
+      "score": 0.6161,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0134
+    },
+    {
+      "image_id": "13_273",
+      "label": "food being prepared",
+      "score": 0.6159,
+      "cluster": 13,
+      "runner_up": "people around the island",
+      "margin": 0.0756
+    },
+    {
+      "image_id": "11_755",
+      "label": "people around the island",
+      "score": 0.6158,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0676
+    },
+    {
+      "image_id": "13_85",
+      "label": "meal served",
+      "score": 0.6158,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0468
+    },
+    {
+      "image_id": "14_3505",
+      "label": "food being prepared",
+      "score": 0.6155,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0112
+    },
+    {
+      "image_id": "09_2284",
+      "label": "meal served",
+      "score": 0.6153,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.021
+    },
+    {
+      "image_id": "12_1403",
+      "label": "island with fruit only",
+      "score": 0.6148,
+      "cluster": 6,
+      "runner_up": "meal served",
+      "margin": 0.0107
+    },
+    {
+      "image_id": "15_1021",
+      "label": "island with fruit only",
+      "score": 0.6145,
+      "cluster": 21,
+      "runner_up": "food being prepared",
+      "margin": 0.3707
+    },
+    {
+      "image_id": "09_3260",
+      "label": "island with fruit only",
+      "score": 0.6136,
+      "cluster": 9,
+      "runner_up": "food being prepared",
+      "margin": 0.3474
+    },
+    {
+      "image_id": "11_901",
+      "label": "island with fruit only",
+      "score": 0.6129,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0222
+    },
+    {
+      "image_id": "17_1290",
+      "label": "people around the island",
+      "score": 0.6129,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0276
+    },
+    {
+      "image_id": "11_1044",
+      "label": "island with fruit only",
+      "score": 0.6127,
+      "cluster": 5,
+      "runner_up": "meal served",
+      "margin": 0.5099
+    },
+    {
+      "image_id": "12_2558",
+      "label": "people around the island",
+      "score": 0.6124,
+      "cluster": 3,
+      "runner_up": "food being prepared",
+      "margin": 0.0372
+    },
+    {
+      "image_id": "12_2992",
+      "label": "food being prepared",
+      "score": 0.6124,
+      "cluster": 3,
+      "runner_up": "island with fruit only",
+      "margin": 0.1256
+    },
+    {
+      "image_id": "bg-09",
+      "label": "island with fruit only",
+      "score": 0.6122,
+      "cluster": 12,
+      "runner_up": "meal served",
+      "margin": 0.0585
+    },
+    {
+      "image_id": "17_1037",
+      "label": "food being prepared",
+      "score": 0.6121,
+      "cluster": 11,
+      "runner_up": "island with fruit only",
+      "margin": 0.257
+    },
+    {
+      "image_id": "08_483",
+      "label": "island with fruit only",
+      "score": 0.6119,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0045
+    },
+    {
+      "image_id": "13_2235",
+      "label": "food being prepared",
+      "score": 0.6116,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0006
+    },
+    {
+      "image_id": "14_2701",
+      "label": "island with fruit only",
+      "score": 0.6104,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.1515
+    },
+    {
+      "image_id": "08_2306",
+      "label": "people around the island",
+      "score": 0.6096,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0329
+    },
+    {
+      "image_id": "13_1490",
+      "label": "food being prepared",
+      "score": 0.6095,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.2307
+    },
+    {
+      "image_id": "09_1748",
+      "label": "meal served",
+      "score": 0.6092,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0718
+    },
+    {
+      "image_id": "12_3127",
+      "label": "food being prepared",
+      "score": 0.6088,
+      "cluster": 3,
+      "runner_up": "island with fruit only",
+      "margin": 0.0335
+    },
+    {
+      "image_id": "14_215",
+      "label": "island with fruit only",
+      "score": 0.608,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.1209
+    },
+    {
+      "image_id": "09_1785",
+      "label": "meal served",
+      "score": 0.6071,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0742
+    },
+    {
+      "image_id": "12_2683",
+      "label": "food being prepared",
+      "score": 0.6071,
+      "cluster": 6,
+      "runner_up": "island with fruit only",
+      "margin": 0.1506
+    },
+    {
+      "image_id": "13_933",
+      "label": "meal served",
+      "score": 0.6068,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0664
+    },
+    {
+      "image_id": "14_719",
+      "label": "island with fruit only",
+      "score": 0.6065,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0658
+    },
+    {
+      "image_id": "12_2122",
+      "label": "food being prepared",
+      "score": 0.6056,
+      "cluster": 15,
+      "runner_up": "people around the island",
+      "margin": 0.0137
+    },
+    {
+      "image_id": "13_514",
+      "label": "meal served",
+      "score": 0.6053,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0247
+    },
+    {
+      "image_id": "12_2527",
+      "label": "people around the island",
+      "score": 0.6049,
+      "cluster": 2,
+      "runner_up": "food being prepared",
+      "margin": 0.0847
+    },
+    {
+      "image_id": "12_2584",
+      "label": "food being prepared",
+      "score": 0.6045,
+      "cluster": 15,
+      "runner_up": "island with fruit only",
+      "margin": 0.102
+    },
+    {
+      "image_id": "09_3319",
+      "label": "island with fruit only",
+      "score": 0.6035,
+      "cluster": 5,
+      "runner_up": "food being prepared",
+      "margin": 0.4679
+    },
+    {
+      "image_id": "15_1125",
+      "label": "island with fruit only",
+      "score": 0.6033,
+      "cluster": 24,
+      "runner_up": "food being prepared",
+      "margin": 0.3861
+    },
+    {
+      "image_id": "16_1280",
+      "label": "island with fruit only",
+      "score": 0.6031,
+      "cluster": 18,
+      "runner_up": "food being prepared",
+      "margin": 0.3667
+    },
+    {
+      "image_id": "13_1715",
+      "label": "food being prepared",
+      "score": 0.6025,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.2985
+    },
+    {
+      "image_id": "17_1842",
+      "label": "food being prepared",
+      "score": 0.6022,
+      "cluster": 12,
+      "runner_up": "island with fruit only",
+      "margin": 0.4379
+    },
+    {
+      "image_id": "08_3591",
+      "label": "island with fruit only",
+      "score": 0.602,
+      "cluster": 10,
+      "runner_up": "meal served",
+      "margin": 0.0321
+    },
+    {
+      "image_id": "13_700",
+      "label": "meal served",
+      "score": 0.602,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0975
+    },
+    {
+      "image_id": "13_2114",
+      "label": "food being prepared",
+      "score": 0.6019,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1491
+    },
+    {
+      "image_id": "09_2055",
+      "label": "meal served",
+      "score": 0.6018,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.1104
+    },
+    {
+      "image_id": "11_610",
+      "label": "people around the island",
+      "score": 0.6018,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0894
+    },
+    {
+      "image_id": "08_1654",
+      "label": "people around the island",
+      "score": 0.6007,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0478
+    },
+    {
+      "image_id": "09_2384",
+      "label": "meal served",
+      "score": 0.5995,
+      "cluster": 1,
+      "runner_up": "island with fruit only",
+      "margin": 0.0612
+    },
+    {
+      "image_id": "14_581",
+      "label": "island with fruit only",
+      "score": 0.5995,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0951
+    },
+    {
+      "image_id": "12_3263",
+      "label": "food being prepared",
+      "score": 0.5991,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.1281
+    },
+    {
+      "image_id": "13_286",
+      "label": "food being prepared",
+      "score": 0.5991,
+      "cluster": 13,
+      "runner_up": "people around the island",
+      "margin": 0.0698
+    },
+    {
+      "image_id": "14_2603",
+      "label": "island with fruit only",
+      "score": 0.599,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.164
+    },
+    {
+      "image_id": "18_3393",
+      "label": "island with fruit only",
+      "score": 0.5981,
+      "cluster": 4,
+      "runner_up": "food being prepared",
+      "margin": 0.0082
+    },
+    {
+      "image_id": "19_1318",
+      "label": "food being prepared",
+      "score": 0.5975,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0906
+    },
+    {
+      "image_id": "12_3204",
+      "label": "food being prepared",
+      "score": 0.5969,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.1018
+    },
+    {
+      "image_id": "14_2916",
+      "label": "island with fruit only",
+      "score": 0.5969,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0039
+    },
+    {
+      "image_id": "16_2073",
+      "label": "island with fruit only",
+      "score": 0.5964,
+      "cluster": 18,
+      "runner_up": "food being prepared",
+      "margin": 0.2239
+    },
+    {
+      "image_id": "17_2504",
+      "label": "people around the island",
+      "score": 0.5961,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0875
+    },
+    {
+      "image_id": "09_2159",
+      "label": "island with fruit only",
+      "score": 0.5957,
+      "cluster": 29,
+      "runner_up": "meal served",
+      "margin": 0.0264
+    },
+    {
+      "image_id": "12_3318",
+      "label": "food being prepared",
+      "score": 0.5954,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.099
+    },
+    {
+      "image_id": "08_425",
+      "label": "island with fruit only",
+      "score": 0.5946,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.0852
+    },
+    {
+      "image_id": "09_1829",
+      "label": "island with fruit only",
+      "score": 0.5946,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0597
+    },
+    {
+      "image_id": "13_2311",
+      "label": "food being prepared",
+      "score": 0.5945,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.1283
+    },
+    {
+      "image_id": "12_980",
+      "label": "island with fruit only",
+      "score": 0.5941,
+      "cluster": 15,
+      "runner_up": "food being prepared",
+      "margin": 0.179
+    },
+    {
+      "image_id": "13_2245",
+      "label": "food being prepared",
+      "score": 0.5933,
+      "cluster": 2,
+      "runner_up": "island with fruit only",
+      "margin": 0.0513
+    },
+    {
+      "image_id": "15_2761",
+      "label": "island with fruit only",
+      "score": 0.5925,
+      "cluster": 0,
+      "runner_up": "food being prepared",
+      "margin": 0.0098
+    },
+    {
+      "image_id": "19_2588",
+      "label": "food being prepared",
+      "score": 0.592,
+      "cluster": 5,
+      "runner_up": "island with fruit only",
+      "margin": 0.1526
+    },
+    {
+      "image_id": "15_2186",
+      "label": "island with fruit only",
+      "score": 0.5911,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.4771
+    },
+    {
+      "image_id": "08_3521",
+      "label": "island with fruit only",
+      "score": 0.5908,
+      "cluster": 10,
+      "runner_up": "meal served",
+      "margin": 0.0716
+    },
+    {
+      "image_id": "11_1701",
+      "label": "island with fruit only",
+      "score": 0.5908,
+      "cluster": 5,
+      "runner_up": "meal served",
+      "margin": 0.2893
+    },
+    {
+      "image_id": "12_3300",
+      "label": "food being prepared",
+      "score": 0.5908,
+      "cluster": 16,
+      "runner_up": "island with fruit only",
+      "margin": 0.112
+    },
+    {
+      "image_id": "15_343",
+      "label": "food being prepared",
+      "score": 0.5905,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0742
+    },
+    {
+      "image_id": "14_3180",
+      "label": "island with fruit only",
+      "score": 0.5898,
+      "cluster": 16,
+      "runner_up": "food being prepared",
+      "margin": 0.0626
+    },
+    {
+      "image_id": "08_3382",
+      "label": "island with fruit only",
+      "score": 0.5894,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0361
+    },
+    {
+      "image_id": "19_1317",
+      "label": "food being prepared",
+      "score": 0.5894,
+      "cluster": 0,
+      "runner_up": "island with fruit only",
+      "margin": 0.0621
+    },
+    {
+      "image_id": "13_86",
+      "label": "meal served",
+      "score": 0.5887,
+      "cluster": 0,
+      "runner_up": "people around the island",
+      "margin": 0.0584
+    },
+    {
+      "image_id": "09_3261",
+      "label": "island with fruit only",
+      "score": 0.5886,
+      "cluster": 9,
+      "runner_up": "food being prepared",
+      "margin": 0.3791
+    },
+    {
+      "image_id": "13_981",
+      "label": "food being prepared",
+      "score": 0.5879,
+      "cluster": 14,
+      "runner_up": "island with fruit only",
+      "margin": 0.1907
+    },
+    {
+      "image_id": "16_3334",
+      "label": "food being prepared",
+      "score": 0.5878,
+      "cluster": 10,
+      "runner_up": "island with fruit only",
+      "margin": 0.3958
+    },
+    {
+      "image_id": "08_382",
+      "label": "island with fruit only",
+      "score": 0.5876,
+      "cluster": 11,
+      "runner_up": "food being prepared",
+      "margin": 0.005
+    },
+    {
+      "image_id": "13_266",
+      "label": "food being prepared",
+      "score": 0.5873,
+      "cluster": 13,
+      "runner_up": "meal served",
+      "margin": 0.0519
+    },
+    {
+      "image_id": "16_1480",
+      "label": "island with fruit only",
+      "score": 0.587,
+      "cluster": 17,
+      "runner_up": "food being prepared",
+      "margin": 0.4589
+    }
+  ]
+}

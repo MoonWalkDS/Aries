@@ -1,0 +1,1863 @@
+{
+  "08_1010_p09": [
+    "cooking at the stove"
+  ],
+  "08_1078_p07": [
+    "opening the refrigerator"
+  ],
+  "08_1114_p02": [
+    "washing dishes",
+    "making a hot drink"
+  ],
+  "08_1114_p07": [
+    "opening the refrigerator"
+  ],
+  "08_1130_p05": [
+    "opening the refrigerator"
+  ],
+  "08_1130_p06": [
+    "opening the refrigerator"
+  ],
+  "08_1136_p06": [
+    "opening the refrigerator"
+  ],
+  "08_1161_p05": [
+    "opening the refrigerator"
+  ],
+  "08_1162_p05": [
+    "opening the refrigerator"
+  ],
+  "08_1169_p07": [
+    "opening the refrigerator"
+  ],
+  "08_1183_p04": [
+    "using a laptop"
+  ],
+  "08_1214_p03": [
+    "opening the refrigerator",
+    "standing idle",
+    "sitting"
+  ],
+  "08_1239_p08": [
+    "opening the refrigerator"
+  ],
+  "08_1257_p08": [
+    "opening the refrigerator"
+  ],
+  "08_1259_p03": [
+    "throwing away trash"
+  ],
+  "08_1267_p06": [
+    "opening the refrigerator"
+  ],
+  "08_1352_p08": [
+    "opening the refrigerator"
+  ],
+  "08_1512_p01": [
+    "throwing away trash"
+  ],
+  "08_1530_p08": [
+    "opening the refrigerator"
+  ],
+  "08_1552_p09": [
+    "opening the refrigerator"
+  ],
+  "08_1552_p10": [
+    "opening the refrigerator"
+  ],
+  "08_1633_p09": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "08_1654_p07": [
+    "throwing away trash"
+  ],
+  "08_1654_p08": [
+    "throwing away trash"
+  ],
+  "08_1764_p06": [
+    "opening the refrigerator"
+  ],
+  "08_1861_p04": [
+    "opening the refrigerator"
+  ],
+  "08_1862_p05": [
+    "opening the refrigerator"
+  ],
+  "08_1936_p06": [
+    "opening the refrigerator"
+  ],
+  "08_1952_p05": [
+    "opening the refrigerator"
+  ],
+  "08_1989_p03": [
+    "making a hot drink",
+    "standing idle"
+  ],
+  "08_2080_p02": [
+    "sitting"
+  ],
+  "08_2200_p02": [
+    "sitting",
+    "opening the refrigerator",
+    "standing idle"
+  ],
+  "08_2200_p03": [
+    "sitting",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "08_2215_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2217_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2217_p07": [
+    "opening the refrigerator",
+    "sitting"
+  ],
+  "08_2262_p01": [
+    "opening the refrigerator",
+    "standing idle",
+    "getting items from a cabinet"
+  ],
+  "08_2265_p02": [
+    "talking"
+  ],
+  "08_2276_p01": [
+    "opening the refrigerator",
+    "standing idle",
+    "sitting"
+  ],
+  "08_2276_p02": [
+    "sitting",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "08_2276_p05": [
+    "sitting",
+    "washing dishes"
+  ],
+  "08_2281_p08": [
+    "opening the refrigerator"
+  ],
+  "08_2287_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2287_p08": [
+    "opening the refrigerator"
+  ],
+  "08_2385_p03": [
+    "sitting",
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "08_2389_p01": [
+    "sitting"
+  ],
+  "08_2413_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2433_p01": [
+    "sitting"
+  ],
+  "08_2472_p02": [
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "08_2509_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2541_p01": [
+    "throwing away trash"
+  ],
+  "08_2546_p01": [
+    "standing idle",
+    "washing dishes"
+  ],
+  "08_262_p04": [
+    "making a hot drink"
+  ],
+  "08_272_p03": [
+    "standing idle"
+  ],
+  "08_2745_p02": [
+    "opening the refrigerator"
+  ],
+  "08_276_p02": [
+    "washing dishes"
+  ],
+  "08_2786_p01": [
+    "opening the refrigerator"
+  ],
+  "08_2786_p03": [
+    "opening the refrigerator"
+  ],
+  "08_2799_p04": [
+    "opening the refrigerator"
+  ],
+  "08_2810_p04": [
+    "opening the refrigerator"
+  ],
+  "08_2949_p06": [
+    "opening the refrigerator"
+  ],
+  "08_2959_p02": [
+    "opening the refrigerator"
+  ],
+  "08_2959_p06": [
+    "opening the refrigerator"
+  ],
+  "08_2972_p01": [
+    "walking"
+  ],
+  "08_3008_p02": [
+    "washing dishes",
+    "standing idle"
+  ],
+  "08_3068_p04": [
+    "eating"
+  ],
+  "08_3109_p01": [
+    "sitting",
+    "drinking",
+    "cooking at the stove",
+    "washing dishes"
+  ],
+  "08_3139_p05": [
+    "opening the refrigerator"
+  ],
+  "08_3191_p03": [
+    "opening the refrigerator"
+  ],
+  "08_3224_p04": [
+    "preparing food",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "08_3330_p01": [
+    "standing idle"
+  ],
+  "08_3330_p06": [
+    "opening the refrigerator"
+  ],
+  "08_3345_p01": [
+    "standing idle"
+  ],
+  "08_3361_p03": [
+    "opening the refrigerator"
+  ],
+  "08_3361_p05": [
+    "opening the refrigerator",
+    "sitting"
+  ],
+  "08_3387_p02": [
+    "opening the refrigerator"
+  ],
+  "08_3399_p01": [
+    "sitting"
+  ],
+  "08_3445_p02": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "08_353_p03": [
+    "standing idle"
+  ],
+  "08_428_p04": [
+    "opening the refrigerator"
+  ],
+  "08_438_p04": [
+    "opening the refrigerator"
+  ],
+  "08_438_p05": [
+    "opening the refrigerator"
+  ],
+  "08_483_p03": [
+    "opening the refrigerator"
+  ],
+  "08_483_p04": [
+    "washing dishes"
+  ],
+  "08_486_p02": [
+    "opening the refrigerator"
+  ],
+  "08_607_p01": [
+    "opening the refrigerator"
+  ],
+  "08_607_p03": [
+    "opening the refrigerator"
+  ],
+  "08_620_p04": [
+    "making a hot drink"
+  ],
+  "08_683_p01": [
+    "opening the refrigerator"
+  ],
+  "08_696_p04": [
+    "getting items from a cabinet"
+  ],
+  "08_723_p07": [
+    "cooking at the stove"
+  ],
+  "08_723_p08": [
+    "making a hot drink"
+  ],
+  "08_726_p06": [
+    "opening the refrigerator"
+  ],
+  "08_806_p06": [
+    "sitting"
+  ],
+  "08_815_p05": [
+    "standing idle",
+    "eating"
+  ],
+  "08_830_p09": [
+    "opening the refrigerator"
+  ],
+  "08_848_p02": [
+    "opening the refrigerator"
+  ],
+  "08_862_p04": [
+    "opening the refrigerator"
+  ],
+  "08_941_p03": [
+    "washing dishes",
+    "sitting"
+  ],
+  "09_1573_p01": [
+    "drinking"
+  ],
+  "09_1946_p01": [
+    "opening the refrigerator"
+  ],
+  "09_2014_p01": [
+    "washing dishes",
+    "getting items from a cabinet"
+  ],
+  "09_2085_p02": [
+    "opening the refrigerator"
+  ],
+  "09_2104_p02": [
+    "opening the refrigerator"
+  ],
+  "09_2187_p02": [
+    "washing dishes"
+  ],
+  "09_2358_p02": [
+    "opening the refrigerator"
+  ],
+  "09_2360_p03": [
+    "opening the refrigerator"
+  ],
+  "09_2571_p01": [
+    "carrying something"
+  ],
+  "09_2868_p02": [
+    "washing dishes"
+  ],
+  "09_2934_p01": [
+    "sitting",
+    "getting items from a cabinet"
+  ],
+  "09_2937_p02": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "09_2940_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet",
+    "washing dishes"
+  ],
+  "09_3030_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "09_3064_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "09_3182_p02": [
+    "opening the refrigerator"
+  ],
+  "09_3183_p02": [
+    "opening the refrigerator"
+  ],
+  "09_3201_p03": [
+    "opening the refrigerator"
+  ],
+  "09_3238_p02": [
+    "sitting"
+  ],
+  "09_3319_p02": [
+    "using a laptop",
+    "getting items from a cabinet",
+    "washing dishes"
+  ],
+  "09_334_p01": [
+    "opening the refrigerator"
+  ],
+  "09_426_p01": [
+    "opening the refrigerator"
+  ],
+  "09_724_p01": [
+    "drinking"
+  ],
+  "11_1001_p01": [
+    "opening the refrigerator"
+  ],
+  "11_1055_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "standing idle",
+    "getting items from a cabinet"
+  ],
+  "11_1089_p02": [
+    "talking"
+  ],
+  "11_1335_p01": [
+    "standing idle"
+  ],
+  "11_1430_p01": [
+    "opening the refrigerator"
+  ],
+  "11_1431_p01": [
+    "sitting"
+  ],
+  "11_1481_p02": [
+    "drinking",
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "11_1498_p03": [
+    "getting items from a cabinet"
+  ],
+  "11_1623_p01": [
+    "sitting",
+    "making a hot drink"
+  ],
+  "11_1627_p07": [
+    "opening the refrigerator"
+  ],
+  "11_1643_p01": [
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "11_1672_p01": [
+    "standing idle"
+  ],
+  "11_1672_p03": [
+    "opening the refrigerator"
+  ],
+  "11_1687_p04": [
+    "talking",
+    "sitting",
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "11_2165_p01": [
+    "standing idle"
+  ],
+  "11_2450_p02": [
+    "opening the refrigerator"
+  ],
+  "11_2453_p02": [
+    "washing dishes"
+  ],
+  "11_2453_p03": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "11_2540_p03": [
+    "opening the refrigerator"
+  ],
+  "11_2630_p02": [
+    "standing idle",
+    "making a hot drink"
+  ],
+  "11_2743_p01": [
+    "drinking",
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "11_2755_p01": [
+    "opening the refrigerator",
+    "sitting",
+    "standing idle"
+  ],
+  "11_2880_p01": [
+    "sitting",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "11_2880_p02": [
+    "walking"
+  ],
+  "11_3423_p01": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "11_3429_p02": [
+    "washing dishes"
+  ],
+  "11_3435_p01": [
+    "talking"
+  ],
+  "11_3455_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "11_3481_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "11_3505_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "11_596_p02": [
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "11_646_p01": [
+    "making a hot drink"
+  ],
+  "11_646_p05": [
+    "opening the refrigerator"
+  ],
+  "11_652_p01": [
+    "sitting"
+  ],
+  "11_660_p05": [
+    "opening the refrigerator"
+  ],
+  "11_730_p04": [
+    "talking"
+  ],
+  "11_732_p03": [
+    "opening the refrigerator"
+  ],
+  "11_770_p01": [
+    "sitting"
+  ],
+  "11_873_p01": [
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "11_875_p07": [
+    "washing dishes"
+  ],
+  "11_893_p01": [
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_1013_p03": [
+    "opening the refrigerator"
+  ],
+  "12_1145_p03": [
+    "opening the refrigerator"
+  ],
+  "12_1825_p02": [
+    "standing idle",
+    "washing dishes"
+  ],
+  "12_216_p01": [
+    "opening the refrigerator"
+  ],
+  "12_2182_p01": [
+    "washing dishes",
+    "getting items from a cabinet"
+  ],
+  "12_2251_p04": [
+    "opening the refrigerator"
+  ],
+  "12_235_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_237_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "12_2426_p04": [
+    "opening the refrigerator"
+  ],
+  "12_2519_p02": [
+    "sitting",
+    "opening the refrigerator",
+    "drinking",
+    "getting items from a cabinet"
+  ],
+  "12_2594_p04": [
+    "throwing away trash"
+  ],
+  "12_2702_p02": [
+    "throwing away trash"
+  ],
+  "12_2716_p01": [
+    "washing dishes"
+  ],
+  "12_2721_p01": [
+    "sitting"
+  ],
+  "12_2755_p05": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "12_278_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_2800_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "12_2809_p01": [
+    "making a hot drink",
+    "carrying something"
+  ],
+  "12_288_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_3052_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "12_305_p01": [
+    "sitting",
+    "getting items from a cabinet",
+    "opening the refrigerator"
+  ],
+  "12_3070_p01": [
+    "opening the refrigerator"
+  ],
+  "12_3076_p01": [
+    "washing dishes",
+    "getting items from a cabinet"
+  ],
+  "12_308_p01": [
+    "carrying something"
+  ],
+  "12_309_p01": [
+    "sitting"
+  ],
+  "12_309_p04": [
+    "opening the refrigerator"
+  ],
+  "12_331_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_3356_p02": [
+    "sitting",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "12_349_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator"
+  ],
+  "12_3554_p01": [
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "12_363_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "12_479_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator"
+  ],
+  "12_479_p02": [
+    "throwing away trash"
+  ],
+  "12_533_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "12_59_p03": [
+    "opening the refrigerator"
+  ],
+  "12_821_p02": [
+    "opening the refrigerator"
+  ],
+  "12_980_p02": [
+    "opening the refrigerator"
+  ],
+  "12_981_p03": [
+    "opening the refrigerator"
+  ],
+  "13_1125_p04": [
+    "opening the refrigerator"
+  ],
+  "13_1140_p01": [
+    "sitting"
+  ],
+  "13_1222_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "13_1245_p04": [
+    "opening the refrigerator"
+  ],
+  "13_141_p03": [
+    "preparing food"
+  ],
+  "13_2201_p02": [
+    "carrying something"
+  ],
+  "13_2206_p02": [
+    "carrying something"
+  ],
+  "13_2577_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "13_2604_p04": [
+    "opening the refrigerator"
+  ],
+  "13_2718_p06": [
+    "opening the refrigerator"
+  ],
+  "13_2817_p01": [
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "13_2817_p02": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "13_2845_p01": [
+    "sitting"
+  ],
+  "13_2864_p02": [
+    "opening the refrigerator"
+  ],
+  "13_2876_p01": [
+    "sitting"
+  ],
+  "13_2901_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "13_2908_p01": [
+    "opening the refrigerator"
+  ],
+  "13_290_p03": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "13_2977_p01": [
+    "sitting"
+  ],
+  "13_3008_p01": [
+    "standing idle"
+  ],
+  "13_3038_p01": [
+    "opening the refrigerator",
+    "washing dishes",
+    "standing idle"
+  ],
+  "13_3056_p01": [
+    "opening the refrigerator",
+    "sitting",
+    "getting items from a cabinet"
+  ],
+  "13_316_p03": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "13_3256_p01": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "13_3291_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "13_3599_p03": [
+    "opening the refrigerator"
+  ],
+  "13_394_p03": [
+    "preparing food"
+  ],
+  "13_520_p04": [
+    "preparing food"
+  ],
+  "13_579_p02": [
+    "preparing food"
+  ],
+  "13_723_p03": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "13_785_p03": [
+    "preparing food"
+  ],
+  "13_785_p04": [
+    "opening the refrigerator"
+  ],
+  "13_815_p01": [
+    "drinking"
+  ],
+  "13_833_p04": [
+    "preparing food"
+  ],
+  "14_218_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "14_252_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "14_2551_p01": [
+    "opening the refrigerator"
+  ],
+  "14_2664_p06": [
+    "opening the refrigerator"
+  ],
+  "14_2683_p04": [
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "14_2683_p05": [
+    "opening the refrigerator",
+    "washing dishes",
+    "sitting"
+  ],
+  "14_2719_p02": [
+    "sitting",
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "14_2777_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "14_2778_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "14_2778_p07": [
+    "opening the refrigerator"
+  ],
+  "14_2780_p02": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "14_2798_p07": [
+    "washing dishes",
+    "sitting"
+  ],
+  "14_2801_p06": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "14_2832_p05": [
+    "sitting",
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "14_2849_p04": [
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "14_2886_p06": [
+    "opening the refrigerator"
+  ],
+  "14_2897_p05": [
+    "washing dishes"
+  ],
+  "14_2916_p01": [
+    "making a hot drink"
+  ],
+  "14_2981_p04": [
+    "opening the refrigerator"
+  ],
+  "14_3007_p01": [
+    "walking"
+  ],
+  "14_3076_p01": [
+    "opening the refrigerator"
+  ],
+  "14_3082_p01": [
+    "sitting"
+  ],
+  "14_3090_p04": [
+    "opening the refrigerator"
+  ],
+  "14_3132_p02": [
+    "opening the refrigerator"
+  ],
+  "14_3132_p04": [
+    "opening the refrigerator"
+  ],
+  "14_3136_p03": [
+    "opening the refrigerator"
+  ],
+  "14_3349_p02": [
+    "opening the refrigerator"
+  ],
+  "14_3440_p02": [
+    "opening the refrigerator"
+  ],
+  "14_3443_p02": [
+    "opening the refrigerator"
+  ],
+  "14_3504_p02": [
+    "opening the refrigerator"
+  ],
+  "14_3505_p02": [
+    "opening the refrigerator"
+  ],
+  "14_384_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "using a phone",
+    "getting items from a cabinet"
+  ],
+  "14_402_p01": [
+    "getting items from a cabinet"
+  ],
+  "14_475_p01": [
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "14_568_p01": [
+    "making a hot drink",
+    "washing dishes"
+  ],
+  "14_572_p01": [
+    "sitting",
+    "washing dishes"
+  ],
+  "14_576_p01": [
+    "throwing away trash"
+  ],
+  "14_576_p03": [
+    "opening the refrigerator"
+  ],
+  "14_588_p01": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "15_1058_p01": [
+    "carrying something"
+  ],
+  "15_1246_p01": [
+    "drinking"
+  ],
+  "15_1261_p04": [
+    "opening the refrigerator"
+  ],
+  "15_1267_p02": [
+    "opening the refrigerator"
+  ],
+  "15_1323_p02": [
+    "standing idle",
+    "cleaning"
+  ],
+  "15_1383_p01": [
+    "carrying something"
+  ],
+  "15_1555_p01": [
+    "opening the refrigerator"
+  ],
+  "15_2154_p03": [
+    "opening the refrigerator"
+  ],
+  "15_2638_p01": [
+    "opening the refrigerator"
+  ],
+  "15_2640_p01": [
+    "opening the refrigerator"
+  ],
+  "15_2645_p01": [
+    "opening the refrigerator"
+  ],
+  "15_2730_p01": [
+    "getting items from a cabinet"
+  ],
+  "15_2742_p01": [
+    "using a laptop",
+    "getting items from a cabinet",
+    "sitting"
+  ],
+  "15_276_p04": [
+    "opening the refrigerator"
+  ],
+  "15_281_p04": [
+    "opening the refrigerator"
+  ],
+  "15_2910_p02": [
+    "opening the refrigerator",
+    "sitting",
+    "getting items from a cabinet"
+  ],
+  "15_2959_p02": [
+    "sitting",
+    "drinking"
+  ],
+  "15_3075_p01": [
+    "sitting",
+    "drinking",
+    "getting items from a cabinet"
+  ],
+  "15_3327_p01": [
+    "opening the refrigerator"
+  ],
+  "15_3367_p01": [
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "15_3377_p01": [
+    "sitting"
+  ],
+  "15_3437_p01": [
+    "sitting"
+  ],
+  "15_3437_p02": [
+    "sitting"
+  ],
+  "15_3437_p03": [
+    "washing dishes",
+    "standing idle"
+  ],
+  "15_3556_p01": [
+    "drinking",
+    "sitting",
+    "washing dishes"
+  ],
+  "15_365_p01": [
+    "throwing away trash"
+  ],
+  "15_372_p03": [
+    "opening the refrigerator"
+  ],
+  "15_373_p01": [
+    "walking"
+  ],
+  "15_634_p01": [
+    "carrying something"
+  ],
+  "15_634_p02": [
+    "sitting",
+    "washing dishes"
+  ],
+  "15_87_p01": [
+    "washing dishes"
+  ],
+  "15_935_p02": [
+    "opening the refrigerator"
+  ],
+  "16_1480_p01": [
+    "preparing food"
+  ],
+  "16_1553_p03": [
+    "opening the refrigerator"
+  ],
+  "16_1935_p01": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "16_2014_p01": [
+    "making a hot drink",
+    "standing idle"
+  ],
+  "16_2014_p02": [
+    "opening the refrigerator"
+  ],
+  "16_2065_p01": [
+    "using a phone"
+  ],
+  "16_2221_p05": [
+    "opening the refrigerator"
+  ],
+  "16_2246_p04": [
+    "opening the refrigerator"
+  ],
+  "16_2359_p04": [
+    "opening the refrigerator"
+  ],
+  "16_2385_p01": [
+    "opening the refrigerator"
+  ],
+  "16_2412_p01": [
+    "opening the refrigerator"
+  ],
+  "16_2412_p02": [
+    "washing dishes"
+  ],
+  "16_2419_p02": [
+    "talking"
+  ],
+  "16_2419_p03": [
+    "opening the refrigerator"
+  ],
+  "16_2429_p04": [
+    "opening the refrigerator"
+  ],
+  "16_2494_p03": [
+    "opening the refrigerator"
+  ],
+  "16_2494_p04": [
+    "using a phone"
+  ],
+  "16_2550_p01": [
+    "walking",
+    "drinking"
+  ],
+  "16_2553_p02": [
+    "preparing food",
+    "standing idle"
+  ],
+  "16_2553_p03": [
+    "opening the refrigerator"
+  ],
+  "16_2558_p05": [
+    "opening the refrigerator"
+  ],
+  "16_2587_p02": [
+    "standing idle",
+    "cleaning"
+  ],
+  "16_2601_p02": [
+    "sitting"
+  ],
+  "16_2608_p02": [
+    "standing idle",
+    "sitting"
+  ],
+  "16_2610_p02": [
+    "sitting"
+  ],
+  "16_2722_p03": [
+    "washing dishes"
+  ],
+  "16_2722_p04": [
+    "drinking",
+    "sitting",
+    "washing dishes"
+  ],
+  "16_2724_p04": [
+    "drinking",
+    "sitting",
+    "washing dishes"
+  ],
+  "16_2733_p03": [
+    "drinking",
+    "washing dishes",
+    "sitting"
+  ],
+  "16_2733_p04": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "16_2780_p05": [
+    "washing dishes"
+  ],
+  "16_2838_p02": [
+    "opening the refrigerator"
+  ],
+  "16_2881_p03": [
+    "opening the refrigerator"
+  ],
+  "16_2914_p03": [
+    "opening the refrigerator"
+  ],
+  "16_291_p01": [
+    "throwing away trash"
+  ],
+  "16_2962_p04": [
+    "opening the refrigerator"
+  ],
+  "16_3071_p04": [
+    "washing dishes",
+    "making a hot drink"
+  ],
+  "16_3112_p04": [
+    "opening the refrigerator"
+  ],
+  "16_3138_p05": [
+    "opening the refrigerator"
+  ],
+  "16_3142_p05": [
+    "opening the refrigerator"
+  ],
+  "16_3161_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "washing dishes",
+    "getting items from a cabinet"
+  ],
+  "16_3249_p05": [
+    "opening the refrigerator"
+  ],
+  "16_3320_p04": [
+    "opening the refrigerator"
+  ],
+  "16_3430_p03": [
+    "opening the refrigerator"
+  ],
+  "16_53_p01": [
+    "opening the refrigerator"
+  ],
+  "16_97_p01": [
+    "sitting"
+  ],
+  "17_1002_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1003_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1044_p01": [
+    "making a hot drink",
+    "standing idle"
+  ],
+  "17_1131_p04": [
+    "opening the refrigerator"
+  ],
+  "17_1147_p05": [
+    "opening the refrigerator"
+  ],
+  "17_1152_p04": [
+    "standing idle"
+  ],
+  "17_1167_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1190_p02": [
+    "opening the refrigerator"
+  ],
+  "17_1190_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1191_p02": [
+    "opening the refrigerator"
+  ],
+  "17_1191_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1246_p04": [
+    "opening the refrigerator"
+  ],
+  "17_1246_p05": [
+    "opening the refrigerator"
+  ],
+  "17_1268_p02": [
+    "opening the refrigerator"
+  ],
+  "17_1380_p05": [
+    "opening the refrigerator"
+  ],
+  "17_1499_p05": [
+    "opening the refrigerator"
+  ],
+  "17_1511_p02": [
+    "sitting",
+    "making a hot drink"
+  ],
+  "17_1629_p04": [
+    "walking"
+  ],
+  "17_169_p05": [
+    "preparing food",
+    "washing dishes"
+  ],
+  "17_169_p06": [
+    "opening the refrigerator"
+  ],
+  "17_1733_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1786_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1913_p03": [
+    "opening the refrigerator"
+  ],
+  "17_1989_p02": [
+    "throwing away trash"
+  ],
+  "17_2023_p02": [
+    "opening the refrigerator"
+  ],
+  "17_2037_p01": [
+    "throwing away trash"
+  ],
+  "17_2124_p03": [
+    "opening the refrigerator"
+  ],
+  "17_2140_p02": [
+    "drinking",
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "17_2238_p02": [
+    "sitting"
+  ],
+  "17_2343_p01": [
+    "sitting",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "17_2343_p02": [
+    "sitting",
+    "standing idle",
+    "cooking at the stove",
+    "making a hot drink"
+  ],
+  "17_2364_p04": [
+    "sitting",
+    "washing dishes",
+    "standing idle"
+  ],
+  "17_2439_p02": [
+    "preparing food",
+    "standing idle"
+  ],
+  "17_2467_p04": [
+    "opening the refrigerator"
+  ],
+  "17_2485_p04": [
+    "cleaning"
+  ],
+  "17_2492_p01": [
+    "sitting",
+    "standing idle",
+    "opening the refrigerator"
+  ],
+  "17_2522_p04": [
+    "opening the refrigerator"
+  ],
+  "17_2538_p02": [
+    "opening the refrigerator",
+    "sitting"
+  ],
+  "17_2538_p03": [
+    "opening the refrigerator"
+  ],
+  "17_2539_p02": [
+    "sitting"
+  ],
+  "17_278_p05": [
+    "opening the refrigerator"
+  ],
+  "17_294_p04": [
+    "opening the refrigerator"
+  ],
+  "17_504_p02": [
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "17_525_p03": [
+    "opening the refrigerator"
+  ],
+  "17_527_p02": [
+    "opening the refrigerator",
+    "standing idle",
+    "sitting"
+  ],
+  "17_527_p07": [
+    "opening the refrigerator"
+  ],
+  "17_539_p03": [
+    "sitting",
+    "drinking",
+    "standing idle"
+  ],
+  "17_586_p02": [
+    "sitting"
+  ],
+  "17_634_p03": [
+    "sitting",
+    "standing idle",
+    "drinking"
+  ],
+  "17_772_p02": [
+    "sitting",
+    "making a hot drink",
+    "standing idle"
+  ],
+  "17_831_p04": [
+    "throwing away trash"
+  ],
+  "17_838_p04": [
+    "throwing away trash"
+  ],
+  "17_851_p05": [
+    "throwing away trash"
+  ],
+  "17_867_p04": [
+    "throwing away trash"
+  ],
+  "17_868_p04": [
+    "throwing away trash"
+  ],
+  "17_879_p04": [
+    "throwing away trash"
+  ],
+  "18_1097_p01": [
+    "standing idle"
+  ],
+  "18_1257_p01": [
+    "getting items from a cabinet",
+    "opening the refrigerator"
+  ],
+  "18_2297_p01": [
+    "getting items from a cabinet"
+  ],
+  "18_2297_p02": [
+    "opening the refrigerator"
+  ],
+  "18_3066_p01": [
+    "talking",
+    "standing idle",
+    "making a hot drink",
+    "sitting"
+  ],
+  "18_3073_p01": [
+    "getting items from a cabinet",
+    "standing idle"
+  ],
+  "18_3174_p01": [
+    "standing idle"
+  ],
+  "18_3180_p01": [
+    "standing idle"
+  ],
+  "18_3212_p01": [
+    "walking"
+  ],
+  "18_3455_p01": [
+    "sitting"
+  ],
+  "18_3458_p01": [
+    "sitting"
+  ],
+  "18_508_p01": [
+    "opening the refrigerator"
+  ],
+  "19_130_p04": [
+    "opening the refrigerator"
+  ],
+  "19_1317_p02": [
+    "opening the refrigerator"
+  ],
+  "19_1340_p02": [
+    "opening the refrigerator"
+  ],
+  "19_1342_p03": [
+    "opening the refrigerator"
+  ],
+  "19_1343_p03": [
+    "opening the refrigerator"
+  ],
+  "19_1348_p03": [
+    "opening the refrigerator"
+  ],
+  "19_1390_p03": [
+    "sitting",
+    "standing idle",
+    "making a hot drink"
+  ],
+  "19_144_p02": [
+    "opening the refrigerator"
+  ],
+  "19_1515_p04": [
+    "opening the refrigerator"
+  ],
+  "19_2496_p02": [
+    "opening the refrigerator"
+  ],
+  "19_258_p03": [
+    "walking"
+  ],
+  "19_2602_p03": [
+    "opening the refrigerator"
+  ],
+  "19_2602_p05": [
+    "sitting"
+  ],
+  "19_2602_p06": [
+    "opening the refrigerator"
+  ],
+  "19_2650_p01": [
+    "opening the refrigerator"
+  ],
+  "19_265_p03": [
+    "sitting"
+  ],
+  "19_265_p06": [
+    "opening the refrigerator"
+  ],
+  "19_268_p06": [
+    "opening the refrigerator"
+  ],
+  "19_268_p07": [
+    "opening the refrigerator",
+    "standing idle",
+    "sitting"
+  ],
+  "19_2733_p05": [
+    "opening the refrigerator"
+  ],
+  "19_2750_p04": [
+    "opening the refrigerator"
+  ],
+  "19_2794_p06": [
+    "opening the refrigerator"
+  ],
+  "19_2816_p07": [
+    "opening the refrigerator"
+  ],
+  "19_2887_p02": [
+    "cooking at the stove",
+    "sitting"
+  ],
+  "19_2918_p04": [
+    "washing dishes",
+    "sitting"
+  ],
+  "19_294_p02": [
+    "sitting"
+  ],
+  "19_2965_p04": [
+    "opening the refrigerator"
+  ],
+  "19_2966_p04": [
+    "opening the refrigerator"
+  ],
+  "19_2968_p05": [
+    "cleaning",
+    "opening the refrigerator"
+  ],
+  "19_2974_p04": [
+    "opening the refrigerator"
+  ],
+  "19_2976_p01": [
+    "getting items from a cabinet"
+  ],
+  "19_2997_p04": [
+    "opening the refrigerator"
+  ],
+  "19_3144_p05": [
+    "opening the refrigerator"
+  ],
+  "19_316_p06": [
+    "opening the refrigerator"
+  ],
+  "19_3193_p02": [
+    "washing dishes",
+    "making a hot drink"
+  ],
+  "19_3226_p05": [
+    "opening the refrigerator"
+  ],
+  "19_3285_p04": [
+    "opening the refrigerator"
+  ],
+  "19_3295_p03": [
+    "sitting",
+    "making a hot drink",
+    "standing idle"
+  ],
+  "19_3295_p07": [
+    "opening the refrigerator"
+  ],
+  "19_3332_p06": [
+    "opening the refrigerator"
+  ],
+  "19_3337_p05": [
+    "opening the refrigerator"
+  ],
+  "19_3576_p01": [
+    "eating"
+  ],
+  "19_392_p06": [
+    "opening the refrigerator"
+  ],
+  "19_442_p05": [
+    "opening the refrigerator"
+  ],
+  "19_442_p06": [
+    "opening the refrigerator"
+  ],
+  "19_443_p06": [
+    "opening the refrigerator"
+  ],
+  "19_457_p01": [
+    "carrying something"
+  ],
+  "19_464_p01": [
+    "throwing away trash"
+  ],
+  "19_560_p01": [
+    "walking"
+  ],
+  "19_691_p02": [
+    "washing dishes"
+  ],
+  "19_697_p01": [
+    "walking"
+  ],
+  "19_771_p01": [
+    "sitting",
+    "opening the refrigerator",
+    "getting items from a cabinet",
+    "washing dishes"
+  ],
+  "19_771_p04": [
+    "getting items from a cabinet"
+  ],
+  "19_898_p02": [
+    "opening the refrigerator"
+  ],
+  "19_905_p01": [
+    "opening the refrigerator"
+  ],
+  "19_931_p01": [
+    "opening the refrigerator"
+  ],
+  "19_989_p04": [
+    "opening the refrigerator"
+  ],
+  "20_105_p02": [
+    "drinking",
+    "sitting",
+    "opening the refrigerator"
+  ],
+  "20_105_p03": [
+    "cleaning"
+  ],
+  "20_1204_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_1228_p03": [
+    "talking",
+    "standing idle",
+    "cooking at the stove",
+    "sitting"
+  ],
+  "20_1531_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_1545_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator"
+  ],
+  "20_1559_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_1566_p01": [
+    "sitting",
+    "drinking",
+    "washing dishes"
+  ],
+  "20_1582_p04": [
+    "sitting",
+    "cooking at the stove",
+    "making a hot drink"
+  ],
+  "20_1587_p02": [
+    "sitting",
+    "drinking",
+    "cooking at the stove",
+    "using a phone"
+  ],
+  "20_1594_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_1594_p03": [
+    "using a phone"
+  ],
+  "20_1596_p02": [
+    "using a phone",
+    "cooking at the stove"
+  ],
+  "20_1612_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "20_1629_p02": [
+    "talking",
+    "standing idle",
+    "cooking at the stove",
+    "sitting"
+  ],
+  "20_1631_p01": [
+    "throwing away trash"
+  ],
+  "20_1640_p03": [
+    "using a phone"
+  ],
+  "20_1656_p04": [
+    "eating"
+  ],
+  "20_1671_p03": [
+    "washing dishes",
+    "opening the refrigerator"
+  ],
+  "20_1765_p01": [
+    "opening the refrigerator",
+    "standing idle"
+  ],
+  "20_1766_p01": [
+    "opening the refrigerator"
+  ],
+  "20_1770_p03": [
+    "sitting",
+    "standing idle",
+    "cooking at the stove"
+  ],
+  "20_1770_p08": [
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_1780_p08": [
+    "cooking at the stove",
+    "sitting"
+  ],
+  "20_1882_p04": [
+    "eating"
+  ],
+  "20_2300_p02": [
+    "throwing away trash"
+  ],
+  "20_2538_p02": [
+    "opening the refrigerator"
+  ],
+  "20_2597_p01": [
+    "opening the refrigerator"
+  ],
+  "20_2620_p01": [
+    "opening the refrigerator"
+  ],
+  "20_2640_p03": [
+    "opening the refrigerator"
+  ],
+  "20_2657_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "20_2665_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_2754_p01": [
+    "sitting"
+  ],
+  "20_2770_p02": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "20_2845_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "washing dishes"
+  ],
+  "20_2873_p01": [
+    "sitting",
+    "drinking",
+    "opening the refrigerator",
+    "getting items from a cabinet"
+  ],
+  "20_2923_p02": [
+    "opening the refrigerator"
+  ],
+  "20_366_p02": [
+    "opening the refrigerator"
+  ],
+  "20_376_p01": [
+    "opening the refrigerator"
+  ],
+  "20_384_p01": [
+    "opening the refrigerator"
+  ],
+  "20_399_p01": [
+    "opening the refrigerator"
+  ],
+  "20_400_p01": [
+    "opening the refrigerator"
+  ],
+  "20_404_p01": [
+    "opening the refrigerator"
+  ],
+  "20_429_p02": [
+    "opening the refrigerator"
+  ],
+  "20_437_p02": [
+    "opening the refrigerator"
+  ],
+  "20_439_p02": [
+    "opening the refrigerator"
+  ],
+  "20_447_p02": [
+    "opening the refrigerator"
+  ],
+  "20_468_p03": [
+    "opening the refrigerator"
+  ],
+  "20_472_p01": [
+    "opening the refrigerator"
+  ],
+  "20_488_p02": [
+    "opening the refrigerator"
+  ]
+}

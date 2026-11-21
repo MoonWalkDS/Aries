@@ -1,0 +1,227 @@
+# Bộ nhãn hoạt động (ADL) cho Castle5000, dùng bởi `python main.py adl ...`.
+#
+# Quy trình theo LSC-ADL (arXiv:2504.02060, mục 3.2 và Phụ lục A): mỗi lớp có 7 câu mô tả, mỗi câu
+# là một truy vấn text->ảnh để lấy ảnh hạt giống. Bộ nhãn của bài báo viết cho lifelog góc nhìn thứ
+# nhất của một người; ở đây đã chọn lại cho camera cố định nhìn từ trên xuống một gian bếp có nhiều
+# người, nên câu mô tả viết ở góc nhìn thứ ba.
+#
+# Đây là bản khởi đầu, soạn từ việc xem mẫu ảnh. Sửa tự do: thêm/bớt lớp, viết lại câu mô tả, rồi
+# chạy `adl init --force`. Câu mô tả viết bằng tiếng Anh vì CLIP được huấn luyện chủ yếu trên tiếng Anh.
+# `name_vi` đi vào bm25_blob để khớp câu truy vấn tiếng Việt.
+
+classes:
+  - name: empty kitchen
+    name_vi: bếp không có người
+    group: General
+    descriptions:
+      - An empty kitchen with no people, seen from a ceiling camera.
+      - A deserted kitchen with a dining table and chairs and nobody in the room.
+      - An unoccupied kitchen with food left on the table and no one around.
+      - A quiet kitchen interior with lights on and no person visible.
+      - A wide-angle view of a tidy kitchen without any people.
+      - A kitchen island and an empty tiled floor with nobody standing on it.
+      - A still kitchen scene with furniture and appliances only.
+
+  - name: opening the refrigerator
+    name_vi: mở tủ lạnh
+    group: Food & Beverage
+    descriptions:
+      - A person opening the refrigerator door in a kitchen.
+      - A man standing in front of an open fridge and looking inside.
+      - Someone reaching into an open refrigerator to take out food.
+      - A person holding the fridge door open with one hand.
+      - A woman taking a bottle out of the refrigerator.
+      - An open refrigerator door with a person standing next to it.
+      - A person putting groceries into the fridge.
+
+  - name: cooking at the stove
+    name_vi: nấu ăn trên bếp
+    group: Food & Beverage
+    descriptions:
+      - A person cooking at the stove in a kitchen.
+      - Someone stirring a pot on the cooker.
+      - A man standing at the oven range and frying food in a pan.
+      - A person holding a pan handle over the hob.
+      - A cook bending over the stove to check the food.
+      - Two people standing at the black stove and cooking together.
+      - Someone opening the oven door to put a tray inside.
+
+  - name: preparing food
+    name_vi: sơ chế, chuẩn bị đồ ăn
+    group: Food & Beverage
+    descriptions:
+      - A person chopping vegetables on a cutting board at the kitchen island.
+      - Someone preparing food on the kitchen counter.
+      - A man slicing ingredients with a knife on a red cutting board.
+      - People standing around the kitchen island and preparing a meal together.
+      - A person mixing ingredients in a bowl on the counter.
+      - Someone peeling vegetables at the kitchen worktop.
+      - A person arranging food on plates on the kitchen island.
+
+  - name: washing dishes
+    name_vi: rửa chén bát
+    group: House Chores
+    descriptions:
+      - A person washing dishes at the kitchen sink.
+      - Someone rinsing a plate under the running tap.
+      - A man standing at the sink and scrubbing a pan.
+      - A person washing their hands at the kitchen sink.
+      - Someone placing clean dishes on the drying rack next to the sink.
+      - A person bending over the sink with a sponge.
+      - Someone loading plates into the dishwasher.
+
+  - name: eating
+    name_vi: ăn uống tại bàn
+    group: Food & Beverage
+    descriptions:
+      - People eating a meal at the kitchen table.
+      - A person sitting on a chair and eating from a plate.
+      - Someone standing in the kitchen and eating a snack.
+      - A group of people having dinner together around the table.
+      - A person lifting food to their mouth with a fork.
+      - People seated at the kitchen island with plates of food in front of them.
+      - Someone eating from a bowl while standing at the counter.
+
+  - name: having a drink
+    name_vi: uống nước, uống đồ uống
+    group: Food & Beverage
+    descriptions:
+      - A person drinking from a cup in the kitchen.
+      - Someone holding a mug and taking a sip.
+      - A man drinking water from a bottle.
+      - A person pouring a drink into a glass.
+      - People standing in the kitchen holding cups of coffee.
+      - Someone raising a glass to their mouth.
+      - A person filling a glass with water.
+
+  - name: making a hot drink
+    name_vi: pha trà, pha cà phê
+    group: Food & Beverage
+    descriptions:
+      - A person making coffee at the coffee machine.
+      - Someone filling the kettle with water.
+      - A person pouring hot water from a kettle into a mug.
+      - A man standing at the counter next to the coffee maker.
+      - Someone putting a tea bag into a cup.
+      - A person pressing a button on the espresso machine.
+      - Someone stirring a hot drink with a spoon at the counter.
+
+  - name: having a conversation
+    name_vi: đứng nói chuyện
+    group: General
+    descriptions:
+      - Several people standing in the kitchen and talking to each other.
+      - Two people facing each other and having a conversation.
+      - A group of people chatting while standing around the kitchen.
+      - A person gesturing with their hands while speaking to another person.
+      - Three people standing in a circle and talking.
+      - People standing idle in the kitchen and looking at each other.
+      - A crowd of people socializing in a kitchen.
+
+  - name: using a phone
+    name_vi: dùng điện thoại
+    group: Entertainment
+    descriptions:
+      - A person looking down at a smartphone in the kitchen.
+      - Someone holding a phone in both hands and typing.
+      - A man talking on a mobile phone held to his ear.
+      - A person taking a photo with a phone.
+      - Someone standing still and scrolling on a phone.
+      - A person showing a phone screen to another person.
+      - Someone leaning on the counter and looking at a phone.
+
+  - name: using a laptop
+    name_vi: dùng máy tính xách tay
+    group: Work
+    descriptions:
+      - A person using a laptop on the kitchen table.
+      - Someone sitting at the table and typing on a laptop.
+      - An open laptop on the kitchen island with a person in front of it.
+      - A man looking at a laptop screen in the kitchen.
+      - Two people looking at one laptop together.
+      - A person working on a computer at the dining table.
+      - Someone standing at the counter and using a laptop.
+
+  - name: walking through
+    name_vi: đi ngang qua bếp
+    group: General
+    descriptions:
+      - A person walking across the kitchen floor.
+      - Someone entering the kitchen through the doorway.
+      - A man walking past the kitchen island.
+      - A person leaving the kitchen.
+      - A single person in mid-stride walking through a kitchen.
+      - Someone walking towards the camera in the kitchen.
+      - A person walking away with their back to the camera.
+
+  - name: carrying items
+    name_vi: mang, bê đồ
+    group: General
+    descriptions:
+      - A person carrying a plate of food across the kitchen.
+      - Someone carrying a shopping bag into the kitchen.
+      - A man carrying a box with both hands.
+      - A person carrying a pot from the stove to the table.
+      - Someone unpacking groceries from a bag onto the counter.
+      - A person holding a tray with dishes while walking.
+      - Someone carrying bottles in their arms.
+
+  - name: setting or clearing the table
+    name_vi: dọn bàn, bày bàn ăn
+    group: House Chores
+    descriptions:
+      - A person setting the table with plates and cutlery.
+      - Someone placing dishes on the kitchen table.
+      - A person clearing dirty plates from the table.
+      - Someone arranging glasses on the kitchen island.
+      - A man collecting used dishes from the table after a meal.
+      - A person putting a bowl of food in the middle of the table.
+      - Someone stacking plates on the counter.
+
+  - name: cleaning
+    name_vi: lau dọn
+    group: House Chores
+    descriptions:
+      - A person wiping the kitchen counter with a cloth.
+      - Someone sweeping the kitchen floor with a broom.
+      - A person mopping the tiled floor.
+      - A man wiping the table with a towel.
+      - Someone spraying cleaner on the worktop.
+      - A person cleaning the stove top with a sponge.
+      - Someone tidying up the kitchen and putting things away.
+
+  - name: throwing away trash
+    name_vi: vứt rác
+    group: House Chores
+    descriptions:
+      - A person throwing something into the trash bin.
+      - Someone opening the lid of the garbage can.
+      - A man bending down to the trash bin under the kitchen island.
+      - A person tying up a full garbage bag.
+      - Someone carrying a trash bag out of the kitchen.
+      - A person scraping leftovers from a plate into the bin.
+      - Someone replacing the bag in the kitchen waste bin.
+
+  - name: getting items from a cabinet
+    name_vi: lấy đồ trong tủ, ngăn kéo
+    group: General
+    descriptions:
+      - A person opening a kitchen cabinet door.
+      - Someone reaching up to a high shelf in the kitchen.
+      - A person taking a plate out of a cupboard.
+      - A man pulling open a kitchen drawer.
+      - Someone crouching down to look into a low cabinet.
+      - A person putting dishes back into a cupboard.
+      - Someone searching for something in the kitchen drawers.
+
+  - name: sitting at the table
+    name_vi: ngồi tại bàn
+    group: General
+    descriptions:
+      - A person sitting on a chair at the kitchen table.
+      - Several people sitting around the kitchen island.
+      - Someone sitting alone at the table and resting.
+      - A person pulling out a chair to sit down.
+      - People seated on chairs in the kitchen and relaxing.
+      - A man sitting at the table with his arms on the tabletop.
+      - Someone sitting on a bench by the window in the kitchen.

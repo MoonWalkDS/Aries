@@ -1,0 +1,589 @@
+{
+  "round": 3,
+  "items": [
+    {
+      "image_id": "14_99",
+      "label": "counter cluttered",
+      "score": 0.8421,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1725
+    },
+    {
+      "image_id": "13_3591",
+      "label": "counter cluttered",
+      "score": 0.842,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1752
+    },
+    {
+      "image_id": "13_3078",
+      "label": "counter cluttered",
+      "score": 0.8227,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1339
+    },
+    {
+      "image_id": "14_35",
+      "label": "counter cluttered",
+      "score": 0.8156,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1962
+    },
+    {
+      "image_id": "13_3447",
+      "label": "counter cluttered",
+      "score": 0.8128,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1123
+    },
+    {
+      "image_id": "13_3511",
+      "label": "counter cluttered",
+      "score": 0.8114,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1119
+    },
+    {
+      "image_id": "14_475",
+      "label": "counter cluttered",
+      "score": 0.7745,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0074
+    },
+    {
+      "image_id": "13_3104",
+      "label": "person at the counter",
+      "score": 0.7678,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0148
+    },
+    {
+      "image_id": "14_511",
+      "label": "counter cluttered",
+      "score": 0.7671,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0932
+    },
+    {
+      "image_id": "13_2332",
+      "label": "counter cluttered",
+      "score": 0.7661,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1101
+    },
+    {
+      "image_id": "13_1752",
+      "label": "counter cluttered",
+      "score": 0.7587,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1896
+    },
+    {
+      "image_id": "13_3454",
+      "label": "counter cluttered",
+      "score": 0.758,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1347
+    },
+    {
+      "image_id": "13_3431",
+      "label": "counter cluttered",
+      "score": 0.7554,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0221
+    },
+    {
+      "image_id": "14_487",
+      "label": "counter cluttered",
+      "score": 0.7455,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0099
+    },
+    {
+      "image_id": "14_31",
+      "label": "counter cluttered",
+      "score": 0.7449,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0994
+    },
+    {
+      "image_id": "13_3512",
+      "label": "person at the counter",
+      "score": 0.7366,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0418
+    },
+    {
+      "image_id": "14_420",
+      "label": "counter cluttered",
+      "score": 0.7328,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.006
+    },
+    {
+      "image_id": "19_1548",
+      "label": "person at the counter",
+      "score": 0.7222,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0465
+    },
+    {
+      "image_id": "13_3540",
+      "label": "counter cluttered",
+      "score": 0.7192,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0836
+    },
+    {
+      "image_id": "13_2828",
+      "label": "counter cluttered",
+      "score": 0.7181,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0223
+    },
+    {
+      "image_id": "14_214",
+      "label": "person at the counter",
+      "score": 0.717,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0606
+    },
+    {
+      "image_id": "13_2953",
+      "label": "counter cluttered",
+      "score": 0.7079,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1196
+    },
+    {
+      "image_id": "14_303",
+      "label": "counter cluttered",
+      "score": 0.6953,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.2394
+    },
+    {
+      "image_id": "13_2781",
+      "label": "person at the counter",
+      "score": 0.6823,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0552
+    },
+    {
+      "image_id": "14_461",
+      "label": "counter cluttered",
+      "score": 0.68,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1208
+    },
+    {
+      "image_id": "14_519",
+      "label": "counter cluttered",
+      "score": 0.6762,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0527
+    },
+    {
+      "image_id": "14_495",
+      "label": "person at the counter",
+      "score": 0.6706,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0414
+    },
+    {
+      "image_id": "14_114",
+      "label": "counter cluttered",
+      "score": 0.6663,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1332
+    },
+    {
+      "image_id": "13_1709",
+      "label": "counter cluttered",
+      "score": 0.6555,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0116
+    },
+    {
+      "image_id": "14_64",
+      "label": "counter cluttered",
+      "score": 0.6509,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1232
+    },
+    {
+      "image_id": "13_2625",
+      "label": "counter cluttered",
+      "score": 0.65,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0155
+    },
+    {
+      "image_id": "14_448",
+      "label": "counter cluttered",
+      "score": 0.6467,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0551
+    },
+    {
+      "image_id": "14_463",
+      "label": "counter cluttered",
+      "score": 0.6452,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0701
+    },
+    {
+      "image_id": "13_3472",
+      "label": "counter cluttered",
+      "score": 0.6447,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1118
+    },
+    {
+      "image_id": "13_2999",
+      "label": "counter cluttered",
+      "score": 0.6411,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0139
+    },
+    {
+      "image_id": "13_3599",
+      "label": "counter cluttered",
+      "score": 0.6396,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1616
+    },
+    {
+      "image_id": "16_1504",
+      "label": "counter cluttered",
+      "score": 0.6381,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.105
+    },
+    {
+      "image_id": "14_581",
+      "label": "person at the counter",
+      "score": 0.6376,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0244
+    },
+    {
+      "image_id": "14_177",
+      "label": "counter cluttered",
+      "score": 0.6373,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0891
+    },
+    {
+      "image_id": "13_2157",
+      "label": "counter cluttered",
+      "score": 0.6284,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.1369
+    },
+    {
+      "image_id": "14_361",
+      "label": "counter cluttered",
+      "score": 0.6274,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0439
+    },
+    {
+      "image_id": "13_3563",
+      "label": "counter cluttered",
+      "score": 0.6269,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0138
+    },
+    {
+      "image_id": "13_3666",
+      "label": "counter cluttered",
+      "score": 0.6268,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1576
+    },
+    {
+      "image_id": "13_2311",
+      "label": "person at the counter",
+      "score": 0.6247,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0906
+    },
+    {
+      "image_id": "14_568",
+      "label": "counter cluttered",
+      "score": 0.6239,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.0023
+    },
+    {
+      "image_id": "13_1797",
+      "label": "counter cluttered",
+      "score": 0.6167,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.1776
+    },
+    {
+      "image_id": "14_449",
+      "label": "counter cluttered",
+      "score": 0.6167,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0355
+    },
+    {
+      "image_id": "14_182",
+      "label": "counter cluttered",
+      "score": 0.6163,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0821
+    },
+    {
+      "image_id": "13_1178",
+      "label": "counter cluttered",
+      "score": 0.6097,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.2196
+    },
+    {
+      "image_id": "14_237",
+      "label": "counter cluttered",
+      "score": 0.607,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.0287
+    },
+    {
+      "image_id": "13_2845",
+      "label": "counter cluttered",
+      "score": 0.6045,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.2949
+    },
+    {
+      "image_id": "13_2604",
+      "label": "person at the counter",
+      "score": 0.6039,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0864
+    },
+    {
+      "image_id": "13_634",
+      "label": "counter cluttered",
+      "score": 0.6038,
+      "cluster": 4,
+      "runner_up": "person at the counter",
+      "margin": 0.6556
+    },
+    {
+      "image_id": "14_236",
+      "label": "counter cluttered",
+      "score": 0.6035,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.026
+    },
+    {
+      "image_id": "14_459",
+      "label": "counter cluttered",
+      "score": 0.5961,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1359
+    },
+    {
+      "image_id": "14_44",
+      "label": "counter cluttered",
+      "score": 0.5903,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1167
+    },
+    {
+      "image_id": "13_1167",
+      "label": "counter cluttered",
+      "score": 0.5876,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.1718
+    },
+    {
+      "image_id": "13_1715",
+      "label": "counter cluttered",
+      "score": 0.5856,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0568
+    },
+    {
+      "image_id": "13_3473",
+      "label": "counter cluttered",
+      "score": 0.5819,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0817
+    },
+    {
+      "image_id": "14_2999",
+      "label": "person at the counter",
+      "score": 0.5799,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0654
+    },
+    {
+      "image_id": "13_3357",
+      "label": "counter cluttered",
+      "score": 0.5778,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0813
+    },
+    {
+      "image_id": "13_2635",
+      "label": "counter cluttered",
+      "score": 0.5773,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.0899
+    },
+    {
+      "image_id": "13_2896",
+      "label": "counter cluttered",
+      "score": 0.5767,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0802
+    },
+    {
+      "image_id": "13_2980",
+      "label": "person at the counter",
+      "score": 0.5714,
+      "cluster": 0,
+      "runner_up": "counter cluttered",
+      "margin": 0.0521
+    },
+    {
+      "image_id": "14_321",
+      "label": "counter cluttered",
+      "score": 0.5701,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.0589
+    },
+    {
+      "image_id": "15_1353",
+      "label": "counter cluttered",
+      "score": 0.5696,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.0782
+    },
+    {
+      "image_id": "14_164",
+      "label": "counter cluttered",
+      "score": 0.5694,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.1306
+    },
+    {
+      "image_id": "13_2852",
+      "label": "counter cluttered",
+      "score": 0.5674,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.174
+    },
+    {
+      "image_id": "14_67",
+      "label": "counter cluttered",
+      "score": 0.5629,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.101
+    },
+    {
+      "image_id": "11_1222",
+      "label": "counter cluttered",
+      "score": 0.5535,
+      "cluster": 4,
+      "runner_up": "person at the counter",
+      "margin": 0.7112
+    },
+    {
+      "image_id": "13_2610",
+      "label": "counter cluttered",
+      "score": 0.5522,
+      "cluster": 2,
+      "runner_up": "person at the counter",
+      "margin": 0.0364
+    },
+    {
+      "image_id": "13_3463",
+      "label": "counter cluttered",
+      "score": 0.5521,
+      "cluster": 0,
+      "runner_up": "person at the counter",
+      "margin": 0.137
+    },
+    {
+      "image_id": "13_2851",
+      "label": "counter cluttered",
+      "score": 0.5519,
+      "cluster": 1,
+      "runner_up": "person at the counter",
+      "margin": 0.2108
+    }
+  ]
+}

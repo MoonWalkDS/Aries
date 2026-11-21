@@ -27,5 +27,25 @@ Technical note*.md
 CLAUDE.md
 docs/agents/
 
-# dres_auto: đề đã kéo về, log nộp bài
-dres_auto/runtime/
+# labeling/: dữ liệu máy sinh, tải lại hoặc chạy lại được
+dataset/
+exports/
+labeling/work/
+labeling/kaggle/**/*.zip
+*.zip
+# Nhãn người duyệt và kết quả VLM tốn GPU: không tái tạo được, phải nằm trong git.
+# Mọi thứ khác trong annotations/ (trang HTML, file Label Studio, embedding) là máy sinh.
+labeling/annotations/*
+!labeling/annotations/*.json
+labeling/annotations/identities*.json
+labeling/annotations/identity_pred.json
+!labeling/annotations/*.yaml
+!labeling/annotations/adl*/
+labeling/annotations/adl*/*
+!labeling/annotations/adl*/approved.json
+!labeling/annotations/adl*/rejected.json
+!labeling/annotations/adl*/suggestions.json
+!labeling/annotations/adl*/vlm_reviews.jsonl
+!labeling/annotations/adl*/person_attrs.jsonl
+# Tài khoản viewer (hash mật khẩu)
+labeling/viewer/users.json

@@ -1,0 +1,328 @@
+# Trang phục của từng người (python main.py enrich merge điền sẵn cho tên mới, từ câu trả lời VLM gặp nhiều nhất).
+# Sửa tự do. Điền stripe_direction (horizontal/vertical), top_color_upper / top_color_lower (màu nửa trên / nửa
+# dưới của áo) và description (câu mô tả đầy đủ). Người thay đồ giữa buổi: thêm một mục nữa trong outfits với
+# hours: ["08", "13"] (giờ bắt đầu, giờ kết thúc, tính cả hai đầu). "all" = cả buổi. Dòng đã có không bị ghi đè.
+# note: mẹo phân biệt với người dễ nhầm (cho người duyệt; không phải mô tả trang phục).
+people:
+  Caro đỏ xanh:
+    crops_described: 173
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short black
+        top: shirt
+        top_color: red and navy
+        top_pattern: checked
+        bottom: jeans
+        bottom_color: blue
+        headwear: none
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, đeo kính, áo sơ mi caro đỏ xen xanh đen, quần
+          jean xanh.
+  Linh:
+    crops_described: 41
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short black
+        top: sweater
+        top_color: blue
+        top_pattern: plain
+        bottom: jeans
+        bottom_color: light blue
+        headwear: none
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, đeo kính, áo len trơn màu xanh dương, quần jean
+          xanh nhạt.
+  Nữ áo trắng:
+    crops_described: 392
+    outfits:
+      - hours: all
+        gender: female
+        age: adult
+        hair: long, dark roots fading to golden-brown ends
+        top: long-sleeve top
+        top_color: cream
+        top_pattern: plain
+        bottom: leggings
+        bottom_color: brown
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nữ, tóc dài, chân tóc đen, đuôi tóc ngả vàng nâu dần, áo dài tay
+          màu trắng kem; quần legging nâu hoặc quần ống rộng đen.
+  Sơ mi xanh:
+    crops_described: 1087
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short brown
+        top: shirt
+        top_color: blue
+        top_pattern: plain
+        bottom: pants
+        bottom_color: black
+        headwear: head-mounted camera
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc ngắn, đeo camera gắn đầu, áo sơ mi trơn màu xanh dương,
+          quần dài đen.
+  Sơ mi xám trơn (hơi xanh xẫm):
+    crops_described: 310
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short dark
+        top: shirt
+        top_color: slate gray
+        top_pattern: plain
+        bottom: pants
+        bottom_color: gray
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, áo sơ mi trơn xám ánh xanh, quần dài xám.
+  caro xanh trắng:
+    crops_described: 80
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short black
+        top: shirt
+        top_color: navy and white
+        top_pattern: checked
+        bottom: khaki pants or black shorts
+        bottom_color: beige
+        headwear: none
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, đeo kính, áo sơ mi caro xanh đen xen trắng, quần
+          kaki màu be; có lúc mặc quần đùi đen.
+  sơ mi trắng:
+    crops_described: 18
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short dark
+        top: shirt
+        top_color: white
+        top_pattern: plain
+        bottom: pants
+        bottom_color: black
+        headwear: head-mounted camera
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, đeo camera gắn đầu, áo sơ mi trơn màu trắng,
+          quần dài đen.
+        note: Dễ nhầm với "Nam áo thun trắng".
+  Áo khoác xanh đen có in hình:
+    crops_described: 83
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short black
+        top: t-shirt
+        top_color: navy
+        top_pattern: printed
+        bottom: pants
+        bottom_color: black
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen ngắn, áo thun xanh đen có hoạ tiết sau lưng; có lúc
+          khoác thêm áo khoác xanh đen có hình in, có lúc không; quần dài đen.
+  Áo len 2 màu:
+    crops_described: 279
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short brown
+        top: sweater
+        top_color: cream and navy
+        top_pattern: striped
+        bottom: jeans
+        bottom_color: blue
+        headwear: head-mounted camera
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: horizontal
+        top_color_upper: cream
+        top_color_lower: navy
+        description: Nam, đeo camera gắn đầu, đeo kính, áo len nửa trên màu kem, nửa
+          dưới xanh đen, ngang ngực có sọc nâu và trắng, quần jean xanh.
+  Áo len xám đậm:
+    crops_described: 279
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short gray
+        top: sweater
+        top_color: gray
+        top_pattern: plain
+        bottom: cargo pants
+        bottom_color: olive brown
+        headwear: head-mounted camera
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam lớn tuổi, tóc xám ngắn, đeo camera gắn đầu, áo len xám đậm, cổ
+          áo bên trong lộ màu sáng (trắng hoặc kem), quần túi hộp nâu ô liu.
+        note: 'Dễ nhầm với "Áo len đen": người này cổ áo lộ màu sáng.'
+  Áo len đen:
+    crops_described: 8
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short brown
+        top: sweater
+        top_color: black
+        top_pattern: plain
+        bottom: jeans
+        bottom_color: dark blue
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc ngắn, áo len đen, cổ áo bên trong lộ màu xanh, quần jean
+          xanh đậm.
+        note: 'Dễ nhầm với "Áo len xám đậm": người này cổ áo lộ màu xanh.'
+  Áo thun xanh đen:
+    crops_described: 611
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short brown
+        top: polo shirt
+        top_color: navy
+        top_pattern: printed
+        bottom: jeans
+        bottom_color: dark blue
+        headwear: head-mounted camera
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc nâu ngắn, đeo camera gắn đầu, áo polo xanh đen có chữ in
+          trắng sau lưng, quần jean xanh đậm.
+  áo jacket xanh navi:
+    crops_described: 24
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: short brown
+        top: zip jacket
+        top_color: navy
+        top_pattern: plain
+        bottom: pants
+        bottom_color: dark blue
+        headwear: head-mounted camera
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, đeo kính, đeo camera gắn đầu, áo khoác kéo khoá xanh navy bên
+          ngoài áo thể thao xanh dương, quần dài sẫm.
+  áo khoác xám cao:
+    crops_described: 515
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: curly dark
+        top: zip-up jacket
+        top_color: gray
+        top_pattern: plain
+        bottom: jeans
+        bottom_color: blue
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam cao, tóc xoăn sẫm, có râu, áo khoác kéo khoá màu xám, quần jean
+          xanh.
+  Nam áo thun trắng:
+    crops_described: 433
+    outfits:
+      - hours: all
+        gender: male
+        age: adult
+        hair: dark brown
+        top: t-shirt
+        top_color: cream
+        top_pattern: plain
+        bottom: jeans
+        bottom_color: dark blue
+        headwear: none
+        glasses: 'yes'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nam, tóc đen, đeo kính, áo thun trắng kem, có dây điện (dây camera)
+          chạy dọc lưng, quần jean xanh đậm.
+        note: Dễ nhầm với "Áo len 2 màu" khi phần dưới áo bị che, và với "sơ mi trắng".
+  Nư áo đen:
+    crops_described: 1
+    outfits:
+      - hours: all
+        gender: female
+        age: adult
+        hair: long dark
+        top: sweater
+        top_color: black
+        top_pattern: plain
+        bottom: pants
+        bottom_color: brown
+        headwear: none
+        glasses: 'no'
+        apron: 'no'
+        stripe_direction: ''
+        top_color_upper: ''
+        top_color_lower: ''
+        description: Nữ, tóc đen dài, áo đen trơn, quần nâu.

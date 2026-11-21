@@ -1,0 +1,341 @@
+{
+  "round": 3,
+  "items": [
+    {
+      "image_id": "17_2129",
+      "label": "coffee corner idle",
+      "score": 0.6735,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0716
+    },
+    {
+      "image_id": "17_1518",
+      "label": "person at the coffee corner",
+      "score": 0.6651,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0053
+    },
+    {
+      "image_id": "16_1995",
+      "label": "person at the coffee corner",
+      "score": 0.6551,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.1255
+    },
+    {
+      "image_id": "17_1061",
+      "label": "coffee corner idle",
+      "score": 0.6542,
+      "cluster": 5,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0574
+    },
+    {
+      "image_id": "13_3503",
+      "label": "coffee corner idle",
+      "score": 0.6488,
+      "cluster": 1,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.297
+    },
+    {
+      "image_id": "17_1276",
+      "label": "coffee corner idle",
+      "score": 0.6466,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0335
+    },
+    {
+      "image_id": "17_1347",
+      "label": "person at the coffee corner",
+      "score": 0.6376,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.03
+    },
+    {
+      "image_id": "12_2683",
+      "label": "coffee corner idle",
+      "score": 0.6339,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.1266
+    },
+    {
+      "image_id": "12_1327",
+      "label": "coffee corner idle",
+      "score": 0.6203,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.1481
+    },
+    {
+      "image_id": "12_1009",
+      "label": "coffee corner idle",
+      "score": 0.6152,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0778
+    },
+    {
+      "image_id": "17_2522",
+      "label": "person at the coffee corner",
+      "score": 0.6089,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.1313
+    },
+    {
+      "image_id": "19_53",
+      "label": "coffee corner idle",
+      "score": 0.6072,
+      "cluster": 5,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0724
+    },
+    {
+      "image_id": "11_1627",
+      "label": "coffee corner idle",
+      "score": 0.6012,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.212
+    },
+    {
+      "image_id": "17_1414",
+      "label": "coffee corner idle",
+      "score": 0.5978,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0382
+    },
+    {
+      "image_id": "17_2347",
+      "label": "coffee corner idle",
+      "score": 0.5961,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0515
+    },
+    {
+      "image_id": "15_2388",
+      "label": "coffee corner idle",
+      "score": 0.5957,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0536
+    },
+    {
+      "image_id": "17_1527",
+      "label": "coffee corner idle",
+      "score": 0.5956,
+      "cluster": 5,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0585
+    },
+    {
+      "image_id": "16_2073",
+      "label": "coffee corner idle",
+      "score": 0.5939,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.0239
+    },
+    {
+      "image_id": "17_1338",
+      "label": "coffee corner idle",
+      "score": 0.5903,
+      "cluster": 5,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.053
+    },
+    {
+      "image_id": "17_1042",
+      "label": "person at the coffee corner",
+      "score": 0.5897,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0252
+    },
+    {
+      "image_id": "17_1428",
+      "label": "person at the coffee corner",
+      "score": 0.5886,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0148
+    },
+    {
+      "image_id": "12_1307",
+      "label": "coffee corner idle",
+      "score": 0.5871,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.072
+    },
+    {
+      "image_id": "19_407",
+      "label": "person at the coffee corner",
+      "score": 0.5864,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0731
+    },
+    {
+      "image_id": "13_815",
+      "label": "coffee corner idle",
+      "score": 0.5843,
+      "cluster": 1,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.2562
+    },
+    {
+      "image_id": "17_1388",
+      "label": "coffee corner idle",
+      "score": 0.5823,
+      "cluster": 6,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.063
+    },
+    {
+      "image_id": "16_2014",
+      "label": "person at the coffee corner",
+      "score": 0.581,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0756
+    },
+    {
+      "image_id": "12_1328",
+      "label": "coffee corner idle",
+      "score": 0.5801,
+      "cluster": 0,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.2214
+    },
+    {
+      "image_id": "15_2725",
+      "label": "person at the coffee corner",
+      "score": 0.577,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.1361
+    },
+    {
+      "image_id": "15_2146",
+      "label": "person at the coffee corner",
+      "score": 0.5736,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0426
+    },
+    {
+      "image_id": "19_721",
+      "label": "person at the coffee corner",
+      "score": 0.573,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0707
+    },
+    {
+      "image_id": "13_3512",
+      "label": "coffee corner idle",
+      "score": 0.5726,
+      "cluster": 1,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.1858
+    },
+    {
+      "image_id": "17_634",
+      "label": "coffee corner idle",
+      "score": 0.5719,
+      "cluster": 2,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.1629
+    },
+    {
+      "image_id": "12_947",
+      "label": "person at the coffee corner",
+      "score": 0.5706,
+      "cluster": 3,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0134
+    },
+    {
+      "image_id": "17_1530",
+      "label": "person at the coffee corner",
+      "score": 0.5699,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0831
+    },
+    {
+      "image_id": "17_887",
+      "label": "person at the coffee corner",
+      "score": 0.5682,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.091
+    },
+    {
+      "image_id": "16_3580",
+      "label": "person at the coffee corner",
+      "score": 0.5676,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0625
+    },
+    {
+      "image_id": "17_818",
+      "label": "person at the coffee corner",
+      "score": 0.565,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.1256
+    },
+    {
+      "image_id": "12_1101",
+      "label": "person at the coffee corner",
+      "score": 0.5599,
+      "cluster": 3,
+      "runner_up": "coffee corner idle",
+      "margin": 0.134
+    },
+    {
+      "image_id": "17_2236",
+      "label": "person at the coffee corner",
+      "score": 0.5588,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0096
+    },
+    {
+      "image_id": "12_1047",
+      "label": "person at the coffee corner",
+      "score": 0.5587,
+      "cluster": 3,
+      "runner_up": "coffee corner idle",
+      "margin": 0.1529
+    },
+    {
+      "image_id": "16_1249",
+      "label": "person at the coffee corner",
+      "score": 0.554,
+      "cluster": 0,
+      "runner_up": "coffee corner idle",
+      "margin": 0.0082
+    },
+    {
+      "image_id": "17_519",
+      "label": "coffee corner idle",
+      "score": 0.5509,
+      "cluster": 2,
+      "runner_up": "person at the coffee corner",
+      "margin": 0.1401
+    }
+  ]
+}

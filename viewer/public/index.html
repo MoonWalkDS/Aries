@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Castle Labeler</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <button id="openDrawer" class="ghost" title="Bộ lọc hàng đợi ( / )">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M4.5 8h7M7 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Bộ lọc</span><span id="filterCount" class="count" hidden></span>
+    </button>
+    <div class="where">
+      <input id="imgId" class="mono" spellcheck="false" autocomplete="off" title="Bấm để nhập mã ảnh khác, Enter để chuyển">
+      <span id="pos" class="muted mono"></span>
+    </div>
+    <div class="seg" role="group" aria-label="Hiện box">
+      <button data-show="people">Người</button><button data-show="roi">Vùng</button><button data-show="all">Cả hai</button>
+    </div>
+    <label class="toggle"><input id="hideDone" type="checkbox"> Ẩn box đã duyệt</label>
+    <label class="toggle" title="Hiện đồ vật do máy dò (V)"><input id="showObjects" type="checkbox"> Đồ vật</label>
+    <button id="drawBtn" class="ghost" aria-pressed="false" title="Kéo trên ảnh để vẽ box mới (B)">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 2.5h4M2.5 2.5v4M13.5 13.5h-4M13.5 13.5v-4M9.5 2.5h4v4M2.5 9.5v4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Vẽ box</span><kbd>B</kbd>
+    </button>
+    <span class="grow"></span>
+    <button id="imageLabel" class="pill-btn" hidden title="Nhãn hoạt động của cả ảnh"></button>
+    <a class="ghost" href="/board.html" title="Xem mọi crop của một người / một cụm, kéo crop nhầm sang đúng người">Bảng định danh</a>
+    <button id="mergeBtn" data-admin class="ghost" title="Gộp nhãn đã duyệt vào enriched/ và xuất output_jsons/dataset/">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5v4c0 2 1.5 3 5 3s5 1 5 3v1M13 2.5v4c0 1-.4 1.7-1.3 2.2M8 9.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span>Gộp dữ liệu</span>
+    </button>
+    <button id="undo" class="ghost" title="Hoàn tác (Z)">Hoàn tác</button>
+    <button id="help" class="ghost" title="Phím tắt ( ? )">?</button>
+  </header>
+
+  <main class="work">
+    <section id="stage" class="stage">
+      <div id="frame" class="frame">
+        <img id="photo" alt="">
+        <svg id="boxes" preserveAspectRatio="none"></svg>
+      </div>
+      <nav class="nav">
+        <button id="prev" class="round" title="Ảnh trước (←)" aria-label="Ảnh trước"><svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <span id="progress" class="progress">Đang nạp nhãn…</span>
+        <button id="next" class="round" title="Ảnh sau (→)" aria-label="Ảnh sau"><svg viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </nav>
+      <div class="legend">
+        <span><i class="sw todo"></i>Chưa có nhãn</span>
+        <span><i class="sw machine"></i>Máy gán</span>
+        <span><i class="sw human"></i>Đã duyệt</span>
+        <span><i class="sw manual"></i>Tự vẽ</span>
+      </div>
+    </section>
+
+    <aside id="panel" class="panel" hidden aria-live="polite"></aside>
+  </main>
+
+  <div id="drawer" class="drawer" hidden>
+    <div class="drawer-in" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-head">
+        <h2 id="drawerTitle">Hàng đợi ảnh</h2>
+        <button id="closeDrawer" class="ghost" aria-label="Đóng">Đóng</button>
+      </div>
+      <div id="drawerBody"></div>
+    </div>
+  </div>
+
+  <div id="helpBox" class="drawer" hidden>
+    <div class="help" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <h2 id="helpTitle">Phím tắt</h2>
+      <dl>
+        <dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Ảnh trước / sau trong hàng đợi</dd>
+        <dt><kbd>Tab</kbd></dt><dd>Box kế tiếp (Shift+Tab: box trước)</dd>
+        <dt><kbd>A</kbd> / <kbd>Enter</kbd></dt><dd>Nhãn đúng, sang box chưa duyệt kế</dd>
+        <dt><kbd>X</kbd></dt><dd>Nhãn sai</dd>
+        <dt><kbd>R</kbd></dt><dd>Đặt lại về nhãn của máy</dd>
+        <dt><kbd>O</kbd></dt><dd>Gõ nhãn khác khi không thẻ nào khớp</dd>
+        <dt><kbd>B</kbd></dt><dd>Bật chế độ vẽ, kéo trên ảnh để tạo box</dd>
+        <dt><kbd>Del</kbd></dt><dd>Xoá box tự vẽ đang chọn</dd>
+        <dt><kbd>Z</kbd></dt><dd>Hoàn tác</dd>
+        <dt><kbd>I</kbd></dt><dd>Gán nhãn cả ảnh</dd>
+        <dt><kbd>L</kbd></dt><dd>Bật/tắt tên nhãn trên box</dd>
+        <dt><kbd>V</kbd></dt><dd>Bật/tắt đồ vật do máy dò</dd>
+        <dt><kbd>N</kbd> / <kbd>H</kbd></dt><dd>Bảng người: tab "Ai · ngoại hình" / "Hành động"</dd>
+        <dt><kbd>/</kbd></dt><dd>Mở bộ lọc</dd>
+        <dt><kbd>Esc</kbd></dt><dd>Bỏ chọn box / đóng</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="session.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

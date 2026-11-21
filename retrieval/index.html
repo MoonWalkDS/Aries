@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Castle5000 Search</title>
+<style>
+  :root { --bg:#f6f6f4; --fg:#1c1c1a; --muted:#6b6b66; --card:#fff; --line:#d9d9d4; --accent:#2f5fd0; --ok:#1a7f4b; --bad:#c0392b; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161615; --fg:#ecece8; --muted:#a0a09a; --card:#222220; --line:#3a3a36; --accent:#8fb0ff; --ok:#4cc38a; --bad:#ff7b6b; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 system-ui, sans-serif; }
+  header { position:sticky; top:0; z-index:2; background:var(--bg); border-bottom:1px solid var(--line); padding:10px 16px; display:grid; gap:8px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  textarea { flex:1; min-width:260px; min-height:56px; font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); }
+  button { font:inherit; padding:7px 14px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--fg); cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button.submit { background:var(--ok); color:#fff; border-color:var(--ok); }
+  .muted { color:var(--muted); font-size:13px; }
+  main { padding:12px 16px 40px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:10px; }
+  .cell { position:relative; border-radius:6px; overflow:hidden; border:2px solid transparent; background:var(--card); }
+  .cell:hover { border-color:var(--accent); }
+  .cell img { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; cursor:zoom-in; }
+  .cell span { position:absolute; left:6px; top:6px; background:#000a; color:#fff; font-size:13px; padding:2px 8px; border-radius:4px; }
+  .cell .submit { position:absolute; right:6px; bottom:6px; }
+  .pager { display:flex; gap:8px; align-items:center; justify-content:center; margin-bottom:10px; }
+  .pager button { min-width:56px; font-size:18px; padding:4px 12px; }
+  details.cfg { border:1px solid var(--line); border-radius:6px; padding:6px 10px; background:var(--card); }
+  details.cfg summary { cursor:pointer; }
+  .cfg-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:6px 10px; margin-top:8px; }
+  .cfg-grid label { display:grid; gap:2px; font-size:12px; color:var(--muted); }
+  .cfg-grid input { font:inherit; padding:5px 7px; border:1px solid var(--line); border-radius:5px; background:var(--bg); color:var(--fg); }
+  dialog { width:min(1200px, 96vw); border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); padding:14px; }
+  dialog::backdrop { background:#0008; }
+  .big { position:relative; } .big img { width:100%; display:block; border-radius:6px; }
+  .box { position:absolute; border:2px solid #ffd400; } .box b { position:absolute; left:0; top:-18px; background:#ffd400; color:#000; font-size:11px; padding:0 4px; white-space:nowrap; }
+  .strip { display:flex; gap:6px; overflow-x:auto; margin:8px 0; }
+  .strip img { height:72px; border-radius:4px; cursor:pointer; border:2px solid transparent; }
+  .strip img.on { border-color:var(--accent); }
+  ul { margin:4px 0; padding-left:18px; }
+  .msg { font-weight:600; } .msg.ok { color:var(--ok); } .msg.bad { color:var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <details class="cfg" id="cfg">
+    <summary>Cấu hình DRES (.env)</summary>
+    <form id="cfgForm">
+      <div class="cfg-grid">
+        <label>DRES_URL<input name="DRES_URL"></label>
+        <label>DRES_USERNAME<input name="DRES_USERNAME" autocomplete="off"></label>
+        <label>DRES_PASSWORD<input name="DRES_PASSWORD" type="password" autocomplete="new-password"></label>
+        <label>DRES_EVALUATION_ID (trống = tự lấy)<input name="DRES_EVALUATION_ID"></label>
+        <label>DRES_COLLECTION<input name="DRES_COLLECTION"></label>
+        <label>DRES_ITEM_PREFIX<input name="DRES_ITEM_PREFIX"></label>
+        <label>DRES_SESSION_ID (trống = tự login)<input name="DRES_SESSION_ID"></label>
+      </div>
+      <div class="row" style="margin-top:8px"><button class="primary" type="submit">Lưu</button><span class="muted" id="cfgMsg"></span></div>
+    </form>
+  </details>
+  <div class="row">
+    <textarea id="q" placeholder="Dán hoặc gõ đề (tiếng Việt). Ctrl+Enter để tìm."></textarea>
+    <div class="row" style="flex-direction:column; align-items:stretch">
+      <button class="primary" id="go">Tìm</button>
+      <button id="task" title="Kéo lại đề hiện tại từ DRES rồi tìm lại">Truy vấn lại</button>
+    </div>
+  </div>
+  <div class="muted" id="task-info"></div>
+  <div class="muted" id="info">Bấm "Truy vấn lại" để kéo đề, hoặc nhập đề rồi bấm Tìm.</div>
+  <div class="msg" id="result"></div>
+</header>
+<main>
+  <div class="pager"><button id="prev" title="Phím ←">&larr;</button><span id="pos" class="muted"></span><button id="next" title="Phím →">&rarr;</button></div>
+  <div class="grid" id="grid"></div>
+</main>
+<dialog id="dlg">
+  <div class="row" style="justify-content:space-between">
+    <strong id="title"></strong>
+    <div class="row"><span class="msg" id="msg"></span><button class="submit" id="sub">Nộp ảnh này</button><button id="close">Đóng</button></div>
+  </div>
+  <div class="strip" id="strip"></div>
+  <div class="big" id="big"></div>
+  <div id="meta" class="muted"></div>
+</dialog>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let current = null, results = [], page = 0, lastPulled = null;
+const PER = 2;
+
+async function search() {
+  const q = $('q').value.trim();
+  if (!q) return;
+  $('info').textContent = 'Đang tìm...';
+  const r = await (await fetch('/api/search?q=' + encodeURIComponent(q))).json();
+  $('info').innerHTML = `<b>EN:</b> ${esc(r.english.join(' '))}` + (r.names.length ? ` · <b>tên:</b> ${esc(r.names.join(', '))}` : '');
+  results = r.results; page = 0;
+  render();
+}
+
+function render() {
+  const shown = results.slice(page, page + PER);
+  $('pos').textContent = results.length ? `${page + 1}–${page + shown.length} / ${results.length}` : '';
+  $('prev').disabled = page === 0; $('next').disabled = page + PER >= results.length;
+  $('grid').replaceChildren(...shown.map((x, k) => {
+    const d = document.createElement('div');
+    d.className = 'cell'; d.title = `${x.id} · ${x.score}`;
+    d.innerHTML = `<img alt="${x.id}" src="/api/image?id=${x.id}"><span>${page + k + 1} · ${x.id}</span><button class="submit">Nộp</button>`;
+    d.querySelector('img').onclick = () => open(x.id);
+    d.querySelector('button').onclick = () => submitId(x.id);
+    return d;
+  }));
+  results.slice(page + PER, page + 2 * PER).forEach((x) => { new Image().src = '/api/image?id=' + x.id; });  // tải trước cặp sau
+}
+
+function move(step) {
+  const p = page + step * PER;
+  if (p < 0 || p >= results.length) return;
+  page = p; render();
+}
+
+// force: luôn tìm lại. Sau khi nộp: chỉ tìm lại khi đề đổi (giữ vị trí đang xem nếu đề vẫn như cũ)
+async function pull(force) {
+  $('task-info').textContent = 'Đang kéo đề...';
+  const t = await (await fetch('/api/task')).json();
+  if (t.error) { $('task-info').textContent = t.error; return; }
+  if (!t.query) { $('task-info').textContent = `Chưa có đề (task: ${t.taskStatus || '?'}).`; return; }
+  $('task-info').textContent = t.running ? `Task ${t.taskId} · còn ${Math.round((t.timeLeftMs || 0) / 1000)}s`
+    : `Không có task đang chạy (${t.taskStatus || '?'}) · đề gần nhất`;
+  const key = t.taskId + '\n' + t.query;
+  if (!force && key === lastPulled) return;
+  lastPulled = key;
+  $('q').value = t.query;
+  await search();
+}
+
+async function submitId(id) {
+  if (!confirm(`Nộp ${id} lên DRES? Nộp sai bị trừ điểm.`)) return;
+  $('result').textContent = $('msg').textContent = `Đang nộp ${id}...`;
+  $('result').className = $('msg').className = 'msg';
+  const r = await (await fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })).json();
+  $('result').textContent = $('msg').textContent = `${id}: ${r.status} · ${r.message}`;
+  $('result').className = $('msg').className = 'msg ' + (r.raw && r.raw.includes('CORRECT') ? 'ok' : 'bad');
+  if ($('dlg').open) $('dlg').close();
+  await pull(false);
+}
+
+async function open(id) {
+  current = id;
+  $('msg').textContent = ''; $('msg').className = 'msg';
+  const r = await (await fetch('/api/detail?id=' + id)).json();
+  $('title').textContent = id;
+  $('strip').replaceChildren(...r.neighbors.map((n) => {
+    const img = document.createElement('img');
+    img.src = '/api/image?thumb=1&id=' + n; img.alt = n; img.title = n; img.className = n === id ? 'on' : '';
+    img.onclick = () => open(n);
+    return img;
+  }));
+  // box người: toạ độ pixel ảnh gốc 1280x720
+  $('big').innerHTML = `<img alt="${id}" src="/api/image?id=${id}">` + r.people.map((p, i) =>
+    `<div class="box" style="left:${p.box[0] / 12.8}%;top:${p.box[1] / 7.2}%;width:${(p.box[2] - p.box[0]) / 12.8}%;height:${(p.box[3] - p.box[1]) / 7.2}%"><b>p${i + 1}</b></div>`).join('');
+  $('meta').innerHTML = '<ul>' + r.people.map((p, i) => `<li>p${i + 1}: <b>${esc(p.name || '?')}</b> · ${esc(p.action || '')} · ${esc(p.look)}</li>`).join('') + '</ul>'
+    + (r.rois.length ? `<div>Vùng: ${esc(r.rois.join(' · '))}</div>` : '') + `<div>Vật: ${esc(r.objects.join(', '))}</div>`;
+  if (!$('dlg').open) $('dlg').showModal();
+}
+
+$('sub').onclick = () => current && submitId(current);
+$('close').onclick = () => $('dlg').close();
+$('go').onclick = search;
+$('q').onkeydown = (e) => { if (e.key === 'Enter' && e.ctrlKey) search(); };
+$('task').onclick = () => pull(true);
+$('prev').onclick = () => move(-1);
+$('next').onclick = () => move(1);
+document.addEventListener('keydown', (e) => {
+  if ($('dlg').open || document.activeElement.matches('input, textarea')) return;
+  if (e.key === 'ArrowRight') move(1);
+  if (e.key === 'ArrowLeft') move(-1);
+});
+
+async function loadConfig() {
+  const c = await (await fetch('/api/config')).json();
+  for (const el of $('cfgForm').elements) if (el.name) el.value = c[el.name] ?? '';
+  $('cfgForm').elements.DRES_PASSWORD.placeholder = c.hasPassword ? 'đã lưu — để trống = giữ nguyên' : 'chưa có';
+  if (!c.DRES_USERNAME || !c.hasPassword) $('cfg').open = true;
+}
+$('cfgForm').onsubmit = async (e) => {
+  e.preventDefault();
+  const body = Object.fromEntries(new FormData($('cfgForm')));
+  const r = await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  $('cfgMsg').textContent = r.ok ? 'Đã lưu vào .env' : 'Lỗi: ' + (await r.json()).message;
+  if (r.ok) loadConfig();
+};
+loadConfig();
+</script>
+</body>
+</html>

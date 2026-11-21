@@ -1,51 +1,24 @@
-.venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-
-# generated offline / contains the image corpus + per-image metadata --
-# never commit any of it; rebuild locally with tools/build_index.py
+# Dữ liệu (tải bằng download_data.bat) và mọi thứ máy sinh
 data/
+.cache/
 
-# original images are never committed
-*.jpg
-*.jpeg
-*.png
-!frontend/**/*.png
+# File máy sinh trong annotations/ (đi kèm dữ liệu trên Hugging Face); chỉ nhãn người duyệt nằm trong git
+annotations/enriched/
+annotations/**/*.npz
+annotations/**/*.html
+annotations/**/label_studio_*
+annotations/adl_people/action_pred.json
+annotations/adl_people/extra_boxes.json
+annotations/adl_people/teacher_hints.json
+annotations/identity_pred.json
+annotations/identities*.json
+annotations/**/*.bak-*
 
-.DS_Store
-node_modules/
-frontend/dist/
-
-# local secrets/config -- copy .env.example to .env and fill in real values
+# Môi trường, bí mật
+.venv/
 .env
-
-# internal planning doc -- not for the public repo
-Technical note*.md
-
-# local agent config
-CLAUDE.md
-docs/agents/
-
-# labeling/: dữ liệu máy sinh, tải lại hoặc chạy lại được
-dataset/
-exports/
-labeling/work/
-labeling/kaggle/**/*.zip
+viewer/node_modules/
+viewer/users.json
+__pycache__/
+.pytest_cache/
 *.zip
-# Nhãn người duyệt và kết quả VLM tốn GPU: không tái tạo được, phải nằm trong git.
-# Mọi thứ khác trong annotations/ (trang HTML, file Label Studio, embedding) là máy sinh.
-labeling/annotations/*
-!labeling/annotations/*.json
-labeling/annotations/identities*.json
-labeling/annotations/identity_pred.json
-!labeling/annotations/*.yaml
-!labeling/annotations/adl*/
-labeling/annotations/adl*/*
-!labeling/annotations/adl*/approved.json
-!labeling/annotations/adl*/rejected.json
-!labeling/annotations/adl*/suggestions.json
-!labeling/annotations/adl*/vlm_reviews.jsonl
-!labeling/annotations/adl*/person_attrs.jsonl
-# Tài khoản viewer (hash mật khẩu)
-labeling/viewer/users.json

@@ -26,3 +26,6 @@ Technical note*.md
 # local agent config
 CLAUDE.md
 docs/agents/
+
+# dres_auto: đề đã kéo về, log nộp bài
+dres_auto/runtime/

@@ -6,6 +6,8 @@ faiss-cpu
 fastapi
 uvicorn[standard]
 httpx
+requests
+python-dotenv
 pydantic
 pydantic-settings
 python-multipart

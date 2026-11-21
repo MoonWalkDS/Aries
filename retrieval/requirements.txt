@@ -1,0 +1,8 @@
+# Công cụ tìm ảnh tiếng Việt (retrieval/). Chạy được trên CPU, có GPU thì nhanh hơn.
+numpy
+torch
+open_clip_torch      # SigLIP2 ViT-SO400M-16-SigLIP2-384 (webli), trùng với embedding trong exports/
+transformers         # dịch đề Việt -> Anh: Helsinki-NLP/opus-mt-vi-en
+sentencepiece        # tokenizer của opus-mt
+requests
+python-dotenv

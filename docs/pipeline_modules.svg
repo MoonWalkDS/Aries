@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2540 901" width="2540" height="901" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a7761a"/></marker></defs>
+<rect width="2540" height="901" fill="#fff"/>
+<text x="1270.0" y="34" font-size="20" font-weight="700" fill="#222" text-anchor="middle">Kiến trúc module xử lý dữ liệu Castle5000: vào / ra của từng module</text>
+<text x="1270.0" y="58" font-size="12.5" font-weight="400" fill="#555" text-anchor="middle">[Mx] trong ô VÀO = file lấy từ module đó. Số liệu lấy từ exports/summary.json và log chạy.</text>
+<rect x="30" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="195.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">Nguồn</text>
+<rect x="460" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="625.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">Trích xuất (GPU)</text>
+<rect x="890" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="1055.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">Gợi ý + Thuộc tính</text>
+<rect x="1320" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="1485.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">VLM duyệt + Cụm trang phục</text>
+<rect x="1750" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="1915.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">Người duyệt + Đặt tên</text>
+<rect x="2180" y="54" width="330" height="24" rx="5" fill="#f1f1f1" stroke="#bbb"/>
+<text x="2345.0" y="71" font-size="13" font-weight="700" fill="#444" text-anchor="middle">Hợp nhất + Xuất</text>
+<rect x="30" y="387.0" width="330" height="133" rx="7" fill="#fff" stroke="#5b7089" stroke-width="1.6"/>
+<path d="M30,394.0 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#5b7089"/>
+<text x="40" y="405.0" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M1  Chuẩn hoá nguồn</text>
+<text x="40" y="426.0" font-size="11" font-weight="400" fill="#555" text-anchor="start">giải nén, đổi tên &lt;giờ&gt;_&lt;số&gt;</text>
+<rect x="34" y="431.0" width="322" height="33" rx="4" fill="#e8f0fa"/>
+<text x="40" y="444.0" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="74" y="444.0" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">Batch1/2/3.zip (5.000 JPEG)</text>
+<rect x="34" y="466.0" width="322" height="46" rx="4" fill="#e6f4ea"/>
+<text x="40" y="479.0" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="74" y="479.0" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">dataset/images/  5.000 ảnh 1280×720</text>
+<text x="74" y="494.0" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">dataset/thumbs/  ảnh nhỏ cho trang duyệt</text>
+<rect x="460" y="96" width="330" height="163" rx="7" fill="#fff" stroke="#3f7a57" stroke-width="1.6"/>
+<path d="M460,103 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f7a57"/>
+<text x="470" y="114" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M2  adl embed</text>
+<text x="470" y="135" font-size="11" font-weight="400" fill="#555" text-anchor="start">SigLIP2 SO400M/384 + trừ nền theo giờ</text>
+<rect x="464" y="140" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="470" y="153" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="504" y="153" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">images/</text>
+<text x="504" y="168" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">ảnh nền = trung vị pixel mỗi giờ</text>
+<rect x="464" y="190" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="470" y="203" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="504" y="203" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">embeddings.npy  5.000×1152</text>
+<text x="504" y="218" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">motion.npy  tỉ lệ vùng chuyển động</text>
+<text x="504" y="233" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">boxes.json  vùng có người (focus)</text>
+<rect x="460" y="285" width="330" height="163" rx="7" fill="#fff" stroke="#3f7a57" stroke-width="1.6"/>
+<path d="M460,292 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f7a57"/>
+<text x="470" y="303" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M3  enrich build: so nền ROI</text>
+<text x="470" y="324" font-size="11" font-weight="400" fill="#555" text-anchor="start">so ảnh xám 320×180, đổi ≥ 10% pixel</text>
+<rect x="464" y="329" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="470" y="342" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="504" y="342" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">images/</text>
+<text x="504" y="357" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">labels/rois.yaml  (10 vùng cố định)</text>
+<rect x="464" y="379" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="470" y="392" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="504" y="392" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rois/&lt;vùng&gt;/crops + embeddings.npy</text>
+<text x="504" y="407" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rois/motion.npy  5.000×10 (22.451 đổi)</text>
+<text x="504" y="422" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rois/baseline.json  ảnh nền mỗi giờ</text>
+<rect x="460" y="474" width="330" height="163" rx="7" fill="#fff" stroke="#3f7a57" stroke-width="1.6"/>
+<path d="M460,481 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f7a57"/>
+<text x="470" y="492" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M4  enrich build: dò người</text>
+<text x="470" y="513" font-size="11" font-weight="400" fill="#555" text-anchor="start">RT-DETR r50vd, điểm ≥ 0,45, NMS 0,70</text>
+<rect x="464" y="518" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="470" y="531" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="504" y="531" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">images/</text>
+<text x="504" y="546" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rois.yaml (zone)</text>
+<rect x="464" y="568" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="470" y="581" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="504" y="581" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people/crops/  12.819 crop</text>
+<text x="504" y="596" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people.json  box, điểm, zone</text>
+<text x="504" y="611" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people/embeddings.npy  12.819×1152</text>
+<rect x="460" y="663" width="330" height="148" rx="7" fill="#fff" stroke="#3f7a57" stroke-width="1.6"/>
+<path d="M460,670 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f7a57"/>
+<text x="470" y="681" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M5  enrich objects</text>
+<text x="470" y="702" font-size="11" font-weight="400" fill="#555" text-anchor="start">RT-DETR (COCO) + OWLv2 (10 truy vấn)</text>
+<rect x="464" y="707" width="322" height="33" rx="4" fill="#e8f0fa"/>
+<text x="470" y="720" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="504" y="720" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">images/</text>
+<rect x="464" y="742" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="470" y="755" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="504" y="755" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">objects.json  43.656 box</text>
+<text x="504" y="770" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">objects_owl.json  52.283 box</text>
+<text x="504" y="785" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">objects_static.json  19 vị trí cố định</text>
+<rect x="890" y="285" width="330" height="163" rx="7" fill="#fff" stroke="#a7761a" stroke-width="1.6"/>
+<path d="M890,292 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#a7761a"/>
+<text x="900" y="303" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M6  adl init / round: gợi ý nhãn</text>
+<text x="900" y="324" font-size="11" font-weight="400" fill="#555" text-anchor="start">SigLIP2 text, centroid, HDBSCAN</text>
+<rect x="894" y="329" width="322" height="63" rx="4" fill="#e8f0fa"/>
+<text x="900" y="342" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="934" y="342" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">embeddings.npy  [M2] ảnh  [M3] vùng  [M4] người</text>
+<text x="934" y="357" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">câu mô tả mỗi lớp (labels/*.yaml)</text>
+<text x="934" y="372" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">approved.json vòng trước  [M8]</text>
+<rect x="894" y="394" width="322" height="46" rx="4" fill="#e6f4ea"/>
+<text x="900" y="407" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="934" y="407" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">hạt giống: 8–10 crop gần nhất mỗi câu</text>
+<text x="934" y="422" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">suggestions.json  ≤ 600 người, ≤ 400 vùng/vòng</text>
+<rect x="890" y="594" width="330" height="148" rx="7" fill="#fff" stroke="#8a5a85" stroke-width="1.6"/>
+<path d="M890,601 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#8a5a85"/>
+<text x="900" y="612" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M9  pipeline attrs</text>
+<text x="900" y="633" font-size="11" font-weight="400" fill="#555" text-anchor="start">Qwen2.5-VL-7B, 1 dòng 13 trường</text>
+<rect x="894" y="638" width="322" height="33" rx="4" fill="#e8f0fa"/>
+<text x="900" y="651" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="934" y="651" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people/crops cao ≥ 160 px  [M4]</text>
+<rect x="894" y="673" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="900" y="686" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="934" y="686" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">person_attrs.jsonl  9.030 crop</text>
+<text x="934" y="701" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">giới, tuổi, tóc, áo, màu, hoa văn, quần,</text>
+<text x="934" y="716" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">mũ, kính, tạp dề, đồ cầm, hướng nhìn</text>
+<rect x="1320" y="285" width="330" height="163" rx="7" fill="#fff" stroke="#a7761a" stroke-width="1.6"/>
+<path d="M1320,292 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#a7761a"/>
+<text x="1330" y="303" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M7  adl vlm-review / fill</text>
+<text x="1330" y="324" font-size="11" font-weight="400" fill="#555" text-anchor="start">Qwen2.5-VL-7B, không thấy nhãn máy gợi ý</text>
+<rect x="1324" y="329" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="1330" y="342" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="1364" y="342" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">suggestions.json + crops  [M6]</text>
+<text x="1364" y="357" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">danh sách lớp để chọn</text>
+<rect x="1324" y="379" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="1330" y="392" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="1364" y="392" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">approved.json  source: vlm  (11.449 người)</text>
+<text x="1364" y="407" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rejected.json  nhãn bị loại</text>
+<text x="1364" y="422" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">vlm_reviews.jsonl  12.819 câu trả lời</text>
+<rect x="1320" y="594" width="330" height="163" rx="7" fill="#fff" stroke="#8a5a85" stroke-width="1.6"/>
+<path d="M1320,601 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#8a5a85"/>
+<text x="1330" y="612" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M10  enrich identities</text>
+<text x="1330" y="633" font-size="11" font-weight="400" fill="#555" text-anchor="start">gom cụm theo trang phục</text>
+<rect x="1324" y="638" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="1330" y="651" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="1364" y="651" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">person_attrs.jsonl  [M9]</text>
+<text x="1364" y="666" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people/embeddings.npy  [M4]</text>
+<rect x="1324" y="688" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="1330" y="701" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="1364" y="701" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">identities.json  cụm o00…</text>
+<text x="1364" y="716" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">khoá = giới · loại áo · màu áo · hoa văn</text>
+<text x="1364" y="731" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">khoá &lt; 15 crop → cụm SigLIP gần nhất</text>
+<rect x="1750" y="285" width="330" height="178" rx="7" fill="#fff" stroke="#a7761a" stroke-width="1.6"/>
+<path d="M1750,292 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#a7761a"/>
+<text x="1760" y="303" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M8  Người duyệt (viewer web)</text>
+<text x="1760" y="324" font-size="11" font-weight="400" fill="#555" text-anchor="start">xác nhận, từ chối, đổi lớp, vẽ box, đặt tên</text>
+<rect x="1754" y="329" width="322" height="48" rx="4" fill="#e8f0fa"/>
+<text x="1760" y="342" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="1794" y="342" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">approved.json, rejected.json  [M7]</text>
+<text x="1794" y="357" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">ảnh / crop</text>
+<rect x="1754" y="379" width="322" height="76" rx="4" fill="#e6f4ea"/>
+<text x="1760" y="392" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="1794" y="392" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">approved.json  + human (78 người, 8 vùng)</text>
+<text x="1794" y="407" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rejected.json  577 nhãn người bị loại</text>
+<text x="1794" y="422" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">manual_boxes.json  3 box vẽ tay</text>
+<text x="1794" y="437" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">identity_names.json  2.641 tên người</text>
+<rect x="1750" y="594" width="330" height="163" rx="7" fill="#fff" stroke="#8a5a85" stroke-width="1.6"/>
+<path d="M1750,601 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#8a5a85"/>
+<text x="1760" y="612" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M11  Đặt tên (train_predict)</text>
+<text x="1760" y="633" font-size="11" font-weight="400" fill="#555" text-anchor="start">LogisticRegression trên SigLIP2, p ≥ 0,60</text>
+<rect x="1754" y="638" width="322" height="63" rx="4" fill="#e8f0fa"/>
+<text x="1760" y="651" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="1794" y="651" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">identities.json  [M10]</text>
+<text x="1794" y="666" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">identity_names.json  [M8]</text>
+<text x="1794" y="681" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people/embeddings.npy  [M4]</text>
+<rect x="1754" y="703" width="322" height="46" rx="4" fill="#e6f4ea"/>
+<text x="1760" y="716" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="1794" y="716" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">identity_pred.json  4.804 crop có tên (15 tên)</text>
+<text x="1794" y="731" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">outfits.yaml  trang phục chuẩn theo tên, giờ</text>
+<rect x="2180" y="216" width="330" height="193" rx="7" fill="#fff" stroke="#3f56a0" stroke-width="1.6"/>
+<path d="M2180,223 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f56a0"/>
+<text x="2190" y="234" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M12  enrich merge</text>
+<text x="2190" y="255" font-size="11" font-weight="400" fill="#555" text-anchor="start">gộp mỗi ảnh một bản ghi</text>
+<rect x="2184" y="260" width="322" height="93" rx="4" fill="#e8f0fa"/>
+<text x="2190" y="273" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="2224" y="273" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">[M3] motion.npy + nhãn trạng thái vùng</text>
+<text x="2224" y="288" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">[M4] people.json    [M5] objects*.json</text>
+<text x="2224" y="303" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">[M8] approved, manual_boxes</text>
+<text x="2224" y="318" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">[M9] person_attrs.jsonl</text>
+<text x="2224" y="333" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">[M11] identity_pred, outfits.yaml</text>
+<rect x="2184" y="355" width="322" height="46" rx="4" fill="#e6f4ea"/>
+<text x="2190" y="368" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="2224" y="368" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">annotations/enriched/&lt;id&gt;.json  × 5.000</text>
+<text x="2224" y="383" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">source mỗi nhãn: human | vlm | seed | suggested</text>
+<rect x="2180" y="443" width="330" height="148" rx="7" fill="#fff" stroke="#3f56a0" stroke-width="1.6"/>
+<path d="M2180,450 a7,7 0 0 1 7,-7 h316 a7,7 0 0 1 7,7 v19 h-330 z" fill="#3f56a0"/>
+<text x="2190" y="461" font-size="13" font-weight="700" fill="#fff" text-anchor="start">M13  Xuất bộ dữ liệu</text>
+<text x="2190" y="482" font-size="11" font-weight="400" fill="#555" text-anchor="start">exports/</text>
+<rect x="2184" y="487" width="322" height="33" rx="4" fill="#e8f0fa"/>
+<text x="2190" y="500" font-size="10" font-weight="700" fill="#2b5da8" text-anchor="start">VÀO</text>
+<text x="2224" y="500" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">enriched/*.json  [M12]</text>
+<rect x="2184" y="522" width="322" height="61" rx="4" fill="#e6f4ea"/>
+<text x="2190" y="535" font-size="10" font-weight="700" fill="#2c7a46" text-anchor="start">RA</text>
+<text x="2224" y="535" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">castle_dataset.jsonl  5.000 dòng</text>
+<text x="2224" y="550" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">people.csv 12.819 · objects.csv 69.603</text>
+<text x="2224" y="565" font-size="11.5" font-weight="400" fill="#222" text-anchor="start">rois.csv 50.000 · summary.json</text>
+<path d="M360,453.5 C410.0,453.5 410.0,158 460,158" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M360,453.5 C410.0,453.5 410.0,347 460,347" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="385.1" y="389.25" width="45.800000000000004" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="410.0" y="400.25" font-size="10" font-weight="600" fill="#444" text-anchor="middle">images/</text>
+<path d="M360,453.5 C410.0,453.5 410.0,536 460,536" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M360,453.5 C410.0,453.5 410.0,725 460,725" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="400" y="423.5" font-size="10" font-weight="600" fill="#444" text-anchor="middle">images/</text>
+<path d="M790,177.5 C840.0,177.5 840.0,365 890,365" fill="none" stroke="#444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<rect x="790.8" y="260.25" width="94.4" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="840.0" y="271.25" font-size="10" font-weight="600" fill="#444" text-anchor="middle">embeddings (ảnh)</text>
+<path d="M790,366.5 C840.0,366.5 840.0,395 890,395" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="788.1" y="369.75" width="99.80000000000001" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="840.0" y="380.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">rois/*/embeddings</text>
+<path d="M790,555.5 C840.0,555.5 840.0,380 890,380" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="788.1" y="456.75" width="99.80000000000001" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="840.0" y="467.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">people/embeddings</text>
+<path d="M790,555.5 C840.0,555.5 840.0,649 890,649" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="801.6" y="591.25" width="72.80000000000001" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="840.0" y="602.25" font-size="10" font-weight="600" fill="#444" text-anchor="middle">people/crops</text>
+<path d="M1220,366.5 C1270.0,366.5 1270.0,345 1320,345" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1220.8" y="344.75" width="94.4" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1270.0" y="355.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">suggestions.json</text>
+<path d="M1650,366.5 C1700.0,366.5 1700.0,345 1750,345" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1656.2" y="344.75" width="83.60000000000001" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1700.0" y="355.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">approved (vlm)</text>
+<path d="M1220,668.0 C1270.0,668.0 1270.0,652 1320,652" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1215.4" y="649.0" width="105.2" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1270.0" y="660.0" font-size="10" font-weight="600" fill="#444" text-anchor="middle">person_attrs.jsonl</text>
+<path d="M1650,675.5 C1700.0,675.5 1700.0,652 1750,652" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1653.5" y="652.75" width="89.0" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1700.0" y="663.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">identities.json</text>
+<path d="M1935.0,463 L1935.0,594" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1939.0" y="517.5" width="110.60000000000001" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1941.0" y="528.5" font-size="10" font-weight="600" fill="#444" text-anchor="start">identity_names.json</text>
+<path d="M2080,675.5 C2130.0,675.5 2130.0,366 2180,366" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="2088.9" y="509.75" width="78.2" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="2130.0" y="520.75" font-size="10" font-weight="600" fill="#444" text-anchor="middle">identity_pred</text>
+<path d="M2080,374.0 C2130.0,374.0 2130.0,316 2180,316" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="2075.4" y="334.0" width="105.2" height="15" rx="3" fill="#fff" opacity="0.92"/>
+<text x="2130.0" y="345.0" font-size="10" font-weight="600" fill="#444" text-anchor="middle">approved + box tay</text>
+<path d="M2365.0,409 L2365.0,443" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M1915.0,285 V263 H1055.0 V285" fill="none" stroke="#a7761a" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#g)"/>
+<text x="1485.0" y="258" font-size="11" font-weight="600" fill="#a7761a" text-anchor="middle">vòng lặp 2–3 lần: nhãn đã duyệt cập nhật centroid, sinh gợi ý mới</text>
+<path d="M625.0,811 V779 H2152 V276 H2180" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="850" y="773" font-size="10" font-weight="600" fill="#444" text-anchor="start">objects*.json  → M12</text>
+<text x="2150" y="206" font-size="10.5" font-weight="400" fill="#555" text-anchor="end">M3, M4, M5, M9 cũng nạp thẳng vào M12 (xem ô VÀO)</text>
+<rect x="30" y="845" width="14" height="14" fill="#e8f0fa" stroke="#2b5da8"/>
+<text x="50" y="857" font-size="12" font-weight="400" fill="#222" text-anchor="start">VÀO: dữ liệu module đọc</text>
+<rect x="250" y="845" width="14" height="14" fill="#e6f4ea" stroke="#2c7a46"/>
+<text x="270" y="857" font-size="12" font-weight="400" fill="#222" text-anchor="start">RA: dữ liệu module ghi</text>
+<line x1="450" y1="852" x2="490" y2="852" stroke="#444" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="498" y="857" font-size="12" font-weight="400" fill="#222" text-anchor="start">đường nét đứt: nhánh nhãn cấp ảnh (không vào bộ cuối) hoặc vòng lặp</text>
+<text x="30" y="877" font-size="12" font-weight="400" fill="#555" text-anchor="start">Chạy local (GPU): M1–M6, M8, M10–M13. Chạy Kaggle T4: M7 (VLM duyệt), M9 (thuộc tính). Model: SigLIP2 SO400M-384, RT-DETR r50vd, OWLv2 base, Qwen2.5-VL-7B, scikit-learn.</text>
+</svg>

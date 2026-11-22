@@ -7,14 +7,15 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
   <style>
-    .o-wrap { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 360px; min-height: 0; }
+    .o-wrap { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 360px; grid-template-rows: minmax(0, 1fr); min-height: 0; min-width: 0; overflow: auto; }
     .o-stage { position: relative; display: flex; align-items: center; justify-content: center; padding: 16px; min-width: 0; min-height: 0; background: #1b1b1b; }
     .o-stage svg { width: 100%; height: 100%; display: block; user-select: none; }
     .o-stage.drawing svg, .o-stage.placing svg { cursor: crosshair; }
     .o-stage.heighting svg { cursor: ns-resize; }
-    .o-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); background: rgba(17,17,17,.85); color: #fff; padding: 6px 14px; border-radius: 9999px; font-size: 13px; pointer-events: none; white-space: nowrap; }
+    .o-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); background: rgba(17,17,17,.85); color: #fff; padding: 6px 14px; border-radius: 9999px; font-size: 13px; pointer-events: none; max-width: calc(100% - 32px); text-align: center; }
     .o-hint:empty { display: none; }
-    .o-side { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--line); background: var(--surface); }
+    .o-side { display: flex; flex-direction: column; min-height: 0; min-width: 0; overflow: auto; border-left: 1px solid var(--line); background: var(--surface); }
+    .o-side > * { flex-shrink: 0; }
     .o-sec { padding: 12px 16px; border-bottom: 1px solid var(--line); }
     .o-sec h2 { margin: 0 0 8px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
     .o-chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -29,7 +30,7 @@
     .o-status.inherited { background: var(--yellow-bg); color: var(--yellow); }
     .o-status.none { background: var(--canvas); color: var(--muted); }
     .o-status button { margin-left: auto; font-weight: 400; }
-    .o-list { flex: 1; overflow-y: auto; padding: 6px 8px; }
+    .o-list { flex: 1 0 auto; padding: 6px 8px; }
     .o-item { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 6px; cursor: pointer; }
     .o-item:hover, .o-item.hl { background: var(--canvas); }
     .o-item input { width: 16px; height: 16px; margin: 0; cursor: pointer; }
@@ -48,7 +49,7 @@
     .btn.danger { color: var(--red); }
     .btn:disabled { opacity: .4; cursor: default; }
     .o-new { display: flex; gap: 6px; margin-top: 8px; }
-    .o-new input { flex: 1; border: 1px solid var(--strong); border-radius: 6px; padding: 6px 10px; }
+    .o-new input { flex: 1; min-width: 0; border: 1px solid var(--strong); border-radius: 6px; padding: 6px 10px; }
     .o-reg { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; align-items: center; padding: 6px 8px; border-radius: 6px; }
     .o-reg.on { background: var(--canvas); box-shadow: inset 3px 0 0 var(--strong); }
     .o-reg input { border: 1px solid transparent; border-radius: 4px; padding: 2px 6px; background: none; min-width: 0; }
@@ -61,6 +62,10 @@
     dialog.b-dlg { border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; max-width: 560px; }
     dialog.b-dlg::backdrop { background: rgba(17,17,17,.35); }
     dialog.b-dlg h3 { margin: 0 0 8px; }
+    @media (max-width: 900px) {
+      .o-wrap { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(240px, 45vh) auto; }
+      .o-side { overflow: visible; border-left: 0; border-top: 1px solid var(--line); }
+    }
     /* lớp vẽ trên ảnh (đơn vị: pixel ảnh gốc) */
     .rg-base { fill: rgba(78,154,87,.12); stroke: #8fd19a; stroke-width: 2; vector-effect: non-scaling-stroke; }
     .rg-top { fill: none; stroke: #8fd19a; stroke-width: 1.5; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }

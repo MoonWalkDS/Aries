@@ -2811,3 +2811,6 @@
 {"at":"2026-11-22T13:52:05.351Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1866"],"d":1}
 {"at":"2026-11-22T13:52:06.089Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1866"],"v":{"items":["bowl","cooking pot","cutting board","plate","Đèn chùm","pineapple","scissors","bottle","knife","frying pan"],"boxes":[],"by":"BaoLong","at":"2026-11-22T13:52:06.089Z"}}
 {"at":"2026-11-22T13:52:06.949Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1876"],"d":1}
+{"at":"2026-11-22T13:52:15.167Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1876"],"v":{"items":["bowl","cooking pot","cutting board","plate","Đèn chùm","pineapple","scissors","bottle","knife","frying pan"],"boxes":[],"by":"BaoLong","at":"2026-11-22T13:52:15.167Z"}}
+{"at":"2026-11-22T13:52:15.242Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1876"],"v":{"items":["bowl","cooking pot","cutting board","plate","Đèn chùm","pineapple","scissors","bottle","knife","frying pan"],"boxes":[],"by":"BaoLong","at":"2026-11-22T13:52:15.242Z"}}
+{"at":"2026-11-22T13:52:23.219Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_1887"],"d":1}

@@ -18,4 +18,7 @@ if not exist "data\exports\search_index\images.json" (
   echo Chưa có chỉ mục: dựng lần đầu, mất vài phút ...
   "%PY%" retrieval\build_search_index.py || exit /b 1
 )
-"%PY%" retrieval\web_app.py %*
+rem Preload logic: Thiết lập cờ PRELOAD_MODEL và kích hoạt nạp trước Model vào VRAM
+set PRELOAD_MODEL=1
+echo [Preload] Kích hoạt nạp trước Model NuExtract vào VRAM khi khởi động...
+"%PY%" retrieval\web_app.py --preload %*

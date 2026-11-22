@@ -1,18 +1,14 @@
 """Tách đề tiếng Việt thành cấu trúc mà engine dùng: số người, tên, cụm-người, cụm-nhóm, cụm-cảnh.
-Hỗ trợ cả mô hình SLM NuExtract-1.5-smol và bộ luật regex tiếng Việt (fallback).
+
+Chỉ dùng luật, không gọi LLM lúc truy vấn: câu mở đầu bằng chủ ngữ người ("một người đàn ông", "người kia",
+"thầy Linh") mở một cụm-người; câu đại từ ("anh ấy…") hoặc tả tiếp đồ mặc ("áo len có…") gộp vào cụm trước;
+"những người khác…" là cụm-nhóm; còn lại là cảnh. Các mẫu regex chạy trên chữ đã bỏ dấu.
 """
 from __future__ import annotations
 
-import json
-import logging
-import os
 import re
-from pathlib import Path
-from typing import Any, Optional
 
-from common import REPO_ROOT, find_names, remove_accents, split_sentences
-
-logger = logging.getLogger("retrieval.query_parser")
+from common import find_names, remove_accents, split_sentences
 
 _NUMBER_WORDS = {"mot": 1, "hai": 2, "ba": 3, "bon": 4, "nam": 5, "sau": 6, "bay": 7, "tam": 8, "chin": 9, "muoi": 10}
 _NUMBER = rf"(\d+|{'|'.join(_NUMBER_WORDS)})"
@@ -73,15 +69,17 @@ def _split_clauses(sentence: str, known_names: list[str]) -> list[str]:
     return clauses
 
 
-def parse_query_rule(text: str, known_names: list[str] = []) -> dict:
-    """Fallback: Tách đề bằng luật Regex (giữ nguyên cấu trúc web)."""
+def parse_query(text: str, known_names: list[str]) -> dict:
+    """Trả dict (giữ nguyên khoá vì web hiển thị):
+    sentences, names, count (số người nêu rõ hoặc None), count_min, people [{text, gender, name}],
+    group ({text, n} hoặc None), scene [cụm-cảnh]."""
     sentences = split_sentences(text)
     parsed = {"sentences": sentences, "names": find_names(" ".join(sentences), known_names), "count": None, "count_min": 0,
               "people": [], "group": None, "scene": []}
     plural_gender, plural_text, total_is_exact = None, None, False
     for sentence_index, sentence in enumerate(sentences):
         for clause in _split_clauses(sentence, known_names):
-            plain = _LOCATION_PREFIX.sub("", remove_accents(clause).strip())
+            plain = _LOCATION_PREFIX.sub("", remove_accents(clause).strip())   # "phía sau có một người…" -> "một người…"
             if _ZERO_PEOPLE.search(plain) and not _NOBODY_ELSE.match(plain):
                 parsed["count"] = 0
                 parsed["scene"].append(clause)
@@ -92,10 +90,10 @@ def parse_query_rule(text: str, known_names: list[str] = []) -> dict:
                 parsed["scene"].append(clause)
                 continue
             plural_count = _to_number(plural.group(1)) if plural else 0
-            if plural_count >= 2 and sentence_index == 0 and not parsed["people"]:
+            if plural_count >= 2 and sentence_index == 0 and not parsed["people"]:   # câu mở đầu "Hai người đàn ông…" = tổng số người
                 parsed["count"], plural_gender, plural_text = plural_count, detect_gender(clause), clause
                 parsed["scene"].append(clause)
-            elif plural_count >= 2:
+            elif plural_count >= 2:                                                # "phía xa có ba người…" = n người nữa
                 parsed["group"] = {"text": clause, "n": plural_count}
             elif _ONLY_ONE_PERSON.match(plain):
                 if parsed["people"]:
@@ -116,203 +114,18 @@ def parse_query_rule(text: str, known_names: list[str] = []) -> dict:
                 parsed["scene"].append(clause)
     if plural_text:
         parsed["scene"].remove(plural_text)
-        if not parsed["people"]:
+        if not parsed["people"]:     # "Hai người đàn ông đang nấu ăn": n cụm giống nhau, ghép vào n người khác nhau
             parsed["people"] = [{"text": plural_text, "gender": plural_gender, "name": None} for _ in range(parsed["count"])]
-        else:
+        else:                        # hành động/vị trí của câu số nhiều áp cho từng người được tả sau đó
             for person in parsed["people"]:
                 person["text"] += f" {plural_text}"
-    if parsed["count"] == 0:
+    if parsed["count"] == 0:         # "có 0 người": mọi cụm-người là tách nhầm
         parsed["scene"] += [p["text"] for p in parsed["people"]] + ([parsed["group"]["text"]] if parsed["group"] else [])
         parsed["people"], parsed["group"] = [], None
     for person in parsed["people"]:
         found = find_names(person["text"], parsed["names"])
         person["name"] = found[0] if found else None
     parsed["count_min"] = len(parsed["people"]) + (parsed["group"]["n"] if parsed["group"] else 0)
-    if total_is_exact:
+    if total_is_exact:               # "Không có ai khác" / "Chỉ có một người": tổng = số người đã tả
         parsed["count"] = parsed["count_min"]
-
-    # Normalize fields
-    parsed["so_nguoi"] = parsed["count"]
-    parsed["danh_sach_nguoi"] = [p["text"] for p in parsed["people"]]
-    parsed["vat_the_trang_thai"] = parsed["scene"]
-    parsed["raw_query"] = text
     return parsed
-
-
-class NuExtractSLM:
-    """SLM Parser sử dụng mô hình NuExtract-1.5-smol."""
-
-    _instance = None
-
-    def __init__(self, model_dir: Path | str | None = None):
-        if model_dir is None:
-            model_dir = REPO_ROOT / "model" / "NuExtract-1.5-smol"
-        self.model_dir = Path(model_dir)
-        self.device = None
-        self.tokenizer = None
-        self.model = None
-        self.failed = False
-        self._cache: dict[str, dict] = {}
-
-    def load(self):
-        if self.model is not None or self.failed:
-            return
-        if not self.model_dir.exists():
-            logger.warning("NuExtract model directory not found at %s", self.model_dir)
-            self.failed = True
-            return
-        try:
-            import torch
-            from transformers import AutoModelForCausalLM, AutoTokenizer
-
-            self.device = "cuda" if torch.cuda.is_available() else "cpu"
-            logger.info("Loading NuExtract from %s on %s...", self.model_dir, self.device)
-            self.tokenizer = AutoTokenizer.from_pretrained(str(self.model_dir))
-            self.model = AutoModelForCausalLM.from_pretrained(
-                str(self.model_dir),
-                torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-            ).to(self.device)
-            self.model.eval()
-            logger.info("NuExtract model loaded successfully!")
-        except Exception as exc:
-            logger.warning("Failed to load NuExtract: %s", exc)
-            self.failed = True
-
-    def extract(self, query: str) -> dict | None:
-        clean_q = query.strip()
-        if clean_q in self._cache:
-            return self._cache[clean_q]
-
-        self.load()
-        if self.model is None or self.tokenizer is None:
-            return None
-        try:
-            import torch
-
-            # Prompt chỉ dẫn chi tiết theo yêu cầu của chuyên gia parsing câu truy vấn
-            instruction = """Bạn là chuyên gia parsing câu truy vấn, nhiệm vụ của bạn là parsing câu truy vấn đầu vào thành 3 thành phần: (a) so_nguoi - kiểm tra số lượng người yêu cầu trong truy vấn:
-- Nếu là số lượng cố định chính xác (ví dụ: "1 người", "hai người", "duy nhất") -> ghi số nguyên (ví dụ: 1, 2).
-- Nếu có điều kiện cận biên, so sánh (ví dụ: "tối thiểu 2", "ít nhất 2", "từ 2 trở lên", "nhiều hơn 1") -> ghi rõ dạng toán tử: ">=2" (hoặc ">1").
-- Nếu hoàn toàn không đề cập số lượng -> ghi "khong_de_cap" (b) danh_sach_nguoi - tự động truy xuất theo người, tự chia truy vấn theo người và kèm theo miêu tả vi_tri, mau_ao (c) vat_the_trang_thai - trích xuất các vật thể có trong truy vấn. Ví dụ: Với truy vấn "Một người đàn ông mặc áo vest đen đứng sau đảo bếp" thì output đầu ra là: {"so_nguoi": 1, "danh_sach_nguoi": ["người đàn ông mặc vest đen"], "vat_the_trang_thai" :["bếp"]}"""
-            schema_str = '{"so_nguoi":"","danh_sach_nguoi":[],"vat_the_trang_thai":[]}'
-            example_input = "Một người đàn ông mặc áo vest đen đứng sau đảo bếp"
-            example_output = '{"so_nguoi": 1, "danh_sach_nguoi": ["người đàn ông mặc vest đen"], "vat_the_trang_thai": ["bếp"]}'
-
-            prompt = (
-                f"<|input|>\n"
-                f"### Instruction:\n{instruction}\n"
-                f"### Template:\n{schema_str}\n"
-                f"### Example 1\n### Text:\n{example_input}\n### Output:\n{example_output}\n"
-                f"### Text:\n{clean_q}\n<|output|>\n"
-            )
-
-            inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-            with torch.inference_mode():
-                out = self.model.generate(
-                    **inputs,
-                    max_new_tokens=100,
-                    do_sample=False,
-                    use_cache=True,
-                    pad_token_id=self.tokenizer.eos_token_id,
-                )
-
-            full_text = self.tokenizer.decode(out[0], skip_special_tokens=False)
-            if "<|output|>" in full_text:
-                gen_text = full_text.split("<|output|>")[-1].replace("<|endoftext|>", "").strip()
-            else:
-                gen_text = full_text.strip()
-
-            res = None
-            m = re.search(r"\{.*\}", gen_text, re.DOTALL)
-            if m:
-                try:
-                    res = json.loads(m.group(0))
-                except Exception:
-                    pass
-
-            # Dự phòng tự đóng ngoặc nếu chuỗi bị cắt do chạm ngưỡng 100 tokens
-            if res is None and "{" in gen_text:
-                s = gen_text[gen_text.find("{"):].strip()
-                for suffix in ('"}', '"]}', ']}', '}'):
-                    try:
-                        res = json.loads(s + suffix)
-                        break
-                    except Exception:
-                        pass
-
-            if res is not None:
-                self._cache[clean_q] = res
-                return res
-        except Exception as exc:
-            logger.warning("NuExtract extraction failed (%s), falling back to rule parser", exc)
-        return None
-
-
-_SLM_PARSER: NuExtractSLM | None = None
-
-
-def get_slm_parser() -> NuExtractSLM:
-    global _SLM_PARSER
-    if _SLM_PARSER is None:
-        _SLM_PARSER = NuExtractSLM()
-    return _SLM_PARSER
-
-
-def parse_query(text: str, known_names: list[str] = []) -> dict:
-    """Tách câu đề thành cấu trúc hoàn chỉnh bằng NuExtract SLM (fallback rule)."""
-    slm = get_slm_parser()
-    data = slm.extract(text)
-
-    if data is None:
-        return parse_query_rule(text, known_names)
-
-    # Map SLM output
-    raw_so_nguoi = data.get("so_nguoi")
-    so_nguoi = None
-    if raw_so_nguoi is not None and str(raw_so_nguoi).lower() not in ("khong_de_cap", "null", ""):
-        try:
-            so_nguoi = int(raw_so_nguoi)
-        except (ValueError, TypeError):
-            so_nguoi = None
-
-    raw_vat_the = data.get("vat_the_trang_thai", [])
-    if isinstance(raw_vat_the, list):
-        vat_the_trang_thai = [str(x) for x in raw_vat_the]
-    else:
-        vat_the_trang_thai = []
-
-    people_objs = []
-    danh_sach_nguoi = []
-    raw_people = data.get("danh_sach_nguoi", [])
-    if isinstance(raw_people, list):
-        for p in raw_people:
-            if isinstance(p, str):
-                danh_sach_nguoi.append(p)
-                people_objs.append({"text": p, "gender": detect_gender(p), "name": None, "mau_ao": "", "vi_tri": ""})
-            elif isinstance(p, dict):
-                mo_ta = p.get("mo_ta") or p.get("hanh_dong") or ""
-                danh_sach_nguoi.append(mo_ta)
-                people_objs.append({
-                    "text": mo_ta,
-                    "gender": detect_gender(mo_ta),
-                    "name": None,
-                    "mau_ao": p.get("mau_ao", ""),
-                    "vi_tri": p.get("vi_tri", ""),
-                })
-
-    count_val = so_nguoi if so_nguoi is not None else len(people_objs) if people_objs else None
-
-    return {
-        "sentences": split_sentences(text),
-        "names": find_names(text, known_names) if known_names else [],
-        "count": count_val,
-        "count_min": count_val or 0,
-        "people": people_objs,
-        "group": None,
-        "scene": vat_the_trang_thai,
-        "so_nguoi": so_nguoi,
-        "danh_sach_nguoi": danh_sach_nguoi,
-        "vat_the_trang_thai": vat_the_trang_thai,
-        "raw_query": text,
-        "engine": "NuExtract-1.5-smol",
-    }

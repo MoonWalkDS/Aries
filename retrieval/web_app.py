@@ -84,13 +84,9 @@ def pull_task() -> dict:
 
 
 def neighbors(image_id: str, span: int = 6) -> list[str]:
-    clean = image_id.replace(".jpg", "")
-    hour = clean.split("_")[0]
-    all_clean = [i.replace(".jpg", "") for i in SEARCH.image_ids]
-    same = sorted((i for i in all_clean if i.startswith(hour + "_")), key=lambda i: int(i.split("_")[1]) if "_" in i and i.split("_")[1].isdigit() else 0)
-    if not same or clean not in same:
-        return SEARCH.image_ids[:2 * span + 1]
-    k = same.index(clean)
+    hour = image_id.split("_")[0]
+    same = sorted((i for i in SEARCH.image_ids if i.startswith(hour + "_")), key=lambda i: int(i.split("_")[1]))
+    k = same.index(image_id)
     return same[max(0, k - span): k + span + 1]
 
 
@@ -144,18 +140,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"error": f"Lỗi: {exc}"}, 500)
         if url.path == "/api/config":
             return self._json(get_config())
-        if url.path == "/api/image" and (q.get("id") in SEARCH.records or f"{q.get('id')}.jpg" in SEARCH.records):     # chỉ id có thật: không cho đọc file tuỳ ý
-            img_name = q['id'] if q['id'].endswith('.jpg') else f"{q['id']}.jpg"
-            target_path = None
-            for folder in (THUMBNAILS_DIR if q.get("thumb") else IMAGES_DIR, IMAGES_DIR, THUMBNAILS_DIR, REPO_ROOT / "metadata"):
-                if (folder / img_name).exists():
-                    target_path = folder / img_name
-                    break
-            if target_path and target_path.exists():
-                return self._send(target_path.read_bytes(), "image/jpeg")
-        if url.path == "/api/detail" and (q.get("id") in SEARCH.records or f"{q.get('id')}.jpg" in SEARCH.records):
-            clean_id = q["id"] if q["id"] in SEARCH.records else f"{q['id']}.jpg"
-            return self._json({**summary(clean_id), "neighbors": neighbors(clean_id)})
+        if url.path == "/api/image" and q.get("id") in SEARCH.records:     # chỉ id có thật: không cho đọc file tuỳ ý
+            folder = THUMBNAILS_DIR if q.get("thumb") and (THUMBNAILS_DIR / f"{q['id']}.jpg").exists() else IMAGES_DIR
+            return self._send((folder / f"{q['id']}.jpg").read_bytes(), "image/jpeg")
+        if url.path == "/api/detail" and q.get("id") in SEARCH.records:
+            return self._json({**summary(q["id"]), "neighbors": neighbors(q["id"])})
         self._json({"error": "not found"}, 404)
 
     def do_POST(self) -> None:

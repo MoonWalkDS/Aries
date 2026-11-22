@@ -2973,3 +2973,32 @@
 {"at":"2026-11-22T14:11:38.100Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2373"],"d":1}
 {"at":"2026-11-22T14:11:39.236Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2385"],"d":1}
 {"at":"2026-11-22T14:11:40.076Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2386"],"d":1}
+{"at":"2026-11-22T14:12:25.924Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2477"],"d":1}
+{"at":"2026-11-22T14:12:27.835Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2480"],"d":1}
+{"at":"2026-11-22T14:12:28.867Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2495"],"d":1}
+{"at":"2026-11-22T14:12:29.799Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2503"],"d":1}
+{"at":"2026-11-22T14:12:30.772Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2509"],"d":1}
+{"at":"2026-11-22T14:12:31.562Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2512"],"d":1}
+{"at":"2026-11-22T14:12:32.354Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2513"],"d":1}
+{"at":"2026-11-22T14:12:33.107Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2521"],"d":1}
+{"at":"2026-11-22T14:12:34.035Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2540"],"d":1}
+{"at":"2026-11-22T14:12:34.835Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2541"],"d":1}
+{"at":"2026-11-22T14:12:38.291Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2546"],"d":1}
+{"at":"2026-11-22T14:12:43.068Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:43.068Z"}}
+{"at":"2026-11-22T14:12:43.964Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:43.964Z"}}
+{"at":"2026-11-22T14:12:44.866Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:44.866Z"}}
+{"at":"2026-11-22T14:12:45.628Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:45.628Z"}}
+{"at":"2026-11-22T14:12:46.634Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:46.634Z"}}
+{"at":"2026-11-22T14:12:48.034Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:12:48.034Z"}}
+{"at":"2026-11-22T14:13:03.380Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:13:03.380Z"}}
+{"at":"2026-11-22T14:13:07.699Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:13:07.699Z"}}
+{"at":"2026-11-22T14:13:09.324Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:13:09.324Z"}}
+{"at":"2026-11-22T14:14:03.301Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm","bowl"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:14:03.301Z"}}
+{"at":"2026-11-22T14:14:21.525Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm","bowl","air fryer"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:14:21.525Z"}}
+{"at":"2026-11-22T14:14:22.324Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2553"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm","bowl"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:14:22.324Z"}}
+{"at":"2026-11-22T14:14:31.795Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2563"],"d":1}
+{"at":"2026-11-22T14:14:34.581Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2563"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm","bowl"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:14:34.581Z"}}
+{"at":"2026-11-22T14:14:37.859Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2579"],"d":1}
+{"at":"2026-11-22T14:14:39.388Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2563"],"d":1}
+{"at":"2026-11-22T14:14:52.703Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2581"],"d":1}
+{"at":"2026-11-22T14:14:55.906Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","08_2581"],"v":{"items":["bottle","cooking pot","cutting board","knife","pineapple","plate","scissors","fork","Đèn chùm","bowl"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:14:55.906Z"}}

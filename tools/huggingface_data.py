@@ -33,7 +33,9 @@ DATA = [
     "data/exports/search_index/**",
     "data/intermediate/adl/**",
     "data/intermediate/enrich/_detections.json", "data/intermediate/enrich/objects.json", "data/intermediate/enrich/objects_owl.json", "data/intermediate/enrich/objects_static.json",
-    "data/intermediate/enrich/people/**", "data/intermediate/enrich/rois/**",
+    "data/intermediate/enrich/people/people.json", "data/intermediate/enrich/people/ids.json",
+    "data/intermediate/enrich/people/embeddings.npy", "data/intermediate/enrich/people/build_stats.json",
+    "data/intermediate/enrich/rois/**",
     # file máy sinh nằm trong labeling/annotations/ (gitignore); nhãn người duyệt thì ở trong git
     "labeling/annotations/enriched/**",
     "labeling/annotations/adl/centroids.npz", "labeling/annotations/adl/text_embeddings.npz",
@@ -44,8 +46,43 @@ DATA = [
                                                    "oven_towel", "sink", "stove", "trash") for f in ("centroids.npz", "text_embeddings.npz")]
 
 
+# HF chỉ cho tối đa 10.000 file mỗi thư mục: thư mục nào vượt thì đẩy dưới dạng một file <thư mục>.zip, tải về thì giải nén.
+ARCHIVED_DIRS = ["data/intermediate/enrich/people/crops"]   # 12.819 crop người
+
+
 def patterns(with_images: bool) -> list[str]:
-    return DATA + ([IMAGES] if with_images else [])
+    return DATA + [f"{d}.zip" for d in ARCHIVED_DIRS] + ([IMAGES] if with_images else [])
+
+
+def pack_archives(root: Path = ROOT) -> None:
+    """Nén mỗi thư mục trong ARCHIVED_DIRS thành <thư mục>.zip (không nén lại ảnh jpg, chỉ gom)."""
+    import zipfile
+
+    for rel in ARCHIVED_DIRS:
+        folder = root / rel
+        if not folder.is_dir():
+            continue
+        with zipfile.ZipFile(root / f"{rel}.zip", "w", zipfile.ZIP_STORED) as archive:
+            for path in sorted(folder.iterdir()):
+                if path.is_file():
+                    archive.write(path, path.name)
+
+
+def unpack_archives(root: Path = ROOT) -> None:
+    """Giải nén <thư mục>.zip vừa tải về nếu thư mục chưa có đủ file. Giữ file zip để lần tải sau không tải lại."""
+    import zipfile
+
+    for rel in ARCHIVED_DIRS:
+        archive_path, folder = root / f"{rel}.zip", root / rel
+        if not archive_path.exists():
+            continue
+        with zipfile.ZipFile(archive_path) as archive:
+            names = archive.namelist()
+            if folder.is_dir() and sum(1 for _ in folder.iterdir()) >= len(names):
+                continue
+            folder.mkdir(parents=True, exist_ok=True)
+            archive.extractall(folder)
+            print(f"Đã giải nén {len(names)} file vào {rel}/")
 
 
 def _login_or_exit(api: HfApi) -> None:
@@ -103,6 +140,7 @@ def download(images: str, root: Path = ROOT) -> None:
         link_images(Path(images), root)      # kiểm tra đường dẫn trước khi tải để sai thì báo ngay
     print(f"Tải {REPO} vào {root} ...")
     snapshot_download(REPO, repo_type="dataset", local_dir=root, allow_patterns=patterns(with_images))
+    unpack_archives(root)
     if not (root / "data" / "exports" / "castle_dataset.jsonl").exists():
         sys.exit(f"{REPO} chưa có dữ liệu của repo này (chưa ai chạy tools\\upload_data.bat).")
     print("Xong. Ảnh gốc:", {"download": "đã tải", "skip": "bỏ qua"}.get(images, f"liên kết tới {images}"))
@@ -114,11 +152,31 @@ def upload(root: Path = ROOT, yes: bool = False) -> None:
     missing = [p for p in ("data/exports/castle_dataset.jsonl", "data/exports/search_index/images.json") if not (root / p).exists()]
     if missing:
         sys.exit(f"Thiếu {missing}: chưa đủ dữ liệu để đẩy.")
-    if not yes and input(f"Đẩy data/ và file máy sinh trong labeling/annotations/ lên {REPO} (riêng tư)? Gõ yes để tiếp tục: ").strip().lower() != "yes":
+    pack_archives(root)
+    files = files_to_upload(root)
+    images = sum(1 for rel, _ in files if rel.startswith("data/dataset/images/"))
+    print(f"Sẽ đẩy {len(files)} file ({sum(size for _, size in files) / 1e9:.2f} GB), trong đó {images} ảnh gốc.")
+    if not yes and input(f"Đẩy lên {REPO} (riêng tư)? Gõ yes để tiếp tục: ").strip().lower() != "yes":
         sys.exit("Đã huỷ, không đẩy gì.")
     api.create_repo(REPO, repo_type="dataset", private=True, exist_ok=True)
-    api.upload_large_folder(repo_id=REPO, repo_type="dataset", folder_path=root, allow_patterns=patterns(with_images=True))
+    api.upload_folder(repo_id=REPO, repo_type="dataset", folder_path=root, allow_patterns=patterns(with_images=True),
+                      delete_patterns=[f"{d}/*" for d in ARCHIVED_DIRS],   # bỏ file lẻ của thư mục nay đã đi dạng zip
+                      commit_message="Dữ liệu cho castle-retrieval (data/ + file máy sinh trong labeling/annotations/)")
     print("Đã đẩy xong.")
+
+
+def files_to_upload(root: Path = ROOT) -> list[tuple[str, int]]:
+    """(đường dẫn tương đối, kích thước) của các file khớp mẫu, lọc đúng như upload_folder (fnmatch)."""
+    import fnmatch
+
+    wanted = patterns(with_images=True)
+    out = []
+    for path in root.glob("**/*"):                    # glob của pathlib đi qua cả junction ảnh gốc
+        if path.is_file():
+            rel = path.relative_to(root).as_posix()
+            if any(fnmatch.fnmatch(rel, p) for p in wanted):
+                out.append((rel, path.stat().st_size))
+    return out
 
 
 def main() -> None:

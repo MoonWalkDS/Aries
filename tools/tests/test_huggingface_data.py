@@ -55,3 +55,22 @@ def test_patterns_do_not_leak_into_subfolders():
     assert hit("labeling/annotations/identities.json") and not hit("labeling/annotations/identities.outfit-vlm.json")   # merge cần cụm danh tính
     assert not hit("data/exports/hf/data/captions.jsonl") and not hit("data/intermediate/enrich/_shards/people_0001.json")
     assert not hit("data/exports/caption/codex/run.json") and not hit("data/dataset/images/08_1.jpg")
+
+
+def test_big_folder_goes_up_as_one_zip_and_comes_back(tmp_path):
+    """HF chỉ cho tối đa 10.000 file mỗi thư mục: thư mục crop người được đẩy dưới dạng một file zip rồi giải nén khi tải."""
+    import fnmatch
+    hit = lambda path: any(fnmatch.fnmatch(path, p) for p in huggingface_data.patterns(with_images=True))  # noqa: E731
+    crops = "data/intermediate/enrich/people/crops"
+    assert not hit(f"{crops}/08_1_p01.jpg") and hit(f"{crops}.zip") and hit("data/intermediate/enrich/people/people.json")
+    folder = tmp_path / crops
+    folder.mkdir(parents=True)
+    for n in range(3):
+        (folder / f"08_{n}_p01.jpg").write_bytes(bytes([n]) * 10)
+    huggingface_data.pack_archives(tmp_path)
+    assert (tmp_path / f"{crops}.zip").exists()
+    import shutil
+    shutil.rmtree(folder)
+    huggingface_data.unpack_archives(tmp_path)
+    assert sorted(p.name for p in folder.iterdir()) == ["08_0_p01.jpg", "08_1_p01.jpg", "08_2_p01.jpg"]
+    assert (folder / "08_2_p01.jpg").read_bytes() == bytes([2]) * 10

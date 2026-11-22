@@ -6,8 +6,8 @@ import huggingface_data
 
 
 def test_patterns_include_images_only_when_asked():
-    assert huggingface_data.IMAGES not in huggingface_data.patterns(with_images=False)
-    assert huggingface_data.IMAGES in huggingface_data.patterns(with_images=True)
+    assert "data/dataset/images.zip" not in huggingface_data.patterns(with_images=False)
+    assert "data/dataset/images.zip" in huggingface_data.patterns(with_images=True)
     assert all(p.startswith(("data/", "labeling/annotations/")) for p in huggingface_data.patterns(with_images=True))
     # nhãn người duyệt nằm trong git: không bao giờ tải đè từ HF
     assert not any(p.endswith(("approved.json", "rejected.json", "identity_names.json")) for p in huggingface_data.patterns(True))
@@ -74,3 +74,18 @@ def test_big_folder_goes_up_as_one_zip_and_comes_back(tmp_path):
     huggingface_data.unpack_archives(tmp_path)
     assert sorted(p.name for p in folder.iterdir()) == ["08_0_p01.jpg", "08_1_p01.jpg", "08_2_p01.jpg"]
     assert (folder / "08_2_p01.jpg").read_bytes() == bytes([2]) * 10
+
+
+def test_folders_of_small_files_travel_as_zips():
+    """Hàng chục nghìn file nhỏ làm HF chặn lượt tải (429): các thư mục đó chỉ đi dạng zip, file lẻ không bao giờ khớp mẫu."""
+    import fnmatch
+    hit = lambda path: any(fnmatch.fnmatch(path, p) for p in huggingface_data.patterns(with_images=True))  # noqa: E731
+    for folder, sample in [("data/dataset/images", "08_1.jpg"), ("data/dataset/thumbs", "08_1.jpg"),
+                           ("labeling/annotations/enriched", "08_1.json"), ("data/intermediate/enrich/rois/sink/crops", "08_1.jpg"),
+                           ("data/intermediate/enrich/people/crops", "08_1_p01.jpg")]:
+        assert hit(f"{folder}.zip") and not hit(f"{folder}/{sample}"), folder
+    for kept in ("data/intermediate/enrich/rois/sink/embeddings.npy", "data/intermediate/enrich/rois/sink/labels.yaml",
+                 "data/intermediate/enrich/rois/motion.npy", "data/intermediate/enrich/rois/image_ids.json"):
+        assert hit(kept), kept
+    remote_files = 300   # ước lượng trên: zip + embedding + json, không còn hàng chục nghìn file lẻ
+    assert len(huggingface_data.patterns(with_images=True)) < remote_files

@@ -9,16 +9,16 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from engine import split_sentences
-from text_engine import TextEngine
+from common import split_sentences
+from search_engine import SearchEngine
 
-WINDOW = 3
+NEIGHBOR_FRAMES = 3   # ±3 khung cùng giờ quanh ảnh đáp án cũng tính là đúng
 
 
 def main() -> None:
-    engine = TextEngine()
+    engine = SearchEngine()
     by_hour: dict[str, list[str]] = {}
-    for i in engine.ids:
+    for i in engine.image_ids:
         by_hour.setdefault(i.split("_")[0], []).append(i)
     for v in by_hour.values():
         v.sort(key=lambda i: int(i.split("_")[1]))
@@ -27,7 +27,7 @@ def main() -> None:
     for c in cases:
         hour = by_hour[c["answer"].split("_")[0]]
         k = hour.index(c["answer"])
-        answers = set(hour[max(0, k - WINDOW): k + WINDOW + 1])
+        answers = set(hour[max(0, k - NEIGHBOR_FRAMES): k + NEIGHBOR_FRAMES + 1])
         sentences = split_sentences(c["query"])
         ranks = [engine.rank_of(" ".join(sentences[:n]), answers) for n in range(1, len(sentences) + 1)]
         first.append(ranks[0])

@@ -58,6 +58,8 @@ async function go(id) {
 }
 const cur = () => S.img?.regions.find((r) => r.name === S.region);
 const regionDef = () => S.meta.regions.find((r) => r.name === S.region);
+// Vùng chưa gán mặc định bật tất cả đồ vật; nhãn đã lưu (kể cả rỗng) được giữ nguyên.
+const selectedItems = (c) => c.label?.items ?? S.meta.vocab.map((v) => v.name);
 
 // ---------- vẽ
 function viewBox() {
@@ -108,7 +110,7 @@ function render() {
 function drawObjects(g, k) {
   const c = cur();
   if (!c) return;
-  const items = new Set(c.label?.items ?? []);
+  const items = new Set(selectedItems(c));
   const box = (b, cls, text, i) => {
     const o = el('g', { class: `ob ${cls}${S.hl && S.hl !== text ? ' faint' : ''}${S.hl === text ? ' hl' : ''}`, ...(i != null ? { 'data-box': i } : {}) }, g);
     el('rect', { x: b[0], y: b[1], width: b[2] - b[0], height: b[3] - b[1] }, o);
@@ -168,7 +170,7 @@ function renderLabelSide() {
 }
 
 function renderList(c) {
-  const items = new Set(c.label?.items ?? []);
+  const items = new Set(selectedItems(c));
   const hints = new Map(c.hints.map((h) => [h.label, h]));
   const userCount = new Map();
   for (const b of c.label?.boxes ?? []) userCount.set(b.label, (userCount.get(b.label) || 0) + 1);
@@ -209,7 +211,7 @@ async function save(items, boxes) {
   await loadMeta();
   render();
 }
-const curItems = () => [...(cur().label?.items ?? [])];
+const curItems = () => [...selectedItems(cur())];
 function toggle(name, on) {
   return guard(async () => {
     const items = curItems().filter((n) => n !== name);

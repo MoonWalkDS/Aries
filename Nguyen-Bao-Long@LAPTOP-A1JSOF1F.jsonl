@@ -3332,3 +3332,18 @@
 {"at":"2026-11-22T14:25:18.298Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_610"],"v":{"items":["bottle","bowl","cooking pot","cutting board","frying pan","knife","pineapple","scissors","tea towel","Đèn chùm","plate","spoon"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:25:18.298Z"}}
 {"at":"2026-11-22T14:25:18.933Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_612"],"d":1}
 {"at":"2026-11-22T14:25:19.131Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_612"],"v":{"items":["bottle","bowl","cooking pot","cutting board","frying pan","knife","pineapple","scissors","tea towel","Đèn chùm","plate","spoon"],"boxes":[],"by":"BaoLong","at":"2026-11-22T14:25:19.131Z"}}
+{"at":"2026-11-22T14:26:31.143Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_616"],"d":1}
+{"at":"2026-11-22T14:26:32.356Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_621"],"d":1}
+{"at":"2026-11-22T14:26:33.196Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_638"],"d":1}
+{"at":"2026-11-22T14:26:33.836Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_639"],"d":1}
+{"at":"2026-11-22T14:26:34.612Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_644"],"d":1}
+{"at":"2026-11-22T14:26:38.140Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_647"],"d":1}
+{"at":"2026-11-22T14:26:39.388Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_662"],"d":1}
+{"at":"2026-11-22T14:26:43.795Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_669"],"d":1}
+{"at":"2026-11-22T14:26:46.547Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_670"],"d":1}
+{"at":"2026-11-22T14:26:47.443Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_671"],"d":1}
+{"at":"2026-11-22T14:26:48.355Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_690"],"d":1}
+{"at":"2026-11-22T14:26:49.100Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_696"],"d":1}
+{"at":"2026-11-22T14:26:49.948Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_705"],"d":1}
+{"at":"2026-11-22T14:26:50.732Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_706"],"d":1}
+{"at":"2026-11-22T14:26:51.508Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn ăn","09_708"],"d":1}

@@ -43,6 +43,8 @@ from .utils import get_logger, image_id_of, read_json, resolve_from_config, writ
 RelBox = tuple[float, float, float, float]
 BASELINE_PREFIX = "bg-"
 MANUAL_BOXES_FILE = "manual_boxes.json"  # box người dùng tự vẽ bằng label_viewer/, trong annotations/
+OBJECT_REGIONS_FILE = "object_regions.json"  # vùng đồ vật người vẽ trên label_viewer/objects.html, trong annotations/
+OBJECT_LABELS_FILE = "object_labels.json"  # đồ vật người tick theo vùng: {vùng: {mã ảnh: {items, boxes}}}
 CUSTOM_LABELS_FILE = "custom_labels.json"  # nhãn người tự gõ trên label_viewer/ khi không lớp nào khớp: {profile: {khoá: {text}}}
 OBJECTS_FILE = "objects.json"  # đồ vật do `enrich objects` dò, trong work/enrich/
 OWL_OBJECTS_FILE = "objects_owl.json"  # đồ vật do `enrich objects --owl` (OWLv2, theo tên) dò, trong work/enrich/
@@ -651,6 +653,34 @@ def _manual_entry(m: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def region_objects(jsons_dir: Path, image_ids: Sequence[str]) -> dict[str, dict[str, dict[str, Any]]]:
+    """Đồ vật theo vùng (label_viewer/objects.html) cho mỗi ảnh: ``{mã ảnh: {vùng: {items, boxes, from, source}}}``.
+
+    Giống label_viewer/objstore.js: ảnh không có nhãn riêng kế thừa ảnh gần nhất phía trước cùng giờ có nhãn
+    (``source`` = ``inherited``, ``from`` = ảnh đó). Vùng đã xoá trên viewer thì bỏ qua.
+    """
+    regions_file, labels_file = jsons_dir / OBJECT_REGIONS_FILE, jsons_dir / OBJECT_LABELS_FILE
+    if not regions_file.exists() or not labels_file.exists():
+        return {}
+    names = [r["name"] for r in read_json(regions_file).get("regions", [])]
+    labels = read_json(labels_file)
+    order = sorted(image_ids, key=lambda i: (group_key(i), int(i.rsplit("_", 1)[1]) if i.rsplit("_", 1)[1].isdigit() else 0))
+    out: dict[str, dict[str, dict[str, Any]]] = {}
+    for name in names:
+        own, last, last_hour = labels.get(name, {}), None, None
+        for image_id in order:
+            hour = group_key(image_id)
+            if hour != last_hour:
+                last, last_hour = None, hour
+            if image_id in own:
+                last = image_id
+            if last is not None:
+                e = own[last]
+                out.setdefault(image_id, {})[name] = {"items": list(e.get("items", [])), "boxes": list(e.get("boxes", [])), "from": last,
+                                                      "source": "human" if last == image_id else "inherited"}
+    return out
+
+
 def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str, Any]:
     """Gộp tầng người + tầng vùng + nhãn hiện có thành một bản ghi mỗi ảnh trong ``enriched/``.
 
@@ -671,6 +701,7 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
     name_vi = {r.name: r.name_vi for r in rois}
     manual_file = jsons_dir / MANUAL_BOXES_FILE
     manual_boxes: dict[str, list[dict[str, Any]]] = read_json(manual_file) if manual_file.exists() else {}
+    by_region = region_objects(jsons_dir, image_ids)
     objects: dict[str, list[dict[str, Any]]] = {}
     for name, source in ((OBJECTS_FILE, "rtdetr"), (OWL_OBJECTS_FILE, "owlv2")):
         if (data_dir / name).exists():
@@ -709,7 +740,7 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
         if person["id"] not in not_person:
             by_image.setdefault(person["image_id"], []).append(person)
     out_dir = jsons_dir / "enriched"
-    counts = {"images": 0, "people": 0, "people_labeled": 0, "people_described": 0, "people_named": 0, "roi_states": 0, "manual_boxes": 0, "objects": 0}
+    counts = {"images": 0, "people": 0, "people_labeled": 0, "people_described": 0, "people_named": 0, "roi_states": 0, "manual_boxes": 0, "objects": 0, "region_object_slots": 0}
     records: list[dict[str, Any]] = []
     for i, image_id in enumerate(image_ids):
         persons = []
@@ -735,8 +766,9 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
         counts["manual_boxes"] += len(manual)
         image_objects = objects.get(image_id, [])
         counts["objects"] += len(image_objects)
+        counts["region_object_slots"] += len(by_region.get(image_id, {}))
         record = {"image_id": image_id, "hour": group_key(image_id), "num_people": len(persons), "people": persons, "rois": regions, "manual": manual,
-                  "objects": image_objects}
+                  "objects": image_objects, "region_objects": by_region.get(image_id, {})}
         write_json(out_dir / f"{image_id}.json", record)
         records.append(record)
         counts["images"] += 1
@@ -765,7 +797,7 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
 
     outfit_fields = sorted({f"outfit_{k}" for r in records for p in r["people"] for k in (p.get("outfit") or {})})
 
-    people_rows, roi_rows, object_rows = [], [], []
+    people_rows, roi_rows, object_rows, region_rows = [], [], [], []
     with open(out_dir / "castle_dataset.jsonl", "w", encoding="utf-8") as f:
         for r in records:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -781,13 +813,22 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
             for o in r.get("objects", []):
                 object_rows.append({"image_id": r["image_id"], "hour": r["hour"], "object_id": o["id"], "label": o["label"],
                                     "x1": o["box"][0], "y1": o["box"][1], "x2": o["box"][2], "y2": o["box"][3], "score": o["score"], "source": o.get("source", "")})
+            for name, reg in (r.get("region_objects") or {}).items():
+                boxed = {b["label"] for b in reg.get("boxes", [])}
+                for item in reg["items"]:
+                    region_rows.append({"image_id": r["image_id"], "hour": r["hour"], "region": name, "object": item, "has_box": item in boxed,
+                                        "source": reg["source"], "from_image": reg["from"]})
+                if not reg["items"]:   # vùng đã gán là trống: vẫn ghi một dòng để phân biệt với "chưa gán"
+                    region_rows.append({"image_id": r["image_id"], "hour": r["hour"], "region": name, "object": "", "has_box": False,
+                                        "source": reg["source"], "from_image": reg["from"]})
             for name, roi in r["rois"].items():
                 s = roi.get("state") or {}
                 roi_rows.append({"image_id": r["image_id"], "hour": r["hour"], "roi": name, "changed": roi["changed"], "motion": roi["motion"],
                                  "state": s.get("label", ""), "state_vi": s.get("label_vi", ""), "source": s.get("source", ""), "custom": bool(s.get("custom"))})
     for name, rows, fields in (("people.csv", people_rows, ["image_id", "hour", "person_id", "x1", "y1", "x2", "y2", "det_score", "zone", "action", "action_vi", "source", "custom", "identity_cluster", "identity_name", "identity_source", "identity_prob", *ATTR_FIELDS, *outfit_fields]),
                                ("rois.csv", roi_rows, ["image_id", "hour", "roi", "changed", "motion", "state", "state_vi", "source", "custom"]),
-                               ("objects.csv", object_rows, ["image_id", "hour", "object_id", "label", "x1", "y1", "x2", "y2", "score", "source"])):
+                               ("objects.csv", object_rows, ["image_id", "hour", "object_id", "label", "x1", "y1", "x2", "y2", "score", "source"]),
+                               ("region_objects.csv", region_rows, ["image_id", "hour", "region", "object", "has_box", "source", "from_image"])):
         with open(out_dir / name, "w", encoding="utf-8-sig", newline="") as f:  # utf-8-sig: Excel đọc đúng tiếng Việt
             w = csv.DictWriter(f, fieldnames=fields, restval="")
             w.writeheader()
@@ -797,6 +838,8 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
         "people_described": sum(1 for r in people_rows if r.get("gender")), "people_named": sum(1 for r in people_rows if r["identity_name"]),
         "identities": dict(Counter(r["identity_name"] for r in people_rows if r["identity_name"]).most_common()), "objects": len(object_rows),
         "object_labels": dict(Counter(r["label"] for r in object_rows).most_common()),
+        "region_objects": {n: dict(Counter(r["object"] for r in region_rows if r["region"] == n and r["object"]).most_common()) for n in dict.fromkeys(r["region"] for r in region_rows)},
+        "region_images_labeled": len({r["image_id"] for r in region_rows}),
         "roi_slots": len(roi_rows), "roi_labeled": sum(1 for r in roi_rows if r["state"]),
         "people_by_source": dict(Counter(r["source"] or "none" for r in people_rows)),
         "rois_by_source": dict(Counter(r["source"] or "none" for r in roi_rows)),

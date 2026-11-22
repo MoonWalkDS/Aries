@@ -203,6 +203,8 @@ sẽ mở đúng chỗ đó.
 | Vẽ, sửa, xoá box tự vẽ | `annotations/manual_boxes.json` |
 | Tên người (tab Ai · ngoại hình) | `annotations/identity_names.json` |
 | Ô **Khác** (nhãn tự gõ) | `annotations/custom_labels.json` (và đánh dấu sai nhãn máy trong `rejected.json`) |
+| Vùng đồ vật (trang **Đồ vật**) | `annotations/object_regions.json` (vùng + danh sách đồ vật) |
+| Tick đồ vật, box đồ vật tự vẽ | `annotations/object_labels.json` |
 
 - Định dạng giống hệt `python labeling/pipeline/main.py adl import`: nhãn người duyệt có `"source": "human"`.
 - **Sao lưu tự động:** lần ghi đầu tiên vào mỗi file sau khi server khởi động sẽ tạo một bản sao
@@ -215,7 +217,7 @@ sẽ mở đúng chỗ đó.
   thắng nhãn máy, với `"source": "human", "custom": true`.
 - **Sau một buổi duyệt**, bấm **Gộp dữ liệu** trên thanh trên (khoảng 15–20 giây). Nút này chạy
   `python labeling/pipeline/main.py enrich merge`: cập nhật `annotations/enriched/` và xuất lại `data/exports/`
-  (`castle_dataset.jsonl`, `people.csv`, `rois.csv`, `summary.json`), rồi nạp lại trang. Sau khi gộp, lịch sử
+  (`castle_dataset.jsonl`, `people.csv`, `rois.csv`, `region_objects.csv`, `summary.json`), rồi nạp lại trang. Sau khi gộp, lịch sử
   hoàn tác bị xoá. Server tìm Python ở `.venv` ở gốc repo, nếu không có thì dùng `python` hoặc biến môi trường `PYTHON`.
 
   Muốn vòng gợi ý kế tiếp học từ nhãn vừa duyệt thì chạy thêm `python labeling/pipeline/main.py adl round --profile people`
@@ -286,6 +288,52 @@ Chúng không được cộng vào số người. `adl round` và VLM chưa dùn
 
 ---
 
+## 8a. Gán đồ vật theo vùng (trang Đồ vật)
+
+Mở tab **Đồ vật** trên thanh trên (http://localhost:5173/objects.html). Có hai chế độ.
+
+**Sửa vùng** (làm một lần; camera cố định nên vùng dùng chung cho cả 5000 ảnh):
+
+1. Nhấn `P` hoặc bấm **+ Vùng mới**. Bấm từng điểm quanh mặt bàn hay mặt lò. `Backspace` xoá điểm vừa chấm.
+   Nhấn `Enter` hoặc bấm lại điểm đầu để khép vùng.
+2. Kéo chiều cao: rê chuột lên trên tới đỉnh đồ cao nhất, rồi bấm để chốt. Vùng lúc này thành một khối.
+   Muốn chỉnh lại chiều cao thì chọn vùng và nhấn `H`.
+3. Gõ tên vùng vào ô đang chọn sẵn, rồi `Enter`.
+4. Kéo các điểm vàng để chỉnh hình. `Delete` xoá vùng. Mọi thay đổi được lưu ngay.
+
+Đồ vật thuộc một vùng khi chân box của nó (giữa cạnh dưới) nằm trong khối. Đồ treo như khăn trên cửa lò cũng
+được tính: chỉ cần một nửa box trở lên nằm trong khối.
+
+**Gán đồ vật:**
+
+- Chọn vùng bằng `1`–`9`. Ảnh tự phóng vào vùng đó; nhấn `F` để xem cả khung.
+- Danh sách chia ba nhóm: *Đang tick*, *Máy thấy trong vùng* (kèm điểm số của RT-DETR/OWLv2), *Còn lại*.
+  Rê chuột lên một dòng để làm nổi box của đồ đó trên ảnh.
+- Bấm vào một dòng để tick hoặc bỏ tick. Mỗi lần tick được lưu ngay.
+- `M` tick đúng những đồ máy thấy trong vùng.
+- `/` mở ô tìm. `Enter` trong ô tìm tick mục đầu tiên khớp; nếu không có mục nào khớp thì thêm tên mới.
+- **Thiếu đồ vật:** nhấn `N`, kéo box quanh đồ vật, gõ tên rồi `Enter`. Tên mới vào danh sách chung, đồ được
+  tick luôn. Bấm một box xanh để chọn, `Delete` để xoá box đó.
+- **Kế thừa:** nhãn của một ảnh tự áp cho các ảnh sau trong cùng giờ, tới ảnh kế tiếp có nhãn riêng.
+  Ô trạng thái hiện *Kế thừa từ …* (vàng) hoặc *Nhãn riêng của ảnh này* (xanh). Bấm **Bỏ** để xoá nhãn riêng.
+- `Enter` giữ nhãn đang thấy làm nhãn riêng của ảnh, rồi sang ảnh sau.
+- `Space` nhảy tới ảnh kế tiếp mà tập đồ máy thấy trong vùng khác ảnh trước (vùng có thể vừa đổi).
+  Nhờ vậy chỉ cần dừng lại ở những chỗ có thay đổi.
+- `U` nhảy tới ảnh kế tiếp chưa có nhãn (kể cả nhãn kế thừa).
+- `Z` hoàn tác.
+
+**Tải JSON** (thanh trên) xuất nhãn hiệu lực, đã tính kế thừa, của mọi ảnh và mọi vùng.
+
+**Gộp dữ liệu** (`enrich merge`) đưa nhãn đồ vật vào dataset:
+
+- Mỗi `annotations/enriched/<mã ảnh>.json` có thêm trường `region_objects`, dạng
+  `{vùng: {items, boxes, from, source}}`. `source` là `human` khi ảnh có nhãn riêng, `inherited` khi kế thừa ảnh `from`.
+- `data/exports/region_objects.csv` ghi mỗi đồ một dòng: `image_id, hour, region, object, has_box, source, from_image`.
+  Vùng đã gán là trống vẫn có một dòng với `object` rỗng, để phân biệt với vùng chưa gán.
+- `summary.json` có thêm `region_objects` (số ảnh có từng đồ, theo vùng) và `region_images_labeled`.
+
+---
+
 ## 9. Phím tắt
 
 Nhấn `?` trên trang để xem bảng này.
@@ -344,6 +392,70 @@ cloudflared tunnel --url http://localhost:5173
 - Chỉ admin thấy và bấm được **Gộp dữ liệu** (chạy Python trên máy này) và Tải lại.
 - Đăng nhập sai quá 8 lần trong 15 phút từ một IP thì bị chặn 15 phút. Server in ra mỗi lần đăng nhập thành công.
 - Ảnh là ảnh người thật: chỉ gửi địa chỉ và tài khoản cho người trong nhóm nghiên cứu.
+
+---
+
+## 9b. Mỗi người gán trên máy mình, tự đồng bộ qua git
+
+Không cần một máy chủ luôn bật. Mỗi người chạy viewer trên máy của mình. Server tự pull nhãn mới về khi khởi
+động, và tự đẩy nhãn lên khi tắt.
+
+**Cách hoạt động:**
+
+- Mỗi lần gán, viewer ghi file nhãn như cũ. Phần thay đổi được ghi thêm vào
+  `annotations/journal/<tên git>@<tên máy>.jsonl`.
+- `annotations/journal/` là một git worktree của nhánh riêng `label-journal`. Đồng bộ không chạm nhánh code.
+- Mỗi máy chỉ ghi file của mình, nên pull và push không bao giờ conflict.
+- **Lúc `npm start`:** pull nhánh `label-journal`, rồi áp các thay đổi mới của người khác vào file nhãn.
+  Hai người sửa cùng một mục thì người sửa sau thắng.
+- **Đẩy lên:** khi tắt server (`Ctrl+C` hoặc đóng cửa sổ terminal), tự đẩy mỗi 5 phút nếu có nhãn mới, hoặc khi
+  bấm **Đồng bộ** trên thanh trên.
+- Nút **Đồng bộ** đẩy nhãn của mình lên, kéo nhãn người khác về, rồi tải lại trang nếu có thay đổi.
+  Chấm xanh nghĩa là đồng bộ được. Chấm vàng nghĩa là chưa có remote hoặc lỗi mạng; rê chuột lên nút để xem lý do.
+- Mất mạng thì nhãn vẫn được ghi trên máy, lần mở sau sẽ đẩy tiếp.
+
+**Chuẩn bị (người quản lý, làm một lần):**
+
+1. Tạo một repo git riêng tư (GitHub, GitLab…), rồi gắn làm remote `origin`:
+
+```bash
+git remote add origin <địa chỉ repo>
+```
+
+2. Commit các file nhãn hiện tại (`labeling/annotations/*.json`, `adl*/`) và push. Đây là bản gốc chung:
+   mọi máy bắt đầu từ cùng bản này rồi áp journal lên trên.
+3. Mỗi người gán cần dữ liệu không nằm trong git (`data/`, `labeling/annotations/enriched/`): tải bằng
+   `tools/download_data.bat`, hoặc nén từ máy đã có rồi gửi.
+
+**Mỗi người gán (một lần):**
+
+1. Clone repo, rồi giải nén các thư mục nhận được vào đúng chỗ.
+2. Đặt tên. Tên này xuất hiện trong file journal và trong trường `by` của nhãn:
+
+```bash
+git config user.name "Tên của bạn"
+```
+
+3. Chạy viewer:
+
+```bash
+cd labeling/label_viewer && npm install && npm start
+```
+
+   Dòng `Đồng bộ nhãn (git label-journal): áp N thay đổi…` cho biết đồng bộ đã chạy.
+
+**Lưu ý:**
+
+- **Đừng commit file nhãn lên nhánh code nữa.** Nhãn đi qua journal.
+- Khi cần thay bản gốc (ví dụ sau khi chạy `adl round` hay VLM bằng Python):
+  1. Một người commit file nhãn mới rồi push.
+  2. Những người còn lại tắt server và bỏ thay đổi trên file nhãn:
+     `git checkout -- labeling/annotations`.
+  3. Pull.
+  4. Xoá `data/intermediate/journal-state.json`.
+  5. Chạy lại `npm start`. Toàn bộ journal được áp lại lên bản gốc mới, nên nhãn người gán vẫn thắng nhãn máy.
+- Tắt đồng bộ bằng `LABEL_SYNC=0`. Đồng bộ cũng tự tắt khi chạy trên bản sao (`npm start -- <thư mục>`).
+- Chỉ đồng bộ những gì viewer ghi. Thay đổi do pipeline Python ghi thì đi theo bản gốc như trên.
 
 ---
 

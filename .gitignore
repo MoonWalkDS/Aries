@@ -13,6 +13,8 @@ labeling/annotations/adl_people/teacher_hints.json
 labeling/annotations/identity_pred.json
 labeling/annotations/identities*.json
 labeling/annotations/**/*.bak-*
+# worktree của nhánh label-journal (label_viewer/journal.js): đồng bộ riêng, không thuộc nhánh code
+labeling/annotations/journal/
 
 # Môi trường, bí mật
 .venv/

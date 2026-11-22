@@ -9,6 +9,7 @@
 </head>
 <body>
   <header class="top">
+    <nav class="tabs" data-nav aria-label="Các trang gán nhãn"></nav>
     <button id="openDrawer" class="ghost" title="Bộ lọc hàng đợi ( / )">
       <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M4.5 8h7M7 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <span>Bộ lọc</span><span id="filterCount" class="count" hidden></span>
@@ -28,7 +29,6 @@
     </button>
     <span class="grow"></span>
     <button id="imageLabel" class="pill-btn" hidden title="Nhãn hoạt động của cả ảnh"></button>
-    <a class="ghost" href="/board.html" title="Xem mọi crop của một người / một cụm, kéo crop nhầm sang đúng người">Bảng định danh</a>
     <button id="mergeBtn" data-admin class="ghost" title="Gộp nhãn đã duyệt vào enriched/ và xuất output_jsons/dataset/">
       <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5v4c0 2 1.5 3 5 3s5 1 5 3v1M13 2.5v4c0 1-.4 1.7-1.3 2.2M8 9.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       <span>Gộp dữ liệu</span>

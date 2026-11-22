@@ -24,3 +24,4 @@ labeling/label_viewer/users.json
 __pycache__/
 .pytest_cache/
 *.zip
+model/NuExtract-1.5-smol/

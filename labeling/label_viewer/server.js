@@ -3,9 +3,11 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFile } = require('node:child_process');
+const { execFile, execFileSync } = require('node:child_process');
+const os = require('node:os');
 const { Store, SAFE } = require('./store');
 const { Auth, clientIp } = require('./auth');
+const { Journal, GitSync, setJournal } = require('./journal');
 
 // Thư mục labeling/ (mặc định thư mục cha của label_viewer/). `npm start -- <dir>` để trỏ sang bản sao khi thử.
 const ROOT = path.resolve(process.argv[2] || process.env.LABELING_ROOT || path.join(__dirname, '..'));
@@ -15,6 +17,25 @@ const PUBLIC = path.join(__dirname, 'public');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.jpg': 'image/jpeg' };
 
 const auth = new Auth();
+
+// Đồng bộ nhãn qua git (journal.js): tắt bằng LABEL_SYNC=0, hoặc tự tắt khi chạy trên bản sao (`npm start -- <dir>`).
+const SYNC = process.env.LABEL_SYNC !== '0' && !process.argv[2];
+const gitName = () => { try { return execFileSync('git', ['config', 'user.name'], { cwd: ROOT, encoding: 'utf8', windowsHide: true }).trim(); } catch { return ''; } };
+const LABELER = process.env.LABELER || gitName() || os.userInfo().username;
+let journal = null, sync = null;
+if (SYNC) {
+  journal = new Journal({ root: ROOT, dir: path.join(ROOT, 'annotations', 'journal'), stateFile: path.join(ROOT, '..', 'data', 'intermediate', 'journal-state.json'), user: LABELER });
+  sync = new GitSync({ repoDir: ROOT, dir: journal.dir });
+  console.log('Đồng bộ nhãn: đang pull…');
+  const st = sync.setup();
+  const r = journal.replay();
+  setJournal(journal);
+  console.log(`Đồng bộ nhãn (${st.mode === 'remote' ? `git ${st.branch}` : st.mode === 'local' ? 'chỉ trên máy này: chưa có git remote "origin"' : 'tắt: không phải repo git'}): `
+    + `áp ${r.applied} thay đổi của người khác${r.files.length ? ` vào ${r.files.length} file` : ''}. Người gán: ${LABELER} (${journal.me}).`);
+  if (st.error) console.log(`  ! ${st.error}`);
+  sync.push(journal.file);   // nhãn còn sót của lần chạy trước (tắt máy, mất mạng)
+}
+
 console.time('Nạp dữ liệu');
 const store = new Store(ROOT);
 console.timeEnd('Nạp dữ liệu');
@@ -71,7 +92,7 @@ async function api(req, res, url, user) {
   if (req.method === 'GET' && p === '/api/me') return send(res, 200, { user: user?.name ?? null, admin: !auth.enabled || !!user?.admin, auth: auth.enabled });
   if (req.method === 'POST' && p === '/api/logout') return send(res, 200, { ok: true }, undefined, { 'Set-Cookie': auth.cookie(req, '', 0) });
   // Gộp dữ liệu chạy Python trên máy này, Tải lại xoá lịch sử hoàn tác của mọi người: chỉ admin.
-  if (auth.enabled && !user?.admin && req.method === 'POST' && (p === '/api/merge' || p === '/api/reload')) return send(res, 403, { error: 'Chỉ admin được làm việc này.' });
+  if (auth.enabled && !user?.admin && req.method === 'POST' && (p === '/api/merge' || p === '/api/reload' || p === '/api/sync')) return send(res, 403, { error: 'Chỉ admin được làm việc này.' });
   if (req.method === 'GET' && p === '/api/meta') return send(res, 200, { ...store.meta(), undo: store.undoStack.length, edited: store.edited.size });
   if (req.method === 'GET' && p === '/api/images') {
     const rows = store.query(filtersFrom(q));
@@ -120,10 +141,52 @@ async function api(req, res, url, user) {
     const body = await readBody(req);
     return send(res, 200, { ...store.setIdentity(body), names: store.identityNames() });
   }
+  if (req.method === 'GET' && p === '/api/objects/meta') return send(res, 200, store.objects.meta());
+  if (req.method === 'GET' && (m = p.match(/^\/api\/objects\/image\/([\w-]+)$/))) {
+    const d = store.objects.image(m[1]);
+    return d ? send(res, 200, d) : send(res, 404, { error: 'Không có ảnh' });
+  }
+  if (req.method === 'GET' && p === '/api/objects/next') return send(res, 200, { id: store.objects.next(q.get('region') || '', q.get('from') || '', q.get('kind') || 'unlabeled', q.get('dir') === '-1' ? -1 : 1) });
+  if (req.method === 'POST' && p === '/api/objects/regions') return send(res, 200, store.objects.setRegions((await readBody(req)).regions));
+  if (req.method === 'POST' && p === '/api/objects/label') return send(res, 200, store.objects.setLabel(await readBody(req)));
+  if (req.method === 'POST' && p === '/api/objects/clear') return send(res, 200, store.objects.clearLabel(await readBody(req)));
+  if (req.method === 'GET' && p === '/api/objects/export') return send(res, 200, JSON.stringify(store.objects.exportRows(), null, 1), 'application/json; charset=utf-8', { 'Content-Disposition': 'attachment; filename="object_labels_effective.json"' });
+  if (req.method === 'GET' && p === '/api/sync') return send(res, 200, syncStatus());
+  if (req.method === 'POST' && p === '/api/sync') return send(res, 200, await syncNow());
   if (req.method === 'POST' && p === '/api/undo') return send(res, 200, store.undo());
   if (req.method === 'POST' && p === '/api/reload') { store.reload(); return send(res, 200, { ok: true, images: store.images.length }); }
   if (req.method === 'POST' && p === '/api/merge') return send(res, 200, await runMerge());
   return send(res, 404, { error: 'Không có API này' });
+}
+
+function syncStatus() {
+  if (!journal) return { enabled: false };
+  return { enabled: true, me: journal.me, user: LABELER, pending: journal.pending, ...sync.status() };
+}
+
+// Đẩy nhãn của mình lên, kéo nhãn người khác về, áp vào file rồi nạp lại (xoá lịch sử hoàn tác).
+async function syncNow() {
+  if (!journal) throw Object.assign(new Error('Đồng bộ đang tắt (LABEL_SYNC=0 hoặc chạy trên bản sao).'), { status: 400 });
+  if (await sync.push(journal.file)) journal.pending = 0;
+  sync.pull();
+  const r = journal.replay();
+  if (r.applied) store.reload();
+  return { ...syncStatus(), applied: r.applied };
+}
+
+// Tự đẩy mỗi 5 phút khi có nhãn mới, và khi tắt server (Ctrl+C, đóng cửa sổ terminal).
+if (journal) {
+  setInterval(async () => { if (journal.pending && await sync.push(journal.file)) journal.pending = 0; }, 5 * 60 * 1000).unref();
+  let closing = false;
+  const close = (sig) => {
+    if (closing) return;
+    closing = true;
+    if (journal.pending || sync.mode === 'remote') {
+      console.log('Đang đẩy nhãn lên…');
+      sync.push(journal.file, { sync: true }).then((ok) => { console.log(ok ? 'Đã đẩy nhãn.' : `Chưa đẩy được nhãn${sync.lastError ? `: ${sync.lastError}` : ''}. Lần mở sau sẽ đẩy tiếp.`); process.exit(0); });
+    } else process.exit(0);
+  };
+  for (const sig of ['SIGINT', 'SIGTERM', 'SIGHUP', 'SIGBREAK']) process.on(sig, () => close(sig));
 }
 
 // `python labeling/pipeline/main.py enrich merge`: gộp nhãn đã duyệt vào enriched/ và xuất exports/, rồi nạp lại.
@@ -181,7 +244,7 @@ http.createServer(async (req, res) => {
         return res.end();
       }
     }
-    store.actor = user?.name || 'local';
+    store.actor = user?.name || LABELER;
     if (url.pathname.startsWith('/api/')) return await api(req, res, url, user);
     return files(res, url.pathname);
   } catch (e) {

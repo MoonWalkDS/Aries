@@ -4,6 +4,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const YAML = require('yaml');
+const { ObjectLabels } = require('./objstore');
+const { beforeWrite } = require('./journal');
 const HARD_LIMIT = 300;   // hàng "khó trước": đủ cho một lượt duyệt, chạy lại enrich identities rồi duyệt tiếp
 // Hàng "hành động lệch vùng": hành động gắn với một chỗ mà người lại đứng vùng khác thì nhiều khả năng nhãn sai
 // (soát 8 ca "mở tủ lạnh" lệch vùng: 7 ca nhãn sai). Không có "vứt rác": zone trash nằm trọn trong zone fridge nên gần như không ai được gán.
@@ -22,6 +24,7 @@ function readJson(file, fallback) {
 
 function writeJsonAtomic(file, data) {
   const sorted = Object.fromEntries(Object.entries(data).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
+  beforeWrite(file, { data: sorted });   // ghi nhật ký để đồng bộ sang máy khác (journal.js)
   const tmp = `${file}.${process.pid}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(sorted, null, 2), 'utf8');
   fs.renameSync(tmp, file);
@@ -120,6 +123,7 @@ class Store {
     this.extraBoxes = readJson(path.join(this.jsons, 'adl_people', 'extra_boxes.json'), {});
     this.teacherHints = readJson(path.join(this.jsons, 'adl_people', 'teacher_hints.json'), {});   // {pid: {label, text}}: câu của thầy tả người này
     this.searchCache = new Map();
+    this.objects = new ObjectLabels(this);   // gán đồ vật theo vùng (objects.html)
     this.undoStack = [];
   }
 
@@ -430,6 +434,7 @@ class Store {
       if (people && people.has(from)) {
         if (people.has(to)) people.delete(from); // gộp vào người đã có: giữ trang phục của người đích
         else { const pair = people.items.find((it) => String(it.key?.value ?? it.key) === from); pair.key = doc.createNode(to); }
+        beforeWrite(outfitsFile, { text: doc.toString() });
         fs.writeFileSync(outfitsFile, doc.toString(), 'utf8');
       }
     }
@@ -443,6 +448,7 @@ class Store {
   _saveNames() {
     if (!this.namesBackedUp && fs.existsSync(this.namesFile)) fs.copyFileSync(this.namesFile, `${this.namesFile}.bak-${new Date().toISOString().replace(/[:.]/g, '-')}`);
     this.namesBackedUp = true;
+    beforeWrite(this.namesFile, { data: this.names });
     fs.writeFileSync(`${this.namesFile}.tmp`, JSON.stringify(this.names, null, 2), 'utf8');
     fs.renameSync(`${this.namesFile}.tmp`, this.namesFile);
     this.namesMtime = mtime(this.namesFile);
@@ -674,13 +680,14 @@ class Store {
   undo() {
     const step = this.undoStack.pop();
     if (!step) throw Object.assign(new Error('Không còn gì để hoàn tác.'), { status: 400 });
+    if (step.obj) { try { return this.objects.undo(step); } catch (e) { this.undoStack.push(step); throw e; } }
     if (step.names) {
       if (mtime(this.namesFile) !== this.namesMtime) { this.undoStack.push(step); throw Object.assign(new Error('identity_names.json đã bị ghi đè.'), { status: 409 }); }
       this.names = step.names;
       this._saveNames();
       if (step.rename) {
         for (const pid of step.rename.predicted) this.personById.get(pid).identity.predicted.name = step.rename.from;
-        if (step.outfits != null) fs.writeFileSync(step.outfitsFile, step.outfits, 'utf8');
+        if (step.outfits != null) { beforeWrite(step.outfitsFile, { text: step.outfits }); fs.writeFileSync(step.outfitsFile, step.outfits, 'utf8'); }
       }
       for (const id of step.images) this.searchCache.delete(id);
       return { changed: step.images, left: this.undoStack.length };

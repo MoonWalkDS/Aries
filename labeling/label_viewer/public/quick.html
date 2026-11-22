@@ -30,9 +30,7 @@
 </head>
 <body>
   <header class="top">
-    <a class="ghost" href="/board.html" title="Về bảng định danh">← Bảng định danh</a>
-    <a class="ghost" href="/action.html" title="Gán nhanh hành động">Gán nhanh hành động</a>
-    <h1 class="b-title">Gán nhanh</h1>
+    <nav class="tabs" data-nav aria-label="Các trang gán nhãn"></nav>
     <label class="small">Hàng đợi <select id="mode"><option value="hard">Khó trước (chưa gán)</option><option value="recheck">Cần gán lại (đã bấm X)</option><option value="extra">Có thể box thừa</option></select></label>
     <span class="grow"></span>
     <label class="small"><input type="checkbox" id="byPlace" checked> Xếp theo vị trí</label>
@@ -46,6 +44,7 @@
     </section>
     <aside class="q-keys" id="keys" aria-label="Phím gán tên"></aside>
   </main>
+  <script src="session.js"></script>
   <script src="quickcore.js"></script>
   <script src="quick.js"></script>
 </body>

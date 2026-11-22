@@ -281,7 +281,14 @@ def test_people_and_roi_loops_then_merge(project):
     ]}, ensure_ascii=False), encoding="utf-8")
     # nhãn tự gõ trên label_viewer/ thắng nhãn máy (định dạng của label_viewer/store.js)
     (jsons / "custom_labels.json").write_text(json.dumps({"roi-stove": {"08_8": {"text": "nồi bị đổ"}}}, ensure_ascii=False), encoding="utf-8")
+    # đồ vật tick theo vùng trên viewer/objects.html (định dạng của viewer/objstore.js); 08_8 kế thừa 08_0
+    (jsons / "object_regions.json").write_text(json.dumps({"size": [1280, 720], "regions": [{"name": "mặt bàn", "points": [[0, 0], [9, 0], [9, 9]], "height": 5}], "vocab": []}, ensure_ascii=False), encoding="utf-8")
+    (jsons / "object_labels.json").write_text(json.dumps({"mặt bàn": {"08_0": {"items": ["ấm", "cup"], "boxes": [{"label": "ấm", "box": [1, 1, 8, 8]}]}}}, ensure_ascii=False), encoding="utf-8")
     assert run("enrich", "merge") == 0
+    inherited = json.loads((jsons / "enriched" / "08_8.json").read_text(encoding="utf-8"))["region_objects"]["mặt bàn"]
+    assert (inherited["items"], inherited["source"], inherited["from"]) == (["ấm", "cup"], "inherited", "08_0")
+    region_rows = (jsons.parent / "exports" / "region_objects.csv").read_text(encoding="utf-8-sig").splitlines()
+    assert region_rows[0] == "image_id,hour,region,object,has_box,source,from_image" and "08_0,08,mặt bàn,ấm,True,human,08_0" in region_rows
     rows = (jsons.parent / "exports" / "rois.csv").read_text(encoding="utf-8-sig").splitlines()
     assert rows[0].startswith("image_id,hour,roi,") and any(r.startswith("08_8,08,stove,") and "nồi bị đổ" in r and r.endswith(",human,True") for r in rows)
     assert len((jsons.parent / "exports" / "castle_dataset.jsonl").read_text(encoding="utf-8").splitlines()) == json.loads((jsons.parent / "exports" / "summary.json").read_text(encoding="utf-8"))["images"]

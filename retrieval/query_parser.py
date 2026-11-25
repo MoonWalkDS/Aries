@@ -129,3 +129,55 @@ def parse_query(text: str, known_names: list[str]) -> dict:
     if total_is_exact:               # "Không có ai khác" / "Chỉ có một người": tổng = số người đã tả
         parsed["count"] = parsed["count_min"]
     return parsed
+
+
+def apply_edits(parsed: dict, edits: dict, known_names: list[str]) -> dict:
+    """Ghi đè kết quả tách đề bằng bản người dùng sửa tay trên giao diện. Giữ `sentences` của đề gốc.
+
+    Đầu vào từ trình duyệt: kiểm tra kiểu, cắt độ dài, bỏ tên không có trong dữ liệu. Sai kiểu -> ValueError.
+    """
+    if not isinstance(edits, dict):
+        raise ValueError("parsed phải là object")
+
+    def text(v) -> str:
+        if not isinstance(v, str):
+            raise ValueError("text phải là chuỗi")
+        return v.strip()[:500]
+
+    def num(v, lo: int = 0, hi: int = 20) -> int | None:
+        if v is None or v == "":
+            return None
+        if isinstance(v, bool) or not isinstance(v, int) or not lo <= v <= hi:
+            raise ValueError(f"số phải là int từ {lo} đến {hi}")
+        return v
+
+    known = set(known_names)
+    names = [n for n in (edits.get("names") or []) if isinstance(n, str) and n in known]
+    people = []
+    for p in edits.get("people") or []:
+        if not isinstance(p, dict) or p.get("gender") not in (None, "male", "female"):
+            raise ValueError("người: gender phải là null/male/female")
+        t = text(p.get("text", ""))
+        if not t:
+            continue
+        name = p.get("name") if p.get("name") in known else None
+        if name is None:
+            found = find_names(t, names or known_names)
+            name = found[0] if found else None
+        if name and name not in names:
+            names.append(name)
+        people.append({"text": t, "gender": p.get("gender"), "name": name})
+    g = edits.get("group")
+    group = None
+    if g:
+        if not isinstance(g, dict):
+            raise ValueError("group phải là object")
+        gt, gn = text(g.get("text", "")), num(g.get("n"), 1) or 1
+        group = {"text": gt, "n": gn} if gt else None
+    scene = [s for s in (text(x) for x in edits.get("scene") or []) if s]
+    count = num(edits.get("count"))
+    count_min = max(len(people) + (group["n"] if group else 0), num(edits.get("count_min")) or 0)
+    if count is not None and count < count_min:
+        count = count_min
+    return {**parsed, "names": names, "count": count, "count_min": count_min, "people": people, "group": group, "scene": scene,
+            "edited": True}

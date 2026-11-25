@@ -24,6 +24,7 @@ import submit_task as dres  # noqa: E402  (đọc .env, dùng lại login/submit
 PORT = 8314
 IMAGES_DIR, THUMBNAILS_DIR = REPO_ROOT / "data" / "dataset" / "images", REPO_ROOT / "data" / "dataset" / "thumbs"
 PAGE = Path(__file__).with_name("index.html")
+STATIC = {"/settings.js": PAGE.with_name("settings.js"), "/app.js": PAGE.with_name("app.js")}  # tên cố định, không ghép đường dẫn từ URL
 SEARCH: SearchEngine
 STATE: dict = {}
 ENV_FILE = REPO_ROOT / ".env"
@@ -76,8 +77,10 @@ def pull_task() -> dict:
         text = ft.hint_to_text(ft.get_hint(STATE["session"], STATE["evaluation_id"], state["taskTemplateId"]))
         record = {"evaluationId": STATE["evaluation_id"], "taskId": state.get("taskId"),
                   "taskTemplateId": state["taskTemplateId"], "timeLeftMs": state.get("timeLeft"), "query": text}
-        ft.OUT_JSON.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
-        ft.OUT_TXT.write_text(text, encoding="utf-8")
+        dump = json.dumps(record, ensure_ascii=False, indent=2)
+        if not ft.OUT_JSON.exists() or ft.OUT_JSON.read_text(encoding="utf-8") != dump:  # trang kiểm tra định kỳ: chỉ ghi khi đổi
+            ft.OUT_JSON.write_text(dump, encoding="utf-8")
+            ft.OUT_TXT.write_text(text, encoding="utf-8")
         return {**record, "running": True}
     saved = json.loads(ft.OUT_JSON.read_text(encoding="utf-8")) if ft.OUT_JSON.exists() else {}
     return {**saved, "running": False, "taskStatus": state.get("taskStatus")}
@@ -115,6 +118,13 @@ def submit(image_id: str) -> dict:
     return {"status": status, "item": item, "message": dres.describe(status, text), "raw": text}
 
 
+def _top(value) -> int:
+    try:
+        return min(max(int(value), 1), 1000)
+    except (TypeError, ValueError):
+        return 300
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, body: bytes, kind: str, code: int = 200) -> None:
         self.send_response(code)
@@ -131,8 +141,12 @@ class Handler(BaseHTTPRequestHandler):
         q = {k: v[0] for k, v in parse_qs(url.query).items()}
         if url.path == "/":
             return self._send(PAGE.read_bytes(), "text/html; charset=utf-8")
+        if url.path in STATIC:
+            return self._send(STATIC[url.path].read_bytes(), "text/javascript; charset=utf-8")
         if url.path == "/api/search":
-            return self._json(SEARCH.search(q.get("q", ""), int(q.get("top", 300))))
+            return self._json(SEARCH.search(q.get("q", ""), _top(q.get("top"))))
+        if url.path == "/api/names":
+            return self._json(sorted(SEARCH.known_names))
         if url.path == "/api/task":
             try:
                 return self._json(pull_task())
@@ -144,17 +158,23 @@ class Handler(BaseHTTPRequestHandler):
             folder = THUMBNAILS_DIR if q.get("thumb") and (THUMBNAILS_DIR / f"{q['id']}.jpg").exists() else IMAGES_DIR
             return self._send((folder / f"{q['id']}.jpg").read_bytes(), "image/jpeg")
         if url.path == "/api/detail" and q.get("id") in SEARCH.records:
-            return self._json({**summary(q["id"]), "neighbors": neighbors(q["id"])})
+            span = int(q["span"]) if q.get("span", "").isdigit() else 6
+            return self._json({**summary(q["id"]), "neighbors": neighbors(q["id"], min(max(span, 1), 20))})
         self._json({"error": "not found"}, 404)
 
     def do_POST(self) -> None:
         path = urlparse(self.path).path
-        if path not in ("/api/submit", "/api/config"):
+        if path not in ("/api/submit", "/api/config", "/api/search"):
             return self._json({"error": "not found"}, 404)
         # chỉ nhận JSON: trang web lạ không gửi được form "đơn giản" tới localhost để nộp bài/đổi cấu hình
         if not self.headers.get("Content-Type", "").startswith("application/json"):
             return self._json({"error": "cần Content-Type: application/json"}, 415)
         body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+        if path == "/api/search":   # có `parsed` = bản tách đề sửa tay trên web
+            try:
+                return self._json(SEARCH.search(str(body.get("q", "")), _top(body.get("top")), body.get("parsed")))
+            except ValueError as exc:
+                return self._json({"error": f"Bản sửa không hợp lệ: {exc}"}, 400)
         try:
             self._json(set_config(body) if path == "/api/config" else submit(str(body.get("id", ""))))
         except Exception as exc:  # lỗi mạng / đăng nhập: báo lên giao diện thay vì làm sập server

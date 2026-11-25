@@ -89,3 +89,21 @@ def test_count_anywhere_and_photo_is_not_a_person():
     assert parse_query("Anh ấy mở tủ lạnh.", NAMES)["people"][0]["gender"] == "male"   # "anh ấy" vẫn là người
     q = parse_query("Một người đàn ông nấu ăn. Không có ai khác trong bếp.", NAMES)
     assert q["count"] == 1 and len(q["people"]) == 1
+
+
+def test_apply_edits_overrides_and_validates():
+    import pytest
+    from query_parser import apply_edits
+    parsed = parse_query(Q_09_1574, NAMES)
+    e = apply_edits(parsed, {"count": 2, "names": ["Linh", "Không có"], "people": [
+        {"text": "người đàn ông mở tủ lạnh", "gender": "male", "name": None},
+        {"text": "Thầy Linh mặc áo len xanh", "gender": None, "name": None}, {"text": "  ", "gender": None}],
+        "group": None, "scene": ["", "trên đảo có dứa"]}, NAMES)
+    assert e["sentences"] == parsed["sentences"] and e["edited"]
+    assert e["names"] == ["Linh"] and [p["name"] for p in e["people"]] == [None, "Linh"]
+    assert e["count"] == 2 and e["count_min"] == 2 and e["scene"] == ["trên đảo có dứa"]
+    # số người ít hơn số cụm đã tả -> nâng lên cho khớp
+    assert apply_edits(parsed, {"count": 0, "people": [{"text": "một người", "gender": None}]}, NAMES)["count"] == 1
+    for bad in ({"count": "2"}, {"count": 99}, {"people": [{"text": "x", "gender": "other"}]}, {"scene": [3]}, []):
+        with pytest.raises(ValueError):
+            apply_edits(parsed, bad, NAMES)

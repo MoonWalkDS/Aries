@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 
 from common import EXPORTS_DIR, SIGLIP_MODEL, SIGLIP_WEIGHTS, TRANSLATION_MODEL, remove_accents, zscore
-from query_parser import parse_query
+from query_parser import apply_edits, parse_query
 from text_match import BM25, assign_one_to_one, tokenize
 
 SEARCH_INDEX_DIR = EXPORTS_DIR / "search_index"
@@ -274,8 +274,11 @@ class SearchEngine:
             scores[kept] = layer2_scores[kept] + WEIGHTS["scene_detail"] * scene_detail[kept]
         return scores, scene_detail
 
-    def search(self, query: str, top: int = 200) -> dict:
+    def search(self, query: str, top: int = 200, edits: dict | None = None) -> dict:
+        """edits: bản tách đề người dùng sửa tay trên web (xem `apply_edits`); None = tự tách."""
         parsed = parse_query(query, self.known_names)
+        if edits is not None and parsed["sentences"]:
+            parsed = apply_edits(parsed, edits, self.known_names)
         if not parsed["sentences"]:
             return {"sentences": [], "english": [], "names": [], "parsed": parsed, "layers": [len(self.image_ids), 0, 0], "results": []}
         encoded = self._encode_query(parsed)

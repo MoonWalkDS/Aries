@@ -101,3 +101,12 @@ def test_explicit_count_dominates(engine):
     target = next(c for c in range(2, 11) if 3 <= fits(c) <= len(engine.image_ids) // 2)   # đủ ảnh khớp nhưng không phải đa số
     top = engine.search(f"Ảnh bếp có {nums[target]} người, trên đảo bếp có nhiều nồi inox, hai quả dứa, đĩa trắng và cốc sứ.", top=3)["results"]
     assert all(target in (engine.people_count_detector[engine.image_row[x["id"]]], engine.people_count_teacher[engine.image_row[x["id"]]]) for x in top)
+
+
+def test_edits_override_only_what_was_edited(engine):
+    q = "Một người đàn ông mở cửa tủ lạnh. Anh ấy mặc áo len. Những người khác đang rửa chén"
+    auto = engine.search(q, top=10)
+    same = engine.search(q, top=10, edits={k: auto["parsed"][k] for k in ("count", "count_min", "names", "people", "group", "scene")})
+    assert [x["id"] for x in same["results"]] == [x["id"] for x in auto["results"]] and same["parsed"]["edited"]
+    edited = engine.search(q, top=10, edits={"people": [], "group": None, "scene": ["bồn rửa"], "count": 1})
+    assert edited["parsed"]["count"] == 1 and edited["results"][0]["explain"]["pairs"] == []

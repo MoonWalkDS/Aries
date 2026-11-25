@@ -83,3 +83,4 @@
 {"at":"2026-11-25T06:37:24.457Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","08_2674"],"v":{"items":["coffee machine","cup","kettle"],"boxes":[],"by":"Quoc","at":"2026-11-25T06:37:24.456Z"}}
 {"at":"2026-11-25T06:37:25.658Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","08_2679"],"v":{"items":["coffee machine","cup","kettle"],"boxes":[],"by":"Quoc","at":"2026-11-25T06:37:25.658Z"}}
 {"at":"2026-11-25T06:37:26.366Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","08_2700"],"v":{"items":["coffee machine","cup","kettle"],"boxes":[],"by":"Quoc","at":"2026-11-25T06:37:26.366Z"}}
+{"at":"2026-11-25T06:50:02.828Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","08_2704"],"v":{"items":["coffee machine","cup","kettle"],"boxes":[],"by":"Quoc","at":"2026-11-25T06:50:02.827Z"}}

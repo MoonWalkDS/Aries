@@ -118,7 +118,7 @@ def main() -> None:
         assert isinstance(m["so_nguoi"], int) and m["so_nguoi"] == len(m["danh_sach_nguoi"]), k
         assert all(isinstance(s, str) and s for s in m["danh_sach_nguoi"] + m["vat_the_trang_thai"]), k
     OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(json.dumps(meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")   # gọn: kèm `goc` nên file lớn
+    OUT.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")   # thụt dòng như file mẫu của Nam
     print(f"{len(meta)} ảnh -> {OUT}  (caption: {sum(1 for m in meta.values() if m['caption'])}, "
           f"mô tả thầy: {sum(1 for m in meta.values() if m['mo_ta_thay'])})")
 

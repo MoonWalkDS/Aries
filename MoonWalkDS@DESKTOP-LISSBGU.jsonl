@@ -1487,3 +1487,5 @@
 {"at":"2026-11-26T13:15:15.256Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","11_3134"],"v":{"items":["kettle","coffee machine","cup"],"boxes":[],"by":"Quoc","at":"2026-11-26T13:15:15.256Z"}}
 {"at":"2026-11-26T13:15:15.316Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","11_3134"],"v":{"items":["kettle","coffee machine","cup"],"boxes":[],"by":"Quoc","at":"2026-11-26T13:15:15.316Z"}}
 {"at":"2026-11-26T13:15:15.462Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","11_3139"],"v":{"items":["kettle","coffee machine","cup"],"boxes":[],"by":"Quoc","at":"2026-11-26T13:15:15.462Z"}}
+{"at":"2026-11-26T15:48:40.437Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","11_3141"],"v":{"items":["kettle","coffee machine","cup"],"boxes":[],"by":"Quoc","at":"2026-11-26T15:48:40.437Z"}}
+{"at":"2026-11-26T15:48:41.037Z","by":"MoonWalkDS","file":"annotations/object_labels.json","path":["Bàn pha cà phê","11_3143"],"v":{"items":["kettle","coffee machine","cup"],"boxes":[],"by":"Quoc","at":"2026-11-26T15:48:41.037Z"}}

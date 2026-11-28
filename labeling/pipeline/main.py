@@ -149,7 +149,7 @@ def stage_enrich(ctx: Context) -> None:
 
         result = run_actions(ctx.cfg, data_dir, ctx.jsons_dir)
     else:
-        result = enrich.run_merge(ctx.cfg, data_dir, ctx.jsons_dir)
+        result = enrich.run_merge(ctx.cfg, data_dir, ctx.jsons_dir, ctx.images_dir)
     ctx.log.info("enrich %s: %s", ctx.args.action, result)
 
 

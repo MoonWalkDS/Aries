@@ -79,7 +79,12 @@ function renderSide() {
   fresh.addEventListener('dragover', (e) => { e.preventDefault(); fresh.classList.add('drop'); });
   fresh.addEventListener('dragleave', () => fresh.classList.remove('drop'));
   fresh.addEventListener('drop', (e) => { e.preventDefault(); fresh.classList.remove('drop'); newPerson(); });
-  $('names').replaceChildren(hard, ...nameRows, unnamed, unknown, fresh);
+  // thả vào: Xoá box (không phải người, box trùng); Del cũng xoá các crop đang chọn
+  const del = h('button', { class: 'b-item unknown', title: 'Thả vào (hoặc bấm Del khi đã chọn crop): xoá box, bỏ khỏi mọi nơi. Z để hoàn tác.', onclick: () => deleteSel() }, h('span', {}, 'Xoá box'), h('span', { class: 'n' }, SUM.notPerson ?? 0));
+  del.addEventListener('dragover', (e) => { e.preventDefault(); del.classList.add('drop'); });
+  del.addEventListener('dragleave', () => del.classList.remove('drop'));
+  del.addEventListener('drop', (e) => { e.preventDefault(); del.classList.remove('drop'); deleteSel(); });
+  $('names').replaceChildren(hard, ...nameRows, unnamed, unknown, fresh, del);
   // cụm chỉ còn crop chưa gán; cụm đã gán hết bị ẩn (bật "hiện cả cụm đã xong" để xem)
   const showDone = $('showDone').checked;
   const rows = SUM.clusters.filter((c) => (showDone || c.left > 0) && (!f || c.cluster.includes(f) || `${c.label || ''} ${c.name || ''}`.toLowerCase().includes(f)))
@@ -101,7 +106,7 @@ function renderGrid() {
     // trong một cụm: crop mô hình đã đoán tên (chưa ai gán) được viền vàng
     const other = (VIEW.cluster != null || VIEW.hard) && x.name && x.source === 'model';
     const card = h('div', { class: 'b-card' + (SEL.has(x.id) ? ' sel' : '') + (other ? ' other' : ''), draggable: 'true', 'data-id': x.id, title: `${x.id} · cụm ${x.cluster ?? '—'} · ${x.name ?? 'chưa có tên'}${x.source ? ` (${x.source})` : ''}` },
-      h('img', { src: `/crop/person/${x.id}.jpg`, alt: x.id, loading: 'lazy' }),
+      h('img', { src: `/crop/person/${x.id}.jpg`, alt: x.id, loading: 'lazy', onerror: (e) => cropFromImage(e.target, x) }),
       x.name && (VIEW.cluster != null || VIEW.hard) ? h('span', { class: 'tag' }, x.name) : VIEW.hard && x.guess ? h('span', { class: 'tag' }, `${x.guess}?`) : '',
       h('div', { class: 'cap' }, h('span', {}, x.image_id), h('span', {}, VIEW.hard && x.margin != null ? `±${Math.round(x.margin * 100)}` : x.sim != null ? `${Math.round(x.sim * 100)}%` : '')));
     card.addEventListener('click', (e) => select(items, i, e.shiftKey));
@@ -142,6 +147,29 @@ async function moveTo(name) {
     toast(name ? `Đã chuyển ${n} crop sang "${name}". Z để hoàn tác.` : `Đã đánh dấu ${n} crop "Không rõ là ai".`);
   } catch (e) { toast(e.message, true); }
 }
+// box tự vẽ chưa gộp chưa có file crop: cắt từ ảnh gốc ngay trên trình duyệt
+function cropFromImage(img, x) {
+  if (img.dataset.fallback || !x.box) return;
+  img.dataset.fallback = '1';
+  const full = new Image();
+  full.onload = () => {
+    const [x1, y1, x2, y2] = x.box, c = document.createElement('canvas');
+    c.width = Math.max(1, Math.round(x2 - x1)); c.height = Math.max(1, Math.round(y2 - y1));
+    c.getContext('2d').drawImage(full, x1, y1, x2 - x1, y2 - y1, 0, 0, c.width, c.height);
+    img.src = c.toDataURL('image/jpeg', 0.85);
+  };
+  full.src = `/img/${x.image_id}.jpg`;
+}
+async function deleteSel() {
+  if (!SEL.size) return toast('Chọn crop trước, rồi bấm Del hoặc thả vào "Xoá box".', true);
+  const n = SEL.size;
+  try {
+    await api('/api/person/delete', { ids: [...SEL] });
+    SEL = new Set(); LAST = -1;
+    await refresh();
+    toast(`Đã xoá ${n} box. Z để hoàn tác.`);
+  } catch (e) { toast(e.message, true); }
+}
 async function open(v) {
   VIEW = v; SEL = new Set(); LAST = -1; toHash(v);
   const cl = v.cluster != null ? SUM.clusters.find((c) => c.cluster === v.cluster) : null;
@@ -154,7 +182,13 @@ async function loadItems() {
   ITEMS = r.items; renderGrid();
 }
 async function refresh() { SUM = await api('/api/identity/summary'); renderSide(); if (VIEW) await loadItems(); }
-async function undo() { try { const r = await api('/api/undo', {}); toast(`Đã hoàn tác. Còn ${r.left} bước.`); await refresh(); } catch (e) { toast(e.message, true); } }
+async function undo() {
+  try {
+    const r = await api('/api/undo', {});
+    toast(`${r.desc ? `Đã hoàn tác: ${r.desc}${r.page ? ` (trang ${r.page})` : ''}.` : 'Đã hoàn tác.'}${r.conflicts?.length ? ` Giữ nguyên ${r.conflicts.join(', ')}: người khác đã sửa sau.` : ''}`, !!r.conflicts?.length);
+    await refresh();
+  } catch (e) { toast(e.message, true); }
+}
 
 (async function init() {
   try { SUM = await api('/api/identity/summary'); } catch (e) { return toast(e.message, true); }
@@ -166,7 +200,7 @@ async function undo() { try { const r = await api('/api/undo', {}); toast(`Đã 
   $('selNone').onclick = () => { SEL = new Set(); renderSel(); };
   $('undo').onclick = undo;
   $('renameBtn').onclick = () => VIEW?.name && rename(VIEW.name);
-  document.addEventListener('keydown', (e) => { if (/^(INPUT|TEXTAREA)$/.test(e.target.tagName) || e.ctrlKey || e.metaKey) return; if (e.key.toLowerCase() === 'z') undo(); if (e.key === 'Escape') { SEL = new Set(); renderSel(); } });
+  document.addEventListener('keydown', (e) => { if (/^(INPUT|TEXTAREA)$/.test(e.target.tagName) || e.ctrlKey || e.metaKey) return; if (e.key.toLowerCase() === 'z') undo(); if (e.key === 'Delete') deleteSel(); if (e.key === 'Escape') { SEL = new Set(); renderSel(); } });
   const v = fromHash();
   if (v) await open(v); else renderSide();
 })();

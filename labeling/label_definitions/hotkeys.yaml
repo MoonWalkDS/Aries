@@ -1,0 +1,34 @@
+# Thứ tự phím trên hai trang gán nhanh (label_viewer/quick.html, action.html).
+# Mục đầu danh sách nhận phím 1, rồi 2, ..., 0, rồi q w e r t y u i o p s d f g h j l c v b n m
+# (không dùng a, x, z, k: phím chung Đúng, Sai, Hoàn tác, Không rõ).
+# Tên / lớp không có ở đây tự nhận phím còn trống, nhiều crop trước. Sửa xong tải lại trang là có hiệu lực.
+
+names:     # tên người (Tên người trong GLOSSARY.md), viết đúng như trên Bảng định danh
+  - Linh
+  - Áo len 2 màu
+  - Nữ áo trắng
+  - Caro đỏ xanh
+  - caro xanh trắng
+  - áo khoác xám cao
+  - Sơ mi xanh
+  - Sơ mi xám trơn (hơi xanh xẫm)
+  - Nư áo đen
+
+actions:   # tên lớp tiếng Anh trong adl_people_labels.yaml
+  - standing idle
+  - walking
+  - preparing food
+  - cooking at the stove
+  - washing dishes
+  - opening the refrigerator
+  - carrying something
+  - talking
+  - making a hot drink
+  - getting items from a cabinet
+  - eating
+  - drinking
+  - using a phone
+  - using a laptop
+  - sitting
+  - cleaning
+  - throwing away trash

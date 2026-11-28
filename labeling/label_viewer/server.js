@@ -53,7 +53,7 @@ function sendFile(res, file, cache) {
   });
 }
 
-function readBody(req) {
+function readBodyRaw(req) {
   // Chỉ nhận JSON: form của trang khác không gửi được kiểu này nếu không qua preflight CORS (chặn CSRF).
   if (!String(req.headers['content-type'] || '').startsWith('application/json')) return Promise.reject(Object.assign(new Error('Cần Content-Type: application/json'), { status: 415 }));
   return new Promise((resolve, reject) => {
@@ -87,6 +87,11 @@ function filtersFrom(q) {
 const hitOut = (h) => ({ profile: h.profile, key: h.key, kind: h.kind, id: h.id, inherited: !!h.inherited, label: h.state?.label ?? null, label_vi: h.state?.label_vi ?? '', source: h.state?.source ?? null, score: h.state?.score ?? null });
 
 async function api(req, res, url, user) {
+  // Người và trang đang thao tác: đặt lại ngay sau khi đọc body (lúc chờ đọc, request khác có thể đã đổi store.actor).
+  // Trang lấy từ Referer, chỉ để ghi vào mô tả bước hoàn tác.
+  const PAGES = { '/': 'Ảnh', '/index.html': 'Ảnh', '/board.html': 'Bảng định danh', '/quick.html': 'Gán nhanh danh tính', '/action.html': 'Gán nhanh hành động', '/objects.html': 'Đồ vật' };
+  const bind = () => { store.actor = user?.name || LABELER; try { store.page = PAGES[new URL(req.headers.referer).pathname] || ''; } catch { store.page = ''; } };
+  const readBody = async (r) => { const b = await readBodyRaw(r); bind(); return b; };
   const q = url.searchParams;
   const p = url.pathname;
   if (req.method === 'GET' && p === '/api/me') return send(res, 200, { user: user?.name ?? null, admin: !auth.enabled || !!user?.admin, auth: auth.enabled });
@@ -126,6 +131,10 @@ async function api(req, res, url, user) {
     const body = await readBody(req);
     return send(res, 200, store.manualOp(body));
   }
+  // Xoá box (máy dò: ẩn; tự vẽ: bỏ hẳn) và sửa khung box máy dò (thay bằng box tự vẽ): docs/adr/0002
+  if (req.method === 'POST' && p === '/api/person/delete') return send(res, 200, store.deletePeople((await readBody(req)).ids));
+  if (req.method === 'POST' && p === '/api/person/replace') { const b = await readBody(req); return send(res, 200, store.replacePerson(b.id, b.box)); }
+  if (req.method === 'GET' && p === '/api/hotkeys') return send(res, 200, store.hotkeys());
   if (req.method === 'GET' && p === '/api/action/summary') return send(res, 200, store.actionSummary());
   if (req.method === 'GET' && p === '/api/action/members') return send(res, 200, { items: store.actionMembers(q.has('suspect') ? { suspect: true } : q.has('recheck') ? { recheck: true } : q.has('conflict') ? { conflict: true } : q.has('teacher') ? { teacher: q.get('teacher') } : { label: q.get('label') || '' }) });
   if (req.method === 'GET' && p === '/api/identity/summary') return send(res, 200, { ...store.identitySummary(), names_all: store.identityNames() });
@@ -224,7 +233,7 @@ const OPEN = new Set(['/login.html', '/style.css', '/login.js']);
 async function login(req, res) {
   const ip = clientIp(req);
   if (auth.limited(ip)) return send(res, 429, { error: 'Sai quá nhiều lần. Thử lại sau 15 phút.' });
-  const body = await readBody(req);
+  const body = await readBodyRaw(req);
   const user = auth.check(String(body.user || ''), body.password);
   if (!user) { auth.failed(ip); return send(res, 401, { error: 'Sai tên hoặc mật khẩu.' }); }
   console.log(`Đăng nhập: ${user.name} từ ${ip}`);

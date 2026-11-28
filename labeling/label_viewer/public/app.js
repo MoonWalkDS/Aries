@@ -20,9 +20,9 @@ const NONE = '__none__';
 const DEFAULTS = { id: '', show: 'people', hideDone: false, labels: false, objects: false, tokens: [], mode: 'or', q: '', src: [], hours: [], edited: false, manual: false, conflict: false };
 const S = { ...DEFAULTS };
 let META = null, PROF = {}, QUEUE = [], D = null, SEL = '', NAT = { w: 1280, h: 720 };
-// vẽ box thủ công
-let DRAW = false, DRAFT = null, LASTKIND = 'person', suppressClick = false;
-// đang kéo sửa box tự vẽ: {key, mode: 'move' | tổ hợp n/s/e/w, start: [x, y], orig, box}
+// vẽ box người: vẽ xong là lưu ngay thành Người chưa có nhãn
+let DRAW = false, suppressClick = false;
+// đang kéo sửa khung một Người: {key, mode: 'move' | tổ hợp n/s/e/w, start: [x, y], orig, box}
 let EDIT = null;
 const editBox = (key, box) => (EDIT && EDIT.key === key ? EDIT.box : box);
 
@@ -91,16 +91,11 @@ function units() {
   if (!D) return [];
   const out = [];
   if (PROF.image) out.push({ ...D.activity, kind: 'image', kindVi: 'Cả ảnh', title: D.image_id, crop: `/img/${D.image_id}.jpg` });
-  for (const p of D.people) out.push({ ...p, kind: 'person', kindVi: 'Người', title: `Người ${p.id.split('_').pop()}`, sub: p.zone_vi, crop: `/crop/person/${p.id}.jpg`, box: p.box });
+  for (const p of D.people) out.push({ ...p, kind: 'person', kindVi: p.manual ? 'Người · box tự vẽ' : 'Người', title: `Người ${p.id.split('_').pop()}`, sub: p.zone_vi, crop: `/crop/person/${p.id}.jpg`, box: editBox(p.key, p.box) });
   for (const r of D.rois) {
     const [x1, y1, x2, y2] = r.box;
     out.push({ ...r, kind: 'roi', kindVi: 'Vùng', title: r.name_vi || r.name, sub: r.name, crop: `/crop/roi/${r.name}/${r.key}.jpg`, box: [x1 * NAT.w, y1 * NAT.h, x2 * NAT.w, y2 * NAT.h] });
   }
-  for (const m of D.manual || []) {
-    out.push({ kind: 'manual', manualKind: m.kind, profile: 'manual', key: m.id, kindVi: 'Box tự vẽ', title: `Box ${m.id.split('_').pop()}`,
-      state: m.label ? { label: m.label, label_vi: m.label_vi || '', source: 'human' } : null, box: editBox(m.id, m.box) });
-  }
-  if (DRAFT) out.push({ kind: 'manual', draft: true, manualKind: DRAFT.kind, profile: 'manual', key: 'draft', kindVi: 'Box tự vẽ', title: 'Box mới', state: null, box: editBox('draft', DRAFT.box) });
   return out;
 }
 // bộ lọc "hành động lệch vùng": cùng luật với store.js ACTION_ZONE
@@ -109,7 +104,6 @@ const isMatch = (u) => isConflict(u) || S.tokens.some((t) => t.profile === u.pro
 function visible() {
   return units().filter((u) => {
     if (u.kind === 'image') return false;
-    if (u.kind === 'manual') return u.draft || !(S.hideDone && u.state && uid(u) !== SEL);
     if (S.show === 'people' && u.kind !== 'person') return false;
     if (S.show === 'roi' && u.kind !== 'roi') return false;
     if (S.hideDone && statusOf(u.state) === 'human' && uid(u) !== SEL) return false;
@@ -139,12 +133,12 @@ function drawBoxes() {
     const st = statusOf(u.state);
     const sel = uid(u) === SEL;
     if (sel) selU = u;
-    const g = sv('g', { class: `box ${st} ${u.kind === 'roi' || u.kind === 'manual' ? u.kind : ''} ${sel ? 'sel' : ''} ${hasTok && !isMatch(u) && !sel ? 'dim' : ''}`, 'data-id': uid(u), tabindex: -1 });
+    const g = sv('g', { class: `box ${st} ${u.kind === 'roi' ? 'roi' : u.manual ? 'manual' : ''} ${sel ? 'sel' : ''} ${hasTok && !isMatch(u) && !sel ? 'dim' : ''}`, 'data-id': uid(u), tabindex: -1 });
     const r = { x: x1, y: y1, width: x2 - x1, height: y2 - y1 };
     g.append(sv('rect', { ...r, class: 'halo', 'stroke-width': sel ? 7 : 5 }), sv('rect', { ...r, class: 'edge', 'stroke-width': sel ? 4 : 2.5 }), sv('rect', { ...r, class: 'hit' }));
     g.append(sv('title', {}, `${u.title}: ${u.state ? u.state.label_vi || u.state.label : 'chưa có nhãn'}`));
     g.addEventListener('click', (e) => { e.stopPropagation(); select(uid(u)); });
-    if (sel && u.kind === 'manual' && !DRAW) g.addEventListener('pointerdown', (e) => startEdit(e, u, 'move'));
+    if (sel && u.kind === 'person' && !DRAW) g.addEventListener('pointerdown', (e) => startEdit(e, u, 'move'));
     g.addEventListener('mouseenter', () => showTag(u, 'hover'));
     g.addEventListener('mouseleave', () => removeTag('hover'));
     kids.push(g);
@@ -152,7 +146,7 @@ function drawBoxes() {
   }
   svg.replaceChildren(...(S.objects ? objectMarks() : []), ...kids);
   if (selU) svg.append(tag(selU, 'selected'));
-  if (selU?.kind === 'manual' && !DRAW) svg.append(...handles(selU));
+  if (selU?.kind === 'person' && !DRAW) svg.append(...handles(selU));
 }
 // đồ vật do `enrich objects` dò: chỉ để xem, không chọn được
 function objectMarks() {
@@ -205,9 +199,13 @@ async function finishEdit() {
   EDIT = null;
   suppressClick = true;
   if (box.every((v, i) => Math.abs(v - orig[i]) < 0.5)) return drawBoxes(); // chỉ bấm, không kéo
-  if (u.draft) { DRAFT.box = box; drawBoxes(); return renderPanel(); }
   try {
-    await api('/api/manual', { action: 'update', image_id: D.image_id, id: u.key, box });
+    if (u.manual) await api('/api/manual', { action: 'update', image_id: D.image_id, id: u.key, box });
+    else {
+      const r = await api('/api/person/replace', { id: u.key, box });
+      SEL = `people|${r.id}`;
+      toast(`Đã thay box máy dò bằng box tự vẽ ${r.id} (giữ hành động và tên). Z để hoàn tác.`);
+    }
     $('undo').disabled = false;
   } catch (e) { fail(e); }
   await loadImage(S.id, true);
@@ -234,7 +232,6 @@ function renderPanel() {
   const wasHidden = panel.hidden;
   panel.hidden = false;
   if (wasHidden) requestAnimationFrame(fit);
-  if (u.kind === 'manual') return renderManualPanel(u, panel);
   const p = PROF[u.profile];
   const st = statusOf(u.state);
   const all = p?.classes || [];
@@ -248,7 +245,7 @@ function renderPanel() {
   panel.replaceChildren(
     // crop bên trái, nhãn hiện tại bên phải: chừa chỗ cho lưới thẻ để không phải cuộn
     h('div', { class: 'p-head p-row' },
-      h('div', { class: 'p-crop' }, h('img', { src: u.crop, alt: `Crop ${u.title}` })),
+      h('div', { class: 'p-crop' }, cropOf(u)),
       h('div', { class: 'p-info' },
         h('div', { class: 'p-kind' }, u.kindVi, u.sub ? ` · ${u.sub}` : ''),
         h('h2', { class: 'p-title' }, u.title),
@@ -262,7 +259,8 @@ function renderPanel() {
     h('div', { class: 'actions' },
       h('button', { class: 'btn primary', disabled: !u.state, onclick: () => act('confirm') }, 'Đúng', h('kbd', {}, 'A')),
       h('button', { class: 'btn bad', disabled: !u.state, onclick: () => act('reject') }, 'Sai', h('kbd', {}, 'X')),
-      h('button', { class: 'btn', title: 'Đặt lại về nhãn của máy (R)', onclick: () => act('reset') }, 'Đặt lại', h('kbd', {}, 'R'))),
+      h('button', { class: 'btn', title: 'Đặt lại về nhãn của máy (R)', onclick: () => act('reset') }, 'Đặt lại', h('kbd', {}, 'R')),
+      u.kind === 'person' ? h('button', { class: 'btn bad', title: 'Box sai (không phải người, trùng): bỏ khỏi mọi nơi. Z để hoàn tác.', onclick: () => deleteBox(u) }, 'Xoá box', h('kbd', {}, 'Del')) : null),
     h('div', { class: 'classes' }, all.length > 20 ? filterBox : null,
       shown.map((c, i) => h('button', { class: 'cls' + (u.state?.label === c.name && !u.state?.custom ? ' cur' : '') + ((u.rejected || []).includes(c.name) ? ' off' : ''), onclick: () => act('set', c.name), title: c.name },
         h('span', { class: 'vi' }, c.name_vi || c.name))),
@@ -274,7 +272,7 @@ function renderPanel() {
 // đầu bảng gọn cho tab "Ai · ngoại hình"
 function headOf(u, st) {
   return h('div', { class: 'p-head p-row' },
-    h('div', { class: 'p-crop' }, h('img', { src: u.crop, alt: `Crop ${u.title}` })),
+    h('div', { class: 'p-crop' }, cropOf(u)),
     h('div', { class: 'p-info' },
       h('div', { class: 'p-kind' }, u.kindVi, u.sub ? ` · ${u.sub}` : ''),
       h('h2', { class: 'p-title' }, u.title),
@@ -314,8 +312,8 @@ function whoPanel(u) {
     u.predicted ? h('div', { class: 'muted small' }, `Mô hình đoán: ${u.predicted.name} (${Math.round(u.predicted.prob * 100)}%)${u.predicted.prob < 0.6 ? ' · thấp, không dùng' : ''}`) : '',
     u.outfit ? h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Trang phục (outfits.yaml)') : '',
     u.outfit ? h('dl', { class: 'attrs' }, Object.entries(u.outfit).filter(([, v]) => v !== '' && v != null).flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, Array.isArray(v) ? v.join(', ') : String(v))])) : '',
-    h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Ngoại hình (VLM)'),
-    a ? h('dl', { class: 'attrs' }, ATTR_VI.flatMap(([k, t]) => [h('dt', {}, t), h('dd', {}, attrText(a, k))]))
+    u.manual && !a ? '' : h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Ngoại hình (VLM)'),
+    u.manual && !a ? '' : a ? h('dl', { class: 'attrs' }, ATTR_VI.flatMap(([k, t]) => [h('dt', {}, t), h('dd', {}, attrText(a, k))]))
       : h('div', { class: 'muted small' }, 'Chưa có mô tả. Bước mô tả người đang chạy trên Kaggle; bấm "Gộp dữ liệu" khi có kết quả.'));
 }
 // "Người NN" nhỏ nhất chưa có trong các tên đã đặt
@@ -354,74 +352,23 @@ function cropCanvas(box) {
   c.getContext('2d').drawImage($('photo'), x1, y1, w, hh, 0, 0, c.width, c.height);
   return c;
 }
-function renderManualPanel(u, panel) {
-  const kind = u.manualKind;
-  const seg = h('div', { class: 'seg', role: 'group', 'aria-label': 'Loại box' }, [['person', 'Người'], ['object', 'Vật thể']].map(([k, t]) =>
-    h('button', { class: kind === k ? 'on' : '', onclick: () => setManualKind(u, k) }, t)));
-  let body;
-  if (kind === 'person') {
-    const all = PROF.people?.classes || [];
-    const f = norm(classFilter);
-    const shown = all.filter((c) => !f || norm(`${c.name} ${c.name_vi}`).includes(f));
-    panel._shown = shown;
-    body = h('div', { class: 'classes' },
-      all.length > 9 ? h('input', { type: 'search', placeholder: `Tìm trong ${all.length} lớp…`, value: classFilter, 'aria-label': 'Tìm lớp',
-        oninput: (e) => { classFilter = e.target.value; renderPanel(); const i = $('panel').querySelector('.classes input'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }) : null,
-      shown.map((c, i) => h('button', { class: 'cls' + (u.state?.label === c.name ? ' cur' : ''), onclick: () => saveManual(u, { label: c.name }) },
-        h('span', {}, h('span', { class: 'vi' }, c.name_vi || c.name), h('span', { class: 'en' }, c.name)))));
-  } else {
-    panel._shown = null;
-    const input = h('input', { type: 'text', list: 'objLabels', value: u.state?.label || '', placeholder: 'Tên vật, ví dụ: chảo, cốc, túi ni lông', 'aria-label': 'Tên vật thể', maxlength: 80,
-      onkeydown: (e) => { if (e.key === 'Enter') { e.preventDefault(); saveManual(u, { label: input.value }); } } });
-    body = h('div', { class: 'classes' },
-      h('label', { class: 'p-kind', for: 'objName' }, 'Tên vật thể'),
-      Object.assign(input, { id: 'objName' }),
-      h('datalist', { id: 'objLabels' }, (META.manual?.objectLabels || []).map((l) => h('option', { value: l }))),
-      h('button', { class: 'btn primary', style: 'width:100%', onclick: () => saveManual(u, { label: input.value }) }, 'Lưu nhãn', h('kbd', {}, 'Enter')));
-    // chỉ box vừa vẽ mới cần gõ tên ngay; box đã lưu để phím tắt (Del, Z) còn dùng được
-    if (u.draft || !u.state) setTimeout(() => { if (document.activeElement === document.body) input.focus(); }, 0);
-  }
-  panel.replaceChildren(
-    h('div', { class: 'p-head' },
-      h('div', { class: 'p-kind' }, u.draft ? 'Box mới, chưa lưu' : `${u.kindVi} · ${u.key}`),
-      h('h2', { class: 'p-title' }, u.draft ? 'Gán nhãn cho box vừa vẽ' : u.title),
-      h('div', { class: 'p-crop' }, cropCanvas(u.box))),
-    h('div', { class: 'p-now' },
-      h('div', { class: 'p-kind', style: 'margin-bottom:6px' }, 'Loại'), seg,
-      h('div', { class: 'p-label', style: 'margin-top:10px' }, u.state ? u.state.label_vi || u.state.label : 'Chưa có nhãn'),
-      u.state?.label_vi ? h('div', { class: 'p-en' }, u.state.label) : null),
-    h('div', { class: 'actions', style: 'grid-template-columns:1fr' },
-      u.draft ? h('button', { class: 'btn', onclick: cancelDraft }, 'Huỷ box này', h('kbd', {}, 'Esc'))
-        : h('button', { class: 'btn bad', onclick: () => deleteManual(u) }, 'Xoá box', h('kbd', {}, 'Del'))),
-    body);
-}
-async function setManualKind(u, kind) {
-  LASTKIND = kind;
-  if (u.draft) { DRAFT.kind = kind; return renderPanel(); }
-  await saveManual(u, { kind });
-}
-async function saveManual(u, fields) {
-  if (fields.label !== undefined && !String(fields.label).trim() && u.draft) return toast('Nhập tên vật trước khi lưu.', true);
+// crop của bảng: box tự vẽ chưa gộp chưa có file crop, cắt thẳng từ ảnh đang xem
+const cropOf = (u) => (u.manual || u.key === EDIT?.key ? cropCanvas(u.box) : h('img', { src: u.crop, alt: `Crop ${u.title}` }));
+async function addBox(box) {
   try {
-    const r = u.draft
-      ? await api('/api/manual', { action: 'add', image_id: D.image_id, box: u.box, kind: u.manualKind, ...fields })
-      : await api('/api/manual', { action: 'update', image_id: D.image_id, id: u.key, ...fields });
-    DRAFT = null;
-    SEL = `manual|${r.id}`;
-    const l = fields.label && u.manualKind === 'object' ? String(fields.label).trim() : '';
-    if (l && META.manual && !META.manual.objectLabels.includes(l)) META.manual.objectLabels.push(l);
+    const r = await api('/api/manual', { action: 'add', image_id: D.image_id, box });
+    SEL = `people|${r.id}`;
     $('undo').disabled = false;
     await loadImage(S.id, true);
-    toast(u.draft ? 'Đã lưu box mới.' : 'Đã lưu.');
+    toast('Đã lưu box người mới. Gán hành động, tên; Del nếu vẽ nhầm.');
   } catch (e) { fail(e); }
 }
-async function deleteManual(u) {
-  try { await api('/api/manual', { action: 'delete', image_id: D.image_id, id: u.key }); } catch (e) { return fail(e); }
+async function deleteBox(u) {
+  try { await api('/api/person/delete', { ids: [u.key] }); } catch (e) { return fail(e); }
   SEL = ''; $('undo').disabled = false;
   await loadImage(S.id, true);
-  toast('Đã xoá box. Bấm Z để hoàn tác.');
+  toast(`Đã xoá box ${u.key}. Z để hoàn tác.`);
 }
-function cancelDraft() { DRAFT = null; select(''); }
 function setDraw(on) {
   DRAW = on;
   $('frame').classList.toggle('drawing', on);
@@ -460,10 +407,9 @@ function wireDrawing() {
     start = null; rubber.remove(); rubber = null;
     suppressClick = true; // click sinh ra ngay sau khi nhả chuột không được bỏ chọn box mới
     if (box[2] - box[0] < 8 || box[3] - box[1] < 8) return toast('Box quá nhỏ, kéo rộng hơn.', true);
-    DRAFT = { box: box.map((v) => Math.round(v * 10) / 10), kind: LASTKIND };
     setDraw(false);
     classFilter = '';
-    select('manual|draft');
+    addBox(box.map((v) => Math.round(v * 10) / 10));
   };
   svg.addEventListener('pointerup', end);
   svg.addEventListener('pointercancel', () => { if (rubber) rubber.remove(); start = rubber = null; if (EDIT) { EDIT = null; drawBoxes(); } });
@@ -472,7 +418,6 @@ function norm(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '
 
 function select(id) {
   if (SEL !== id) classFilter = '';
-  if (DRAFT && id !== 'manual|draft') DRAFT = null; // bỏ box vẽ dở khi chọn box khác
   SEL = id;
   removeTag('hover');
   drawBoxes(); renderPanel(); renderTop();
@@ -481,17 +426,15 @@ function select(id) {
 // ---------------------------------------------------------------- sửa nhãn + tự sang box kế tiếp
 async function act(action, label, text) {
   const u = current();
-  if (!u || u.kind === 'manual') return;
+  if (!u) return;
   if ((action === 'confirm' || action === 'reject') && !u.state) return;
   if (u.inherited && !confirm(`Nhãn này dùng chung cho ${u.affected} ảnh giờ ${D.hour} (vùng không đổi so với nền). Vẫn sửa?`)) return;
   try {
     await api('/api/label', { ops: [{ profile: u.profile, key: u.key, action, label, text }] });
   } catch (e) {
-    if (e.status !== 409) return fail(e);
-    // file nhãn bị chương trình khác ghi đè: nạp lại để không đè mất thay đổi của họ
-    await api('/api/reload', {}).catch(fail);
-    await loadImage(S.id, true);
-    return toast('File nhãn vừa bị chương trình khác ghi. Đã nạp lại; kiểm tra rồi thao tác lại.', true);
+    fail(e);
+    if (e.status === 409) await loadImage(S.id, true);   // mục vừa được người khác sửa: server đã nạp bản mới, hiện ra
+    return;
   }
   const before = SEL;
   await loadImage(S.id, true);
@@ -518,7 +461,13 @@ function cycle(d) {
   select(uid(order[(i + d + order.length) % order.length]));
 }
 async function undo() {
-  try { const r = await api('/api/undo', {}); toast(`Đã hoàn tác. Còn ${r.left} bước.`); $('undo').disabled = !r.left; await loadImage(S.id, true); } catch (e) { fail(e); }
+  try { const r = await api('/api/undo', {}); toast(undoText(r), !!r.conflicts?.length); $('undo').disabled = !r.left; await loadImage(S.id, true); } catch (e) { fail(e); }
+}
+
+// câu báo sau khi hoàn tác (dùng chung với các trang khác qua session.js nếu cần)
+function undoText(r) {
+  const what = r.desc ? `Đã hoàn tác: ${r.desc}${r.page ? ` (trang ${r.page})` : ''}.` : 'Đã hoàn tác.';
+  return `${what}${r.conflicts?.length ? ` Giữ nguyên ${r.conflicts.join(', ')}: người khác đã sửa sau.` : ''} Còn ${r.left} bước.`;
 }
 
 // gộp nhãn đã duyệt vào enriched/ + exports/ (python main.py enrich merge)
@@ -554,7 +503,7 @@ function renderTop() {
     $('imageLabel').textContent = `Cả ảnh: ${img.state ? img.state.label_vi || img.state.label : 'chưa có nhãn'}`;
     $('imageLabel').classList.toggle('on', uid(img) === SEL);
   }
-  const all = units().filter((u) => u.kind !== 'image' && u.kind !== 'manual' && (S.show === 'all' || (S.show === 'people') === (u.kind === 'person')));
+  const all = units().filter((u) => u.kind !== 'image' && (S.show === 'all' || (S.show === 'people') === (u.kind === 'person')));
   const done = all.filter((u) => statusOf(u.state) === 'human').length;
   $('progress').textContent = D ? `${done}/${all.length} ${S.show === 'roi' ? 'vùng' : S.show === 'people' ? 'người' : 'box'} đã duyệt` : '';
 }
@@ -570,7 +519,7 @@ async function loadImage(id, keepSel) {
     if (img.naturalWidth) NAT = { w: img.naturalWidth, h: img.naturalHeight };
   }
   if (!keepSel) {
-    SEL = ''; DRAFT = null;
+    SEL = '';
     // có lọc theo nhãn: chọn sẵn box khớp đầu tiên
     const m = sortReading(visible()).find(isMatch);
     if (m) SEL = uid(m);
@@ -657,7 +606,6 @@ function onKey(e) {
     if (!$('drawer').hidden) return closeDrawer();
     if (typing) return e.target.blur();
     if (DRAW) return setDraw(false);
-    if (DRAFT) return cancelDraft();
     if (SEL) return select('');
   }
   if (typing || !$('drawer').hidden || !$('helpBox').hidden) return;
@@ -675,10 +623,7 @@ function onKey(e) {
   if (k === 'i') { const img = units().find((u) => u.kind === 'image'); if (img) select(uid(img)); return; }
   if (!SEL) return;
   const cu = current();
-  if (cu?.kind === 'manual') {
-    if ((e.key === 'Delete' || e.key === 'Backspace') && !cu.draft) return deleteManual(cu);
-    return;
-  }
+  if (e.key === 'Delete' && cu?.kind === 'person') return deleteBox(cu);
   if (k === 'o') { e.preventDefault(); $('otherText')?.focus(); return; }
   if (k === 'a' || e.key === 'Enter') return act('confirm');
   if (k === 'x') return act('reject');

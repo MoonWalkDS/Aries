@@ -6300,3 +6300,6 @@
 {"at":"2026-11-28T08:56:11.030Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["12_288_p02"],"v":{"label":"sitting","source":"human","round":3,"score":0.8457,"by":"TrKimHieu","at":"2026-11-28T08:56:11.018Z"}}
 {"at":"2026-11-28T08:56:13.833Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["12_302_p01"],"v":{"label":"sitting","source":"human","round":3,"score":0.8978,"by":"TrKimHieu","at":"2026-11-28T08:56:13.823Z"}}
 {"at":"2026-11-28T08:56:15.970Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["12_305_p02"],"v":{"label":"sitting","source":"human","round":3,"score":0.9349,"by":"TrKimHieu","at":"2026-11-28T08:56:15.959Z"}}
+{"at":"2026-11-28T09:22:46.324Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_923_p01"],"d":1}
+{"at":"2026-11-28T09:22:46.324Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_923_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:22:46.320Z"}}
+{"at":"2026-11-28T09:22:46.324Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","12_923_p01"],"v":true}

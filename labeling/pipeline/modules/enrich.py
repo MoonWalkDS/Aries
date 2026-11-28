@@ -38,11 +38,12 @@ import yaml
 from PIL import Image
 
 from .adl_embed import background_of, group_key, load_small
-from .utils import get_logger, image_id_of, read_json, resolve_from_config, write_json
+from .utils import get_logger, image_id_of, list_images, read_json, resolve_from_config, write_json
 
 RelBox = tuple[float, float, float, float]
 BASELINE_PREFIX = "bg-"
 MANUAL_BOXES_FILE = "manual_boxes.json"  # box người dùng tự vẽ bằng label_viewer/, trong annotations/
+MANUAL_PEOPLE_FILE = "manual_people.npz"  # embedding SigLIP của box người tự vẽ, trong work/enrich/people/
 OBJECT_REGIONS_FILE = "object_regions.json"  # vùng đồ vật người vẽ trên label_viewer/objects.html, trong annotations/
 OBJECT_LABELS_FILE = "object_labels.json"  # đồ vật người tick theo vùng: {vùng: {mã ảnh: {items, boxes}}}
 CUSTOM_LABELS_FILE = "custom_labels.json"  # nhãn người tự gõ trên label_viewer/ khi không lớp nào khớp: {profile: {khoá: {text}}}
@@ -645,12 +646,79 @@ def fix_action(action: Optional[dict[str, Any]], pid: str, pred: dict[str, Any],
 
 
 def _manual_entry(m: dict[str, Any]) -> dict[str, Any]:
-    """Box tự vẽ trên trang label_viewer/ ở dạng bản ghi gộp. Nhãn do người đặt nên ``source`` luôn là human."""
+    """Box vật thể tự vẽ cũ trên label_viewer/ (nay vật thể vẽ ở trang Đồ vật). Nhãn do người đặt nên ``source`` luôn là human."""
     label = m.get("label")
     return {
         "id": m["id"], "kind": m.get("kind", "object"), "box": m["box"],
         "label": {"label": label, "label_vi": m.get("label_vi", ""), "source": "human", "score": None} if label else None,
     }
+
+
+def manual_action(m: dict[str, Any], names: dict[str, str]) -> Optional[dict[str, Any]]:
+    """Hành động của một box người tự vẽ (label_viewer lưu ngay trong manual_boxes.json): lớp có sẵn hoặc tự gõ."""
+    if m.get("custom"):
+        return {"label": m["custom"], "label_vi": m["custom"], "source": "human", "score": None, "custom": True}
+    if m.get("label"):
+        return {"label": m["label"], "label_vi": names.get(m["label"], m.get("label_vi", "")), "source": "human", "score": None}
+    return None
+
+
+def manual_people(
+    cfg: dict[str, Any], data_dir: Path, jsons_dir: Path, images_dir: Optional[Path], encoder: Optional[Any] = None,
+) -> tuple[list[str], np.ndarray, dict[str, dict[str, Any]]]:
+    """Box người tự vẽ -> (ids, embedding, {id: {id, image_id, box}}) để học và đoán "người này là ai".
+
+    Cắt crop như `enrich build` (nới pad_margin, lưu people/crops/<id>.jpg cho viewer) rồi mã hoá bằng cùng
+    model SigLIP. Cache theo (id, box): chỉ mã hoá box mới hoặc box vừa kéo lại. Không có ảnh gốc thì bỏ qua box đó.
+    """
+    log, ecfg = get_logger(), cfg["enrich"]
+    manual_file = jsons_dir / MANUAL_BOXES_FILE
+    boxes: dict[str, list[dict[str, Any]]] = read_json(manual_file) if manual_file.exists() else {}
+    meta = {m["id"]: {"id": m["id"], "image_id": image_id, "box": [float(v) for v in m["box"]]}
+            for image_id, items in boxes.items() for m in items if m.get("kind") == "person"}
+    people_dir = data_dir / "people"
+    cache_path = people_dir / MANUAL_PEOPLE_FILE
+    cached: dict[tuple[str, tuple[float, ...]], np.ndarray] = {}
+    if cache_path.exists():
+        with np.load(cache_path) as data:
+            cached = {(str(i), tuple(float(v) for v in b)): vec for i, b, vec in zip(data["ids"], data["boxes"], data["vectors"])}
+    key = lambda pid: (pid, tuple(meta[pid]["box"]))  # noqa: E731
+    todo = [pid for pid in sorted(meta) if key(pid) not in cached]
+    if todo:
+        paths = {image_id_of(p): p for p in list_images(images_dir)} if images_dir is not None and Path(images_dir).is_dir() else {}
+        missing = [pid for pid in todo if meta[pid]["image_id"] not in paths]
+        if missing:
+            log.warning("enrich merge: %d box người tự vẽ chưa mã hoá được (không thấy ảnh gốc), ví dụ %s", len(missing), missing[:3])
+        todo = [pid for pid in todo if pid not in missing]
+    if todo:
+        owns_encoder = encoder is None
+        if owns_encoder:
+            from .adl_embed import ClipImageEncoder
+
+            encoder = ClipImageEncoder(cfg["adl"]["clip"]["model"], cfg["adl"]["clip"]["pretrained"], ecfg.get("device", "auto"))
+        (people_dir / "crops").mkdir(parents=True, exist_ok=True)
+        margin, thumb, batch = float(ecfg["person"]["pad_margin"]), int(ecfg["crop_thumb_long_side"]), int(ecfg["batch_size"])
+        for start in range(0, len(todo), batch):
+            chunk, crops = todo[start:start + batch], []
+            for pid in chunk:
+                image = Image.open(paths[meta[pid]["image_id"]]).convert("RGB")
+                crop = image.crop(pad_pixels(meta[pid]["box"], margin, *image.size))
+                _thumbnail(crop.copy(), thumb).save(people_dir / "crops" / f"{pid}.jpg", quality=88)
+                crops.append(crop)
+            for pid, vector in zip(chunk, encoder.encode(crops)):
+                cached[key(pid)] = np.asarray(vector, np.float32)
+        log.info("enrich merge: mã hoá %d box người tự vẽ", len(todo))
+        if owns_encoder:
+            del encoder
+            from .utils import free_gpu_memory
+
+            free_gpu_memory()
+    ids = [pid for pid in sorted(meta) if key(pid) in cached]
+    vectors = np.stack([cached[key(pid)] for pid in ids]).astype(np.float32) if ids else np.zeros((0, 1), np.float32)
+    if ids or cache_path.exists():   # chỉ giữ box còn tồn tại: box đã xoá hoặc kéo lại không nằm mãi trong cache
+        people_dir.mkdir(parents=True, exist_ok=True)
+        np.savez(cache_path, ids=np.array(ids), boxes=np.array([meta[pid]["box"] for pid in ids], np.float64).reshape(-1, 4), vectors=vectors)
+    return ids, vectors, {pid: meta[pid] for pid in ids}
 
 
 def region_objects(jsons_dir: Path, image_ids: Sequence[str]) -> dict[str, dict[str, dict[str, Any]]]:
@@ -681,7 +749,7 @@ def region_objects(jsons_dir: Path, image_ids: Sequence[str]) -> dict[str, dict[
     return out
 
 
-def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str, Any]:
+def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path, images_dir: Optional[Path] = None, encoder: Optional[Any] = None) -> dict[str, Any]:
     """Gộp tầng người + tầng vùng + nhãn hiện có thành một bản ghi mỗi ảnh trong ``enriched/``.
 
     Mỗi nhãn mang ``source``: ``human`` (đã duyệt), ``seed`` (hạt giống chưa duyệt) hay ``suggested``
@@ -720,7 +788,17 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
     from . import identity as ident_mod
 
     identity = ident_mod.load_identity(jsons_dir)
-    training = ident_mod.train_predict(cfg, data_dir, jsons_dir) if any(identity[1].values()) or any(identity[2].values()) else {"skipped": "chưa đặt tên"}
+    # box người tự vẽ cũng được học (nếu đã đặt tên) và được đoán tên như người do máy dò
+    extra = manual_people(cfg, data_dir, jsons_dir, images_dir, encoder)
+    image_paths = {image_id_of(p): p for p in list_images(images_dir)} if images_dir is not None and Path(images_dir).is_dir() else {}
+
+    def image_size(image_id: str) -> tuple[int, int]:
+        path = image_paths.get(image_id)
+        if path is None:
+            return 1280, 720   # mọi ảnh Castle5000 cùng cỡ; chỉ dùng khi không có ảnh gốc (test, máy cloud)
+        with Image.open(path) as im:
+            return im.size
+    training = ident_mod.train_predict(cfg, data_dir, jsons_dir, extra) if any(identity[1].values()) or any(identity[2].values()) else {"skipped": "chưa đặt tên"}
     pred = ident_mod.load_pred(jsons_dir) if "skipped" not in training else {}
     min_prob = float(cfg["enrich"]["identity"]["min_prob"])
     final = {pid: ident_mod.final_identity(pid, identity, pred, min_prob) for pid in people}
@@ -740,7 +818,7 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
         if person["id"] not in not_person:
             by_image.setdefault(person["image_id"], []).append(person)
     out_dir = jsons_dir / "enriched"
-    counts = {"images": 0, "people": 0, "people_labeled": 0, "people_described": 0, "people_named": 0, "roi_states": 0, "manual_boxes": 0, "objects": 0, "region_object_slots": 0}
+    counts = {"images": 0, "people": 0, "people_labeled": 0, "people_described": 0, "people_named": 0, "roi_states": 0, "manual_boxes": 0, "manual_people": 0, "objects": 0, "region_object_slots": 0}
     records: list[dict[str, Any]] = []
     for i, image_id in enumerate(image_ids):
         persons = []
@@ -749,11 +827,21 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
             outfit = ident_mod.outfit_for(outfits, (final[person["id"]] or {}).get("name"), group_key(image_id))
             attributes, attributes_source = ident_mod.apply_outfit(attrs.get(person["id"]), outfit)
             persons.append({**{k: person[k] for k in ("id", "box", "score", "zone")}, "zone_vi": name_vi.get(person["zone"] or "", ""), "action": action,
-                            "attributes": attributes, "attributes_source": attributes_source, "identity": final[person["id"]], "outfit": outfit})
+                            "attributes": attributes, "attributes_source": attributes_source, "identity": final[person["id"]], "outfit": outfit, "source": "detector"})
+        # Người tự vẽ ngang người máy dò (docs/adr/0001): đếm vào num_people, vào dataset, vào tìm ảnh
+        for m in sorted((m for m in manual_boxes.get(image_id, []) if m.get("kind") == "person"), key=lambda m: m["id"]):
+            zone, _ = assign_zone(m["box"], *image_size(image_id), rois, float(cfg["enrich"]["person"]["min_zone_overlap"]))
+            ident = ident_mod.final_identity(m["id"], identity, pred, min_prob)
+            outfit = ident_mod.outfit_for(outfits, (ident or {}).get("name"), group_key(image_id))
+            attributes, attributes_source = ident_mod.apply_outfit(None, outfit)
+            persons.append({"id": m["id"], "box": m["box"], "score": None, "zone": zone, "zone_vi": name_vi.get(zone or "", ""), "action": manual_action(m, person_labels[2]),
+                            "attributes": attributes, "attributes_source": attributes_source, "identity": ident, "outfit": outfit, "source": "manual"})
+            counts["manual_people"] += 1
+        for p in persons:
             counts["people"] += 1
-            counts["people_labeled"] += action is not None
-            counts["people_described"] += attributes is not None
-            counts["people_named"] += bool((persons[-1]["identity"] or {}).get("name"))
+            counts["people_labeled"] += p["action"] is not None
+            counts["people_described"] += p["attributes"] is not None
+            counts["people_named"] += bool((p["identity"] or {}).get("name"))
         regions = {}
         for r, name in enumerate(roi_names):
             if name not in roi_labels:
@@ -762,7 +850,7 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
             state = _label_entry(image_id if is_changed else f"{BASELINE_PREFIX}{group_key(image_id)}", *roi_labels[name])
             regions[name] = {"name_vi": name_vi.get(name, ""), "changed": is_changed, "motion": round(float(motion[i, r]), 4), "state": state}
             counts["roi_states"] += state is not None
-        manual = [_manual_entry(m) for m in manual_boxes.get(image_id, [])]
+        manual = [_manual_entry(m) for m in manual_boxes.get(image_id, []) if m.get("kind") != "person"]
         counts["manual_boxes"] += len(manual)
         image_objects = objects.get(image_id, [])
         counts["objects"] += len(image_objects)
@@ -783,6 +871,11 @@ def run_merge(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str,
                      (data_dir / "people" / "embeddings.npy", "people.npy"), (data_dir / "people" / "ids.json", "people_ids.json")):
         if Path(src).exists():
             shutil.copyfile(src, emb_dir / dst)
+    if extra[0] and (emb_dir / "people.npy").exists():   # crop người tự vẽ đứng sau crop người máy dò
+        vectors = np.load(emb_dir / "people.npy")
+        if vectors.shape[1] == extra[1].shape[1]:
+            np.save(emb_dir / "people.npy", np.concatenate([vectors, extra[1].astype(vectors.dtype)]))
+            write_json(emb_dir / "people_ids.json", read_json(emb_dir / "people_ids.json") + [f"{pid}.jpg" for pid in extra[0]])
     return {**counts, "identity_model": training, **outfit_update, "objects_static_dropped": static_dropped, "out_dir": str(out_dir), "dataset": str(exports)}
 
 
@@ -804,7 +897,7 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
             for p in r["people"]:
                 a = p.get("action") or {}
                 people_rows.append({"image_id": r["image_id"], "hour": r["hour"], "person_id": p["id"], "x1": p["box"][0], "y1": p["box"][1], "x2": p["box"][2], "y2": p["box"][3],
-                                    "det_score": p["score"], "zone": p.get("zone") or "", "action": a.get("label", ""), "action_vi": a.get("label_vi", ""),
+                                    "det_score": p["score"], "box_source": p.get("source", "detector"), "zone": p.get("zone") or "", "action": a.get("label", ""), "action_vi": a.get("label_vi", ""),
                                     "source": a.get("source", ""), "custom": bool(a.get("custom")),
                                     "identity_cluster": (p.get("identity") or {}).get("cluster") or "", "identity_name": (p.get("identity") or {}).get("name") or "",
                                     "identity_source": (p.get("identity") or {}).get("source") or "", "identity_prob": ((p.get("identity") or {}).get("predicted") or {}).get("prob", ""),
@@ -825,7 +918,7 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
                 s = roi.get("state") or {}
                 roi_rows.append({"image_id": r["image_id"], "hour": r["hour"], "roi": name, "changed": roi["changed"], "motion": roi["motion"],
                                  "state": s.get("label", ""), "state_vi": s.get("label_vi", ""), "source": s.get("source", ""), "custom": bool(s.get("custom"))})
-    for name, rows, fields in (("people.csv", people_rows, ["image_id", "hour", "person_id", "x1", "y1", "x2", "y2", "det_score", "zone", "action", "action_vi", "source", "custom", "identity_cluster", "identity_name", "identity_source", "identity_prob", *ATTR_FIELDS, *outfit_fields]),
+    for name, rows, fields in (("people.csv", people_rows, ["image_id", "hour", "person_id", "x1", "y1", "x2", "y2", "det_score", "box_source", "zone", "action", "action_vi", "source", "custom", "identity_cluster", "identity_name", "identity_source", "identity_prob", *ATTR_FIELDS, *outfit_fields]),
                                ("rois.csv", roi_rows, ["image_id", "hour", "roi", "changed", "motion", "state", "state_vi", "source", "custom"]),
                                ("objects.csv", object_rows, ["image_id", "hour", "object_id", "label", "x1", "y1", "x2", "y2", "score", "source"]),
                                ("region_objects.csv", region_rows, ["image_id", "hour", "region", "object", "has_box", "source", "from_image"])):
@@ -842,6 +935,7 @@ def write_dataset(records: Sequence[dict[str, Any]], out_dir: Path) -> None:
         "region_images_labeled": len({r["image_id"] for r in region_rows}),
         "roi_slots": len(roi_rows), "roi_labeled": sum(1 for r in roi_rows if r["state"]),
         "people_by_source": dict(Counter(r["source"] or "none" for r in people_rows)),
+        "people_by_box_source": dict(Counter(r["box_source"] for r in people_rows)),
         "rois_by_source": dict(Counter(r["source"] or "none" for r in roi_rows)),
         "actions": dict(Counter(r["action"] for r in people_rows if r["action"]).most_common()),
         "roi_states": {n: dict(Counter(r["state"] for r in roi_rows if r["roi"] == n and r["state"]).most_common()) for n in dict.fromkeys(r["roi"] for r in roi_rows)},

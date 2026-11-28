@@ -1,15 +1,12 @@
 // Gán nhanh hành động, một người một lần. Hàng đợi:
-//   Duyệt: <hành động>: người máy gán hành động đó (chưa ai duyệt). Z = đúng, X = sai (vào "Cần gán lại").
+//   Duyệt: <hành động>: người máy gán hành động đó (chưa ai duyệt). A = đúng, X = sai (vào "Cần gán lại").
 //   Cần gán lại: người đã bị bác một nhãn máy, chưa có nhãn người duyệt.  Lệch vùng: nhãn máy mâu thuẫn với vùng đứng.
-//   Thầy tả: <hành động>: câu mô tả của thầy tả người này làm hành động đó; Z = nhận, X = sai.
-//   Nghi sai: `enrich actions` (gộp VLM, SigLIP, vùng, câu mô tả của thầy) chọn lớp khác nhãn máy; Z = nhận đề xuất, X = bác nhãn máy.
-// Phím số / chữ cố định theo hành động (KEYS); Space / →: bỏ qua; ←: người trước; Backspace: hoàn tác.
+//   Thầy tả: <hành động>: câu mô tả của thầy tả người này làm hành động đó; A = nhận, X = sai.
+//   Nghi sai: `enrich actions` (gộp VLM, SigLIP, vùng, câu mô tả của thầy) chọn lớp khác nhãn máy; A = nhận đề xuất, X = bác nhãn máy.
+// Phím chung mọi trang: A/Enter đúng, X sai, Z hoàn tác, Del xoá box, Space/→ bỏ qua, ← quay lại.
+// Phím số / chữ theo hành động: thứ tự ghim trong label_definitions/hotkeys.yaml, còn lại theo số nhãn (/api/hotkeys).
 'use strict';
-const KEYS = [   // [phím, lớp]: lớp hay gặp lên phím số
-  ['1', 'standing idle'], ['2', 'walking'], ['3', 'preparing food'], ['4', 'cooking at the stove'], ['5', 'washing dishes'],
-  ['6', 'opening the refrigerator'], ['7', 'carrying something'], ['8', 'talking'], ['9', 'making a hot drink'], ['0', 'getting items from a cabinet'],
-  ['q', 'eating'], ['w', 'drinking'], ['e', 'using a phone'], ['r', 'using a laptop'], ['t', 'sitting'], ['y', 'cleaning'], ['u', 'throwing away trash'],
-];
+let KEYS = [];   // [phím, lớp]
 let VI = {}, QUEUE = [], I = 0, BUSY = false, MODE = '', LEFT = null;
 const done = [];
 const msg = (t, err) => { $('msg').textContent = t; $('msg').style.color = err ? '#c0392b' : ''; };
@@ -23,11 +20,12 @@ function renderKeys(x) {
     return b;
   };
   $('keys').replaceChildren(
-    row('Z', x?.label ? `Đúng: ${vi(x.label)}` : 'Đúng (chưa có nhãn)', 'ok', accept),
+    row('A', x?.label ? `Đúng: ${vi(x.label)}` : 'Đúng (chưa có nhãn)', 'ok', accept),
     row('X', MODE === 'recheck' ? 'Bỏ qua' : 'Sai: để gán lại sau', 'danger', reject),
     ...KEYS.map(([k, l]) => row(k.toUpperCase(), vi(l), l === x?.label ? 'guess' : '', () => setLabel(l, k.toUpperCase()))),
+    row('Del', 'Xoá box (không phải người)', 'danger', delBox),
     row('␣', 'Bỏ qua (Space / →)', '', () => go(1)),
-    row('⌫', 'Hoàn tác (Backspace)', '', undo));
+    row('Z', 'Hoàn tác', '', undo));
 }
 
 const showCount = () => { const x = QUEUE[I]; $('count').textContent = x ? `${I + 1} / ${QUEUE.length}${LEFT != null ? ` · còn ${LEFT}` : ''}${x.h != null ? ` · cao ${x.h}px` : ''}` : (LEFT != null ? `còn ${LEFT}` : ''); };
@@ -52,9 +50,9 @@ function renderCard(x) {
     return b;
   };
   const parts = [];
-  if (MODE === 'suspect') parts.push(box('from', 'Máy đang gán', vi(x.machine) || '—'), el('span', 'a-arrow', '→'), box('to', 'Đề xuất', vi(x.label), '<kbd>Z</kbd> nhận · <kbd>X</kbd> bác nhãn máy'));
-  else if (MODE.startsWith('teacher:')) parts.push(box('to', 'Thầy tả: có phải', vi(x.label), '<kbd>Z</kbd> đúng · <kbd>X</kbd> sai'));
-  else if (x.label) parts.push(box('to', 'Có phải', vi(x.label), MODE === 'recheck' ? '<kbd>Z</kbd> đúng · phím số để gán khác' : '<kbd>Z</kbd> đúng · <kbd>X</kbd> sai'));
+  if (MODE === 'suspect') parts.push(box('from', 'Máy đang gán', vi(x.machine) || '—'), el('span', 'a-arrow', '→'), box('to', 'Đề xuất', vi(x.label), '<kbd>A</kbd> nhận · <kbd>X</kbd> bác nhãn máy'));
+  else if (MODE.startsWith('teacher:')) parts.push(box('to', 'Thầy tả: có phải', vi(x.label), '<kbd>A</kbd> đúng · <kbd>X</kbd> sai'));
+  else if (x.label) parts.push(box('to', 'Có phải', vi(x.label), MODE === 'recheck' ? '<kbd>A</kbd> đúng · phím số để gán khác' : '<kbd>A</kbd> đúng · <kbd>X</kbd> sai'));
   else parts.push(box('none', 'Chưa có nhãn', 'Chọn bằng phím số'));
   const side = el('div', 'a-side');
   if (x.zone_vi) { const c = el('span', 'a-chip'); c.append(el('span', '', 'Vùng'), x.zone_vi); side.append(c); }
@@ -83,7 +81,8 @@ async function send(op, key, text, result) {
   if (!x || BUSY) return;
   BUSY = true;
   try {
-    await api('/api/label', { ops: [{ profile: 'people', key: x.id, ...op }] });
+    if (op.delete) await api('/api/person/delete', { ids: [x.id] });
+    else await api('/api/label', { ops: [{ profile: 'people', key: x.id, ...op }] });
     document.querySelector(`.q-key[data-key="${CSS.escape(key)}"]`)?.classList.add('flash');
     x.result = { ...result, key };
     done.push(I);
@@ -96,8 +95,9 @@ const setLabel = (label, key) => send({ action: 'set', label }, key, `Đã gán 
 function accept() {
   const x = QUEUE[I];
   if (!x?.label) return msg('Chưa có nhãn để xác nhận: dùng phím số.', true);
-  send({ action: 'set', label: x.label }, 'Z', `Đúng: "${vi(x.label)}".`, { kind: 'ok', text: vi(x.label) });   // set, không confirm: nhãn đang hiện có thể là nhãn gộp
+  send({ action: 'set', label: x.label }, 'A', `Đúng: "${vi(x.label)}".`, { kind: 'ok', text: vi(x.label) });   // set, không confirm: nhãn đang hiện có thể là nhãn gộp
 }
+const delBox = () => send({ delete: true }, 'Del', 'Đã xoá box. Z để hoàn tác.', { kind: 'bad', text: 'đã xoá box' });
 function reject() {
   const x = QUEUE[I];
   if (MODE === 'recheck' || !x?.label) return go(1);
@@ -106,12 +106,15 @@ function reject() {
 async function undo() {
   if (BUSY || !done.length) return msg('Không còn gì để hoàn tác.', true);
   BUSY = true;
-  try { await api('/api/undo', {}); I = done.pop(); delete QUEUE[I]?.result; msg('Đã hoàn tác.'); show(); refreshCounts(); } catch (e) { msg(e.message, true); } finally { BUSY = false; }
+  try { const r = await api('/api/undo', {}); I = done.pop(); delete QUEUE[I]?.result; show(); msg(undoText(r), !!r.conflicts?.length); refreshCounts(); } catch (e) { msg(e.message, true); } finally { BUSY = false; }
 }
+const undoText = (r) => `${r.desc ? `Đã hoàn tác: ${r.desc}${r.page ? ` (trang ${r.page})` : ''}.` : 'Đã hoàn tác.'}${r.conflicts?.length ? ` Giữ nguyên ${r.conflicts.join(', ')}: người khác đã sửa sau.` : ''}`;
+
 
 async function load() {
   const sum = await api('/api/action/summary');
   VI = Object.fromEntries(sum.classes.map((c) => [c.name, c.name_vi]));
+  KEYS = (await api('/api/hotkeys')).actions;
   if (!$('mode').options.length) {   // lần đầu: hàng theo từng lớp (nhiều nhãn máy trước), rồi hai hàng đặc biệt
     for (const c of [...sum.classes].sort((a, b) => (sum.pending[b.name] || 0) - (sum.pending[a.name] || 0))) $('mode').append(new Option(c.name, `label:${c.name}`));
     // hàng "Thầy tả" mỗi lớp có gợi ý, mở tủ lạnh lên đầu
@@ -137,11 +140,12 @@ document.addEventListener('keydown', (e) => {
   const k = e.key.toLowerCase();
   const hit = KEYS.find(([key]) => key === k);
   if (hit) setLabel(hit[1], hit[0].toUpperCase());
-  else if (k === 'z') accept();
+  else if (k === 'a' || k === 'enter') accept();
   else if (k === 'x') reject();
+  else if (k === 'z') undo();
+  else if (k === 'delete') delBox();
   else if (k === ' ' || k === 'arrowright') go(1);
   else if (k === 'arrowleft') go(-1);
-  else if (k === 'backspace') undo();
   else return;
   e.preventDefault();
 });

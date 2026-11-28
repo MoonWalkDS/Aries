@@ -305,13 +305,17 @@ def test_people_and_roi_loops_then_merge(project):
     pot = json.loads((jsons / "enriched" / "08_8.json").read_text(encoding="utf-8"))
     assert pot["rois"]["stove"]["changed"] and pot["rois"]["stove"]["state"]["label"] == "pot on stove"
     person = json.loads((jsons / "enriched" / "08_12.json").read_text(encoding="utf-8"))
-    assert person["num_people"] == 1 and person["people"][0]["zone"] == "stove" and person["people"][0]["zone_vi"] == "bếp"
+    assert person["num_people"] == 2 and person["people"][0]["zone"] == "stove" and person["people"][0]["zone_vi"] == "bếp"
     assert person["people"][0]["action"]["label"] == "standing" and person["people"][0]["action"]["source"] in {"seed", "suggested"}
-    assert person["num_people"] == 1                                                  # box tự vẽ không cộng vào người do máy dò
-    assert person["manual"] == [
-        {"id": "08_12_m01", "kind": "object", "box": [10, 20, 60, 80], "label": {"label": "chảo", "label_vi": "", "source": "human", "score": None}},
-        {"id": "08_12_m02", "kind": "person", "box": [5, 5, 30, 90], "label": None},
-    ]
+    assert person["num_people"] == 2                                                  # người tự vẽ ngang người máy dò (docs/adr/0001)
+    drawn = person["people"][1]
+    assert (drawn["id"], drawn["source"], drawn["score"], drawn["zone"], drawn["action"]) == ("08_12_m02", "manual", None, "door", None)
+    assert person["people"][0]["source"] == "detector"
+    assert person["manual"] == [{"id": "08_12_m01", "kind": "object", "box": [10, 20, 60, 80], "label": {"label": "chảo", "label_vi": "", "source": "human", "score": None}}]
+    rows = (jsons.parent / "exports" / "people.csv").read_text(encoding="utf-8-sig").splitlines()
+    assert any(r.startswith("08_12,08,08_12_m02,") and ",manual," in r for r in rows)
+    people_ids = json.loads((jsons.parent / "exports" / "embeddings" / "people_ids.json").read_text(encoding="utf-8"))
+    assert people_ids[-1] == "08_12_m02.jpg" and len(people_ids) == np.load(jsons.parent / "exports" / "embeddings" / "people.npy").shape[0]
 
 
 

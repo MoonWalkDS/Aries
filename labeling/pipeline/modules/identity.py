@@ -92,7 +92,7 @@ OUTFIT_PREFILL = ("gender", "age", "hair", "top", "top_color", "top_pattern", "b
 OUTFIT_MANUAL = ("stripe_direction", "top_color_upper", "top_color_lower", "description")
 
 
-def train_predict(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[str, Any]:
+def train_predict(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path, extra: Optional[tuple[list[str], np.ndarray, dict[str, Any]]] = None) -> dict[str, Any]:
     """Học "crop này là ai" từ mọi crop đã có tên (theo cụm hoặc đặt riêng), rồi đoán cho MỌI crop.
 
     Logistic regression trên embedding SigLIP: bộ này chỉ có ~10–15 người, mỗi người một bộ đồ, nên cố ý
@@ -104,6 +104,11 @@ def train_predict(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[
     icfg = cfg["enrich"]["identity"]
     assign, cluster_names, person_names = load_identity(jsons_dir)
     ids = [Path(str(n)).stem for n in read_json(data_dir / "people" / "ids.json")]
+    vectors = np.load(data_dir / "people" / "embeddings.npy").astype(np.float32)
+    people_file = data_dir / "people" / "people.json"
+    people = read_json(people_file) if people_file.exists() else {}
+    if extra and extra[0]:   # box người tự vẽ (enrich.manual_people): (ids, embedding, {id: {box, ...}})
+        ids, vectors, people = ids + list(extra[0]), np.concatenate([vectors, extra[1]]), {**people, **extra[2]}
     labels = []
     for pid in ids:
         ident = identity_of(pid, assign, cluster_names, person_names)
@@ -115,7 +120,6 @@ def train_predict(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[
     usable = {n for n, c in counts.items() if c >= int(icfg["min_examples"])}
     if len(usable) < 2:
         return {"skipped": f"cần ít nhất 2 tên, mỗi tên >= {icfg['min_examples']} crop; đang có {counts}"}
-    vectors = np.load(data_dir / "people" / "embeddings.npy").astype(np.float32)
     train = [j for j, n in enumerate(labels) if n in usable]
     model = LogisticRegression(max_iter=2000, C=float(icfg["c"]), class_weight="balanced")
     model.fit(vectors[train], [labels[j] for j in train])
@@ -125,7 +129,7 @@ def train_predict(cfg: dict[str, Any], data_dir: Path, jsons_dir: Path) -> dict[
     tcfg = icfg.get("track")
     if tcfg:
         # crop phân vân lấy tên theo cả vệt (cùng người qua các ảnh liền kề): đúng 0,655 -> 0,741 trên crop phân vân
-        track = person_tracks(ids, read_json(data_dir / "people" / "people.json"), vectors, int(tcfg["max_gap"]), float(tcfg["min_iou"]), float(tcfg["min_cos"]))
+        track = person_tracks(ids, people, vectors, int(tcfg["max_gap"]), float(tcfg["min_iou"]), float(tcfg["min_cos"]))
         logp = np.log(proba + 1e-6)
         for t in np.unique(track):
             members = np.where(track == t)[0]

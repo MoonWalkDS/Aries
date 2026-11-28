@@ -104,25 +104,31 @@ test('sửa bg-HH ảnh hưởng mọi ảnh cùng giờ; từ chối lớp lạ
   assert.throws(() => s.apply([{ profile: 'people', key: '08_1_p01', action: 'reset' }]), (e) => e.status === 409);
 });
 
-test('box thủ công: thêm, sửa nhãn, xoá, hoàn tác, kiểm lớp', () => {
+test('box người tự vẽ: vẽ là thành Người, gán hành động như mọi người (kể cả tự gõ), sửa khung, xoá, hoàn tác', () => {
   const root = fixture();
   const s = new Store(root);
   const file = path.join(root, 'annotations/manual_boxes.json');
-  const { id } = s.manualOp({ action: 'add', image_id: '08_1', box: [10, 20, 110, 220], kind: 'person' });
+  const { id } = s.manualOp({ action: 'add', image_id: '08_1', box: [10, 20, 110, 220] });
   assert.equal(id, '08_1_m01');
-  s.manualOp({ action: 'update', image_id: '08_1', id, label: 'sitting' });
-  let saved = JSON.parse(fs.readFileSync(file, 'utf8'))['08_1'][0];
-  assert.deepEqual([saved.box, saved.kind, saved.label, saved.label_vi], [[10, 20, 110, 220], 'person', 'sitting', 'ngồi']);
-  assert.throws(() => s.manualOp({ action: 'update', image_id: '08_1', id, label: 'flying' }), /không thuộc/);
-  assert.throws(() => s.manualOp({ action: 'add', image_id: '08_1', box: [0, 0, 2, 2], kind: 'object' }), /quá nhỏ/);
-  s.manualOp({ action: 'update', image_id: '08_1', id, kind: 'object', label: 'cái chảo' });
-  assert.deepEqual(s.query({ q: 'cai chao' }).map((r) => r.image_id), ['08_1']);
-  assert.deepEqual(s.query({ manual: true }).map((r) => r.image_id), ['08_1']);
-  assert.equal(s.meta().manual.objectLabels[0], 'cái chảo');
-  s.manualOp({ action: 'delete', image_id: '08_1', id });
+  assert.deepEqual(s.detail('08_1').people.map((p) => [p.id, p.manual]), [['08_1_p01', false], ['08_1_m01', true]]);
+  assert.equal(s.byId.get('08_1').num_people, 2);
+  s.apply([{ profile: 'people', key: id, action: 'set', label: 'sitting' }]);
+  const saved = JSON.parse(fs.readFileSync(file, 'utf8'))['08_1'][0];
+  assert.deepEqual([saved.box, saved.kind, saved.label], [[10, 20, 110, 220], 'person', 'sitting']);
+  assert.deepEqual(s.resolve('people', id), { label: 'sitting', label_vi: 'ngồi', group: 'Rest', source: 'human', score: null, vlm: null });
+  assert.ok(!fs.readFileSync(path.join(root, 'annotations/adl_people/approved.json'), 'utf8').includes(id));   // không vào approved.json của pipeline
+  s.apply([{ profile: 'people', key: id, action: 'custom', text: 'rót nước' }]);
+  assert.equal(s.resolve('people', id).custom, true);
+  assert.deepEqual(s.query({ q: 'rot nuoc' }).map((r) => r.image_id), ['08_1']);
+  assert.throws(() => s.apply([{ profile: 'people', key: id, action: 'set', label: 'flying' }]), /không thuộc/);
+  assert.throws(() => s.manualOp({ action: 'add', image_id: '08_1', box: [0, 0, 2, 2] }), /quá nhỏ/);
+  s.manualOp({ action: 'update', image_id: '08_1', id, box: [12, 20, 110, 220] });
+  s.deletePeople([id]);
   assert.equal(JSON.parse(fs.readFileSync(file, 'utf8'))['08_1'], undefined);
-  s.undo();
-  assert.equal(s.detail('08_1').manual[0].label, 'cái chảo');
+  assert.equal(s.undo().desc, `xoá box ${id}`);
+  assert.equal(s.detail('08_1').people[1].box[0], 12);
+  s.undo();                                                                              // trả khung cũ, giữ nhãn tự gõ
+  assert.deepEqual([s.detail('08_1').people[1].box[0], s.resolve('people', id).label], [10, 'rót nước']);
 });
 
 test('nhãn tự gõ: thắng nhãn máy, đánh dấu nhãn máy sai, hoàn tác được, chọn lớp thì xoá', () => {
@@ -137,7 +143,7 @@ test('nhãn tự gõ: thắng nhãn máy, đánh dấu nhãn máy sai, hoàn tá
   assert.deepEqual(s.query({ q: 'rot nuoc' }).map((r) => r.image_id), ['08_1']);
   s.apply([{ profile: 'people', key: '08_1_p01', action: 'confirm' }]);
   assert.equal(s.resolve('people', '08_1_p01').custom, true);
-  s.undo(); s.undo();
+  s.undo();                                                                              // xác nhận nhãn tự gõ không đổi gì: không thành bước
   assert.equal(s.resolve('people', '08_1_p01').label, 'opening the refrigerator');
   assert.equal(new Store(root).resolve('people', '08_1_p01').custom, undefined);
   s.apply([{ profile: 'people', key: '08_1_p01', action: 'custom', text: 'x' }]);
@@ -246,19 +252,81 @@ test('lọc hành động lệch vùng: nhãn máy mâu thuẫn với vùng đ�
   assert.deepEqual(s.query({ conflict: true }), []);                     // người đã duyệt: không đưa lại vào hàng
 });
 
-test('không phải người: rời mọi danh sách, đếm riêng, hoàn tác được', () => {
+test('xoá box máy dò: ẩn khỏi trang ảnh, hàng đợi, bộ lọc, đếm riêng; hoàn tác thì hiện lại', () => {
   const root = fixture();
   fs.writeFileSync(path.join(root, 'annotations/identities.json'), JSON.stringify({ clusters: { c01: { size: 2, examples: [] } }, assign: { '08_1_p01': { cluster: 'c01', sim: 0.9 }, '09_3_p01': { cluster: 'c01', sim: 0.7 } } }));
   const s = new Store(root);
-  s.setIdentity({ scope: 'person', persons: ['08_1_p01'], notPerson: true });
+  s.page = 'Gán nhanh danh tính';
+  s.setIdentity({ scope: 'person', persons: ['08_1_p01'], notPerson: true });          // trang gán nhanh cũ: "không phải người"
   assert.deepEqual(s.identityMembers({ cluster: 'c01' }).map((x) => x.id), ['09_3_p01']);
   assert.equal(s.identitySummary().notPerson, 1);
+  assert.deepEqual(s.detail('08_1').people, []);
+  assert.equal(s.byId.get('08_1').num_people, 0);
+  assert.deepEqual(s.query({ tokens: [{ profile: 'people', label: 'opening the refrigerator' }] }), []);
+  assert.deepEqual(s.actionMembers({ label: 'opening the refrigerator' }), []);
+  assert.throws(() => s.setIdentity({ scope: 'person', persons: ['08_1_p01'], name: 'An' }), /Không có người/);
   const saved = JSON.parse(fs.readFileSync(path.join(root, 'annotations/identity_names.json'), 'utf8'));
   assert.deepEqual(saved.not_person, { '08_1_p01': true });
-  s.setIdentity({ scope: 'person', persons: ['08_1_p01'], name: 'An' });                 // gán tên lại thì bỏ dấu
+  const r = s.undo();
+  assert.deepEqual([r.desc, r.page], ['xoá box 08_1_p01', 'Gán nhanh danh tính']);
   assert.equal(s.identitySummary().notPerson, 0);
+  assert.deepEqual(s.detail('08_1').people.map((p) => p.id), ['08_1_p01']);
+});
+
+test('sửa khung box máy dò: ẩn box cũ, box tự vẽ mới mang hành động và tên người gán; một bước hoàn tác', () => {
+  const root = fixture();
+  const s = new Store(root);
+  s.apply([{ profile: 'people', key: '08_1_p01', action: 'confirm' }]);
+  s.setIdentity({ scope: 'person', person: '08_1_p01', name: 'An' });
+  const { id } = s.replacePerson('08_1_p01', [1, 1, 50, 60]);
+  assert.equal(id, '08_1_m01');
+  assert.deepEqual(s.detail('08_1').people.map((p) => p.id), ['08_1_m01']);
+  assert.equal(s.resolve('people', id).label, 'opening the refrigerator');
+  assert.equal(s.identity(id).name, 'An');
   s.undo();
-  assert.equal(s.identitySummary().notPerson, 1);
+  assert.deepEqual(s.detail('08_1').people.map((p) => p.id), ['08_1_p01']);
+  assert.equal(s.identity('08_1_m01'), null);
+  assert.equal(s.identity('08_1_p01').name, 'An');
+});
+
+test('hoàn tác theo mục: không đè thay đổi của người khác, báo xung đột', () => {
+  const root = fixture();
+  const s = new Store(root);
+  s.actor = 'an';
+  s.setIdentity({ scope: 'person', persons: ['08_1_p01', '09_3_p01'], name: 'An' });
+  s.actor = 'binh';
+  s.setIdentity({ scope: 'person', person: '09_3_p01', name: 'Bình' });                 // sửa sau, đúng một mục của 'an'
+  s.setIdentity({ scope: 'person', person: '09_3_p02', name: 'Chi' });                  // mục khác: không liên quan
+  s.actor = 'an';
+  const r = s.undo();
+  assert.deepEqual(r.conflicts, ['09_3_p01']);
+  assert.equal(s.identity('08_1_p01'), null);                                           // mục của mình: trả lại
+  assert.deepEqual([s.identity('09_3_p01').name, s.identity('09_3_p02').name], ['Bình', 'Chi']);
+});
+
+test('file bị chỗ khác ghi: tự nạp lại; làm tiếp nếu mục không đổi, báo nếu chính mục đó đã đổi', () => {
+  const root = fixture();
+  const s = new Store(root);
+  const names = path.join(root, 'annotations/identity_names.json');
+  s.setIdentity({ scope: 'person', person: '08_1_p01', name: 'An' });
+  const later = (doc) => { fs.writeFileSync(names, JSON.stringify(doc)); const t = new Date(Date.now() + 5000); fs.utimesSync(names, t, t); };
+  later({ clusters: {}, people: { '08_1_p01': 'An', '09_3_p02': 'Chi' } });             // máy khác đặt tên người khác
+  s.setIdentity({ scope: 'person', person: '09_3_p01', name: 'Bình' });
+  assert.deepEqual(JSON.parse(fs.readFileSync(names, 'utf8')).people, { '08_1_p01': 'An', '09_3_p01': 'Bình', '09_3_p02': 'Chi' });
+  later({ clusters: {}, people: { '08_1_p01': 'Dũng' } });                              // máy khác sửa đúng mục mình sắp sửa
+  assert.throws(() => s.setIdentity({ scope: 'person', person: '08_1_p01', name: 'Em' }), (e) => e.status === 409);
+  assert.equal(s.identity('08_1_p01').name, 'Dũng');
+});
+
+test('phím tắt: thứ tự ghim trong hotkeys.yaml, phần còn lại theo số crop; không dùng a, x, z, k', () => {
+  const root = fixture();
+  fs.writeFileSync(path.join(root, 'label_definitions/hotkeys.yaml'), 'actions: [sitting]\nnames: [Bình]\n');
+  const s = new Store(root);
+  s.setIdentity({ scope: 'person', persons: ['08_1_p01', '09_3_p01'], name: 'An' });
+  s.setIdentity({ scope: 'person', person: '09_3_p02', name: 'Bình' });
+  const k = s.hotkeys();
+  assert.deepEqual(k.names, [['1', 'Bình'], ['2', 'An']]);
+  assert.deepEqual(k.actions, [['1', 'sitting'], ['2', 'opening the refrigerator']]);
 });
 
 test('sai, gán lại sau: vào hàng recheck, gán tên thì rời hàng, hoàn tác được', () => {
@@ -335,4 +403,26 @@ test('hàng "Thầy tả": người câu của thầy tả, X chỉ bác gợi �
   assert.equal(s.resolve('people', '09_3_p02').label, 'sitting');                     // nhãn máy giữ nguyên
   assert.deepEqual(s.actionMembers({ teacher: 'opening the refrigerator' }), []);
   assert.equal(s.actionSummary().teacher['opening the refrigerator'], undefined);
+});
+
+test('box người tự vẽ: đặt tên như người, mô hình đoán từ lần gộp, xoá thì rời bảng định danh', () => {
+  const root = fixture();
+  const f = path.join(root, 'annotations/enriched/08_1.json');
+  const rec = JSON.parse(fs.readFileSync(f, 'utf8'));
+  rec.people.push({ id: '08_1_m01', box: [1, 2, 3, 4], source: 'manual', zone: 'fridge', identity: { name: 'An', source: 'model', predicted: { name: 'An', prob: 0.9, margin: 0.8 } } });
+  fs.writeFileSync(f, JSON.stringify(rec));
+  fs.writeFileSync(path.join(root, 'annotations/manual_boxes.json'), JSON.stringify({ '08_1': [{ id: '08_1_m01', kind: 'person', box: [1, 2, 3, 4] }] }));
+  const s = new Store(root);
+  assert.equal(s.byId.get('08_1').people.length, 2);                                   // người tự vẽ trong enriched không bị đếm hai lần
+  assert.equal(s.finalIdentity('08_1_m01').name, 'An');
+  assert.equal(s.detail('08_1').people[1].zone, 'fridge');
+  assert.deepEqual(s.identityMembers({ name: 'An' }).map((x) => x.id), ['08_1_m01']);
+  const { id } = s.manualOp({ action: 'add', image_id: '08_1', box: [10, 20, 110, 220] });
+  s.setIdentity({ scope: 'person', person: id, name: 'Bình' });                         // box vừa vẽ, chưa gộp: vẫn đặt tên được
+  assert.equal(s.detail('08_1').people[2].identity.name, 'Bình');
+  assert.equal(s.identitySummary().names['Bình'], 1);
+  s.deletePeople([id]);
+  assert.equal(s.identitySummary().names['Bình'], undefined);
+  s.undo();
+  assert.equal(s.identitySummary().names['Bình'], 1);
 });

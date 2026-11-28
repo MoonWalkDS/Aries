@@ -188,7 +188,7 @@ kbd { font: 11px/1 var(--mono); border: 1px solid var(--line); border-radius: 4p
 .classes input[type=text] { width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; margin: 6px 0 10px; background: var(--canvas); }
 
 /* ---------- sửa box tự vẽ: kéo thân để dời, kéo tay nắm để đổi cỡ */
-.box.manual.sel .hit { cursor: move; }
+.box.sel:not(.roi) .hit { cursor: move; }
 .handle { fill: #fff; stroke: var(--strong); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .handle:hover { fill: var(--strong); }
 .h-nw, .h-se { cursor: nwse-resize; } .h-ne, .h-sw { cursor: nesw-resize; }

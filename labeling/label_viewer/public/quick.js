@@ -1,14 +1,12 @@
 // Gán nhanh danh tính, một người một lần. Ba hàng đợi:
-//   Duyệt theo tên: crop máy đã gán tên đó (chưa ai xác nhận), ít chắc nhất trước. Z = đúng, X = sai (vào "Cần gán lại").
-//   Khó trước: crop chưa gán, mô hình phân vân nhất. Z = nhận tên mô hình đoán.
+//   Duyệt theo tên: crop máy đã gán tên đó (chưa ai xác nhận), ít chắc nhất trước. A = đúng, X = sai (vào "Cần gán lại").
+//   Khó trước: crop chưa gán, mô hình phân vân nhất. A = nhận tên mô hình đoán.
 //   Cần gán lại: crop đã bấm X, gán bằng phím số.
-// Phím số cố định theo người (FIXED); tên còn lại lấy chữ q, w, e, ... K: không rõ; Delete: không phải người;
-// Space / →: bỏ qua; ←: người trước; Backspace: hoàn tác.
+// Phím chung mọi trang: A/Enter đúng, X sai, Z hoàn tác, Del xoá box, Space/→ bỏ qua, ← quay lại. K: không rõ.
+// Phím số / chữ theo người: thứ tự ghim trong label_definitions/hotkeys.yaml, còn lại theo số crop (/api/hotkeys).
 'use strict';
-const FIXED = ['Linh', 'Áo len 2 màu', 'Nữ áo trắng', 'Caro đỏ xanh', 'caro xanh trắng', 'áo khoác xám cao', 'Sơ mi xanh', 'Sơ mi xám trơn (hơi xanh xẫm)', 'Nư áo đen'];
-const LETTERS = 'qwertyuiop';
 let KEYMAP = [], QUEUE = [], I = 0, BUSY = false, MODE = 'hard', LEFT = null;
-const done = [];   // vị trí đã xử lý, để Backspace quay lại đúng người
+const done = [];   // vị trí đã xử lý, để Z (hoàn tác) quay lại đúng người
 
 const msg = (t, err) => { $('msg').textContent = t; $('msg').style.color = err ? '#c0392b' : ''; };
 const shown = (x) => (MODE === 'extra' ? 'Box thừa (không phải người)' : MODE.startsWith('name:') ? MODE.slice(5) : x?.guess) || null;   // tên đang hỏi đúng/sai
@@ -22,13 +20,13 @@ function renderKeys(x) {
   };
   const cur = shown(x);
   $('keys').replaceChildren(
-    row('Z', cur ? `Đúng: ${cur}` : 'Đúng (không có tên đoán)', 'ok', () => accept()),
+    row('A', cur ? `Đúng: ${cur}` : 'Đúng (không có tên đoán)', 'ok', () => accept()),
     row('X', MODE === 'extra' ? 'Không: là người (bỏ qua)' : MODE === 'recheck' ? 'Bỏ qua' : 'Sai: để gán lại sau', 'danger', () => reject()),
     ...KEYMAP.map(([k, n]) => row(k.toUpperCase(), n, n === cur ? 'guess' : '', () => assign({ name: n }, k.toUpperCase()))),
     row('K', 'Không rõ là ai', '', () => assign({ name: '' }, 'K')),
-    row('Del', 'Không phải người (xoá box)', 'danger', () => assign({ notPerson: true }, 'Del')),
+    row('Del', 'Xoá box (không phải người)', 'danger', () => delBox()),
     row('␣', 'Bỏ qua (Space / →)', '', () => go(1)),
-    row('⌫', 'Hoàn tác (Backspace)', '', undo));
+    row('Z', 'Hoàn tác', '', undo));
 }
 
 function show() {
@@ -56,12 +54,12 @@ const refreshCounts = () => api('/api/identity/summary').then(setCounts).catch((
 const showCount = () => { const x = QUEUE[I]; $('count').textContent = x ? `${I + 1} / ${QUEUE.length}${LEFT != null ? ` · còn ${LEFT}` : ''}${x.h != null ? ` · cao ${x.h}px` : ''}` : (LEFT != null ? `còn ${LEFT}` : ''); };
 const go = (d) => { I = Math.max(0, Math.min(QUEUE.length, I + d)); msg(''); show(); };
 
-async function send(body, key, text, result) {
+async function send(body, key, text, result, url = '/api/identity') {
   const x = QUEUE[I];
   if (!x || BUSY) return;
   BUSY = true;
   try {
-    await api('/api/identity', { scope: 'person', persons: [x.id], ...body });
+    await api(url, url === '/api/identity' ? { scope: 'person', persons: [x.id], ...body } : { ids: [x.id] });
     document.querySelector(`.q-key[data-key="${CSS.escape(key)}"]`)?.classList.add('flash');
     x.result = { ...result, key };
     done.push(I);
@@ -70,13 +68,14 @@ async function send(body, key, text, result) {
     setTimeout(() => go(1), 100);
   } catch (e) { msg(e.message, true); } finally { BUSY = false; }
 }
-const assign = (body, key, kind) => send(body, key, body.notPerson ? 'Đã đánh dấu không phải người.' : body.name ? `Đã gán "${body.name}".` : 'Đã đánh dấu không rõ.',
-  { kind: kind || (body.name && body.name === shown(QUEUE[I]) ? 'ok' : 'set'), text: body.notPerson ? 'không phải người' : body.name || 'không rõ là ai' });
+const assign = (body, key, kind) => send(body, key, body.name ? `Đã gán "${body.name}".` : 'Đã đánh dấu không rõ.',
+  { kind: kind || (body.name && body.name === shown(QUEUE[I]) ? 'ok' : 'set'), text: body.name || 'không rõ là ai' });
+const delBox = (key = 'Del', kind = 'bad') => send({}, key, 'Đã xoá box. Z để hoàn tác.', { kind, text: 'đã xoá box' }, '/api/person/delete');
 function accept() {
-  if (MODE === 'extra') return assign({ notPerson: true }, 'Z', 'ok');   // đúng là box thừa
+  if (MODE === 'extra') return delBox('A', 'ok');   // đúng là box thừa
   const cur = shown(QUEUE[I]);
   if (!cur) return msg('Không có tên để xác nhận: dùng phím số.', true);
-  send({ name: cur }, 'Z', `Đúng: "${cur}".`, { kind: 'ok', text: cur });
+  send({ name: cur }, 'A', `Đúng: "${cur}".`, { kind: 'ok', text: cur });
 }
 function reject() {
   if (MODE === 'recheck' || MODE === 'extra') return go(1);   // box thừa? không: là người, để đó (gán tên bằng phím số nếu muốn)
@@ -86,15 +85,16 @@ function reject() {
 async function undo() {
   if (BUSY || !done.length) return msg('Không còn gì để hoàn tác.', true);
   BUSY = true;
-  try { await api('/api/undo', {}); I = done.pop(); delete QUEUE[I]?.result; msg('Đã hoàn tác.'); show(); refreshCounts(); } catch (e) { msg(e.message, true); } finally { BUSY = false; }
+  try { const r = await api('/api/undo', {}); I = done.pop(); delete QUEUE[I]?.result; show(); msg(undoText(r), !!r.conflicts?.length); refreshCounts(); } catch (e) { msg(e.message, true); } finally { BUSY = false; }
 }
+const undoText = (r) => `${r.desc ? `Đã hoàn tác: ${r.desc}${r.page ? ` (trang ${r.page})` : ''}.` : 'Đã hoàn tác.'}${r.conflicts?.length ? ` Giữ nguyên ${r.conflicts.join(', ')}: người khác đã sửa sau.` : ''}`;
+
 
 async function load() {
   MODE = $('mode').value || 'hard';
   const sum = await api('/api/identity/summary');
   const all = Object.entries(sum.names).sort((a, b) => b[1] - a[1]).map(([n]) => n);
-  const rest = all.filter((n) => !FIXED.includes(n));
-  KEYMAP = [...FIXED.map((n, i) => [String(i + 1), n]), ...rest.slice(0, LETTERS.length).map((n, i) => [LETTERS[i], n])];   // số cố định theo người, không đổi khi số crop đổi
+  KEYMAP = (await api('/api/hotkeys')).names;
   if ($('mode').options.length <= 2) for (const n of all) $('mode').append(new Option(n, `name:${n}`));   // lần đầu: một mục "Duyệt: <tên>" mỗi tên
   setCounts(sum);
   const q = MODE === 'hard' ? 'hard=1' : MODE === 'extra' ? 'extra=1' : MODE === 'recheck' ? 'recheck=1' : `name=${encodeURIComponent(MODE.slice(5))}`;
@@ -112,13 +112,13 @@ document.addEventListener('keydown', (e) => {
   const k = e.key.toLowerCase();
   const hit = KEYMAP.find(([key]) => key === k);
   if (hit) assign({ name: hit[1] }, hit[0].toUpperCase());
-  else if (k === 'z') accept();
+  else if (k === 'a' || k === 'enter') accept();
   else if (k === 'x') reject();
+  else if (k === 'z') undo();
   else if (k === 'k') assign({ name: '' }, 'K');
-  else if (k === 'delete') assign({ notPerson: true }, 'Del');
+  else if (k === 'delete') delBox();
   else if (k === ' ' || k === 'arrowright') go(1);
   else if (k === 'arrowleft') go(-1);
-  else if (k === 'backspace') undo();
   else return;
   e.preventDefault();
 });

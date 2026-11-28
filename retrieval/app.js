@@ -145,6 +145,18 @@ async function search(parsed) {
   renderInfo(); renderEditor(); render();
 }
 
+// Nút "Tách đề": chỉ tách đề, mở sẵn bảng sửa; sửa xong bấm "Tìm lại với bản đã sửa" (hoặc Tìm để tách lại).
+async function parseOnly() {
+  const q = $('q').value.trim();
+  if (!q) { $('q').focus(); return; }
+  let r;
+  try { r = await api('/api/parse', { q }); } catch (e) { toast(e.message || 'Lỗi tách đề', 'bad'); return; }
+  st.lastQuery = q; st.parsed = r.parsed || null; st.edited = false; st.english = []; st.layers = [];
+  $('info').textContent = '';
+  renderInfo(); renderEditor(true);
+  toast('Đã tách đề. Sửa nếu cần rồi bấm "Tìm lại với bản đã sửa".', '', 3500);
+}
+
 function renderInfo() {
   const pq = st.parsed;
   if (!pq) return;
@@ -152,7 +164,7 @@ function renderInfo() {
   if (st.edited) parts.push('<span class="edited">Đang dùng bản đã sửa tay</span>');
   if (S.get('parse.showEnglish') && st.english.length) parts.push(`<div><b>EN:</b> ${esc(st.english.join(' '))}</div>`);
   const head = [];
-  if (S.get('parse.showLayers')) head.push(`<b>Lớp:</b> ${st.layers.join(' → ')} ảnh`);
+  if (S.get('parse.showLayers') && st.layers.length) head.push(`<b>Lớp:</b> ${st.layers.join(' → ')} ảnh`);
   if (S.get('parse.showClauses')) {
     head.push(`<b>số người:</b> ${pq.count ?? ('≥' + (pq.count_min || 0))}`);
     if (pq.names?.length) head.push(`<b>tên:</b> ${esc(pq.names.join(', '))}`);
@@ -168,11 +180,11 @@ function renderInfo() {
 }
 
 // ---------------------------------------------------------------- form sửa biến
-function renderEditor() {
+function renderEditor(force) {
   const mode = S.get('parse.editor'), box = $('editor');
-  box.hidden = mode === 'off' || !st.parsed;
+  box.hidden = (mode === 'off' && !force) || !st.parsed;
   if (box.hidden) { measureHeader(); return; }
-  if (mode === 'open') box.open = true;
+  if (mode === 'open' || force) box.open = true;
   const pq = st.parsed;
   const g = (v) => `<option value=""${!v ? ' selected' : ''}>không rõ</option><option value="male"${v === 'male' ? ' selected' : ''}>nam</option><option value="female"${v === 'female' ? ' selected' : ''}>nữ</option>`;
   const person = (p = {}) => `<div class="ed-item person">
@@ -527,6 +539,7 @@ $('next').onclick = () => move(1);
 $('d-prev').onclick = () => stepDetail(-1);
 $('d-next').onclick = () => stepDetail(1);
 $('sub').onclick = () => submitId(st.current);
+$('parse').onclick = parseOnly;
 for (const b of $('mode').querySelectorAll('button')) b.onclick = () => setMode(b.dataset.mode, true);
 $('qa').onsubmit = (e) => { e.preventDefault(); submitText($('qa-text').value); };
 st.mode = 'kis';

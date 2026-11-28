@@ -129,7 +129,7 @@ def run_pipeline(
     if "merge" in wanted:
         # Bộ chỉ chở một phần (bundle pack --profiles) có thể thiếu tầng người hoặc tầng vùng.
         if (data_dir / "people" / "people.json").exists() and (data_dir / "rois" / "image_ids.json").exists():
-            result = timed("enrich merge", lambda: enrich.run_merge(cfg, data_dir, jsons_dir))
+            result = timed("enrich merge", lambda: enrich.run_merge(cfg, data_dir, jsons_dir, Path(image_paths[0]).parent if image_paths else None))
             summary["merge"] = {k: result[k] for k in ("images", "people", "people_labeled", "roi_states")}
         else:
             summary["merge"] = {"skipped": "chưa chạy enrich build"}

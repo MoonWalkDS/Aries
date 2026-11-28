@@ -31,6 +31,12 @@ function writeJsonAtomic(file, data) {
 }
 
 const mtime = (file) => { try { return fs.statSync(file).mtimeMs; } catch { return 0; } };
+const clone = (v) => (v === undefined ? undefined : JSON.parse(JSON.stringify(v)));
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+const IMAGE_SIZE = [1280, 720];   // mọi ảnh Castle5000 cùng cỡ; dùng để đặt vùng cho box tự vẽ chưa gộp
+const MIN_ZONE_OVERLAP = 0.35;    // config.yaml enrich.person.min_zone_overlap
+const imageOfPid = (pid) => String(pid).replace(/_[pm]\d+$/, '');
+const bad = (msg, status = 400) => Object.assign(new Error(msg), { status });
 
 function loadClasses(file) {
   if (!fs.existsSync(file)) return [];
@@ -124,7 +130,49 @@ class Store {
     this.teacherHints = readJson(path.join(this.jsons, 'adl_people', 'teacher_hints.json'), {});   // {pid: {label, text}}: câu của thầy tả người này
     this.searchCache = new Map();
     this.objects = new ObjectLabels(this);   // gán đồ vật theo vùng (objects.html)
-    this.undoStack = [];
+    // Người = box máy dò chưa bị xoá + box người tự vẽ (docs/adr/0001). enriched/ có sẵn người tự vẽ (source "manual")
+    // của lần gộp trước: chỉ lấy dự đoán tên, ngoại hình, vùng; box và hành động đọc thẳng từ manual_boxes.json.
+    // Lịch sử hoàn tác giữ qua lần nạp lại (gộp dữ liệu, đồng bộ): hoàn tác theo mục nên vẫn an toàn.
+    this.manualEnriched = new Map();
+    this.manualBox = new Map();
+    for (const im of this.images) {
+      for (const p of im.people) if (p.source === 'manual') this.manualEnriched.set(p.id, p);
+      for (const m of im.manual || []) if (m.kind === 'person') this.manualEnriched.set(m.id, m);   // enriched cũ
+      im.detected = im.people.filter((p) => p.source !== 'manual');
+    }
+    for (const im of this.images) this._refreshPeople(im.image_id);
+  }
+
+  // Dựng lại danh sách Người của một ảnh sau khi xoá / vẽ / hoàn tác.
+  _refreshPeople(imageId) {
+    const im = this.byId.get(imageId);
+    if (!im) return;
+    for (const p of im.people || []) { this.personToImage.delete(p.id); this.personById.delete(p.id); this.manualBox.delete(p.id); }
+    const hidden = this.names.not_person || {};
+    const manual = (this.manual[imageId] || []).filter((m) => m.kind === 'person').map((m) => {
+      const e = this.manualEnriched.get(m.id);
+      const predicted = e?.identity?.predicted;
+      this.manualBox.set(m.id, m);
+      return { id: m.id, box: m.box, score: null, zone: same(e?.box, m.box) && e?.zone !== undefined ? e.zone : this._zoneOf(m.box), source: 'manual',
+        attributes: e?.attributes ?? null, outfit: e?.outfit ?? null, action: null, identity: predicted ? { predicted } : null };
+    });
+    im.people = [...(im.detected || []).filter((p) => !hidden[p.id]), ...manual];
+    im.num_people = im.people.length;
+    for (const p of im.people) { this.personToImage.set(p.id, imageId); this.personById.set(p.id, p); }
+    this.searchCache.delete(imageId);
+  }
+
+  // như pipeline/modules/enrich.py:assign_zone
+  _zoneOf([x1, y1, x2, y2]) {
+    const [W, H] = IMAGE_SIZE, area = Math.max((x2 - x1) * (y2 - y1), 1e-6);
+    let best = [null, 0];
+    for (const r of this.rois) {
+      if (!r.zone) continue;
+      const [zx1, zy1, zx2, zy2] = [r.zone[0] * W, r.zone[1] * H, r.zone[2] * W, r.zone[3] * H];
+      const o = Math.max(0, Math.min(x2, zx2) - Math.max(x1, zx1)) * Math.max(0, Math.min(y2, zy2) - Math.max(y1, zy1)) / area;
+      if (o > best[1]) best = [r.name, o];
+    }
+    return best[1] >= MIN_ZONE_OVERLAP ? best[0] : null;
   }
 
   _readState(dir) {
@@ -145,6 +193,12 @@ class Store {
   resolve(profileName, key) {
     const p = this.profiles[profileName];
     if (!p) return null;
+    if (p.layer === 'people' && this.manualBox?.has(key)) {   // box tự vẽ: hành động lưu ngay trong manual_boxes.json
+      const m = this.manualBox.get(key);
+      if (m.custom) return { label: m.custom, label_vi: m.custom, group: '', source: 'human', score: null, vlm: null, custom: true };
+      const c = m.label && p.classByName.get(m.label);
+      return m.label ? { label: m.label, label_vi: c?.name_vi || m.label_vi || '', group: c?.group || '', source: 'human', score: null, vlm: null } : null;
+    }
     const c = this.custom[profileName]?.[key];
     if (c) return { label: c.text, label_vi: c.text, group: '', source: 'human', score: null, vlm: null, custom: true };
     const a = p.approved[key];
@@ -280,11 +334,11 @@ class Store {
 
   identitySummary() {
     const names = {}, size = {}, left = {};
-    let unnamed = 0, unknown = 0, hard = 0, notPerson = 0;
+    let unnamed = 0, unknown = 0, hard = 0;
+    const notPerson = Object.keys(this.names.not_person || {}).length;   // box đã xoá không còn trong personToImage
     const pending = {};   // crop máy gán tên, chưa ai xác nhận: hàng "Duyệt: <tên>" của trang gán nhanh
     const recheck = Object.keys(this.names.recheck || {}).filter((pid) => !(pid in this.names.people) && !this.names.not_person?.[pid]).length;
     for (const pid of this.personToImage.keys()) {
-      if (this.names.not_person?.[pid]) { notPerson++; continue; }
       const f = this.finalIdentity(pid);
       if (f?.name) names[f.name] = (names[f.name] || 0) + 1;
       if (f?.source === 'model') pending[f.name] = (pending[f.name] || 0) + 1;
@@ -379,7 +433,6 @@ class Store {
 
   // op: {scope: 'cluster'|'person', cluster?, person?, name} ; name '' = xoá tên (person: "không rõ là ai")
   setIdentity(op) {
-    const bad = (msg) => Object.assign(new Error(msg), { status: 400 });
     const name = String(op?.name ?? '').trim().replace(/\s+/g, ' ').slice(0, 60);
     if (op.scope === 'cluster' && !this.idClusters[op.cluster]) throw bad(`Không có cụm ${op.cluster}.`);
     // persons: nhiều người một lần (kéo thả trên bảng định danh), một bước hoàn tác
@@ -387,64 +440,98 @@ class Store {
     for (const pid of persons) if (!this.personToImage.has(pid)) throw bad(`Không có người ${pid}.`);
     if (op.scope === 'person' && !persons.length) throw bad('Chưa chọn người nào.');
     if (!['cluster', 'person'].includes(op.scope)) throw bad('scope phải là cluster hoặc person.');
-    if (mtime(this.namesFile) !== this.namesMtime) throw Object.assign(new Error('annotations/identity_names.json đã bị chương trình khác ghi đè. Tải lại rồi sửa tiếp.'), { status: 409 });
-    const prev = JSON.parse(JSON.stringify(this.names));
-    // ai đặt tên nào: names.by (pipeline Python chỉ đọc clusters / people nên bỏ qua khoá này)
-    const by = (this.names.by ||= {});
-    const notPerson = (this.names.not_person ||= {});
-    const recheck = (this.names.recheck ||= {});   // "sai, gán lại sau": {pid: tên bị bác}
-    if (op.scope === 'cluster') { if (name) this.names.clusters[op.cluster] = name; else delete this.names.clusters[op.cluster]; by[`cluster:${op.cluster}`] = this._by(); }
-    else if (op.recheck) for (const pid of persons) { recheck[pid] = String(op.recheck); by[pid] = this._by(); }
-    else for (const pid of persons) {
-      delete notPerson[pid];
-      delete recheck[pid];
-      if (op.reset) delete this.names.people[pid];
-      else if (op.notPerson) { delete this.names.people[pid]; notPerson[pid] = true; }   // box nhầm (không phải người): enrich merge bỏ khỏi dataset
-      else this.names.people[pid] = name;
-      by[pid] = this._by();
-    }
-    this._saveNames();
-    const ids = op.scope === 'person' ? [...new Set(persons.map((pid) => this.personToImage.get(pid)))]
-      : [...new Set(Object.entries(this.idAssign).filter(([, a]) => a.cluster === op.cluster).map(([pid]) => this.personToImage.get(pid)).filter(Boolean))];
-    for (const id of ids) { this.searchCache.delete(id); this.edited.add(id); }
-    this.undoStack.push({ names: prev, images: ids });
-    return { changed: ids };
+    if (op.notPerson) return this.deletePeople(persons);   // trang gán nhanh cũ: "không phải người" = Xoá box
+    const who = persons.length === 1 ? persons[0] : `${persons.length} người`;
+    const desc = op.scope === 'cluster' ? `đặt tên "${name}" cho cụm ${op.cluster}` : op.recheck ? `đưa ${who} vào "Cần gán lại"`
+      : op.reset ? `bỏ tên riêng của ${who}` : name ? `đặt tên "${name}" cho ${who}` : `đánh dấu ${who} không rõ là ai`;
+    const descs = op.scope === 'cluster' ? [{ t: 'cluster', c: op.cluster }] : persons.map((pid) => ({ t: 'name', pid }));
+    return this._step(desc, descs, () => {
+      // ai đặt tên nào: names.by (pipeline Python chỉ đọc clusters / people nên bỏ qua khoá này)
+      const by = (this.names.by ||= {});
+      const recheck = (this.names.recheck ||= {});   // "sai, gán lại sau": {pid: tên bị bác}
+      if (op.scope === 'cluster') { if (name) this.names.clusters[op.cluster] = name; else delete this.names.clusters[op.cluster]; by[`cluster:${op.cluster}`] = this._by(); }
+      else if (op.recheck) for (const pid of persons) { recheck[pid] = String(op.recheck); by[pid] = this._by(); }
+      else for (const pid of persons) {
+        delete recheck[pid];
+        if (op.reset) delete this.names.people[pid];
+        else this.names.people[pid] = name;
+        by[pid] = this._by();
+      }
+    });
+  }
+
+  // Xoá box (docs/adr/0002): box máy dò bị ẩn (names.not_person, enrich merge bỏ khỏi dataset), box tự vẽ bị bỏ hẳn.
+  deletePeople(ids) {
+    ids = Array.isArray(ids) ? ids : [ids];
+    if (!ids.length) throw bad('Chưa chọn box nào.');
+    for (const pid of ids) if (!this.personToImage.has(pid)) throw bad(`Không có người ${pid}.`);
+    const descs = ids.map((pid) => (this.manualBox.has(pid) ? { t: 'box', image: this.personToImage.get(pid), id: pid } : { t: 'name', pid }));
+    return this._step(`xoá box ${ids.length === 1 ? ids[0] : `${ids.length} người`}`, descs, () => {
+      for (const d of descs) {
+        if (d.t === 'box') this.manual[d.image] = this.manual[d.image].filter((m) => m.id !== d.id);
+        else {
+          delete this.names.people[d.pid];
+          delete this.names.recheck?.[d.pid];
+          (this.names.not_person ||= {})[d.pid] = true;
+          (this.names.by ||= {})[d.pid] = this._by();
+        }
+      }
+    });
+  }
+
+  // Sửa box máy dò (docs/adr/0002): ẩn box cũ, thay bằng box tự vẽ mang theo hành động và tên do người gán.
+  replacePerson(pid, box) {
+    const imageId = this.personToImage.get(pid);
+    if (!imageId) throw bad(`Không có người ${pid}.`);
+    if (this.manualBox.has(pid)) return this.manualOp({ action: 'update', image_id: imageId, id: pid, box });
+    const clean = this._cleanBox(box);
+    const id = this._nextManualId(imageId);
+    const st = this.resolve('people', pid);
+    const ident = this.identity(pid);
+    const name = ident?.source === 'person' || ident?.source === 'cluster' ? ident.name : null;
+    const descs = [{ t: 'name', pid }, { t: 'box', image: imageId, id }, ...(name ? [{ t: 'name', pid: id }] : [])];
+    return this._step(`sửa box ${pid} (thành ${id})`, descs, () => {
+      const m = { id, kind: 'person', box: clean, created: new Date().toISOString(), by: this.actor, replaces: pid };
+      if (st?.source === 'human') { if (st.custom) m.custom = st.label; else m.label = st.label; }
+      this.manual[imageId] = [...(this.manual[imageId] || []), m];
+      delete this.names.people[pid];
+      (this.names.not_person ||= {})[pid] = true;
+      if (name) this.names.people[id] = name;
+      (this.names.by ||= {})[pid] = this._by();
+    }, { id });
   }
 
   // Đổi tên `from` thành `to` ở mọi nơi: tên cụm, tên đặt riêng, tên mô hình đoán (trong RAM, lần gộp sau học lại)
   // và khoá trong annotations/outfits.yaml (giữ trang phục đã điền). `to` trùng tên đã có = gộp hai người.
   renameIdentity(op) {
-    const bad = (msg) => Object.assign(new Error(msg), { status: 400 });
     const from = String(op?.from ?? '').trim();
     const to = String(op?.to ?? '').trim().replace(/\s+/g, ' ').slice(0, 60);
     if (!from || !to) throw bad('Cần tên cũ và tên mới.');
     if (from === to) return { changed: [], renamed: 0 };
-    if (mtime(this.namesFile) !== this.namesMtime) throw Object.assign(new Error('annotations/identity_names.json đã bị chương trình khác ghi đè. Tải lại rồi sửa tiếp.'), { status: 409 });
-    const prev = JSON.parse(JSON.stringify(this.names));
-    let renamed = 0;
-    for (const table of [this.names.clusters, this.names.people]) for (const [k, v] of Object.entries(table)) if (v === from) { table[k] = to; renamed++; }
-    const predicted = [];
-    for (const p of this.personById.values()) if (p.identity?.predicted?.name === from) { p.identity.predicted.name = to; predicted.push(p.id); }
-    if (!renamed && !predicted.length) throw bad(`Không có ai tên "${from}".`);
+    const descs = [...Object.entries(this.names.clusters).filter(([, v]) => v === from).map(([c]) => ({ t: 'cluster', c })),
+      ...Object.entries(this.names.people).filter(([, v]) => v === from).map(([pid]) => ({ t: 'name', pid }))];
+    const predicted = [...this.personById.values()].filter((p) => p.identity?.predicted?.name === from).map((p) => p.id);
+    if (!descs.length && !predicted.length) throw bad(`Không có ai tên "${from}".`);
     const outfitsFile = path.join(this.jsons, 'outfits.yaml');
     const outfitsPrev = fs.existsSync(outfitsFile) ? fs.readFileSync(outfitsFile, 'utf8') : null;
-    if (outfitsPrev) {
-      const doc = YAML.parseDocument(outfitsPrev);
-      const people = doc.get('people');
-      if (people && people.has(from)) {
-        if (people.has(to)) people.delete(from); // gộp vào người đã có: giữ trang phục của người đích
-        else { const pair = people.items.find((it) => String(it.key?.value ?? it.key) === from); pair.key = doc.createNode(to); }
-        beforeWrite(outfitsFile, { text: doc.toString() });
-        fs.writeFileSync(outfitsFile, doc.toString(), 'utf8');
+    const out = this._step(`đổi tên "${from}" thành "${to}"`, descs, () => {
+      for (const d of descs) { if (d.t === 'cluster') this.names.clusters[d.c] = to; else this.names.people[d.pid] = to; }
+      for (const pid of predicted) this.personById.get(pid).identity.predicted.name = to;
+      if (outfitsPrev) {
+        const doc = YAML.parseDocument(outfitsPrev);
+        const people = doc.get('people');
+        if (people && people.has(from)) {
+          if (people.has(to)) people.delete(from); // gộp vào người đã có: giữ trang phục của người đích
+          else { const pair = people.items.find((it) => String(it.key?.value ?? it.key) === from); pair.key = doc.createNode(to); }
+          beforeWrite(outfitsFile, { text: doc.toString() });
+          fs.writeFileSync(outfitsFile, doc.toString(), 'utf8');
+        }
       }
-    }
-    this._saveNames();
+    }, {}, { rename: { from, to, predicted }, outfits: outfitsPrev, outfitsFile });
     const ids = [...new Set([...this.personToImage].filter(([pid]) => this.finalIdentity(pid)?.name === to).map(([, img]) => img))];
     for (const id of ids) { this.searchCache.delete(id); this.edited.add(id); }
-    this.undoStack.push({ names: prev, images: ids, rename: { from, to, predicted }, outfits: outfitsPrev, outfitsFile });
-    return { changed: ids, renamed: renamed + predicted.length };
+    return { changed: ids, renamed: descs.length + predicted.length };
   }
-
   _saveNames() {
     if (!this.namesBackedUp && fs.existsSync(this.namesFile)) fs.copyFileSync(this.namesFile, `${this.namesFile}.bak-${new Date().toISOString().replace(/[:.]/g, '-')}`);
     this.namesBackedUp = true;
@@ -481,7 +568,7 @@ class Store {
   detail(id) {
     const im = this.byId.get(id);
     if (!im) return null;
-    const people = im.people.map((p) => ({ ...p, zone_vi: this.zoneVi[p.zone] || '', profile: 'people', key: p.id, state: this.resolve('people', p.id), predicted: p.identity?.predicted ?? null, identity: this.identity(p.id) }));
+    const people = im.people.map((p) => ({ ...p, manual: p.source === 'manual', zone_vi: this.zoneVi[p.zone] || '', profile: 'people', key: p.id, state: this.resolve('people', p.id), predicted: p.identity?.predicted ?? null, identity: this.identity(p.id) }));
     const rois = this.rois.filter((r) => im.rois[r.name]).map((r) => {
       const key = this.roiKey(im, r.name);
       const prof = `roi-${r.name}`;
@@ -490,7 +577,7 @@ class Store {
     });
     const activity = { profile: 'image', key: id, state: this.resolve('image', id), rejected: this.profiles.image?.rejected[id] || [] };
     for (const p of people) p.rejected = this.profiles.people?.rejected[p.id] || [];
-    const manual = (this.manual[id] || []).map((m) => ({ ...m }));
+    const manual = (this.manual[id] || []).filter((m) => m.kind !== 'person').map((m) => ({ ...m }));   // box vật thể cũ (nay vẽ ở trang Đồ vật)
     return { image_id: id, hour: im.hour, num_people: im.num_people, activity, people, rois, manual, objects: im.objects || [], edited: this.edited.has(id), raw: im };
   }
 
@@ -510,15 +597,6 @@ class Store {
     return [key];
   }
 
-  _checkFresh(p) {
-    for (const k of ['approved', 'rejected']) {
-      if (mtime(p.files[k]) !== p.mtimes[k]) {
-        const err = new Error(`${path.relative(this.root, p.files[k])} đã bị chương trình khác ghi đè (pipeline Python?). Bấm "⟳ Tải lại" rồi sửa tiếp.`);
-        err.status = 409;
-        throw err;
-      }
-    }
-  }
 
   _save(p) {
     if (!p.backedUp) {
@@ -541,79 +619,165 @@ class Store {
     this.customMtime = mtime(this.customFile);
   }
 
-  _checkCustomFresh() {
-    if (mtime(this.customFile) !== this.customMtime) {
-      throw Object.assign(new Error('annotations/custom_labels.json đã bị chương trình khác ghi đè. Bấm "⟳ Tải lại" rồi sửa tiếp.'), { status: 409 });
-    }
-  }
 
   // ops: [{profile, key, action: 'set'|'confirm'|'reject'|'reset'|'custom', label?, text?}] -> một bước hoàn tác.
   // 'custom': nhãn tự gõ khi không lớp nào khớp; nhãn máy đang có bị đánh dấu sai để không quay lại vòng lặp.
+  // Người tự vẽ: hành động lưu trong manual_boxes.json (label hoặc custom), không vào approved.json của pipeline.
   apply(ops) {
-    if (!Array.isArray(ops) || !ops.length) throw Object.assign(new Error('Không có thao tác nào.'), { status: 400 });
-    const touched = new Set();
+    if (!Array.isArray(ops) || !ops.length) throw bad('Không có thao tác nào.');
     for (const op of ops) {
       const p = this.profiles[op.profile];
-      if (!p) throw Object.assign(new Error(`Profile lạ: ${op.profile}`), { status: 400 });
-      if (!this._validKey(p, op.key)) throw Object.assign(new Error(`Khoá không tồn tại: ${op.key}`), { status: 400 });
-      if ((op.action === 'set' || (op.action === 'reject' && op.label)) && !p.classByName.has(op.label)) throw Object.assign(new Error(`Lớp "${op.label}" không thuộc bộ nhãn ${op.profile}`), { status: 400 });
-      if (!['set', 'confirm', 'reject', 'reset', 'custom'].includes(op.action)) throw Object.assign(new Error(`Thao tác lạ: ${op.action}`), { status: 400 });
+      if (!p) throw bad(`Profile lạ: ${op.profile}`);
+      if (!this._validKey(p, op.key)) throw bad(`Khoá không tồn tại: ${op.key}`);
+      if ((op.action === 'set' || (op.action === 'reject' && op.label)) && !p.classByName.has(op.label)) throw bad(`Lớp "${op.label}" không thuộc bộ nhãn ${op.profile}`);
+      if (!['set', 'confirm', 'reject', 'reset', 'custom'].includes(op.action)) throw bad(`Thao tác lạ: ${op.action}`);
       if (op.action === 'custom') {
         op.text = String(op.text ?? '').trim().replace(/\s+/g, ' ').slice(0, 120);
-        if (!op.text) throw Object.assign(new Error('Nhập mô tả trước khi lưu.'), { status: 400 });
+        if (!op.text) throw bad('Nhập mô tả trước khi lưu.');
       }
-      if (!touched.has(p)) { this._checkFresh(p); touched.add(p); }
     }
-    this._checkCustomFresh();
-    const undo = [];
-    const changed = new Set();
-    let customTouched = false;
-    for (const op of ops) {
-      const p = this.profiles[op.profile];
-      const cur = this.resolve(op.profile, op.key);
-      const own = (this.custom[op.profile] ||= {});
-      undo.push({ profile: op.profile, key: op.key, approved: p.approved[op.key], rejected: p.rejected[op.key], custom: own[op.key] });
-      if (own[op.key] && op.action !== 'confirm') { delete own[op.key]; customTouched = true; }
-      if (op.action === 'custom') {
-        if (cur && !cur.custom) {
-          const list = p.rejected[op.key] || [];
-          if (!list.includes(cur.label)) p.rejected[op.key] = [...list, cur.label];
+    const descs = ops.map((op) => this._labelDesc(op.profile, op.key));
+    const first = ops[0], st = this.resolve(first.profile, first.key);
+    const what = first.action === 'custom' ? `"${first.text}"` : first.action === 'set' ? `"${this.profiles[first.profile].classByName.get(first.label)?.name_vi || first.label}"` : st ? `"${st.label_vi || st.label}"` : '';
+    const verb = { set: 'gán', custom: 'gán', confirm: 'xác nhận', reject: 'bác', reset: 'đặt lại' }[first.action];
+    const desc = `${verb} hành động ${what} cho ${ops.length === 1 ? first.key : `${ops.length} mục`}`.replace(/\s+/g, ' ');
+    return this._step(desc, descs, () => {
+      for (const op of ops) {
+        const p = this.profiles[op.profile];
+        if (p.layer === 'people' && this.manualBox.has(op.key)) {
+          const m = this.manualBox.get(op.key);
+          if (op.action === 'set') { m.label = op.label; delete m.custom; delete m.label_vi; }
+          else if (op.action === 'custom') { m.custom = op.text; delete m.label; delete m.label_vi; }
+          else if (op.action !== 'confirm') { delete m.label; delete m.custom; delete m.label_vi; }   // box tự vẽ không có nhãn máy để quay về
+          continue;
         }
-        delete p.approved[op.key];
-        own[op.key] = { text: op.text, updated: new Date().toISOString(), by: this.actor };
-        customTouched = true;
-      } else if (op.action === 'confirm' && cur?.custom) {
-        continue; // nhãn tự gõ đã là của người duyệt
-      } else if (cur?.custom && op.action === 'reject') {
-        // xoá nhãn tự gõ (đã làm ở trên), không có gì để đánh dấu sai
-      } else if (op.action === 'set' || op.action === 'confirm') {
-        const label = op.action === 'set' ? op.label : cur?.label;
-        if (!label) continue; // xác nhận một mục chưa có nhãn: bỏ qua
-        p.approved[op.key] = { label, source: 'human', round: p.round, score: cur?.score ?? null, ...this._by() };
-      } else if (op.action === 'reject' && op.only && op.label && op.label !== cur?.label) {
-        // chỉ bác một gợi ý (vd câu của thầy), giữ nguyên nhãn máy hiện có
-        const list = p.rejected[op.key] || [];
-        if (!list.includes(op.label)) p.rejected[op.key] = [...list, op.label];
-      } else if (op.action === 'reject') {
-        if (!cur) continue;
-        // op.label: nhãn đang hiện cho người duyệt (vd nhãn gộp đã thay nhãn VLM); bác cả hai
-        const list = p.rejected[op.key] || [];
-        p.rejected[op.key] = [...new Set([...list, cur.label, ...(op.label ? [op.label] : [])])];
-        delete p.approved[op.key];
-      } else delete p.approved[op.key];
-      for (const id of this._imagesOf(p, op.key)) { changed.add(id); this.searchCache.delete(id); }
-    }
-    for (const p of touched) this._save(p);
-    if (customTouched) this._saveCustom();
-    this.undoStack.push(undo);
-    for (const id of changed) this.edited.add(id);
-    return { changed: [...changed] };
+        const cur = this.resolve(op.profile, op.key);
+        const own = (this.custom[op.profile] ||= {});
+        if (own[op.key] && op.action !== 'confirm') delete own[op.key];
+        if (op.action === 'custom') {
+          if (cur && !cur.custom) {
+            const list = p.rejected[op.key] || [];
+            if (!list.includes(cur.label)) p.rejected[op.key] = [...list, cur.label];
+          }
+          delete p.approved[op.key];
+          own[op.key] = { text: op.text, updated: new Date().toISOString(), by: this.actor };
+        } else if (op.action === 'confirm' && cur?.custom) {
+          continue; // nhãn tự gõ đã là của người duyệt
+        } else if (cur?.custom && op.action === 'reject') {
+          // xoá nhãn tự gõ (đã làm ở trên), không có gì để đánh dấu sai
+        } else if (op.action === 'set' || op.action === 'confirm') {
+          const label = op.action === 'set' ? op.label : cur?.label;
+          if (!label) continue; // xác nhận một mục chưa có nhãn: bỏ qua
+          p.approved[op.key] = { label, source: 'human', round: p.round, score: cur?.score ?? null, ...this._by() };
+        } else if (op.action === 'reject' && op.only && op.label && op.label !== cur?.label) {
+          // chỉ bác một gợi ý (vd câu của thầy), giữ nguyên nhãn máy hiện có
+          const list = p.rejected[op.key] || [];
+          if (!list.includes(op.label)) p.rejected[op.key] = [...list, op.label];
+        } else if (op.action === 'reject') {
+          if (!cur) continue;
+          // op.label: nhãn đang hiện cho người duyệt (vd nhãn gộp đã thay nhãn VLM); bác cả hai
+          const list = p.rejected[op.key] || [];
+          p.rejected[op.key] = [...new Set([...list, cur.label, ...(op.label ? [op.label] : [])])];
+          delete p.approved[op.key];
+        } else delete p.approved[op.key];
+      }
+    });
   }
 
-  _checkManualFresh() {
-    if (mtime(this.manualFile) !== this.manualMtime) {
-      throw Object.assign(new Error('annotations/manual_boxes.json đã bị chương trình khác ghi đè. Tải lại rồi vẽ tiếp.'), { status: 409 });
+  _labelDesc(profile, key) {
+    return this.profiles[profile]?.layer === 'people' && this.manualBox.has(key) ? { t: 'box', image: this.personToImage.get(key), id: key } : { t: 'label', profile, key };
+  }
+
+  // ------------------------------------------------------------ hoàn tác theo mục
+  // Mỗi bước hoàn tác là danh sách mục {mô tả mục, before, after}. Hoàn tác chỉ trả lại đúng các mục đó, và bỏ qua
+  // (báo xung đột) mục đã bị người khác sửa sau mình, nên không bao giờ đè thay đổi của người khác.
+  //   {t: 'label', profile, key}  nhãn của một khoá (approved + rejected + tự gõ)
+  //   {t: 'name', pid}            tên riêng / xoá box / cần gán lại của một người máy dò
+  //   {t: 'cluster', c}           tên của một cụm
+  //   {t: 'box', image, id}       một box tự vẽ (cả hành động của nó)
+  _get(d) {
+    if (d.t === 'label') {
+      const p = this.profiles[d.profile];
+      return { approved: clone(p.approved[d.key]), rejected: clone(p.rejected[d.key]), custom: clone(this.custom[d.profile]?.[d.key]) };
     }
+    if (d.t === 'name') return { name: this.names.people[d.pid], hidden: this.names.not_person?.[d.pid], recheck: this.names.recheck?.[d.pid] };
+    if (d.t === 'cluster') return this.names.clusters[d.c];
+    return clone((this.manual[d.image] || []).find((m) => m.id === d.id));
+  }
+
+  _set(d, v, touched) {
+    const put = (obj, k, val) => { if (val === undefined) delete obj[k]; else obj[k] = clone(val); };
+    if (d.t === 'label') {
+      const p = this.profiles[d.profile];
+      put(p.approved, d.key, v.approved); put(p.rejected, d.key, v.rejected); put((this.custom[d.profile] ||= {}), d.key, v.custom);
+      touched.add(p); touched.add('custom');
+      for (const id of this._imagesOf(p, d.key)) touched.add(`img:${id}`);
+    } else if (d.t === 'name') {
+      put(this.names.people, d.pid, v.name); put((this.names.not_person ||= {}), d.pid, v.hidden); put((this.names.recheck ||= {}), d.pid, v.recheck);
+      touched.add('names'); touched.add(`img:${imageOfPid(d.pid)}`);
+    } else if (d.t === 'cluster') {
+      put(this.names.clusters, d.c, v);
+      touched.add('names');
+      for (const [pid, a] of Object.entries(this.idAssign)) if (a.cluster === d.c) touched.add(`img:${imageOfPid(pid)}`);
+    } else {
+      const list = (this.manual[d.image] || []).filter((m) => m.id !== d.id);
+      this.manual[d.image] = v === undefined ? list : [...list, clone(v)].sort((a, b) => (a.id < b.id ? -1 : 1));
+      touched.add('manual'); touched.add(`img:${d.image}`);
+    }
+  }
+
+  _filesOf(descs) {
+    const files = new Set();
+    for (const d of descs) {
+      if (d.t === 'label') { const p = this.profiles[d.profile]; files.add(p.files.approved); files.add(p.files.rejected); files.add(this.customFile); }
+      else if (d.t === 'box') files.add(this.manualFile);
+      else files.add(this.namesFile);
+    }
+    return files;
+  }
+
+  _stale(descs) {
+    const known = new Map([[this.customFile, this.customMtime], [this.manualFile, this.manualMtime], [this.namesFile, this.namesMtime]]);
+    for (const p of Object.values(this.profiles)) { known.set(p.files.approved, p.mtimes.approved); known.set(p.files.rejected, p.mtimes.rejected); }
+    return [...this._filesOf(descs)].some((f) => mtime(f) !== known.get(f));
+  }
+
+  // File vừa bị chỗ khác ghi (đồng bộ, pipeline, người khác): nạp lại. Nếu chính các mục sắp sửa đã đổi thì báo và
+  // dừng để người dùng xem giá trị mới; nếu không thì làm tiếp trên dữ liệu mới.
+  _fresh(descs, strict) {
+    if (!this._stale(descs)) return;
+    const before = descs.map((d) => this._get(d));
+    this.reload();
+    if (strict && descs.some((d, i) => !same(this._get(d), before[i]))) {
+      throw bad('Mục này vừa được người khác sửa. Đã nạp bản mới; kiểm tra rồi làm lại.', 409);
+    }
+  }
+
+  _saveTouched(touched) {
+    for (const t of touched) if (typeof t === 'object') this._save(t);
+    if (touched.has('custom')) this._saveCustom();
+    if (touched.has('names')) this._saveNames();
+    if (touched.has('manual')) this._saveManual();
+    const changed = [...touched].filter((t) => typeof t === 'string' && t.startsWith('img:')).map((t) => t.slice(4));
+    for (const id of changed) { this._refreshPeople(id); this.searchCache.delete(id); this.edited.add(id); }
+    return changed;
+  }
+
+  // Chạy `fn` (sửa trong RAM) rồi ghi đúng các file đã đổi; lưu một bước hoàn tác gồm các mục thật sự đổi.
+  _step(desc, descs, fn, result = {}, extra = {}) {
+    this._fresh(descs, true);
+    const before = descs.map((d) => this._get(d));
+    fn();
+    const items = [], touched = new Set();
+    descs.forEach((d, i) => {
+      const after = this._get(d);
+      if (same(after, before[i])) return;
+      items.push({ ...d, before: before[i], after });
+      this._set(d, after, touched);   // _set ghi lại đúng giá trị: chỉ để biết file / ảnh nào cần lưu
+    });
+    const changed = this._saveTouched(touched);
+    if (items.length || extra.rename) this.undoStack.push({ items, desc, page: this.page, ...extra });
+    return { ...result, changed };
   }
 
   _saveManual() {
@@ -626,96 +790,71 @@ class Store {
     this.manualMtime = mtime(this.manualFile);
   }
 
-  // op: {action: 'add'|'update'|'delete', image_id, id?, box?, kind?, label?}
-  // box tính bằng pixel ảnh gốc [x1, y1, x2, y2]; kind 'person' dùng bộ lớp người, 'object' là tên tự do.
-  manualOp(op) {
-    const bad = (msg) => Object.assign(new Error(msg), { status: 400 });
-    const im = this.byId.get(op?.image_id);
-    if (!im) throw bad('Ảnh không tồn tại.');
-    const list = this.manual[im.image_id] || [];
-    const idx = op.id ? list.findIndex((m) => m.id === op.id) : -1;
-    if (op.action !== 'add' && idx < 0) throw bad(`Không có box ${op.id}.`);
-    const next = { ...(idx >= 0 ? list[idx] : {}) };
-    if (op.action === 'add' || op.box) {
-      const b = op.box;
-      if (!Array.isArray(b) || b.length !== 4 || !b.every(Number.isFinite)) throw bad('Box phải là [x1, y1, x2, y2].');
-      const [x1, y1, x2, y2] = b.map((v) => Math.round(Math.max(0, v) * 10) / 10);
-      if (x2 - x1 < 4 || y2 - y1 < 4) throw bad('Box quá nhỏ.');
-      next.box = [x1, y1, x2, y2];
-    }
-    if (op.kind !== undefined || op.action === 'add') {
-      if (!['person', 'object'].includes(op.kind)) throw bad('kind phải là person hoặc object.');
-      if (op.kind !== next.kind) delete next.label;
-      next.kind = op.kind;
-    }
-    if (op.label !== undefined) {
-      const label = String(op.label ?? '').trim().slice(0, 80);
-      if (next.kind === 'person' && label && !this.profiles.people?.classByName.has(label)) throw bad(`Lớp "${label}" không thuộc bộ nhãn người.`);
-      if (label) next.label = label; else delete next.label;
-    }
-    next.label_vi = next.kind === 'person' && next.label ? this.profiles.people?.classByName.get(next.label)?.name_vi || '' : '';
-    if (!next.label_vi) delete next.label_vi;
-    if (!['add', 'update', 'delete'].includes(op.action)) throw bad(`Thao tác lạ: ${op.action}`);
-
-    this._checkManualFresh();
-    const prev = list.map((m) => ({ ...m }));
-    let updated;
-    if (op.action === 'delete') updated = list.filter((_, i) => i !== idx);
-    else if (op.action === 'update') updated = list.map((m, i) => (i === idx ? { ...next, updated: new Date().toISOString() } : m));
-    else {
-      const n = Math.max(0, ...list.map((m) => Number(m.id.split('_m').pop()) || 0)) + 1;
-      next.id = `${im.image_id}_m${String(n).padStart(2, '0')}`;
-      next.created = new Date().toISOString();
-      next.by = this.actor;
-      updated = [...list, next];
-    }
-    this.manual[im.image_id] = updated;
-    this._saveManual();
-    this.undoStack.push({ manual: true, image_id: im.image_id, prev });
-    this.edited.add(im.image_id);
-    this.searchCache.delete(im.image_id);
-    return { id: op.action === 'add' ? next.id : op.id, changed: [im.image_id] };
+  _cleanBox(b) {
+    if (!Array.isArray(b) || b.length !== 4 || !b.every(Number.isFinite)) throw bad('Box phải là [x1, y1, x2, y2].');
+    const [x1, y1, x2, y2] = b.map((v) => Math.round(Math.max(0, v) * 10) / 10);
+    if (x2 - x1 < 4 || y2 - y1 < 4) throw bad('Box quá nhỏ.');
+    return [x1, y1, x2, y2];
   }
 
+  _nextManualId(imageId) {
+    const n = Math.max(0, ...(this.manual[imageId] || []).map((m) => Number(m.id.split('_m').pop()) || 0)) + 1;
+    return `${imageId}_m${String(n).padStart(2, '0')}`;
+  }
+
+  // Box người tự vẽ (trang Ảnh chỉ vẽ Người; vật thể vẽ ở trang Đồ vật).
+  // op: {action: 'add'|'update'|'delete', image_id, id?, box?}; box tính bằng pixel ảnh gốc [x1, y1, x2, y2].
+  // Hành động của box gán qua apply() như mọi Người.
+  manualOp(op) {
+    const im = this.byId.get(op?.image_id);
+    if (!im) throw bad('Ảnh không tồn tại.');
+    if (op.action === 'delete') return this.deletePeople([op.id]);
+    if (op.action === 'add') {
+      const box = this._cleanBox(op.box);
+      const id = this._nextManualId(im.image_id);
+      return this._step(`vẽ box ${id}`, [{ t: 'box', image: im.image_id, id }], () => {
+        this.manual[im.image_id] = [...(this.manual[im.image_id] || []), { id, kind: 'person', box, created: new Date().toISOString(), by: this.actor }];
+      }, { id });
+    }
+    if (op.action !== 'update') throw bad(`Thao tác lạ: ${op.action}`);
+    const m = (this.manual[im.image_id] || []).find((x) => x.id === op.id);
+    if (!m) throw bad(`Không có box ${op.id}.`);
+    const box = this._cleanBox(op.box);
+    return this._step(`sửa box ${op.id}`, [{ t: 'box', image: im.image_id, id: op.id }], () => {
+      const cur = this.manual[im.image_id].find((x) => x.id === op.id);
+      cur.box = box;
+      cur.updated = new Date().toISOString();
+    }, { id: op.id });
+  }
+
+  // Phím số / chữ của trang gán nhanh: thứ tự ghim trong label_definitions/hotkeys.yaml, phần còn lại theo số crop.
+  hotkeys() {
+    const KEYS = [...'1234567890', ...'qwertyuiopsdfghjlcvbnm'];   // bỏ a, x, z, k: phím chung (đúng, sai, hoàn tác, không rõ)
+    const doc = (() => { try { return YAML.parse(fs.readFileSync(path.join(this.root, 'label_definitions', 'hotkeys.yaml'), 'utf8')) || {}; } catch { return {}; } })();
+    const order = (pinned, all, count) => {
+      const rest = all.filter((x) => !pinned.includes(x)).sort((a, b) => (count[b] || 0) - (count[a] || 0));
+      return [...pinned.filter((x) => all.includes(x)), ...rest].slice(0, KEYS.length).map((x, i) => [KEYS[i], x]);
+    };
+    const names = this.identitySummary().names;
+    const actions = this.stats().people?.byLabel || {};
+    return { names: order(doc.names || [], Object.keys(names), names), actions: order(doc.actions || [], (this.profiles.people?.classes || []).map((c) => c.name), actions) };
+  }
   undo() {
     const step = this.undoStack.pop();
-    if (!step) throw Object.assign(new Error('Không còn gì để hoàn tác.'), { status: 400 });
+    if (!step) throw bad('Không còn gì để hoàn tác.');
     if (step.obj) { try { return this.objects.undo(step); } catch (e) { this.undoStack.push(step); throw e; } }
-    if (step.names) {
-      if (mtime(this.namesFile) !== this.namesMtime) { this.undoStack.push(step); throw Object.assign(new Error('identity_names.json đã bị ghi đè.'), { status: 409 }); }
-      this.names = step.names;
-      this._saveNames();
-      if (step.rename) {
-        for (const pid of step.rename.predicted) this.personById.get(pid).identity.predicted.name = step.rename.from;
-        if (step.outfits != null) { beforeWrite(step.outfitsFile, { text: step.outfits }); fs.writeFileSync(step.outfitsFile, step.outfits, 'utf8'); }
-      }
-      for (const id of step.images) this.searchCache.delete(id);
-      return { changed: step.images, left: this.undoStack.length };
+    try { this._fresh(step.items, false); } catch (e) { this.undoStack.push(step); throw e; }
+    const touched = new Set(), conflicts = [];
+    for (const it of [...step.items].reverse()) {
+      if (!same(this._get(it), it.after)) { conflicts.push(it.pid || it.id || it.key || it.c); continue; }   // người khác đã sửa sau mình
+      this._set(it, it.before, touched);
     }
-    if (!Array.isArray(step)) {
-      try { this._checkManualFresh(); } catch (e) { this.undoStack.push(step); throw e; }
-      this.manual[step.image_id] = step.prev;
-      this._saveManual();
-      this.searchCache.delete(step.image_id);
-      return { changed: [step.image_id], left: this.undoStack.length };
+    if (step.rename) {
+      for (const pid of step.rename.predicted) { const p = this.personById.get(pid); if (p?.identity?.predicted) p.identity.predicted.name = step.rename.from; }
+      if (step.outfits != null) { beforeWrite(step.outfitsFile, { text: step.outfits }); fs.writeFileSync(step.outfitsFile, step.outfits, 'utf8'); }
     }
-    const touched = new Set();
-    try {
-      for (const u of step) { const p = this.profiles[u.profile]; if (!touched.has(p)) { this._checkFresh(p); touched.add(p); } }
-      this._checkCustomFresh();
-    } catch (e) { this.undoStack.push(step); throw e; }
-    const changed = new Set();
-    for (const u of step.reverse()) {
-      const p = this.profiles[u.profile];
-      if (u.approved === undefined) delete p.approved[u.key]; else p.approved[u.key] = u.approved;
-      if (u.rejected === undefined) delete p.rejected[u.key]; else p.rejected[u.key] = u.rejected;
-      const own = (this.custom[u.profile] ||= {});
-      if (u.custom === undefined) delete own[u.key]; else own[u.key] = u.custom;
-      for (const id of this._imagesOf(p, u.key)) { changed.add(id); this.searchCache.delete(id); }
-    }
-    for (const p of touched) this._save(p);
-    this._saveCustom();
-    return { changed: [...changed], left: this.undoStack.length };
+    const changed = this._saveTouched(touched);
+    return { changed, left: this.undoStack.length, desc: step.desc, page: step.page, conflicts };
   }
 }
 

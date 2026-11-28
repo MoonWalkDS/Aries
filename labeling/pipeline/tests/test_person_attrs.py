@@ -193,3 +193,55 @@ def test_person_tracks_link_same_person_in_nearby_frames_only():
     t = identity.person_tracks(ids, people, vectors, max_gap=21, min_iou=0.5, min_cos=0.85)
     assert t[0] == t[2] and len({t[0], t[1], t[3], t[4]}) == 4
     assert identity.box_iou(box_a, box_a) == 1.0 and identity.box_iou(box_a, box_b) == 0.0
+
+
+def test_manual_person_boxes_are_encoded_once_and_named_by_the_model(tmp_path):
+    """Box người tự vẽ: cắt crop + mã hoá (cache theo id và box), rồi được học và đoán tên như người do máy dò."""
+    import numpy as np
+    from PIL import Image
+    from modules import identity
+
+    cfg = load_config(Path(__file__).resolve().parents[2] / "config.yaml")
+    cfg["enrich"]["identity"].update(min_examples=3, track=None)
+    data_dir, jsons, images = tmp_path / "data", tmp_path / "out", tmp_path / "images"
+    for d in (data_dir / "people", jsons, images):
+        d.mkdir(parents=True)
+    Image.new("RGB", (100, 100), (255, 0, 0)).save(images / "08_1.jpg")     # nửa trên đỏ, nửa dưới xanh
+    img = Image.open(images / "08_1.jpg"); img.paste((0, 0, 255), (0, 50, 100, 100)); img.save(images / "08_1.jpg")
+
+    class Encoder:
+        calls = 0
+
+        def encode(self, crops):
+            Encoder.calls += len(crops)
+            return [np.array([*np.asarray(c, np.float32).mean((0, 1)) / 255, 0], np.float32) for c in crops]
+
+    ids = [f"08_{n}_p01" for n in range(10)]
+    vectors = np.array([[1, 0, 0, 0] if n % 2 == 0 else [0, 0, 1, 0] for n in range(10)], np.float32)   # chẵn đỏ, lẻ xanh
+    np.save(data_dir / "people" / "embeddings.npy", vectors)
+    (data_dir / "people" / "ids.json").write_text(json.dumps([f"{i}.jpg" for i in ids]), encoding="utf-8")
+    named = {ids[n]: ("Đỏ" if n % 2 == 0 else "Xanh") for n in range(10)}
+    named["08_1_m02"] = "Xanh"                                                               # box tự vẽ có tên: dùng để học
+    (jsons / identity.NAMES_FILE).write_text(json.dumps({"clusters": {}, "people": named}, ensure_ascii=False), encoding="utf-8")
+    boxes = {"08_1": [{"id": "08_1_m01", "kind": "person", "box": [10, 5, 90, 40]}, {"id": "08_1_m02", "kind": "person", "box": [10, 60, 90, 95]},
+                      {"id": "08_1_m03", "kind": "object", "box": [0, 0, 9, 9], "label": "cốc"}],
+             "08_9": [{"id": "08_9_m01", "kind": "person", "box": [0, 0, 9, 9]}]}                # không có ảnh gốc: bỏ qua
+    (jsons / enrich.MANUAL_BOXES_FILE).write_text(json.dumps(boxes), encoding="utf-8")
+
+    extra = enrich.manual_people(cfg, data_dir, jsons, images, Encoder())
+    assert extra[0] == ["08_1_m01", "08_1_m02"] and Encoder.calls == 2 and extra[1].shape == (2, 4)
+    assert (data_dir / "people" / "crops" / "08_1_m01.jpg").exists()
+    assert enrich.manual_people(cfg, data_dir, jsons, images, Encoder())[0] == extra[0] and Encoder.calls == 2   # cache: không mã hoá lại
+    boxes["08_1"][0]["box"] = [10, 5, 90, 45]                                                # kéo lại box: mã hoá lại đúng box đó
+    (jsons / enrich.MANUAL_BOXES_FILE).write_text(json.dumps(boxes), encoding="utf-8")
+    extra = enrich.manual_people(cfg, data_dir, jsons, images, Encoder())
+    assert Encoder.calls == 3
+
+    result = identity.train_predict(cfg, data_dir, jsons, extra)
+    assert result["train"] == 11 and result["people"] == 12
+    pred = identity.load_pred(jsons)
+    assert pred["08_1_m01"]["name"] == "Đỏ"
+    final = identity.final_identity("08_1_m01", identity.load_identity(jsons), pred, 0.5)
+    assert (final["name"], final["source"]) == ("Đỏ", "model")
+    entry = enrich._manual_entry({"id": "08_1_m01", "kind": "person", "box": [1, 2, 3, 4]}, final)
+    assert entry["identity"]["name"] == "Đỏ" and "identity" not in enrich._manual_entry(boxes["08_1"][2])

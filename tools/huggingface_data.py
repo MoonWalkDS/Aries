@@ -2,7 +2,7 @@
 
     python tools/huggingface_data.py download                     # hỏi cách lấy ảnh gốc
     python tools/huggingface_data.py download --images download   # tải cả 5.000 ảnh gốc
-    python tools/huggingface_data.py download --images skip       # không lấy ảnh (web truy vấn sẽ thiếu ảnh)
+    python tools/huggingface_data.py download --images skip       # không lấy ảnh
     python tools/huggingface_data.py download --images D:/castle/images   # dùng thư mục ảnh có sẵn (tạo liên kết, không chép)
     python tools/huggingface_data.py upload                       # chủ dữ liệu: đẩy data/ + file máy sinh trong labeling/annotations/
 
@@ -33,8 +33,6 @@ DATA = [
     "data/dataset/raw/teacher_metadata.csv",
     "data/exports/castle_dataset.jsonl", "data/exports/people.csv", "data/exports/objects.csv", "data/exports/rois.csv", "data/exports/summary.json",
     "data/exports/caption/inputs.jsonl", "data/exports/caption/captions.jsonl", "data/exports/caption/prompt_vi.md",
-    "data/exports/embeddings/**",
-    "data/exports/search_index/**",
     "data/intermediate/adl/**",
     "data/intermediate/enrich/_detections.json", "data/intermediate/enrich/objects.json", "data/intermediate/enrich/objects_owl.json", "data/intermediate/enrich/objects_static.json",
     "data/intermediate/enrich/people/people.json", "data/intermediate/enrich/people/ids.json",
@@ -154,7 +152,7 @@ def download(images: str, root: Path = ROOT) -> None:
 def upload(root: Path = ROOT, yes: bool = False) -> None:
     api = HfApi()
     _login_or_exit(api)
-    missing = [p for p in ("data/exports/castle_dataset.jsonl", "data/exports/search_index/images.json") if not (root / p).exists()]
+    missing = [p for p in ("data/exports/castle_dataset.jsonl",) if not (root / p).exists()]
     if missing:
         sys.exit(f"Thiếu {missing}: chưa đủ dữ liệu để đẩy.")
     pack_archives(root)
@@ -166,7 +164,7 @@ def upload(root: Path = ROOT, yes: bool = False) -> None:
     api.create_repo(REPO, repo_type="dataset", private=True, exist_ok=True)
     api.upload_folder(repo_id=REPO, repo_type="dataset", folder_path=root, allow_patterns=patterns(with_images=True),
                       delete_patterns=[f"{d}/*" for d in archived_dirs(with_images=True)],   # bỏ file lẻ của thư mục nay đã đi dạng zip
-                      commit_message="Dữ liệu cho castle-retrieval (data/ + file máy sinh trong labeling/annotations/)")
+                      commit_message="Dữ liệu cho Aries (data/ + file máy sinh trong labeling/annotations/)")
     print("Đã đẩy xong.")
 
 

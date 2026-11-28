@@ -23,7 +23,7 @@ where npm >nul 2>nul && (
 ) || echo Không thấy Node.js: bỏ qua viewer. Cài Node 18+ rồi chạy lại tools\setup.bat nếu cần viewer.
 if not exist ".env" (
   copy ".env.example" ".env" >nul
-  echo Đã tạo .env: điền tài khoản DRES vào đó, hoặc sửa trên trang web truy vấn.
+  echo Đã tạo .env: điền tài khoản DRES vào đó.
 )
 echo.
 echo Xong. Bước tiếp theo: tools\download_data.bat

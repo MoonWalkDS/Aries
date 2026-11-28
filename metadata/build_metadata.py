@@ -1,8 +1,8 @@
 """Chuyển toàn bộ nhãn 5.000 ảnh sang định dạng metadata của Nam (metadata/metadata.json, khoá "HH_FRAME.jpg").
 
-    python retrieval/build_metadata.py            # ghi metadata/metadata.json
+    python metadata/build_metadata.py            # ghi metadata/metadata.json
 
-Mỗi ảnh giữ đúng 3 trường engine SLM của Nam đọc (nhánh add_parsing_query, search_engine.py):
+Mỗi ảnh giữ đúng 3 trường mô tả chính:
   so_nguoi            int, số người detector đếm (num_people)
   danh_sach_nguoi     list[str], mỗi người một câu tiếng Việt: trang phục + hành động + vị trí
   vat_the_trang_thai  list[str], tiếng Việt: vùng cố định của bếp, trạng thái vùng, vật thể

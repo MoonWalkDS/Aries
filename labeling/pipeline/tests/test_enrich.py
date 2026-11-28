@@ -310,7 +310,7 @@ def test_people_and_roi_loops_then_merge(project):
     assert person["num_people"] == 1                                                  # box tự vẽ không cộng vào người do máy dò
     assert person["manual"] == [
         {"id": "08_12_m01", "kind": "object", "box": [10, 20, 60, 80], "label": {"label": "chảo", "label_vi": "", "source": "human", "score": None}},
-        {"id": "08_12_m02", "kind": "person", "box": [5, 5, 30, 90], "label": None},
+        {"id": "08_12_m02", "kind": "person", "box": [5, 5, 30, 90], "label": None, "identity": None},
     ]
 
 

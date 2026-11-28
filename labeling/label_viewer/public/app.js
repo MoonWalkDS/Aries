@@ -98,7 +98,7 @@ function units() {
   }
   for (const m of D.manual || []) {
     out.push({ kind: 'manual', manualKind: m.kind, profile: 'manual', key: m.id, kindVi: 'Box tự vẽ', title: `Box ${m.id.split('_').pop()}`,
-      state: m.label ? { label: m.label, label_vi: m.label_vi || '', source: 'human' } : null, box: editBox(m.id, m.box) });
+      state: m.label ? { label: m.label, label_vi: m.label_vi || '', source: 'human' } : null, box: editBox(m.id, m.box), identity: m.identity ?? null, predicted: m.predicted ?? null });
   }
   if (DRAFT) out.push({ kind: 'manual', draft: true, manualKind: DRAFT.kind, profile: 'manual', key: 'draft', kindVi: 'Box tự vẽ', title: 'Box mới', state: null, box: editBox('draft', DRAFT.box) });
   return out;
@@ -314,8 +314,8 @@ function whoPanel(u) {
     u.predicted ? h('div', { class: 'muted small' }, `Mô hình đoán: ${u.predicted.name} (${Math.round(u.predicted.prob * 100)}%)${u.predicted.prob < 0.6 ? ' · thấp, không dùng' : ''}`) : '',
     u.outfit ? h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Trang phục (outfits.yaml)') : '',
     u.outfit ? h('dl', { class: 'attrs' }, Object.entries(u.outfit).filter(([, v]) => v !== '' && v != null).flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, Array.isArray(v) ? v.join(', ') : String(v))])) : '',
-    h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Ngoại hình (VLM)'),
-    a ? h('dl', { class: 'attrs' }, ATTR_VI.flatMap(([k, t]) => [h('dt', {}, t), h('dd', {}, attrText(a, k))]))
+    u.kind === 'manual' ? '' : h('div', { class: 'p-kind', style: 'margin-top:12px' }, 'Ngoại hình (VLM)'),
+    u.kind === 'manual' ? '' : a ? h('dl', { class: 'attrs' }, ATTR_VI.flatMap(([k, t]) => [h('dt', {}, t), h('dd', {}, attrText(a, k))]))
       : h('div', { class: 'muted small' }, 'Chưa có mô tả. Bước mô tả người đang chạy trên Kaggle; bấm "Gộp dữ liệu" khi có kết quả.'));
 }
 // "Người NN" nhỏ nhất chưa có trong các tên đã đặt
@@ -393,6 +393,8 @@ function renderManualPanel(u, panel) {
     h('div', { class: 'actions', style: 'grid-template-columns:1fr' },
       u.draft ? h('button', { class: 'btn', onclick: cancelDraft }, 'Huỷ box này', h('kbd', {}, 'Esc'))
         : h('button', { class: 'btn bad', onclick: () => deleteManual(u) }, 'Xoá box', h('kbd', {}, 'Del'))),
+    // box người đã lưu: đặt tên "người này là ai" như người do máy dò (mô hình đoán tên sau mỗi lần Gộp dữ liệu)
+    kind === 'person' && !u.draft ? whoPanel(u) : '',
     body);
 }
 async function setManualKind(u, kind) {

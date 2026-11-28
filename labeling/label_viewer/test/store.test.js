@@ -336,3 +336,26 @@ test('hàng "Thầy tả": người câu của thầy tả, X chỉ bác gợi �
   assert.deepEqual(s.actionMembers({ teacher: 'opening the refrigerator' }), []);
   assert.equal(s.actionSummary().teacher['opening the refrigerator'], undefined);
 });
+
+test('box người tự vẽ: đặt tên như người, mô hình đoán từ lần gộp, đổi sang vật thể hay xoá thì rời bảng định danh', () => {
+  const root = fixture();
+  const f = path.join(root, 'annotations/enriched/08_1.json');
+  const rec = JSON.parse(fs.readFileSync(f, 'utf8'));
+  rec.manual = [{ id: '08_1_m01', kind: 'person', box: [1, 2, 3, 4], label: null, identity: { name: 'An', source: 'model', predicted: { name: 'An', prob: 0.9, margin: 0.8 } } }];
+  fs.writeFileSync(f, JSON.stringify(rec));
+  fs.writeFileSync(path.join(root, 'annotations/manual_boxes.json'), JSON.stringify({ '08_1': [{ id: '08_1_m01', kind: 'person', box: [1, 2, 3, 4] }] }));
+  const s = new Store(root);
+  assert.equal(s.finalIdentity('08_1_m01').name, 'An');                               // tên mô hình đoán lúc gộp
+  assert.equal(s.detail('08_1').manual[0].predicted.name, 'An');
+  assert.deepEqual(s.identityMembers({ name: 'An' }).map((x) => x.id), ['08_1_m01']);
+  const { id } = s.manualOp({ action: 'add', image_id: '08_1', box: [10, 20, 110, 220], kind: 'person' });
+  s.setIdentity({ scope: 'person', person: id, name: 'Bình' });                         // box vừa vẽ, chưa gộp: vẫn đặt tên được
+  assert.equal(s.detail('08_1').manual[1].identity.name, 'Bình');
+  assert.equal(s.identitySummary().names['Bình'], 1);
+  s.manualOp({ action: 'update', image_id: '08_1', id, kind: 'object', label: 'cái chảo' });
+  assert.equal(s.identitySummary().names['Bình'], undefined);                          // vật thể không phải người
+  s.undo();
+  assert.equal(s.identitySummary().names['Bình'], 1);
+  s.manualOp({ action: 'delete', image_id: '08_1', id: '08_1_m01' });
+  assert.throws(() => s.setIdentity({ scope: 'person', person: '08_1_m01', name: 'x' }), /Không có người/);
+});

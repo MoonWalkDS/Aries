@@ -968,13 +968,6 @@
     "score": null,
     "vlm": "direct"
   },
-  "08_1169_p03": {
-    "label": "opening the refrigerator",
-    "source": "vlm",
-    "round": 3,
-    "score": null,
-    "vlm": "direct"
-  },
   "08_1169_p04": {
     "label": "preparing food",
     "source": "vlm",
@@ -9865,11 +9858,12 @@
     "vlm": "direct"
   },
   "08_3472_p05": {
-    "label": "getting items from a cabinet",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "TrKimHieu",
+    "at": "2026-11-28T02:53:44.378Z"
   },
   "08_3493_p01": {
     "label": "standing idle",
@@ -9886,11 +9880,12 @@
     "vlm": "direct"
   },
   "08_3493_p03": {
-    "label": "cooking at the stove",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "TrKimHieu",
+    "at": "2026-11-28T02:53:21.265Z"
   },
   "08_3521_p01": {
     "label": "cooking at the stove",
@@ -10259,6 +10254,14 @@
     "round": 1,
     "score": 0.7992,
     "vlm": "agree"
+  },
+  "08_449_p02": {
+    "label": "cleaning",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "TrKimHieu",
+    "at": "2026-11-28T01:57:13.052Z"
   },
   "08_449_p03": {
     "label": "cooking at the stove",
@@ -21939,11 +21942,12 @@
     "vlm": "direct"
   },
   "11_944_p05": {
-    "label": "sitting",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "Quoc",
+    "at": "2026-11-28T03:07:10.594Z"
   },
   "11_944_p06": {
     "label": "drinking",
@@ -37637,12 +37641,21 @@
     "vlm": "changed",
     "suggested": "cooking at the stove"
   },
-  "14_218_p02": {
-    "label": "standing idle",
-    "source": "vlm",
+  "14_218_p01": {
+    "label": "sitting",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:09:03.116Z"
+  },
+  "14_218_p02": {
+    "label": "walking",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:09:12.926Z"
   },
   "14_218_p03": {
     "label": "cooking at the stove",
@@ -37708,6 +37721,14 @@
     "score": null,
     "vlm": "direct"
   },
+  "14_252_p01": {
+    "label": "sitting",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:10:19.373Z"
+  },
   "14_252_p02": {
     "label": "washing dishes",
     "source": "vlm",
@@ -37721,6 +37742,14 @@
     "round": 3,
     "score": null,
     "vlm": "direct"
+  },
+  "14_253_p01": {
+    "label": "walking",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:10:55.165Z"
   },
   "14_253_p02": {
     "label": "washing dishes",
@@ -41182,6 +41211,14 @@
     "vlm": "changed",
     "suggested": "opening the refrigerator"
   },
+  "14_384_p01": {
+    "label": "sitting",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:14:49.231Z"
+  },
   "14_384_p02": {
     "label": "preparing food",
     "source": "vlm",
@@ -41218,6 +41255,14 @@
     "vlm": "changed",
     "suggested": "cooking at the stove"
   },
+  "14_402_p01": {
+    "label": "standing idle",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:16:04.524Z"
+  },
   "14_402_p02": {
     "label": "cooking at the stove",
     "source": "vlm",
@@ -41226,19 +41271,20 @@
     "vlm": "agree"
   },
   "14_420_p01": {
-    "label": "cooking at the stove",
-    "source": "vlm",
+    "label": "walking",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:16:36.750Z"
   },
   "14_420_p02": {
-    "label": "getting items from a cabinet",
-    "source": "vlm",
-    "round": 1,
+    "label": "cooking at the stove",
+    "source": "human",
+    "round": 3,
     "score": 0.7759,
-    "vlm": "changed",
-    "suggested": "cooking at the stove"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:16:32.654Z"
   },
   "14_436_p01": {
     "label": "cooking at the stove",
@@ -41255,11 +41301,12 @@
     "vlm": "direct"
   },
   "14_437_p01": {
-    "label": "opening the refrigerator",
-    "source": "vlm",
+    "label": "cooking at the stove",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:25:59.735Z"
   },
   "14_437_p02": {
     "label": "standing idle",
@@ -41283,11 +41330,12 @@
     "vlm": "direct"
   },
   "14_445_p01": {
-    "label": "washing dishes",
-    "source": "vlm",
+    "label": "cooking at the stove",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:26:25.974Z"
   },
   "14_445_p02": {
     "label": "cooking at the stove",
@@ -41305,11 +41353,12 @@
     "suggested": "cleaning"
   },
   "14_448_p02": {
-    "label": "cooking at the stove",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:26:41.070Z"
   },
   "14_449_p01": {
     "label": "cooking at the stove",
@@ -41320,11 +41369,12 @@
     "suggested": "making a hot drink"
   },
   "14_449_p02": {
-    "label": "cooking at the stove",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:26:56.831Z"
   },
   "14_44_p01": {
     "label": "washing dishes",
@@ -41364,21 +41414,37 @@
     "vlm": "changed",
     "suggested": "making a hot drink"
   },
+  "14_470_p01": {
+    "label": "walking",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:29:09.598Z"
+  },
   "14_470_p02": {
-    "label": "using a phone",
-    "source": "vlm",
-    "round": 0,
+    "label": "walking",
+    "source": "human",
+    "round": 3,
     "score": 0.0847,
-    "vlm": "changed",
-    "suggested": "sitting"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:29:06.799Z"
   },
   "14_470_p03": {
-    "label": "making a hot drink",
-    "source": "vlm",
+    "label": "cooking at the stove",
+    "source": "human",
     "round": 3,
     "score": 0.7494,
-    "vlm": "changed",
-    "suggested": "washing dishes"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:29:31.652Z"
+  },
+  "14_475_p01": {
+    "label": "walking",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:29:36.933Z"
   },
   "14_475_p02": {
     "label": "standing idle",
@@ -41443,33 +41509,36 @@
     "at": "2026-11-21T02:19:18.079Z"
   },
   "14_495_p02": {
-    "label": "washing dishes",
-    "source": "vlm",
+    "label": "cooking at the stove",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:14.206Z"
   },
   "14_495_p03": {
-    "label": "making a hot drink",
-    "source": "vlm",
-    "round": 0,
+    "label": "standing idle",
+    "source": "human",
+    "round": 3,
     "score": 0.1616,
-    "vlm": "changed",
-    "suggested": "washing dishes"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:10.158Z"
   },
   "14_500_p01": {
-    "label": "washing dishes",
-    "source": "vlm",
+    "label": "cooking at the stove",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:27.974Z"
   },
   "14_500_p02": {
-    "label": "making a hot drink",
-    "source": "vlm",
-    "round": 0,
+    "label": "washing dishes",
+    "source": "human",
+    "round": 3,
     "score": 0.1649,
-    "vlm": "agree"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:31.605Z"
   },
   "14_509_p01": {
     "label": "cooking at the stove",
@@ -41501,11 +41570,12 @@
     "vlm": "agree"
   },
   "14_513_p02": {
-    "label": "throwing away trash",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:43.748Z"
   },
   "14_519_p01": {
     "label": "cooking at the stove",
@@ -41531,11 +41601,12 @@
     "suggested": "making a hot drink"
   },
   "14_528_p01": {
-    "label": "opening the refrigerator",
-    "source": "vlm",
+    "label": "walking",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:30:52.686Z"
   },
   "14_528_p02": {
     "label": "cooking at the stove",
@@ -41573,12 +41644,28 @@
     "vlm": "changed",
     "suggested": "cleaning"
   },
+  "14_568_p01": {
+    "label": "getting items from a cabinet",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:31:14.308Z"
+  },
   "14_568_p02": {
     "label": "cooking at the stove",
     "source": "vlm",
     "round": 0,
     "score": 0.8213,
     "vlm": "agree"
+  },
+  "14_572_p01": {
+    "label": "getting items from a cabinet",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:31:20.389Z"
   },
   "14_572_p02": {
     "label": "walking",
@@ -41595,12 +41682,29 @@
     "vlm": "changed",
     "suggested": "washing dishes"
   },
-  "14_576_p02": {
-    "label": "cooking at the stove",
-    "source": "vlm",
+  "14_576_p01": {
+    "label": "getting items from a cabinet",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:31:43.358Z"
+  },
+  "14_576_p02": {
+    "label": "standing idle",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:05.470Z"
+  },
+  "14_576_p03": {
+    "label": "cooking at the stove",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:31:55.486Z"
   },
   "14_577_p01": {
     "label": "standing idle",
@@ -41610,11 +41714,12 @@
     "vlm": "direct"
   },
   "14_577_p02": {
-    "label": "washing dishes",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:16.750Z"
   },
   "14_577_p03": {
     "label": "standing idle",
@@ -41631,11 +41736,12 @@
     "vlm": "agree"
   },
   "14_581_p02": {
-    "label": "opening the refrigerator",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:23.302Z"
   },
   "14_581_p03": {
     "label": "cooking at the stove",
@@ -41654,11 +41760,12 @@
     "suggested": "sitting"
   },
   "14_582_p02": {
-    "label": "getting items from a cabinet",
-    "source": "vlm",
+    "label": "standing idle",
+    "source": "human",
     "round": 3,
     "score": null,
-    "vlm": "direct"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:33.054Z"
   },
   "14_582_p03": {
     "label": "getting items from a cabinet",
@@ -41667,6 +41774,14 @@
     "score": 0.7733,
     "vlm": "changed",
     "suggested": "washing dishes"
+  },
+  "14_588_p01": {
+    "label": "standing idle",
+    "source": "human",
+    "round": 3,
+    "score": null,
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:37.790Z"
   },
   "14_588_p02": {
     "label": "preparing food",
@@ -41712,12 +41827,12 @@
     "vlm": "direct"
   },
   "14_600_p02": {
-    "label": "eating",
-    "source": "vlm",
-    "round": 2,
+    "label": "carrying something",
+    "source": "human",
+    "round": 3,
     "score": 0.7903,
-    "vlm": "changed",
-    "suggested": "preparing food"
+    "by": "BaoLong",
+    "at": "2026-11-28T07:32:52.774Z"
   },
   "14_600_p03": {
     "label": "washing dishes",

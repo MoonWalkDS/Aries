@@ -24,3 +24,5 @@ labeling/label_viewer/users.json
 __pycache__/
 .pytest_cache/
 *.zip
+
+metadata/metadata.json

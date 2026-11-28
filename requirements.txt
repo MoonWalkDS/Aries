@@ -1,4 +1,4 @@
-# Máy local: web truy vấn, dựng chỉ mục, các bước pipeline không cần GPU lớn, tải/đẩy dữ liệu HF, test.
+# Máy local: các bước pipeline không cần GPU lớn, tải/đẩy dữ liệu HF, test.
 # setup.bat cài file này. torch bản CUDA được setup.bat cài riêng khi máy có GPU NVIDIA.
 # Bước VLM (Qwen2.5-VL) chạy trên Kaggle/Colab: xem requirements-cloud.txt và pipeline/notebooks/.
 
@@ -12,11 +12,10 @@ scikit-learn>=1.4          # HDBSCAN, mô hình định danh
 python-dotenv>=1.0
 requests>=2.31
 
-# --- model (SigLIP2, RT-DETR, opus-mt) ---
+# --- model (SigLIP2, RT-DETR) ---
 torch>=2.3
 open_clip_torch>=2.31      # SigLIP2 cần >= 2.31
 transformers>=4.44
-sentencepiece>=0.2         # tokenizer của opus-mt-vi-en
 
 # --- backend VLM qua API (tuỳ chọn, chỉ khi cấu hình vlm.backend = api / openai) ---
 anthropic>=0.60

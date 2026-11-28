@@ -9064,3 +9064,5 @@
 {"at":"2026-11-28T13:57:23.828Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","18_565_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:23.828Z"}}
 {"at":"2026-11-28T13:57:29.459Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","16_2040_m02"],"v":"Áo len 2 màu"}
 {"at":"2026-11-28T13:57:29.459Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","16_2040_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:29.459Z"}}
+{"at":"2026-11-28T14:15:32.148Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["13_2718_p01"],"d":1}
+{"at":"2026-11-28T14:15:32.298Z","by":"Nguyen Bao Long","file":"annotations/adl_people/rejected.json","path":["13_2718_p01"],"v":["opening the refrigerator","walking"]}

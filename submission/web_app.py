@@ -3,6 +3,8 @@ import argparse
 import json
 import re
 import webbrowser
+import sys
+from functools import lru_cache
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
@@ -10,6 +12,23 @@ import requests
 
 import fetch_task
 import submit_task
+
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from retrieval.query_parser import parse_query
+
+
+@lru_cache(maxsize=1)
+def load_names(path, modified):
+    names = set()
+    with path.open(encoding="utf-8") as records:
+        for line in records:
+            for person in json.loads(line).get("people", []):
+                name = (person.get("identity") or {}).get("name")
+                if name:
+                    names.add(name)
+    return sorted(names, key=lambda name: (-len(name), name))
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -33,17 +52,28 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get("Origin") != origin or self.headers.get("Host") != origin[7:]:
             self.send_error(403)
             return
-        if self.path not in ("/task", "/submit"):
+        if self.path not in ("/task", "/submit", "/parse"):
             self.send_error(404)
             return
         result_status, headers = 200, {}
         try:
             size = int(self.headers.get("Content-Length", 0))
-            if not 0 < size <= 4096:
+            limit = 65536 if self.path == "/parse" else 4096
+            if not 0 < size <= limit:
                 raise ValueError()
             body = json.loads(self.rfile.read(size))
             if not isinstance(body, dict):
                 raise ValueError()
+            if self.path == "/parse":
+                query = body.get("query")
+                if not isinstance(query, str) or not query.strip():
+                    self.reply(400, "Nhập đề bài trước khi parse.".encode(), "text/plain; charset=utf-8")
+                    return
+                dataset = ROOT / "data/exports/castle_dataset.jsonl"
+                names = load_names(dataset, dataset.stat().st_mtime_ns) if dataset.exists() else []
+                parsed = parse_query(query, names)
+                self.reply(200, json.dumps(parsed, ensure_ascii=False, indent=2).encode(), "application/json")
+                return
             if self.path == "/submit":
                 item, answer = body.get("item"), body.get("text")
                 if answer is not None:   # task QA: câu trả lời chữ

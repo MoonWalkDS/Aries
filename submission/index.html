@@ -3,10 +3,11 @@
 <title>Aries · Truy vấn và nộp bài</title>
 <style>
 *{box-sizing:border-box}body{margin:3rem auto;padding:0 1rem;max-width:48rem;background:#f4f6f4;color:#182820;font:1rem/1.55 system-ui}section{background:white;border:1px solid #cdd7d0;border-radius:.6rem;margin:1rem 0;padding:1.4rem}h1,h2{margin:0 0 .8rem}textarea,input{font:inherit;width:100%;padding:.65rem;margin:.4rem 0 .8rem;border:1px solid #83998c;border-radius:.3rem}button{font:inherit;padding:.5rem 1rem;background:#215343;color:white;border:0;border-radius:.3rem;cursor:pointer}output{display:block;white-space:pre-wrap;margin-top:.6rem}fieldset{border:0;padding:0;margin:0 0 .6rem;display:flex;gap:1.2rem}fieldset label{display:flex;gap:.4rem;align-items:center}fieldset input{width:auto;margin:0}[hidden]{display:none!important}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:1rem;background:#eef3ef}
 </style>
 <main><h1>Aries</h1><section><h2>Truy vấn ảnh</h2>
 <label for="query">Đề bài</label><textarea id="query" rows="4"></textarea>
-<button id="task">Lấy đề DRES</button><p>Engine truy vấn v2 đang chờ triển khai.</p></section>
+<button id="task">Lấy đề DRES</button><button id="parse" type="button">Parse</button><div id="preview" hidden><h3>Kết quả parse</h3><pre id="parsed" aria-live="polite"></pre></div></section>
 <section><h2>Nộp bài DRES</h2><form>
 <fieldset><legend hidden>Loại nộp</legend><label><input type="radio" name="mode" value="kis" checked>Nộp ảnh</label><label><input type="radio" name="mode" value="qa">Nộp QA (câu trả lời chữ)</label></fieldset>
 <div id="kis"><label for="item">Mã ảnh</label><input id="item" placeholder="10_1528.jpg" maxlength="150" pattern="[A-Za-z0-9_.\-]+"></div>
@@ -37,10 +38,30 @@ function setMode(value) {
   select('#qa').hidden = value !== 'qa';
 }
 for (const radio of document.querySelectorAll('input[name=mode]')) radio.onchange = () => setMode(radio.value);
+const query = select('#query');
+function clearPreview() { select('#preview').hidden = true; }
+query.addEventListener('input', clearPreview);
+select('#parse').onclick = async event => {
+  const button = event.currentTarget;
+  const value = query.value;
+  if (!value.trim()) { query.focus(); query.setCustomValidity('Nhập đề bài trước khi parse.'); query.reportValidity(); query.setCustomValidity(''); return; }
+  button.disabled = true;
+  const panel = select('#preview'), result = select('#parsed');
+  panel.hidden = false;
+  result.textContent = 'Đang parse…';
+  try {
+    const response = await fetch('/parse', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({query:value})});
+    if (!response.ok) throw Error();
+    result.textContent = JSON.stringify(await response.json(), null, 2);
+  } catch {
+    result.textContent = 'Không parse được đề bài. Kiểm tra nội dung và thử lại.';
+  } finally {button.disabled = false;}
+};
 select('#task').onclick = async event => {
   const text = await call(event.currentTarget, '/task', {});
   if (!text) return;
-  select('#query').value = text;
+  clearPreview();
+  query.value = text;
   const kind = lastTaskType || '';
   select('#kind').textContent = kind ? 'Loại task DRES: ' + kind : '';
   if (kind) setMode(/\bqa\b|question|answer|text/i.test(kind) ? 'qa' : 'kis');

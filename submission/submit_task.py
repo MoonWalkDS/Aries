@@ -93,6 +93,14 @@ def submit(session, evaluation_id, item_name):
     return r.status_code, r.text
 
 
+def submit_text(session, evaluation_id, answer):
+    """Nộp câu trả lời chữ cho task QA. Chỉ gửi "text": có mediaItemName thì DRES coi là nộp ảnh."""
+    body = {"answerSets": [{"answers": [{"text": answer}]}]}
+    r = requests.post(f"{DRES_URL}/submit/{evaluation_id}",
+                      params={"session": session}, json=body, timeout=15)
+    return r.status_code, r.text
+
+
 def describe(status, text):
     try:
         verdict = json.loads(text).get("submission")

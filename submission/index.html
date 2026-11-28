@@ -2,14 +2,19 @@
 <html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aries · Truy vấn và nộp bài</title>
 <style>
-*{box-sizing:border-box}body{margin:3rem auto;padding:0 1rem;max-width:48rem;background:#f4f6f4;color:#182820;font:1rem/1.55 system-ui}section{background:white;border:1px solid #cdd7d0;border-radius:.6rem;margin:1rem 0;padding:1.4rem}h1,h2{margin:0 0 .8rem}textarea,input{font:inherit;width:100%;padding:.65rem;margin:.4rem 0 .8rem;border:1px solid #83998c;border-radius:.3rem}button{font:inherit;padding:.5rem 1rem;background:#215343;color:white;border:0;border-radius:.3rem;cursor:pointer}output{display:block;white-space:pre-wrap;margin-top:.6rem}
+*{box-sizing:border-box}body{margin:3rem auto;padding:0 1rem;max-width:48rem;background:#f4f6f4;color:#182820;font:1rem/1.55 system-ui}section{background:white;border:1px solid #cdd7d0;border-radius:.6rem;margin:1rem 0;padding:1.4rem}h1,h2{margin:0 0 .8rem}textarea,input{font:inherit;width:100%;padding:.65rem;margin:.4rem 0 .8rem;border:1px solid #83998c;border-radius:.3rem}button{font:inherit;padding:.5rem 1rem;background:#215343;color:white;border:0;border-radius:.3rem;cursor:pointer}output{display:block;white-space:pre-wrap;margin-top:.6rem}fieldset{border:0;padding:0;margin:0 0 .6rem;display:flex;gap:1.2rem}fieldset label{display:flex;gap:.4rem;align-items:center}fieldset input{width:auto;margin:0}[hidden]{display:none!important}
 </style>
 <main><h1>Aries</h1><section><h2>Truy vấn ảnh</h2>
 <label for="query">Đề bài</label><textarea id="query" rows="4"></textarea>
 <button id="task">Lấy đề DRES</button><p>Engine truy vấn v2 đang chờ triển khai.</p></section>
-<section><h2>Nộp bài DRES</h2><form><label for="item">Mã ảnh</label><input id="item" placeholder="10_1528.jpg" required maxlength="150" pattern="[A-Za-z0-9_.\-]+"><button>Nộp ảnh</button></form></section><output aria-live="polite"></output></main>
+<section><h2>Nộp bài DRES</h2><form>
+<fieldset><legend hidden>Loại nộp</legend><label><input type="radio" name="mode" value="kis" checked>Nộp ảnh</label><label><input type="radio" name="mode" value="qa">Nộp QA (câu trả lời chữ)</label></fieldset>
+<div id="kis"><label for="item">Mã ảnh</label><input id="item" placeholder="10_1528.jpg" maxlength="150" pattern="[A-Za-z0-9_.\-]+"></div>
+<div id="qa" hidden><label for="answer">Câu trả lời</label><input id="answer" maxlength="500" autocomplete="off"></div>
+<button>Nộp</button><p id="kind"></p></form></section><output aria-live="polite"></output></main>
 <script>
 const select = s => document.querySelector(s);
+let lastTaskType = null;
 async function call(button, path, data) {
   button.disabled = true;
   select('output').textContent = 'Đang gửi yêu cầu…';
@@ -17,19 +22,39 @@ async function call(button, path, data) {
     const response = await fetch(path, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
 
     const text = await response.text();
+    if (path === '/task') lastTaskType = response.headers.get('X-Task-Type');
     select('output').textContent = text;
     if (response.ok) return text;
   } catch {
     select('output').textContent = 'Mất kết nối. Kiểm tra trạng thái trước khi thử lại.';
   } finally {button.disabled = false;}
 }
+// Nộp ảnh (KIS) hay nộp câu trả lời chữ (QA): tự chọn theo loại task DRES khi lấy đề, đổi tay được.
+const mode = () => select('input[name=mode]:checked').value;
+function setMode(value) {
+  select(`input[name=mode][value=${value}]`).checked = true;
+  select('#kis').hidden = value !== 'kis';
+  select('#qa').hidden = value !== 'qa';
+}
+for (const radio of document.querySelectorAll('input[name=mode]')) radio.onchange = () => setMode(radio.value);
 select('#task').onclick = async event => {
   const text = await call(event.currentTarget, '/task', {});
-  if (text) select('#query').value = text;
+  if (!text) return;
+  select('#query').value = text;
+  const kind = lastTaskType || '';
+  select('#kind').textContent = kind ? 'Loại task DRES: ' + kind : '';
+  if (kind) setMode(/\bqa\b|question|answer|text/i.test(kind) ? 'qa' : 'kis');
 };
 select('form').onsubmit = event => {
   event.preventDefault();
+  if (mode() === 'qa') {
+    const text = select('#answer').value.trim().replace(/\s+/g, ' ');
+    if (!text) return void (select('output').textContent = 'Gõ câu trả lời trước khi nộp.');
+    if (confirm('Nộp câu trả lời QA lên DRES?\n\n"' + text + '"')) call(select('form button'), '/submit', {text});
+    return;
+  }
   const item = select('#item').value.trim();
+  if (!/^[A-Za-z0-9_.-]{1,150}$/.test(item)) return void (select('output').textContent = 'Mã ảnh không hợp lệ.');
   if (confirm('Nộp ảnh ' + item + ' lên DRES?')) call(select('form button'), '/submit', {item});
 };
 </script></html>

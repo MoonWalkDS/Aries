@@ -13,9 +13,11 @@ import submit_task
 
 
 class Handler(BaseHTTPRequestHandler):
-    def reply(self, status, content, mime):
+    def reply(self, status, content, mime, headers=None):
         self.send_response(status)
         self.send_header("Content-Type", mime)
+        for key, value in (headers or {}).items():
+            self.send_header(key, value)
         self.send_header("Content-Length", str(len(content)))
         self.end_headers()
         self.wfile.write(content)
@@ -34,7 +36,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path not in ("/task", "/submit"):
             self.send_error(404)
             return
-        result_status = 200
+        result_status, headers = 200, {}
         try:
             size = int(self.headers.get("Content-Length", 0))
             if not 0 < size <= 4096:
@@ -43,8 +45,12 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(body, dict):
                 raise ValueError()
             if self.path == "/submit":
-                item = body.get("item")
-                if not isinstance(item, str) or not re.fullmatch(r"[\w.-]{1,150}", item):
+                item, answer = body.get("item"), body.get("text")
+                if answer is not None:   # task QA: câu trả lời chữ
+                    if not isinstance(answer, str) or not 0 < len(" ".join(answer.split())) <= 500:
+                        raise ValueError()
+                    answer = " ".join(answer.split())
+                elif not isinstance(item, str) or not re.fullmatch(r"[\w.-]{1,150}", item):
                     raise ValueError()
             session = submit_task.SESSION_ID or submit_task.login()
             evaluation = submit_task.EVALUATION_ID or submit_task.active_evaluation_id(session)
@@ -56,6 +62,15 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     hint = fetch_task.get_hint(session, evaluation, state["taskTemplateId"])
                     message = fetch_task.hint_to_text(hint)
+                    try:   # loại task để trang tự chọn nộp ảnh hay nộp QA
+                        kind = fetch_task.current_task_type(session, evaluation)
+                        headers["X-Task-Type"] = " ".join(v for v in (kind["taskType"], kind["taskGroup"]) if v).encode("ascii", "ignore").decode()
+                    except (requests.RequestException, ValueError):
+                        pass
+            elif answer is not None:
+                status, text = submit_task.submit_text(session, evaluation, answer)
+                submit_task.log(f"text:{answer}", evaluation, status, text)
+                message = f"HTTP {status} · {submit_task.describe(status, text)}"
             else:
                 name = submit_task.to_item_name(item)
                 status, text = submit_task.submit(session, evaluation, name)
@@ -70,7 +85,7 @@ class Handler(BaseHTTPRequestHandler):
         except RuntimeError as error:
             result_status = 503
             message = str(error)
-        self.reply(result_status, message.encode("utf-8"), "text/plain; charset=utf-8")
+        self.reply(result_status, message.encode("utf-8"), "text/plain; charset=utf-8", headers)
 
 
 if __name__ == "__main__":

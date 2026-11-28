@@ -573,3 +573,46 @@
 {"at":"2026-11-28T03:42:02.201Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1463_p01"],"v":"Áo len đen"}
 {"at":"2026-11-28T03:42:02.201Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1463_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T03:42:02.201Z"}}
 {"at":"2026-11-28T03:48:18.704Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["08_1403"],"v":[{"box":[784.4,117.4,876.4,349.1],"kind":"person","label":"cooking at the stove","label_vi":"nấu ăn trên bếp","id":"08_1403_m01","created":"2026-11-28T02:04:56.940Z","by":"TrKimHieu"},{"box":[801.2,107.5,886.3,388.7],"kind":"person","label":"cooking at the stove","label_vi":"nấu ăn trên bếp","id":"08_1403_m02","created":"2026-11-28T03:48:18.703Z","by":"TrKimHieu"}]}
+{"at":"2026-11-28T05:02:44.335Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2080_p02"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T05:02:44.335Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2080_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:02:44.335Z"}}
+{"at":"2026-11-28T05:02:44.335Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_2080_p02"],"d":1}
+{"at":"2026-11-28T05:02:45.648Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1627_p03"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T05:02:45.648Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1627_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:02:45.648Z"}}
+{"at":"2026-11-28T05:02:45.648Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","11_1627_p03"],"d":1}
+{"at":"2026-11-28T05:02:52.750Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_2972_p03"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T05:02:52.750Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_2972_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:02:52.750Z"}}
+{"at":"2026-11-28T05:02:52.750Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","19_2972_p03"],"d":1}
+{"at":"2026-11-28T05:02:57.604Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1462_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T05:02:57.604Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1462_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:02:57.603Z"}}
+{"at":"2026-11-28T05:02:57.604Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_1462_p03"],"d":1}
+{"at":"2026-11-28T05:03:13.310Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1462_p03"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T05:03:13.310Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1462_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:13.310Z"}}
+{"at":"2026-11-28T05:03:14.403Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1989_p04"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T05:03:14.403Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1989_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:14.403Z"}}
+{"at":"2026-11-28T05:03:17.036Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","14_2897_p03"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T05:03:17.036Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","14_2897_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:17.036Z"}}
+{"at":"2026-11-28T05:03:17.901Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","14_2903_p03"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T05:03:17.901Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","14_2903_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:17.901Z"}}
+{"at":"2026-11-28T05:03:22.819Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_3095_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T05:03:22.819Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_3095_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:22.819Z"}}
+{"at":"2026-11-28T05:03:28.521Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_802_p03"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T05:03:28.521Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_802_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:28.521Z"}}
+{"at":"2026-11-28T05:03:28.521Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_802_p03"],"d":1}
+{"at":"2026-11-28T05:03:30.301Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2627_p01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T05:03:30.301Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2627_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:30.301Z"}}
+{"at":"2026-11-28T05:03:30.301Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_2627_p01"],"d":1}
+{"at":"2026-11-28T05:03:32.949Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1804_p02"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T05:03:32.949Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1804_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:32.949Z"}}
+{"at":"2026-11-28T05:03:36.596Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_3216_p01"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T05:03:36.596Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_3216_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:36.596Z"}}
+{"at":"2026-11-28T05:03:37.911Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2080_p01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T05:03:37.911Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2080_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:37.911Z"}}
+{"at":"2026-11-28T05:03:37.911Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_2080_p01"],"d":1}
+{"at":"2026-11-28T05:03:47.091Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_802_p02"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T05:03:47.091Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_802_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:47.090Z"}}
+{"at":"2026-11-28T05:03:49.310Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1619_p01"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T05:03:49.310Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1619_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:49.310Z"}}
+{"at":"2026-11-28T05:03:52.668Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2276_p02"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T05:03:52.668Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2276_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:03:52.668Z"}}
+{"at":"2026-11-28T05:04:05.538Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2097_p01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T05:04:05.538Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2097_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T05:04:05.538Z"}}

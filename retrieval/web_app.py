@@ -78,7 +78,7 @@ def pull_task() -> dict:
     if running and state.get("taskTemplateId"):
         text = ft.hint_to_text(ft.get_hint(STATE["session"], STATE["evaluation_id"], state["taskTemplateId"]))
         record = {"evaluationId": STATE["evaluation_id"], "taskId": state.get("taskId"),
-                  "taskTemplateId": state["taskTemplateId"], "timeLeftMs": state.get("timeLeft"), "query": text}
+                  "taskTemplateId": state["taskTemplateId"], "timeLeftMs": state.get("timeLeft"), "query": text, **task_type()}
         dump = json.dumps(record, ensure_ascii=False, indent=2)
         if not ft.OUT_JSON.exists() or ft.OUT_JSON.read_text(encoding="utf-8") != dump:  # trang kiểm tra định kỳ: chỉ ghi khi đổi
             ft.OUT_JSON.write_text(dump, encoding="utf-8")
@@ -86,6 +86,14 @@ def pull_task() -> dict:
         return {**record, "running": True}
     saved = json.loads(ft.OUT_JSON.read_text(encoding="utf-8")) if ft.OUT_JSON.exists() else {}
     return {**saved, "running": False, "taskStatus": state.get("taskStatus")}
+
+
+def task_type() -> dict:
+    """taskType của task đang chạy để trang tự chọn nộp ảnh hay nộp QA; DRES không trả được thì để trống."""
+    try:
+        return ft.current_task_type(STATE["session"], STATE["evaluation_id"])
+    except (requests.RequestException, ValueError):
+        return {}
 
 
 def neighbors(image_id: str, span: int = 6) -> list[str]:
@@ -119,6 +127,22 @@ def submit(image_id: str) -> dict:
     dres.log(item, STATE["evaluation_id"], status, text)
     result = {"status": status, "item": item, "message": dres.describe(status, text), "raw": text}
     search_log.log_submit(image_id, result)
+    return result
+
+
+def submit_answer(answer: str) -> dict:
+    """Nộp câu trả lời chữ cho task QA; đăng nhập lại một lần nếu phiên hết hạn (401)."""
+    answer = " ".join(answer.split())[:500]
+    if not answer:
+        return {"status": 400, "message": "Câu trả lời trống"}
+    for attempt in range(2):
+        ensure_session(fresh=bool(attempt))
+        status, text = dres.submit_text(STATE["session"], STATE["evaluation_id"], answer)
+        if status != 401:
+            break
+    dres.log(f"text:{answer}", STATE["evaluation_id"], status, text)
+    result = {"status": status, "item": answer, "message": dres.describe(status, text), "raw": text}
+    search_log.log_submit(None, result, text=answer)
     return result
 
 
@@ -188,7 +212,12 @@ class Handler(BaseHTTPRequestHandler):
             except ValueError as exc:
                 return self._json({"error": f"Bản sửa không hợp lệ: {exc}"}, 400)
         try:
-            self._json(set_config(body) if path == "/api/config" else submit(str(body.get("id", ""))))
+            if path == "/api/config":
+                self._json(set_config(body))
+            elif "text" in body:   # task QA: nộp câu trả lời chữ
+                self._json(submit_answer(str(body.get("text") or "")))
+            else:
+                self._json(submit(str(body.get("id", ""))))
         except Exception as exc:  # lỗi mạng / đăng nhập: báo lên giao diện thay vì làm sập server
             self._json({"status": 0, "message": f"Lỗi: {exc}"}, 500)
 

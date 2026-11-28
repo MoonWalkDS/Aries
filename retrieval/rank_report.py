@@ -106,7 +106,7 @@ def analyse(log: list[dict[str, Any]], truth: dict[str, set[str]], by_hour: dict
             searches.append({"time": r["time"], "system": r.get("system"), "commit": r.get("commit"), "task": key, "query": r["query"],
                              "edited": r.get("edited"), "top": r.get("top"), "returned": len(r["results"]), "rank_exact": exact, f"rank_window{window}": win})
             t["ranks"].append((exact, win))
-        elif r["kind"] == "submit":
+        elif r["kind"] == "submit" and r.get("image_id"):   # nộp chữ (QA) không có ảnh để dò hạng
             image = norm_id(r["image_id"])
             t["submits"] += 1
             t["submit_exact"] |= image in truth[key]

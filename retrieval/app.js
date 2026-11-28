@@ -307,7 +307,37 @@ async function fetchTask() {
   const t = await api('/api/task');
   if (t.error) throw new Error(t.error);
   showTask(t);
+  autoMode(t);
   return t;
+}
+
+// ---------------------------------------------------------------- nộp ảnh (KIS) hay nộp chữ (QA)
+// Tự chọn theo loại task DRES (taskType / taskGroup) mỗi khi sang task mới; người dùng đổi tay thì giữ tới task sau.
+function setMode(mode, focus) {
+  st.mode = mode;
+  for (const b of $('mode').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+  $('qa').hidden = mode !== 'qa';
+  document.body.classList.toggle('qa-mode', mode === 'qa');
+  measureHeader();
+  if (focus && mode === 'qa') $('qa-text').focus();
+}
+function autoMode(t) {
+  if (!t.running || !t.taskId || t.taskId === st.modeTask) return;
+  st.modeTask = t.taskId;
+  const kind = `${t.taskType || ''} ${t.taskGroup || ''}`;
+  $('mode').title = `Loại task DRES: ${kind.trim() || 'không rõ'}. Bấm để đổi tay.`;
+  if (kind.trim()) setMode(/\bqa\b|question|answer|text/i.test(kind) ? 'qa' : 'kis');
+}
+async function submitText(answer) {
+  answer = answer.trim().replace(/\s+/g, ' ');
+  if (!answer) return toast('Gõ câu trả lời trước khi nộp.', 'bad');
+  if (S.get('submit.confirm') && !confirm(`Nộp câu trả lời QA lên DRES?\n\n"${answer}"`)) return;
+  toast('Đang nộp câu trả lời...', '', 2000);
+  let r;
+  try { r = await api('/api/submit', { text: answer }); } catch (e) { return toast(e.message, 'bad', 0); }
+  const ok = !!(r.raw && r.raw.includes('CORRECT') && !r.raw.includes('WRONG'));
+  toast(`"${answer}": ${r.status} · ${r.message}`, ok ? 'ok' : 'bad', ok ? 6000 : 0);
+  checkTask();
 }
 
 async function pull() {
@@ -379,6 +409,7 @@ function askConfirm(id) {
 
 async function submitId(id) {
   if (!id) return;
+  if (st.mode === 'qa') return toast('Đang ở chế độ Nộp QA. Bấm "Nộp ảnh" (hoặc phím Q) để nộp ảnh.', 'bad');
   if (S.get('submit.confirm') && !(await askConfirm(id))) return;
   toast(`Đang nộp ${id}...`, '', 2000);
   let r;
@@ -496,6 +527,9 @@ $('next').onclick = () => move(1);
 $('d-prev').onclick = () => stepDetail(-1);
 $('d-next').onclick = () => stepDetail(1);
 $('sub').onclick = () => submitId(st.current);
+for (const b of $('mode').querySelectorAll('button')) b.onclick = () => setMode(b.dataset.mode, true);
+$('qa').onsubmit = (e) => { e.preventDefault(); submitText($('qa-text').value); };
+st.mode = 'kis';
 $('q').addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); search(); } });
 $('q').addEventListener('input', () => { if (st.level !== null) { st.level = null; renderLevels(); } });
 
@@ -512,6 +546,7 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') move(-1);
   else if (e.key === '/') { e.preventDefault(); $('q').focus(); }
   else if (e.key === '?') $('keys').showModal();
+  else if (e.key === 'q' || e.key === 'Q') setMode(st.mode === 'qa' ? 'kis' : 'qa', true);
   else if (/^[1-9]$/.test(e.key)) { const x = st.results[st.page + Number(e.key) - 1]; if (x && Number(e.key) <= perPage()) openDetail(x.id); }
 });
 

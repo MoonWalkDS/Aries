@@ -46,6 +46,13 @@
   .chip.live { border-color:var(--ok); } .chip.low { border-color:var(--bad); color:var(--bad); font-weight:600; }
   .chip.warn { background:var(--bad); color:#fff; border-color:var(--bad); font-weight:600; }
   .topbar .tools { margin-left:auto; display:flex; gap:6px; }
+  .seg { display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .seg button { border:0; border-radius:0; min-height:34px; padding:2px 12px; }
+  .seg button[aria-pressed="true"] { background:var(--ok); color:#fff; font-weight:600; }
+  .qa { display:flex; gap:8px; align-items:center; flex-wrap:wrap; padding:8px 10px; border:1px solid var(--ok); border-radius:6px; background:var(--card); }
+  .qa[hidden] { display:none; }
+  .qa input { flex:1 1 240px; min-width:0; min-height:40px; padding:6px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); font:inherit; }
+  body.qa-mode button.submit:not(#qa-send) { opacity:.45; }
   .query { display:grid; grid-template-columns:1fr auto; gap:8px; }
   .query textarea { min-height:60px; max-height:40vh; resize:vertical; width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--card); }
   .query .actions { display:flex; flex-direction:column; gap:6px; }
@@ -167,6 +174,9 @@
     <span class="brand">Castle5000</span>
     <span class="chip" id="task-chip">Chưa kéo đề</span>
     <span class="chip warn" id="noconfirm" hidden>Nộp không hỏi lại</span>
+    <div class="seg" id="mode" role="group" aria-label="Loại nộp bài" title="Tự chọn theo loại task DRES khi kéo đề; bấm để đổi tay">
+      <button type="button" data-mode="kis" aria-pressed="true">Nộp ảnh</button><button type="button" data-mode="qa" aria-pressed="false">Nộp QA</button>
+    </div>
     <div class="tools">
       <button class="icon ghost" id="open-keys" title="Phím tắt (?)" aria-label="Phím tắt"><svg class="i"><use href="#i-key"/></svg></button>
       <button class="icon ghost" id="open-cfg" title="Cấu hình DRES" aria-label="Cấu hình DRES"><svg class="i"><use href="#i-plug"/></svg></button>
@@ -185,6 +195,11 @@
       <button id="task" title="Kéo lại đề hiện tại từ DRES rồi tìm lại"><svg class="i"><use href="#i-refresh"/></svg>Truy vấn lại</button>
     </div>
   </div>
+  <form class="qa" id="qa" hidden>
+    <label for="qa-text"><b>Câu trả lời QA</b></label>
+    <input id="qa-text" maxlength="500" autocomplete="off" placeholder="Gõ câu trả lời rồi Enter">
+    <button class="submit" id="qa-send" type="submit"><svg class="i"><use href="#i-send"/></svg>Nộp câu trả lời</button>
+  </form>
   <nav class="levels" id="levels" aria-label="Chọn level đề" hidden></nav>
   <div class="info" id="info" aria-live="polite">Bấm "Truy vấn lại" để kéo đề, hoặc nhập đề rồi bấm Tìm.</div>
   <details class="editor" id="editor" hidden>
@@ -269,6 +284,7 @@
       <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Chuyển trang; trong ảnh chi tiết: kết quả trước/sau</td></tr>
       <tr><td><kbd>1</kbd> … <kbd>9</kbd></td><td>Mở ảnh thứ k của trang</td></tr>
       <tr><td><kbd>Enter</kbd></td><td>Nộp ảnh đang mở (vẫn hỏi xác nhận nếu bật)</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>Đổi Nộp ảnh / Nộp QA (QA: về ô câu trả lời)</td></tr>
       <tr><td><kbd>Esc</kbd></td><td>Đóng popup</td></tr>
       <tr><td><kbd>?</kbd></td><td>Mở bảng này</td></tr>
     </table>

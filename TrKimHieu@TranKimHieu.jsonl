@@ -6641,3 +6641,458 @@
 {"at":"2026-11-28T09:48:28.521Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["19_3570"],"v":[{"id":"19_3570_m01","kind":"person","box":[125.6,166.9,182,334.3],"created":"2026-11-28T09:48:26.534Z","by":"TrKimHieu","label":"walking"}]}
 {"at":"2026-11-28T09:48:31.528Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["19_3576"],"v":[{"id":"19_3576_m01","kind":"person","box":[440.2,54,504.5,215.4],"created":"2026-11-28T09:48:31.527Z","by":"TrKimHieu"}]}
 {"at":"2026-11-28T09:48:33.477Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["19_3576"],"v":[{"id":"19_3576_m01","kind":"person","box":[440.2,54,504.5,215.4],"created":"2026-11-28T09:48:31.527Z","by":"TrKimHieu","label":"walking"}]}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2520_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2355_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2906_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2353_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2369_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_2718_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2905_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1776_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2375_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2357_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2015_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2221_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1765_p08"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2434_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_405_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1228_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1972_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2374_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2639_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1712_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1882_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2912_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2527_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1770_p07"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2327_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2558_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2532_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1853_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1998_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2382_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2037_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2426_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2157_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2527_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1780_p07"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1575_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3293_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1388_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1775_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1530_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1804_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2545_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1860_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","16_3199_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1903_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1918_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2546_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1148_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1221_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2016_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3291_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2336_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2597_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2046_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1907_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1527_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_2746_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1940_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2453_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_898_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1917_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2554_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2550_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1320_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1926_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1700_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1894_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_459_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1081_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1881_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2142_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2062_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1574_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2636_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2063_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1499_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2056_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_286_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1743_p08"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2039_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1721_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2044_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2043_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2557_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1414_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1885_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_1912_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1365_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_280_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1900_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2164_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2923_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2168_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2619_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2053_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1766_p07"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2457_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2158_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1734_p08"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1804_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1922_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_1603_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2128_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","14_2798_p05"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1156_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1158_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2145_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1152_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_449_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1753_p04"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_280_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_286_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2520_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.622Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2355_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2906_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2353_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2369_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_2718_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2905_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1776_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2375_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2357_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2015_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2221_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1765_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2434_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_405_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1228_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1972_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2374_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2639_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1712_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1882_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2912_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2527_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1770_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2327_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2558_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2532_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1853_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1998_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2382_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2037_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2426_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2157_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2527_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1780_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1575_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3293_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1388_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1775_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1530_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1804_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2545_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1860_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","16_3199_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1903_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1918_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2546_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1148_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1221_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2016_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3291_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2336_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2597_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2046_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1907_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1527_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_2746_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1940_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2453_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_898_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1917_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2554_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2550_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1320_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1926_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1700_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1894_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_459_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1081_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1881_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2142_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2062_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1574_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2636_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2063_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1499_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2056_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1743_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2039_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1721_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2044_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2043_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2557_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1414_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1885_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_1912_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1365_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1900_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2164_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2923_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2168_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2619_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2053_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1766_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2457_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2158_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1734_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1804_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1922_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_1603_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2128_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","14_2798_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1156_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1158_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2145_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1152_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_449_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1753_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:30.623Z"}}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_280_p04"],"d":1}
+{"at":"2026-11-28T09:55:30.624Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["recheck","08_286_p03"],"d":1}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1914_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2395_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2648_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2400_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2527_p01"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2388_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2471_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","17_1131_p06"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_1745_p08"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2469_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2424_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2450_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_2923_p02"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2421_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2535_p03"],"v":"Áo len đen"}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1914_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2395_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2648_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2400_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2527_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2388_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2471_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","17_1131_p06"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_1745_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2469_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2424_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2450_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_2923_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2421_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:55:35.570Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2535_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:55:35.570Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2453_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_1630_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2667_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_259_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1876_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_696_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1965_p05"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_3449_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_191_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_3_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2477_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_2798_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_989_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_1017_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_2764_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","14_3136_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1750_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_265_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_837_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2847_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_372_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3599_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3300_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_875_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2121_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_2877_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_999_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1116_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1068_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_992_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_3191_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_218_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_472_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3545_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_487_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_33_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_848_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_209_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1524_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_337_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_219_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_3038_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_494_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_343_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","12_288_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1657_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_3282_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_3345_p08"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2385_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_365_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_965_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1062_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2839_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_2842_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_3374_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2716_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_2471_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","18_3572_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1347_p07"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_144_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_449_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2373_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_1525_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_3023_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_841_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_2488_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_344_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","15_276_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_830_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_843_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_845_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2668_p06"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2358_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_442_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_3282_p07"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_1574_p07"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2196_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1270_p06"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_2014_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1223_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","14_3028_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1118_p03"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_1685_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_2451_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_218_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1907_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_196_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_184_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_194_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_195_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","20_201_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","13_2828_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","19_197_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1114_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1115_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_3090_p04"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1112_p02"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_1609_p10"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","09_2937_p01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2453_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_1630_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2667_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_259_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1876_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_696_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1965_p05"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_3449_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_191_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_3_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2477_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_2798_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_989_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_1017_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.181Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_2764_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","14_3136_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1750_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_265_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_837_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2847_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_372_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3599_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3300_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_875_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2121_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_2877_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_999_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1116_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1068_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_992_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3191_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_218_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_472_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3545_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_487_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_33_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_848_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_209_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1524_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_337_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_219_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_3038_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_494_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_343_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","12_288_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1657_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_3282_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3345_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2385_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_365_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_965_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1062_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2839_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_2842_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_3374_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2716_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_2471_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","18_3572_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1347_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_144_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_449_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2373_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_1525_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_3023_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_841_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_2488_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_344_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","15_276_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_830_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_843_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_845_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2668_p06"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2358_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_442_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3282_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_1574_p07"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2196_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1270_p06"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_2014_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1223_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","14_3028_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1118_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_1685_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_2451_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_218_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1907_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_196_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_184_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_194_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_195_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","20_201_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","13_2828_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","19_197_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1114_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1115_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3090_p04"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1112_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1609_p10"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:12.182Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","09_2937_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:12.182Z"}}
+{"at":"2026-11-28T09:56:29.398Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_3090_p03"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T09:56:29.398Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3090_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:29.395Z"}}
+{"at":"2026-11-28T09:56:29.555Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","08_961_p01"],"v":"Sơ mi xám trơn (hơi xanh xẫm)"}
+{"at":"2026-11-28T09:56:29.555Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_3090_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:29.545Z"}}
+{"at":"2026-11-28T09:56:29.555Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_961_p01"],"v":{"by":"TrKimHieu","at":"2026-11-28T09:56:29.555Z"}}

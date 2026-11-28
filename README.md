@@ -30,3 +30,5 @@ Dùng `--images skip` để chỉ lấy metadata và ảnh thu nhỏ, hoặc tru
 ## Kiểm thử
 
 Cài pytest bằng `.venv\Scripts\python.exe -m pip install pytest`, rồi chạy `tools\run_tests.bat`.
+
+Mở giao diện lấy đề và nộp ảnh bằng `tools\run_app.bat` sau khi chạy setup. Trang chạy tại http://127.0.0.1:8314.

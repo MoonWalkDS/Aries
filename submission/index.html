@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aries · Truy vấn và nộp bài</title>
+<style>
+*{box-sizing:border-box}body{margin:3rem auto;padding:0 1rem;max-width:48rem;background:#f4f6f4;color:#182820;font:1rem/1.55 system-ui}section{background:white;border:1px solid #cdd7d0;border-radius:.6rem;margin:1rem 0;padding:1.4rem}h1,h2{margin:0 0 .8rem}textarea,input{font:inherit;width:100%;padding:.65rem;margin:.4rem 0 .8rem;border:1px solid #83998c;border-radius:.3rem}button{font:inherit;padding:.5rem 1rem;background:#215343;color:white;border:0;border-radius:.3rem;cursor:pointer}output{display:block;white-space:pre-wrap;margin-top:.6rem}
+</style>
+<main><h1>Aries</h1><section><h2>Truy vấn ảnh</h2>
+<label for="query">Đề bài</label><textarea id="query" rows="4"></textarea>
+<button id="task">Lấy đề DRES</button><p>Engine truy vấn v2 đang chờ triển khai.</p></section>
+<section><h2>Nộp bài DRES</h2><form><label for="item">Mã ảnh</label><input id="item" placeholder="10_1528.jpg" required maxlength="150" pattern="[A-Za-z0-9_.\-]+"><button>Nộp ảnh</button></form></section><output aria-live="polite"></output></main>
+<script>
+const select = s => document.querySelector(s);
+async function call(button, path, data) {
+  button.disabled = true;
+  select('output').textContent = 'Đang gửi yêu cầu…';
+  try {
+    const response = await fetch(path, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+
+    const text = await response.text();
+    select('output').textContent = text;
+    if (response.ok) return text;
+  } catch {
+    select('output').textContent = 'Mất kết nối. Kiểm tra trạng thái trước khi thử lại.';
+  } finally {button.disabled = false;}
+}
+select('#task').onclick = async event => {
+  const text = await call(event.currentTarget, '/task', {});
+  if (text) select('#query').value = text;
+};
+select('form').onsubmit = event => {
+  event.preventDefault();
+  const item = select('#item').value.trim();
+  if (confirm('Nộp ảnh ' + item + ' lên DRES?')) call(select('form button'), '/submit', {item});
+};
+</script></html>

@@ -8983,3 +8983,23 @@
 {"at":"2026-11-28T13:35:19.978Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["14_2809"],"v":[{"box":[477.1,209.8,579,618.1],"kind":"person","label":"standing idle","label_vi":"đứng không làm gì","id":"14_2809_m01","created":"2026-11-28T07:48:32.615Z","by":"BaoLong"},{"id":"14_2809_m02","kind":"person","box":[553.7,189.4,636,249],"created":"2026-11-28T13:35:19.809Z","by":"BaoLong","replaces":"14_2809_p08","label":"getting items from a cabinet"}]}
 {"at":"2026-11-28T13:35:39.186Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_2809_m02"],"v":"Nư áo đen"}
 {"at":"2026-11-28T13:35:39.186Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2809_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:35:39.186Z"}}
+{"at":"2026-11-28T13:37:16.251Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_3008_m01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T13:37:16.251Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_3008_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:37:16.248Z"}}
+{"at":"2026-11-28T13:37:44.011Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_1122_m02"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:37:44.011Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_1122_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:37:44.011Z"}}
+{"at":"2026-11-28T13:38:04.183Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","20_3267_p01"],"v":{"by":"BaoLong","at":"2026-11-28T13:38:04.183Z"}}
+{"at":"2026-11-28T13:38:04.183Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","20_3267_p01"],"v":true}
+{"at":"2026-11-28T13:38:04.416Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["20_3267"],"v":[{"id":"20_3267_m01","kind":"person","box":[728.2,248.1,924.1,508.2],"created":"2026-11-28T13:38:04.183Z","by":"BaoLong","replaces":"20_3267_p01"}]}
+{"at":"2026-11-28T13:38:06.723Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["20_3267"],"v":[{"id":"20_3267_m01","kind":"person","box":[728.2,248.1,924.1,508.2],"created":"2026-11-28T13:38:04.183Z","by":"BaoLong","replaces":"20_3267_p01","label":"opening the refrigerator"}]}
+{"at":"2026-11-28T13:38:24.231Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_2102_m01"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:38:24.231Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_2102_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:38:24.231Z"}}
+{"at":"2026-11-28T13:38:28.168Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","20_3267_m01"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:38:28.168Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","20_3267_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:38:28.168Z"}}
+{"at":"2026-11-28T13:39:01.272Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","20_3008_m01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:39:01.272Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","20_3008_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:39:01.272Z"}}
+{"at":"2026-11-28T13:39:18.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_3515_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:39:18.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_557_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:39:18.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_3515_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:39:18.354Z"}}
+{"at":"2026-11-28T13:39:18.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_557_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:39:18.354Z"}}
+{"at":"2026-11-28T13:39:42.629Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_2722"],"v":[{"box":[570.6,284.5,854.4,530.7],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"15_2722_m01","created":"2026-11-28T08:11:57.150Z","by":"BaoLong","updated":"2026-11-28T13:39:42.616Z"}]}
+{"at":"2026-11-28T13:39:44.570Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_2722"],"v":[{"box":[570.6,284.5,862.8,550.7],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"15_2722_m01","created":"2026-11-28T08:11:57.150Z","by":"BaoLong","updated":"2026-11-28T13:39:44.567Z"}]}

@@ -5,7 +5,7 @@ lên hạng mấy. Mỗi dòng mang tên hệ thống (branch + commit, hoặc b
 
     {"time", "kind": "search", "system", "commit", "task": {evaluationId, taskId, taskTemplateId}, "query", "edited",
      "edits", "top", "names", "count", "layers", "elapsed_ms", "results": [id, ...]}
-    {"time", "kind": "submit", "system", "commit", "task", "image_id", "item", "status", "message"}
+    {"time", "kind": "submit", "system", "commit", "task", "image_id" | "text" (QA), "item", "status", "message"}
 """
 from __future__ import annotations
 
@@ -66,5 +66,6 @@ def log_search(query: str, top: int, edits: Optional[dict], response: dict[str, 
            "elapsed_ms": round(elapsed_ms), "results": [r["id"] for r in response.get("results", [])]})
 
 
-def log_submit(image_id: str, result: dict[str, Any]) -> None:
-    write({"kind": "submit", "image_id": image_id, "item": result.get("item"), "status": result.get("status"), "message": result.get("message")})
+def log_submit(image_id: Optional[str], result: dict[str, Any], text: Optional[str] = None) -> None:
+    """Một lần nộp: ảnh (image_id) cho task tìm ảnh, hoặc câu trả lời chữ (text) cho task QA."""
+    write({"kind": "submit", "image_id": image_id, "text": text, "item": result.get("item"), "status": result.get("status"), "message": result.get("message")})

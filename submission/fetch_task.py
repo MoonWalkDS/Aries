@@ -51,6 +51,14 @@ def get_state(session, evaluation_id):
     return r.json()
 
 
+def current_task_type(session, evaluation_id):
+    """Loại task đang chạy (taskType trong ApiClientTaskTemplateInfo của DRES), ví dụ để phân biệt KIS với QA."""
+    r = requests.get(f"{DRES_URL}/client/evaluation/currentTask/{evaluation_id}", params={"session": session}, timeout=10)
+    r.raise_for_status()
+    info = r.json()
+    return {"taskType": info.get("taskType"), "taskGroup": info.get("taskGroup"), "taskName": info.get("name")}
+
+
 def get_hint(session, evaluation_id, template_id):
     r = requests.get(
         f"{DRES_URL}/evaluation/{evaluation_id}/template/task/{template_id}/hint",

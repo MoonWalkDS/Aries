@@ -7262,3 +7262,10 @@
 {"at":"2026-11-28T11:17:56.824Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["09_2616_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T11:17:56.812Z"}}
 {"at":"2026-11-28T11:21:24.350Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["08_843_p02"],"v":{"label":"walking","source":"human","round":3,"score":0.7441,"by":"TrKimHieu","at":"2026-11-28T11:21:24.329Z"}}
 {"at":"2026-11-28T11:21:25.987Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["20_1671_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":0.8233,"by":"TrKimHieu","at":"2026-11-28T11:21:25.971Z"}}
+{"at":"2026-11-28T11:32:51.415Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["13_707_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T11:32:51.393Z"}}
+{"at":"2026-11-28T11:34:05.223Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1617_m01"],"v":""}
+{"at":"2026-11-28T11:34:05.223Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1617_m01"],"v":{"by":"TrKimHieu","at":"2026-11-28T11:34:05.221Z"}}
+{"at":"2026-11-28T11:34:06.122Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1609_m01"],"v":""}
+{"at":"2026-11-28T11:34:06.122Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1609_m01"],"v":{"by":"TrKimHieu","at":"2026-11-28T11:34:06.122Z"}}
+{"at":"2026-11-28T11:34:08.093Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_1609_m01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T11:34:08.093Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_1609_m01"],"v":{"by":"TrKimHieu","at":"2026-11-28T11:34:08.093Z"}}

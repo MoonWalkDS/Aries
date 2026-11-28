@@ -5436,3 +5436,6 @@
 {"at":"2026-11-28T09:13:55.092Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_3671_p04"],"d":1}
 {"at":"2026-11-28T09:13:55.092Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_3671_p04"],"v":{"by":"BaoLong","at":"2026-11-28T09:13:54.758Z"}}
 {"at":"2026-11-28T09:13:55.092Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","13_3671_p04"],"v":true}
+{"at":"2026-11-28T09:21:58.000Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["18_163_p01"],"v":{"label":"walking","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T09:21:57.957Z"}}
+{"at":"2026-11-28T09:22:26.400Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["18_578"],"v":[{"id":"18_578_m01","kind":"person","box":[230.1,120.4,305.8,248.7],"created":"2026-11-28T09:22:26.371Z","by":"BaoLong"}]}
+{"at":"2026-11-28T09:22:28.395Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["18_578"],"v":[{"id":"18_578_m01","kind":"person","box":[230.1,120.4,305.8,248.7],"created":"2026-11-28T09:22:26.371Z","by":"BaoLong","label":"walking"}]}

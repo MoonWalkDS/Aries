@@ -9054,3 +9054,13 @@
 {"at":"2026-11-28T13:52:37.975Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_2644_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:52:37.975Z"}}
 {"at":"2026-11-28T13:54:10.610Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["11_1334"],"d":1}
 {"at":"2026-11-28T13:54:29.189Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["12_921"],"d":1}
+{"at":"2026-11-28T13:55:15.414Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_3154"],"v":[{"box":[240.7,163.5,350,244.5],"kind":"person","label":"sitting","label_vi":"đang ngồi","id":"15_3154_m01","created":"2026-11-28T08:18:24.896Z","by":"BaoLong"}]}
+{"at":"2026-11-28T13:56:38.966Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["20_866"],"d":1}
+{"at":"2026-11-28T13:57:15.282Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","20_924_m01"],"v":"Áo len đen"}
+{"at":"2026-11-28T13:57:15.282Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","20_924_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:15.282Z"}}
+{"at":"2026-11-28T13:57:20.648Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_2701_m01"],"v":"caro xanh trắng"}
+{"at":"2026-11-28T13:57:20.648Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2701_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:20.647Z"}}
+{"at":"2026-11-28T13:57:23.828Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","18_565_m01"],"v":"Linh"}
+{"at":"2026-11-28T13:57:23.828Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","18_565_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:23.828Z"}}
+{"at":"2026-11-28T13:57:29.459Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","16_2040_m02"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T13:57:29.459Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","16_2040_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:57:29.459Z"}}

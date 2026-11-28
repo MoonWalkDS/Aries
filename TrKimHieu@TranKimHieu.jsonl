@@ -8029,3 +8029,6 @@
 {"at":"2026-11-28T13:11:35.427Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","08_1130_p08"],"v":{"by":"TrKimHieu","at":"2026-11-28T13:11:35.427Z"}}
 {"at":"2026-11-28T13:11:35.427Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","08_1130_p08"],"v":true}
 {"at":"2026-11-28T13:12:25.023Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["08_1708_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T13:12:25.005Z"}}
+{"at":"2026-11-28T13:14:20.144Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["08_736_p04"],"v":{"label":"preparing food","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T13:14:20.123Z"}}
+{"at":"2026-11-28T13:14:25.322Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["08_815_p09"],"v":{"label":"preparing food","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T13:14:25.311Z"}}
+{"at":"2026-11-28T13:14:27.171Z","by":"TrKimHieu","file":"annotations/adl_people/approved.json","path":["08_830_p04"],"v":{"label":"preparing food","source":"human","round":3,"score":null,"by":"TrKimHieu","at":"2026-11-28T13:14:27.163Z"}}

@@ -5912,3 +5912,9 @@
 {"at":"2026-11-28T11:14:15.522Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["19_3576_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T11:14:15.508Z"}}
 {"at":"2026-11-28T11:14:18.252Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["19_3576"],"v":[{"id":"19_3576_m01","kind":"person","box":[431.9,62.5,489.7,166.6],"created":"2026-11-28T11:14:18.243Z","by":"BaoLong"}]}
 {"at":"2026-11-28T11:14:19.772Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["19_3576"],"v":[{"id":"19_3576_m01","kind":"person","box":[431.9,62.5,489.7,166.6],"created":"2026-11-28T11:14:18.243Z","by":"BaoLong","label":"standing idle"}]}
+{"at":"2026-11-28T11:36:12.560Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_943_p02"],"d":1}
+{"at":"2026-11-28T11:36:12.714Z","by":"Nguyen Bao Long","file":"annotations/adl_people/rejected.json","path":["08_943_p02"],"v":["standing idle"]}
+{"at":"2026-11-28T11:36:14.070Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_1609_p01"],"d":1}
+{"at":"2026-11-28T11:36:14.225Z","by":"Nguyen Bao Long","file":"annotations/adl_people/rejected.json","path":["08_1609_p01"],"v":["standing idle"]}
+{"at":"2026-11-28T11:36:15.256Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_1633_p01"],"d":1}
+{"at":"2026-11-28T11:36:15.416Z","by":"Nguyen Bao Long","file":"annotations/adl_people/rejected.json","path":["08_1633_p01"],"v":["standing idle"]}

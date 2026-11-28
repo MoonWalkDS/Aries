@@ -8425,3 +8425,99 @@
 {"at":"2026-11-28T13:04:34.839Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2949_p06"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:34.824Z"}}
 {"at":"2026-11-28T13:04:39.637Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2959_p06"],"v":{"label":"walking","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:39.622Z"}}
 {"at":"2026-11-28T13:04:42.246Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2959_p02"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:42.231Z"}}
+{"at":"2026-11-28T13:04:54.067Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2972_p01"],"v":{"label":"walking","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:54.050Z"}}
+{"at":"2026-11-28T13:04:54.242Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2972_p03"],"v":{"label":"cooking at the stove","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:54.224Z"}}
+{"at":"2026-11-28T13:04:59.306Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_2976_p01"],"v":{"label":"walking","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:04:59.293Z"}}
+{"at":"2026-11-28T13:05:02.963Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_3008_p02"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:05:02.950Z"}}
+{"at":"2026-11-28T13:05:05.366Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_3008_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:05:05.351Z"}}
+{"at":"2026-11-28T13:05:08.792Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_3023_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:05:08.781Z"}}
+{"at":"2026-11-28T13:05:15.432Z","by":"Nguyen Bao Long","file":"annotations/adl_people/approved.json","path":["08_3026_p01"],"v":{"label":"standing idle","source":"human","round":3,"score":null,"by":"BaoLong","at":"2026-11-28T13:05:15.414Z"}}
+{"at":"2026-11-28T13:05:46.258Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","08_353_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:05:46.258Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_1733_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:05:46.258Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","08_353_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:05:46.258Z"}}
+{"at":"2026-11-28T13:05:46.258Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_1733_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:05:46.258Z"}}
+{"at":"2026-11-28T13:05:49.770Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_1518_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:05:49.770Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_1518_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:05:49.770Z"}}
+{"at":"2026-11-28T13:05:56.474Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_1776_m01"],"v":"Áo len đen"}
+{"at":"2026-11-28T13:05:56.474Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_1776_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:05:56.474Z"}}
+{"at":"2026-11-28T13:05:59.523Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_1968_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:05:59.523Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_1968_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:05:59.523Z"}}
+{"at":"2026-11-28T13:06:13.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_2014_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:06:13.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_2431_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:06:13.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2014_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:06:13.362Z"}}
+{"at":"2026-11-28T13:06:13.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2431_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:06:13.362Z"}}
+{"at":"2026-11-28T13:06:16.024Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_2400_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:06:16.024Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2400_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:06:16.024Z"}}
+{"at":"2026-11-28T13:06:17.970Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_2389_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:06:17.970Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2389_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:06:17.970Z"}}
+{"at":"2026-11-28T13:06:20.624Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_2504_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:06:20.624Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2504_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:06:20.624Z"}}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_2846_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_2876_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_2834_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_2846_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:20.746Z"}}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_2876_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:20.746Z"}}
+{"at":"2026-11-28T13:07:20.746Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_2834_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:20.746Z"}}
+{"at":"2026-11-28T13:07:24.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_1227_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:07:24.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_1245_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:07:24.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_1227_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:24.362Z"}}
+{"at":"2026-11-28T13:07:24.362Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_1245_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:24.362Z"}}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_1265_m01"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_2809_m01"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_2110_m01"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_1265_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:34.576Z"}}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_2809_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:34.576Z"}}
+{"at":"2026-11-28T13:07:34.576Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_2110_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:34.576Z"}}
+{"at":"2026-11-28T13:07:36.835Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_2400_m01"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:07:36.835Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_2400_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:36.835Z"}}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","15_2877_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","15_2969_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_2630_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","15_2877_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:46.619Z"}}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","15_2969_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:46.619Z"}}
+{"at":"2026-11-28T13:07:46.619Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2630_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:46.619Z"}}
+{"at":"2026-11-28T13:07:53.307Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","16_991_m01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T13:07:53.307Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","16_991_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:07:53.307Z"}}
+{"at":"2026-11-28T13:08:00.779Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_497_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:08:00.779Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_500_m01"],"v":"Caro đỏ xanh"}
+{"at":"2026-11-28T13:08:00.779Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_497_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:00.779Z"}}
+{"at":"2026-11-28T13:08:00.779Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_500_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:00.779Z"}}
+{"at":"2026-11-28T13:08:13.883Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_1176_m01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:08:13.883Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_1176_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:13.883Z"}}
+{"at":"2026-11-28T13:08:21.179Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_867_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:08:21.179Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_867_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:21.179Z"}}
+{"at":"2026-11-28T13:08:23.834Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_818_m01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T13:08:23.834Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_818_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:23.834Z"}}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_3116_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_3116_m02"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_3129_m01"],"v":"Nữ áo trắng"}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_3116_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:32.511Z"}}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_3116_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:32.511Z"}}
+{"at":"2026-11-28T13:08:32.511Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_3129_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:32.511Z"}}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_3226_m01"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_3226_m02"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_2957_m03"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_2957_m02"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_3226_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:39.683Z"}}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_3226_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:39.683Z"}}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_2957_m03"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:39.683Z"}}
+{"at":"2026-11-28T13:08:39.683Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_2957_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:39.683Z"}}
+{"at":"2026-11-28T13:08:52.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_3107_m02"],"v":"Linh"}
+{"at":"2026-11-28T13:08:52.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_3109_m02"],"v":"Linh"}
+{"at":"2026-11-28T13:08:52.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_3107_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:52.227Z"}}
+{"at":"2026-11-28T13:08:52.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_3109_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:52.227Z"}}
+{"at":"2026-11-28T13:08:57.135Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_2801_m02"],"v":"Nam áo thun trắng"}
+{"at":"2026-11-28T13:08:57.135Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2801_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:08:57.135Z"}}
+{"at":"2026-11-28T13:09:04.507Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","09_529_m02"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:09:04.507Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","13_1281_m01"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:09:04.507Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","09_529_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:04.507Z"}}
+{"at":"2026-11-28T13:09:04.507Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","13_1281_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:04.507Z"}}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","09_854_m01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","09_878_m01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","09_762_m01"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","09_854_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:16.226Z"}}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","09_878_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:16.226Z"}}
+{"at":"2026-11-28T13:09:16.227Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","09_762_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:16.226Z"}}
+{"at":"2026-11-28T13:09:42.394Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_423_p04"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:09:42.394Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_423_p04"],"v":{"by":"BaoLong","at":"2026-11-28T13:09:42.394Z"}}
+{"at":"2026-11-28T13:09:42.394Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","17_423_p04"],"d":1}

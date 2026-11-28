@@ -8,10 +8,12 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+import search_log
 from common import REPO_ROOT
 from search_engine import SearchEngine
 
@@ -115,7 +117,17 @@ def submit(image_id: str) -> dict:
         if status != 401:
             break
     dres.log(item, STATE["evaluation_id"], status, text)
-    return {"status": status, "item": item, "message": dres.describe(status, text), "raw": text}
+    result = {"status": status, "item": item, "message": dres.describe(status, text), "raw": text}
+    search_log.log_submit(image_id, result)
+    return result
+
+
+def run_search(query: str, top: int, edits: dict | None = None) -> dict:
+    """Tìm và ghi nhật ký (search_log) để sau buổi thi dò hạng của ảnh đúng."""
+    started = time.perf_counter()
+    response = SEARCH.search(query, top, edits)
+    search_log.log_search(query, top, edits, response, (time.perf_counter() - started) * 1000)
+    return response
 
 
 def _top(value) -> int:
@@ -144,7 +156,7 @@ class Handler(BaseHTTPRequestHandler):
         if url.path in STATIC:
             return self._send(STATIC[url.path].read_bytes(), "text/javascript; charset=utf-8")
         if url.path == "/api/search":
-            return self._json(SEARCH.search(q.get("q", ""), _top(q.get("top"))))
+            return self._json(run_search(q.get("q", ""), _top(q.get("top"))))
         if url.path == "/api/names":
             return self._json(sorted(SEARCH.known_names))
         if url.path == "/api/task":
@@ -172,7 +184,7 @@ class Handler(BaseHTTPRequestHandler):
         body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
         if path == "/api/search":   # có `parsed` = bản tách đề sửa tay trên web
             try:
-                return self._json(SEARCH.search(str(body.get("q", "")), _top(body.get("top")), body.get("parsed")))
+                return self._json(run_search(str(body.get("q", "")), _top(body.get("top")), body.get("parsed")))
             except ValueError as exc:
                 return self._json({"error": f"Bản sửa không hợp lệ: {exc}"}, 400)
         try:

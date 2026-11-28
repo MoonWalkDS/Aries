@@ -9,6 +9,5 @@ if not exist ".venv\Scripts\python.exe" (
 )
 set "PY=.venv\Scripts\python.exe"
 set PYTHONIOENCODING=utf-8
-rem Chạy toàn bộ test: Python (pytest) và viewer (node --test).
-"%PY%" -m pytest -q || exit /b 1
-where npm >nul 2>nul && if exist "labeling\label_viewer\node_modules" (pushd labeling\label_viewer & call npm test --silent & popd)
+"%PY%" -m pytest -q
+exit /b %errorlevel%

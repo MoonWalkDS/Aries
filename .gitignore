@@ -1,28 +1,7 @@
-# Dữ liệu (tải bằng tools/download_data.bat) và mọi thứ máy sinh
 data/
 .cache/
-
-# File máy sinh trong labeling/annotations/ (đi kèm dữ liệu trên Hugging Face); chỉ nhãn người duyệt nằm trong git
-labeling/annotations/enriched/
-labeling/annotations/**/*.npz
-labeling/annotations/**/*.html
-labeling/annotations/**/label_studio_*
-labeling/annotations/adl_people/action_pred.json
-labeling/annotations/adl_people/extra_boxes.json
-labeling/annotations/adl_people/teacher_hints.json
-labeling/annotations/identity_pred.json
-labeling/annotations/identities*.json
-labeling/annotations/**/*.bak-*
-# worktree của nhánh label-journal (label_viewer/journal.js): đồng bộ riêng, không thuộc nhánh code
-labeling/annotations/journal/
-
-# Môi trường, bí mật
 .venv/
 .env
-labeling/label_viewer/node_modules/
-labeling/label_viewer/users.json
 __pycache__/
 .pytest_cache/
-*.zip
-
 metadata/metadata.json

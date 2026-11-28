@@ -1,15 +1,4 @@
-"""Tải / đẩy dữ liệu của repo từ dataset riêng tư trên Hugging Face.
-
-    python tools/huggingface_data.py download                     # hỏi cách lấy ảnh gốc
-    python tools/huggingface_data.py download --images download   # tải cả 5.000 ảnh gốc
-    python tools/huggingface_data.py download --images skip       # không lấy ảnh
-    python tools/huggingface_data.py download --images D:/castle/images   # dùng thư mục ảnh có sẵn (tạo liên kết, không chép)
-    python tools/huggingface_data.py upload                       # chủ dữ liệu: đẩy data/ + file máy sinh trong labeling/annotations/
-
-Trong repo HF, file nằm đúng đường dẫn như trong repo này (data/..., labeling/annotations/...), nên tải về là đúng chỗ.
-Nhãn người duyệt (approved/rejected/identity_names...) nằm trong git, không bao giờ bị tải đè.
-Chạy lại `download` chỉ tải phần còn thiếu hoặc đã đổi.
-"""
+"""Tải dữ liệu Castle5000 từ Hugging Face."""
 from __future__ import annotations
 
 import argparse
@@ -22,59 +11,32 @@ from huggingface_hub import HfApi, snapshot_download
 
 ROOT = Path(__file__).resolve().parents[1]   # gốc repo
 REPO = "DS314/img314"
-ROIS = ("coffee_corner", "counter_left", "floor_front", "fridge", "island", "living_area", "oven_towel", "sink", "stove", "trash")
 IMAGES_ARCHIVE = "data/dataset/images"
-# Thư mục có hàng nghìn file nhỏ đi dạng một file <thư mục>.zip, tải về thì giải nén. Lý do: HF chỉ cho tối đa 10.000 file
-# mỗi thư mục, và tải từng file lẻ (hơn 30.000 file) thì bị HF chặn lượt gọi (lỗi 429) và mất hàng giờ.
-ARCHIVED_DIRS = ["data/dataset/thumbs", "labeling/annotations/enriched", "data/intermediate/enrich/people/crops"] + \
-                [f"data/intermediate/enrich/rois/{roi}/crops" for roi in ROIS]
-# HF lọc bằng fnmatch: `*` khớp cả dấu `/`, nên file ở thư mục gốc phải ghi tên đầy đủ, chỉ dùng `/**` cho cả cây thư mục.
 DATA = [
     "data/dataset/raw/teacher_metadata.csv",
-    "data/exports/castle_dataset.jsonl", "data/exports/people.csv", "data/exports/objects.csv", "data/exports/rois.csv", "data/exports/summary.json",
-    "data/exports/caption/inputs.jsonl", "data/exports/caption/captions.jsonl", "data/exports/caption/prompt_vi.md",
-    "data/intermediate/adl/**",
-    "data/intermediate/enrich/_detections.json", "data/intermediate/enrich/objects.json", "data/intermediate/enrich/objects_owl.json", "data/intermediate/enrich/objects_static.json",
-    "data/intermediate/enrich/people/people.json", "data/intermediate/enrich/people/ids.json",
-    "data/intermediate/enrich/people/embeddings.npy", "data/intermediate/enrich/people/build_stats.json",
-    "data/intermediate/enrich/rois/baseline.json", "data/intermediate/enrich/rois/image_ids.json",
-    "data/intermediate/enrich/rois/motion.npy", "data/intermediate/enrich/rois/roi_names.json",
-    *[f"data/intermediate/enrich/rois/{roi}/{name}" for roi in ROIS for name in ("build_stats.json", "embeddings.npy", "ids.json", "labels.yaml")],
-    # file máy sinh nằm trong labeling/annotations/ (gitignore); nhãn người duyệt thì ở trong git
-    "labeling/annotations/adl/centroids.npz", "labeling/annotations/adl/text_embeddings.npz",
-    "labeling/annotations/adl_people/centroids.npz", "labeling/annotations/adl_people/text_embeddings.npz",
-    "labeling/annotations/adl_people/action_pred.json", "labeling/annotations/adl_people/extra_boxes.json", "labeling/annotations/adl_people/teacher_hints.json",
-    "labeling/annotations/identity_pred.json", "labeling/annotations/identities.json",
-] + [f"labeling/annotations/adl_roi-{roi}/{f}" for roi in ROIS for f in ("centroids.npz", "text_embeddings.npz")]
+    "data/exports/castle_dataset.jsonl",
+    "data/exports/caption/captions.jsonl",
+    "data/exports/people.csv",
+    "data/exports/objects.csv",
+    "data/exports/region_objects.csv",
+    "data/exports/rois.csv",
+    "data/exports/summary.json",
+]
 
 
 def archived_dirs(with_images: bool) -> list[str]:
-    return ARCHIVED_DIRS + ([IMAGES_ARCHIVE] if with_images else [])
+    return ["data/dataset/thumbs"] + ([IMAGES_ARCHIVE] if with_images else [])
 
 
 def patterns(with_images: bool) -> list[str]:
     return DATA + [f"{d}.zip" for d in archived_dirs(with_images)]
 
 
-def pack_archives(root: Path = ROOT) -> None:
-    """Nén mỗi thư mục cần gom (kể cả ảnh gốc) thành <thư mục>.zip (không nén lại ảnh jpg, chỉ gom)."""
-    import zipfile
-
-    for rel in archived_dirs(with_images=True):
-        folder = root / rel
-        if not folder.is_dir():
-            continue
-        with zipfile.ZipFile(root / f"{rel}.zip", "w", zipfile.ZIP_STORED) as archive:
-            for path in sorted(folder.iterdir()):
-                if path.is_file():
-                    archive.write(path, path.name)
-
-
-def unpack_archives(root: Path = ROOT) -> None:
+def unpack_archives(root: Path, with_images: bool) -> None:
     """Giải nén <thư mục>.zip vừa tải về nếu thư mục chưa có đủ file. Giữ file zip để lần tải sau không tải lại."""
     import zipfile
 
-    for rel in archived_dirs(with_images=True):
+    for rel in archived_dirs(with_images):
         archive_path, folder = root / f"{rel}.zip", root / rel
         if not archive_path.exists():
             continue
@@ -142,44 +104,10 @@ def download(images: str, root: Path = ROOT) -> None:
         link_images(Path(images), root)      # kiểm tra đường dẫn trước khi tải để sai thì báo ngay
     print(f"Tải {REPO} vào {root} ...")
     snapshot_download(REPO, repo_type="dataset", local_dir=root, allow_patterns=patterns(with_images))
-    unpack_archives(root)
+    unpack_archives(root, with_images)
     if not (root / "data" / "exports" / "castle_dataset.jsonl").exists():
-        sys.exit(f"Không tải được data/exports/castle_dataset.jsonl. Nếu ở trên có lỗi mạng hoặc 429 thì chạy lại lệnh này "
-                 f"(file đã tải được giữ nguyên); nếu không thì {REPO} chưa có dữ liệu (chưa ai chạy tools\\upload_data.bat).")
+        sys.exit("Thiếu data/exports/castle_dataset.jsonl sau khi tải.")
     print("Xong. Ảnh gốc:", {"download": "đã tải", "skip": "bỏ qua"}.get(images, f"liên kết tới {images}"))
-
-
-def upload(root: Path = ROOT, yes: bool = False) -> None:
-    api = HfApi()
-    _login_or_exit(api)
-    missing = [p for p in ("data/exports/castle_dataset.jsonl",) if not (root / p).exists()]
-    if missing:
-        sys.exit(f"Thiếu {missing}: chưa đủ dữ liệu để đẩy.")
-    pack_archives(root)
-    files = files_to_upload(root)
-    archives = [rel for rel, _ in files if rel.endswith(".zip")]
-    print(f"Sẽ đẩy {len(files)} file ({sum(size for _, size in files) / 1e9:.2f} GB), trong đó {len(archives)} file zip: {archives}")
-    if not yes and input(f"Đẩy lên {REPO} (riêng tư)? Gõ yes để tiếp tục: ").strip().lower() != "yes":
-        sys.exit("Đã huỷ, không đẩy gì.")
-    api.create_repo(REPO, repo_type="dataset", private=True, exist_ok=True)
-    api.upload_folder(repo_id=REPO, repo_type="dataset", folder_path=root, allow_patterns=patterns(with_images=True),
-                      delete_patterns=[f"{d}/*" for d in archived_dirs(with_images=True)],   # bỏ file lẻ của thư mục nay đã đi dạng zip
-                      commit_message="Dữ liệu cho Aries (data/ + file máy sinh trong labeling/annotations/)")
-    print("Đã đẩy xong.")
-
-
-def files_to_upload(root: Path = ROOT) -> list[tuple[str, int]]:
-    """(đường dẫn tương đối, kích thước) của các file khớp mẫu, lọc đúng như upload_folder (fnmatch)."""
-    import fnmatch
-
-    wanted = patterns(with_images=True)
-    out = []
-    for path in root.glob("**/*"):                    # glob của pathlib đi qua cả junction ảnh gốc
-        if path.is_file():
-            rel = path.relative_to(root).as_posix()
-            if any(fnmatch.fnmatch(rel, p) for p in wanted):
-                out.append((rel, path.stat().st_size))
-    return out
 
 
 def main() -> None:
@@ -187,13 +115,8 @@ def main() -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
     d = sub.add_parser("download")
     d.add_argument("--images", help="download | skip | <đường dẫn thư mục ảnh có sẵn>; bỏ trống thì hỏi")
-    u = sub.add_parser("upload")
-    u.add_argument("--yes", action="store_true", help="không hỏi xác nhận")
     args = ap.parse_args()
-    if args.cmd == "download":
-        download(args.images or _ask_images())
-    else:
-        upload(yes=args.yes)
+    download(args.images or _ask_images())
 
 
 if __name__ == "__main__":

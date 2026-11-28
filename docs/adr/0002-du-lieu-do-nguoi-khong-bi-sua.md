@@ -1,3 +1,0 @@
-# Dữ liệu dò người không bao giờ bị sửa
-
-Box máy dò bị lệch có hai cách sửa: ghi đè toạ độ ngay trên dữ liệu dò, hoặc ẩn box cũ và thay bằng một box tự vẽ. Chúng tôi chọn cách thứ hai. Crop, embedding, cụm danh tính và mã người (`<ảnh>_pNN`) đều được dựng từ dữ liệu dò, nên ghi đè toạ độ sẽ làm các thứ đó lệch với box, cho tới lần dựng lại tốn GPU. Vì vậy **Sửa box** trên box máy dò được thực hiện như sau: box cũ bị ẩn bằng cùng cơ chế với **Xoá box**, rồi sinh một box tự vẽ mang theo hành động và tên đã gán, tất cả trong một bước hoàn tác. **Xoá box** trên box máy dò cũng chỉ ẩn box, không xoá khỏi dữ liệu dò.

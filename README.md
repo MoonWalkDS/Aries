@@ -1,26 +1,32 @@
-﻿# Aries v2
+# Aries v2
 
-Bộ công cụ làm việc với Castle5000 gồm pipeline gán nhãn, viewer chỉnh nhãn, xuất metadata và CLI nộp bài DRES. Thư mục `retrieval/` dành cho hệ thống truy vấn trong tương lai.
+Nền tảng truy vấn ảnh Castle5000 và nộp kết quả lên DRES. Thư mục `retrieval/` dành cho phần cài đặt hệ thống truy vấn.
 
-## Chuẩn bị trên Windows
+## Tải dataset trên Windows
 
-1. Cài Python 3.12 và Node.js 18 trở lên nếu dùng viewer.
-2. Chạy `tools\setup.bat` để tạo môi trường, cài thư viện và tạo file `.env`.
-3. Nếu cần dữ liệu, đăng nhập bằng `.venv\Scripts\hf.exe auth login` rồi chạy `tools\download_data.bat`. Tài khoản cần quyền đọc dataset riêng tư `DS314/img314`.
+Chạy các lệnh sau từ gốc repo với Python 3.12 và tài khoản có quyền đọc dataset riêng tư `DS314/img314`.
 
-## Làm việc với dữ liệu
+```bat
+tools\setup.bat
+.venv\Scripts\hf.exe auth login
+tools\download_data.bat --images download
+```
 
-- `labeling/pipeline/` chứa các bước tạo nhãn và xuất dữ liệu. Chạy `.venv\Scripts\python.exe labeling\pipeline\main.py --help` để xem các lệnh.
-- `tools\run_viewer.bat` mở viewer để kiểm tra và chỉnh nhãn. Hướng dẫn nằm trong `labeling/label_viewer/README.md`.
-- `labeling/caption/` chứa công cụ tạo mô tả tiếng Việt.
-- `.venv\Scripts\python.exe metadata\build_metadata.py` đọc `data/exports/castle_dataset.jsonl`, ghép caption và mô tả của thầy nếu có rồi ghi `metadata/metadata.json`.
-- `tools\run_tests.bat` chạy bộ kiểm thử. Chủ dữ liệu dùng `tools\upload_data.bat` để đồng bộ các file lên Hugging Face.
+Dùng `--images skip` để chỉ lấy metadata và ảnh thu nhỏ, hoặc truyền đường dẫn thư mục ảnh có sẵn vào `--images`. Các bản ghi ảnh nằm tại `data/exports/castle_dataset.jsonl`. Để ghép caption và mô tả của thầy thành `metadata/metadata.json`, chạy lệnh sau.
 
-## Nộp bài DRES
+```bat
+.venv\Scripts\python.exe metadata\build_metadata.py
+```
 
-Điền cấu hình DRES trong `.env`. Chạy các lệnh sau từ gốc dự án khi cần lấy đề hoặc nộp mã ảnh đã chọn.
+## Nộp DRES
 
-```powershell
+Điền cấu hình DRES trong `.env`. Lệnh đầu lấy đề hiện tại. Lệnh sau mở chế độ tương tác để nộp mã ảnh.
+
+```bat
 .venv\Scripts\python.exe submission\fetch_task.py --once
 .venv\Scripts\python.exe submission\submit_task.py
 ```
+
+## Kiểm thử
+
+Cài pytest bằng `.venv\Scripts\python.exe -m pip install pytest`, rồi chạy `tools\run_tests.bat`.

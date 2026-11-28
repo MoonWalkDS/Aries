@@ -8,9 +8,8 @@ import huggingface_data
 def test_patterns_include_images_only_when_asked():
     assert "data/dataset/images.zip" not in huggingface_data.patterns(with_images=False)
     assert "data/dataset/images.zip" in huggingface_data.patterns(with_images=True)
-    assert all(p.startswith(("data/", "labeling/annotations/")) for p in huggingface_data.patterns(with_images=True))
-    # nhãn người duyệt nằm trong git: không bao giờ tải đè từ HF
-    assert not any(p.endswith(("approved.json", "rejected.json", "identity_names.json")) for p in huggingface_data.patterns(True))
+    assert all(p.startswith("data/") for p in huggingface_data.patterns(True))
+    assert not any("intermediate/" in p for p in huggingface_data.patterns(True))
 
 
 def test_link_images_rejects_folder_without_jpg(tmp_path):
@@ -47,45 +46,14 @@ def test_download_stops_with_login_hint_when_not_logged_in(monkeypatch, capsys):
     assert stop.value.code == 2 and "auth login" in capsys.readouterr().out
 
 
-def test_patterns_do_not_leak_into_subfolders():
-    """HF lọc bằng fnmatch, nơi `*` khớp cả dấu `/`: mẫu không được kéo theo thư mục phụ."""
-    import fnmatch
-    hit = lambda path: any(fnmatch.fnmatch(path, p) for p in huggingface_data.patterns(with_images=False))  # noqa: E731
-    assert hit("data/exports/castle_dataset.jsonl") and hit("data/intermediate/enrich/objects.json") and hit("data/intermediate/enrich/people/people.json")
-    assert hit("labeling/annotations/identities.json") and not hit("labeling/annotations/identities.outfit-vlm.json")   # merge cần cụm danh tính
-    assert not hit("data/exports/hf/data/captions.jsonl") and not hit("data/intermediate/enrich/_shards/people_0001.json")
-    assert not hit("data/exports/caption/codex/run.json") and not hit("data/dataset/images/08_1.jpg")
+def test_skip_does_not_unpack_existing_image_archive(tmp_path):
+    import zipfile
 
-
-def test_big_folder_goes_up_as_one_zip_and_comes_back(tmp_path):
-    """HF chỉ cho tối đa 10.000 file mỗi thư mục: thư mục crop người được đẩy dưới dạng một file zip rồi giải nén khi tải."""
-    import fnmatch
-    hit = lambda path: any(fnmatch.fnmatch(path, p) for p in huggingface_data.patterns(with_images=True))  # noqa: E731
-    crops = "data/intermediate/enrich/people/crops"
-    assert not hit(f"{crops}/08_1_p01.jpg") and hit(f"{crops}.zip") and hit("data/intermediate/enrich/people/people.json")
-    folder = tmp_path / crops
-    folder.mkdir(parents=True)
-    for n in range(3):
-        (folder / f"08_{n}_p01.jpg").write_bytes(bytes([n]) * 10)
-    huggingface_data.pack_archives(tmp_path)
-    assert (tmp_path / f"{crops}.zip").exists()
-    import shutil
-    shutil.rmtree(folder)
-    huggingface_data.unpack_archives(tmp_path)
-    assert sorted(p.name for p in folder.iterdir()) == ["08_0_p01.jpg", "08_1_p01.jpg", "08_2_p01.jpg"]
-    assert (folder / "08_2_p01.jpg").read_bytes() == bytes([2]) * 10
-
-
-def test_folders_of_small_files_travel_as_zips():
-    """Hàng chục nghìn file nhỏ làm HF chặn lượt tải (429): các thư mục đó chỉ đi dạng zip, file lẻ không bao giờ khớp mẫu."""
-    import fnmatch
-    hit = lambda path: any(fnmatch.fnmatch(path, p) for p in huggingface_data.patterns(with_images=True))  # noqa: E731
-    for folder, sample in [("data/dataset/images", "08_1.jpg"), ("data/dataset/thumbs", "08_1.jpg"),
-                           ("labeling/annotations/enriched", "08_1.json"), ("data/intermediate/enrich/rois/sink/crops", "08_1.jpg"),
-                           ("data/intermediate/enrich/people/crops", "08_1_p01.jpg")]:
-        assert hit(f"{folder}.zip") and not hit(f"{folder}/{sample}"), folder
-    for kept in ("data/intermediate/enrich/rois/sink/embeddings.npy", "data/intermediate/enrich/rois/sink/labels.yaml",
-                 "data/intermediate/enrich/rois/motion.npy", "data/intermediate/enrich/rois/image_ids.json"):
-        assert hit(kept), kept
-    remote_files = 300   # ước lượng trên: zip + embedding + json, không còn hàng chục nghìn file lẻ
-    assert len(huggingface_data.patterns(with_images=True)) < remote_files
+    dataset = tmp_path / "data/dataset"
+    dataset.mkdir(parents=True)
+    for name in ("thumbs", "images"):
+        with zipfile.ZipFile(dataset / f"{name}.zip", "w") as archive:
+            archive.writestr("frame.jpg", b"frame")
+    huggingface_data.unpack_archives(tmp_path, with_images=False)
+    assert (dataset / "thumbs/frame.jpg").is_file()
+    assert not (dataset / "images").exists()

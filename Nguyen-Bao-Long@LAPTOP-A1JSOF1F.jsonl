@@ -9003,3 +9003,25 @@
 {"at":"2026-11-28T13:39:18.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_557_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:39:18.354Z"}}
 {"at":"2026-11-28T13:39:42.629Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_2722"],"v":[{"box":[570.6,284.5,854.4,530.7],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"15_2722_m01","created":"2026-11-28T08:11:57.150Z","by":"BaoLong","updated":"2026-11-28T13:39:42.616Z"}]}
 {"at":"2026-11-28T13:39:44.570Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_2722"],"v":[{"box":[570.6,284.5,862.8,550.7],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"15_2722_m01","created":"2026-11-28T08:11:57.150Z","by":"BaoLong","updated":"2026-11-28T13:39:44.567Z"}]}
+{"at":"2026-11-28T13:39:53.573Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["15_2722"],"v":[{"box":[570.6,284.5,903.8,558.1],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"15_2722_m01","created":"2026-11-28T08:11:57.150Z","by":"BaoLong","updated":"2026-11-28T13:39:53.570Z"}]}
+{"at":"2026-11-28T13:40:10.770Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","15_2722_m01"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T13:40:10.770Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","15_2722_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:40:10.770Z"}}
+{"at":"2026-11-28T13:41:07.851Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["13_2781"],"d":1}
+{"at":"2026-11-28T13:41:33.678Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_2046_p01"],"d":1}
+{"at":"2026-11-28T13:41:33.678Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_2046_p01"],"v":{"by":"BaoLong","at":"2026-11-28T13:41:33.678Z"}}
+{"at":"2026-11-28T13:41:33.678Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","11_2046_p01"],"v":true}
+{"at":"2026-11-28T13:41:53.379Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","19_104_m01"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:41:53.379Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","19_104_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:41:53.379Z"}}
+{"at":"2026-11-28T13:41:56.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_2046_m01"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:41:56.354Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_2046_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:41:56.353Z"}}
+{"at":"2026-11-28T13:42:16.859Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2485_p04"],"v":{"by":"BaoLong","at":"2026-11-28T13:42:16.859Z"}}
+{"at":"2026-11-28T13:42:16.859Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","17_2485_p04"],"v":true}
+{"at":"2026-11-28T13:43:34.611Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","16_2825_p04"],"v":{"by":"BaoLong","at":"2026-11-28T13:43:34.611Z"}}
+{"at":"2026-11-28T13:43:34.611Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","16_2825_p04"],"v":true}
+{"at":"2026-11-28T13:43:34.611Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","16_2825_p04"],"d":1}
+{"at":"2026-11-28T13:43:44.911Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","08_723_p08"],"v":{"by":"BaoLong","at":"2026-11-28T13:43:44.911Z"}}
+{"at":"2026-11-28T13:43:44.911Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","08_723_p08"],"v":true}
+{"at":"2026-11-28T13:43:44.911Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","08_723_p08"],"d":1}
+{"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2389_p04"],"v":{"by":"BaoLong","at":"2026-11-28T13:43:57.887Z"}}
+{"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","17_2389_p04"],"v":true}
+{"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","17_2389_p04"],"d":1}

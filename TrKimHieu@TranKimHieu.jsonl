@@ -6064,3 +6064,19 @@
 {"at":"2026-11-28T06:56:50.449Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["12_3098"],"v":[{"box":[138.5,190.6,212.7,254],"kind":"person","label":"sitting","label_vi":"đang ngồi","id":"12_3098_m01","created":"2026-11-28T06:56:50.449Z","by":"TrKimHieu"}]}
 {"at":"2026-11-28T06:57:15.099Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["12_3107"],"v":[{"box":[148.4,201.5,221.6,257],"kind":"person","label":"sitting","label_vi":"đang ngồi","id":"12_3107_m01","created":"2026-11-28T06:57:15.098Z","by":"TrKimHieu"}]}
 {"at":"2026-11-28T07:39:23.667Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["12_1"],"v":[{"box":[515.4,48,603.4,207.5],"kind":"person","label":"getting items from a cabinet","label_vi":"lấy đồ trong tủ, ngăn kéo","id":"12_1_m01","created":"2026-11-28T07:39:23.662Z","by":"TrKimHieu"}]}
+{"at":"2026-11-28T08:36:03.834Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["11_1617"],"v":[{"box":[71,100.6,140.1,236.7],"kind":"person","label":"standing idle","label_vi":"đứng không làm gì","id":"11_1617_m01","created":"2026-11-28T03:32:22.125Z","by":"Quoc"},{"id":"11_1617_m02","kind":"person","box":[238.4,141.1,328.4,207.5],"created":"2026-11-28T08:36:03.726Z","by":"TrKimHieu"}]}
+{"at":"2026-11-28T08:36:06.770Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["11_1617"],"v":[{"box":[71,100.6,140.1,236.7],"kind":"person","label":"standing idle","label_vi":"đứng không làm gì","id":"11_1617_m01","created":"2026-11-28T03:32:22.125Z","by":"Quoc"},{"id":"11_1617_m02","kind":"person","box":[238.4,141.1,328.4,207.5],"created":"2026-11-28T08:36:03.726Z","by":"TrKimHieu","label":"sitting"}]}
+{"at":"2026-11-28T08:36:36.883Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2453_p03"],"d":1}
+{"at":"2026-11-28T08:36:36.883Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2453_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T08:36:36.878Z"}}
+{"at":"2026-11-28T08:36:36.883Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","11_2453_p03"],"v":true}
+{"at":"2026-11-28T08:36:50.094Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2551_p02"],"d":1}
+{"at":"2026-11-28T08:36:50.094Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2551_p02"],"v":{"by":"TrKimHieu","at":"2026-11-28T08:36:50.094Z"}}
+{"at":"2026-11-28T08:36:50.094Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","11_2551_p02"],"v":true}
+{"at":"2026-11-28T08:36:59.215Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2630_p03"],"d":1}
+{"at":"2026-11-28T08:36:59.215Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2630_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T08:36:59.215Z"}}
+{"at":"2026-11-28T08:36:59.215Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","11_2630_p03"],"v":true}
+{"at":"2026-11-28T08:37:01.743Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["people","11_2644_p03"],"d":1}
+{"at":"2026-11-28T08:37:01.743Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["by","11_2644_p03"],"v":{"by":"TrKimHieu","at":"2026-11-28T08:37:01.743Z"}}
+{"at":"2026-11-28T08:37:01.743Z","by":"TrKimHieu","file":"annotations/identity_names.json","path":["not_person","11_2644_p03"],"v":true}
+{"at":"2026-11-28T08:37:16.311Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["11_2747"],"v":[{"id":"11_2747_m01","kind":"person","box":[272,113.4,365,251.1],"created":"2026-11-28T08:37:16.308Z","by":"TrKimHieu"}]}
+{"at":"2026-11-28T08:37:19.075Z","by":"TrKimHieu","file":"annotations/manual_boxes.json","path":["11_2747"],"v":[{"id":"11_2747_m01","kind":"person","box":[272,113.4,365,251.1],"created":"2026-11-28T08:37:16.308Z","by":"TrKimHieu","label":"using a laptop"}]}

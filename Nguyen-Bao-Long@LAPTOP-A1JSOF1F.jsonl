@@ -8974,3 +8974,12 @@
 {"at":"2026-11-28T13:34:25.054Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2981_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:34:25.054Z"}}
 {"at":"2026-11-28T13:34:40.394Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","16_918_m01"],"v":"Áo thun xanh đen"}
 {"at":"2026-11-28T13:34:40.394Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","16_918_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:34:40.394Z"}}
+{"at":"2026-11-28T13:34:53.626Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","17_988_p05"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:34:53.626Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_988_p05"],"v":{"by":"BaoLong","at":"2026-11-28T13:34:53.626Z"}}
+{"at":"2026-11-28T13:34:53.626Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","17_988_p05"],"d":1}
+{"at":"2026-11-28T13:35:19.809Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_988_p05"],"v":{"by":"BaoLong","at":"2026-11-28T13:34:53.925Z"}}
+{"at":"2026-11-28T13:35:19.809Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2809_p08"],"v":{"by":"BaoLong","at":"2026-11-28T13:35:19.809Z"}}
+{"at":"2026-11-28T13:35:19.809Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","14_2809_p08"],"v":true}
+{"at":"2026-11-28T13:35:19.978Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["14_2809"],"v":[{"box":[477.1,209.8,579,618.1],"kind":"person","label":"standing idle","label_vi":"đứng không làm gì","id":"14_2809_m01","created":"2026-11-28T07:48:32.615Z","by":"BaoLong"},{"id":"14_2809_m02","kind":"person","box":[553.7,189.4,636,249],"created":"2026-11-28T13:35:19.809Z","by":"BaoLong","replaces":"14_2809_p08","label":"getting items from a cabinet"}]}
+{"at":"2026-11-28T13:35:39.186Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_2809_m02"],"v":"Nư áo đen"}
+{"at":"2026-11-28T13:35:39.186Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_2809_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:35:39.186Z"}}

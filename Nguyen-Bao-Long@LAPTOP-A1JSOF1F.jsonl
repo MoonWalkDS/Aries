@@ -9025,3 +9025,23 @@
 {"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_2389_p04"],"v":{"by":"BaoLong","at":"2026-11-28T13:43:57.887Z"}}
 {"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","17_2389_p04"],"v":true}
 {"at":"2026-11-28T13:43:57.887Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","17_2389_p04"],"d":1}
+{"at":"2026-11-28T13:44:58.592Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["12_821"],"v":[{"id":"12_821_m01","kind":"person","box":[590.6,352.5,833.4,654.7],"created":"2026-11-28T13:17:30.144Z","by":"BaoLong","replaces":"12_821_p02","label":"opening the refrigerator","updated":"2026-11-28T13:44:58.576Z"}]}
+{"at":"2026-11-28T13:45:18.560Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["13_1314"],"d":1}
+{"at":"2026-11-28T13:45:38.553Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","12_821_m01"],"v":"Áo thun xanh đen"}
+{"at":"2026-11-28T13:45:38.553Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","12_821_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:45:38.551Z"}}
+{"at":"2026-11-28T13:45:52.034Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","08_696_m01"],"v":"áo khoác xám cao"}
+{"at":"2026-11-28T13:45:52.034Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","08_696_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:45:52.034Z"}}
+{"at":"2026-11-28T13:46:39.757Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","17_851_p09"],"v":{"by":"BaoLong","at":"2026-11-28T13:46:39.757Z"}}
+{"at":"2026-11-28T13:46:39.757Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","17_851_p09"],"v":true}
+{"at":"2026-11-28T13:46:39.757Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["recheck","17_851_p09"],"d":1}
+{"at":"2026-11-28T13:47:51.089Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_730_m01"],"v":"Áo len xám đậm"}
+{"at":"2026-11-28T13:47:51.089Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_730_m01"],"v":{"by":"BaoLong","at":"2026-11-28T13:47:51.089Z"}}
+{"at":"2026-11-28T13:47:58.997Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","08_2926_m02"],"v":"Áo len 2 màu"}
+{"at":"2026-11-28T13:47:58.997Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","08_2926_m02"],"v":{"by":"BaoLong","at":"2026-11-28T13:47:58.997Z"}}
+{"at":"2026-11-28T13:48:06.109Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","14_396_m03"],"v":"Sơ mi xanh"}
+{"at":"2026-11-28T13:48:06.109Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","14_396_m03"],"v":{"by":"BaoLong","at":"2026-11-28T13:48:06.109Z"}}
+{"at":"2026-11-28T13:49:24.718Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_732_p02"],"d":1}
+{"at":"2026-11-28T13:49:24.718Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["people","11_732_m02"],"v":"Áo khoác xanh đen có in hình"}
+{"at":"2026-11-28T13:49:24.718Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["by","11_732_p02"],"v":{"by":"BaoLong","at":"2026-11-28T13:49:24.717Z"}}
+{"at":"2026-11-28T13:49:24.718Z","by":"Nguyen Bao Long","file":"annotations/identity_names.json","path":["not_person","11_732_p02"],"v":true}
+{"at":"2026-11-28T13:49:24.914Z","by":"Nguyen Bao Long","file":"annotations/manual_boxes.json","path":["11_732"],"v":[{"box":[734.8,188.3,949.2,563.7],"kind":"person","label":"opening the refrigerator","label_vi":"mở tủ lạnh","id":"11_732_m01","created":"2026-11-28T03:01:31.412Z","by":"Quoc"},{"id":"11_732_m02","kind":"person","box":[469.5,149.9,568.2,224.4],"created":"2026-11-28T13:49:24.717Z","by":"BaoLong","replaces":"11_732_p02"}]}

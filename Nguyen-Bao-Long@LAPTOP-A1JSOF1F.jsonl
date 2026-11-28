@@ -4671,3 +4671,4 @@
 {"at":"2026-11-28T02:42:04.302Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn bếp","08_272"],"d":1}
 {"at":"2026-11-28T02:42:34.274Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn bếp","08_607"],"v":{"items":["cooking pot","tea towel","Lò nướng","frying pan","cup","cutting board","toaster"],"boxes":[],"by":"BaoLong","at":"2026-11-28T02:42:34.274Z"}}
 {"at":"2026-11-28T02:45:40.054Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn bếp","08_1786"],"v":{"items":["cooking pot","tea towel","Lò nướng","frying pan","cup","cutting board"],"boxes":[],"by":"BaoLong","at":"2026-11-28T02:45:40.054Z"}}
+{"at":"2026-11-28T02:52:58.100Z","by":"Nguyen Bao Long","file":"annotations/object_labels.json","path":["Bàn bếp","08_1791"],"v":{"items":["cooking pot","tea towel","Lò nướng","frying pan","cup","cutting board","wine glass"],"boxes":[],"by":"BaoLong","at":"2026-11-28T02:52:58.078Z"}}

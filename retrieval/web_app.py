@@ -15,6 +15,7 @@ from urllib.parse import parse_qs, urlparse
 
 import search_log
 from common import REPO_ROOT
+from query_parser import parse_query
 from search_engine import SearchEngine
 
 sys.path.insert(0, str(REPO_ROOT / "submission"))
@@ -200,12 +201,14 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = urlparse(self.path).path
-        if path not in ("/api/submit", "/api/config", "/api/search"):
+        if path not in ("/api/submit", "/api/config", "/api/search", "/api/parse"):
             return self._json({"error": "not found"}, 404)
         # chỉ nhận JSON: trang web lạ không gửi được form "đơn giản" tới localhost để nộp bài/đổi cấu hình
         if not self.headers.get("Content-Type", "").startswith("application/json"):
             return self._json({"error": "cần Content-Type: application/json"}, 415)
         body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+        if path == "/api/parse":    # nút "Tách đề": chỉ tách, chưa tìm
+            return self._json({"parsed": parse_query(str(body.get("q", "")), SEARCH.known_names)})
         if path == "/api/search":   # có `parsed` = bản tách đề sửa tay trên web
             try:
                 return self._json(run_search(str(body.get("q", "")), _top(body.get("top")), body.get("parsed")))

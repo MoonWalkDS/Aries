@@ -58,6 +58,8 @@ retrieval/               HỆ THỐNG TRUY VẤN
   build_search_index.py    dựng chỉ mục data/exports/search_index/
   web_app.py, index.html   web truy vấn + nộp DRES
   evaluate.py              đánh giá trên dev_queries.json
+  search_log.py            nhật ký mọi lần tìm/nộp: data/runtime/search_logs/searches.jsonl
+  rank_report.py           sau buổi thi: dò hạng ảnh đúng trong nhật ký, xuất CSV + bảng Recall@K
   common.py                hằng số, đường dẫn, hàm dùng chung
 submission/              HỆ THỐNG NỘP BÀI: fetch_task.py (kéo đề), submit_task.py (đăng nhập, nộp bài DRES)
 tools/                   các file .bat + huggingface_data.py (tải / đẩy dữ liệu HF)
@@ -94,6 +96,16 @@ Thiết kế chi tiết: `docs/retrieval-design.md`. Code: `retrieval/search_eng
 4. **Lớp 3** (`layer3`): chi tiết cảnh còn lại xếp hạng cuối.
 
 Đánh giá: `.venv\Scripts\python.exe retrieval\evaluate.py` (7 đề trong `retrieval/dev_queries.json`).
+
+Nhật ký buổi thi: `web_app.py` ghi mỗi lần tìm (câu truy vấn, bản sửa tay, danh sách id kết quả) và mỗi lần nộp
+vào `data/runtime/search_logs/searches.jsonl`, kèm task DRES đang chạy và tên hệ thống (branch + commit; đặt
+`SEARCH_SYSTEM=...` để đổi tên). Sau buổi thi, khi có đáp án (CSV `task,image_ids` theo taskId hoặc taskTemplateId,
+hoặc JSON `{task: [id, ...]}`):
+
+    .venv\Scripts\python.exe retrievalank_report.py --truth dap_an.csv
+
+In bảng Recall@K (số chính: cửa sổ ±3 khung cùng giờ) và ghi `searches.csv`, `tasks.csv`, `summary.md` vào
+`data/runtime/search_logs/report/`.
 
 ## Chạy lại pipeline gán nhãn từ ảnh gốc
 
